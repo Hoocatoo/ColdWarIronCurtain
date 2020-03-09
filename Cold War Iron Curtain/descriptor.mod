@@ -1,5 +1,5 @@
 name="Cold War Iron Curtain Dev Build"
-path="C:/Program Files (x86)/Steam/steamapps/common/Hearts of Iron IV/mod/cwicdevbasenew"
+path="C:/Users/Hooc/Documents/Paradox Interactive/Hearts of Iron IV/mod/ColdWarIronCurtain/Cold War Iron Curtain"
 
 tags={
 	"Gameplay"
@@ -11,6 +11,7 @@ version="1.9.*"
 replace_path = "events"
 replace_path = "common/decisions"
 replace_path = "common/national_focus"
+replace_path = "common/ideas"
 replace_path = "history/units"
 replace_path = "common/on_actions"
 replace_path = "common/bookmarks"
