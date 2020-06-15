@@ -1,5 +1,5 @@
 name="Cold War Iron Curtain Dev Build"
-path="C:/Users/Hooc/Documents/Paradox Interactive/Hearts of Iron IV/mod/ColdWarIronCurtain/Cold War Iron Curtain"
+path="C:\Users\dc404\Documents\Paradox Interactive\Hearts of Iron IV\mod\ColdWarIronCurtain\Cold War Iron Curtain"
 
 tags={
 	"Gameplay"
