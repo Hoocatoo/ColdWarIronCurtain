@@ -6,14 +6,14 @@ focus_tree = {
 	}
 	default = no
 	shared_focus = USA_60s_The_CIA
-	shared_focus = USA_60s_Domestic_Affairs
+	
 	shared_focus = USA_60s_The_American_Armed_Forces
 	shared_focus = USA_60s_State_Department
 	shared_focus = USA_60s_Rethinking_our_Foriegn_Policies
 
 	focus = {
 		id = USA_GOLDWATER_The_Goldwater_Administration
-		icon = GFX_goal_unknown
+		icon = GFX_GoldwaterAdministration
 		search_filters = {IC_FILTER}
 		cost = 10.00
 		x = 5
@@ -62,7 +62,15 @@ focus_tree = {
 		x = 7
 		y = 1
 		completion_reward = {
-			add_ideas = gen_pro_employer_1
+			hidden_effect = {
+				remove_ideas = policy_union_temp_0
+				remove_ideas = policy_union_temp_1
+				remove_ideas = policy_union_temp_2
+				remove_ideas = policy_union_temp_3
+				remove_ideas = policy_union_temp_4
+				remove_ideas = policy_union_temp_5
+			}
+			add_ideas = policy_union_temp_1
 		}
 	}
 	focus = {
@@ -79,7 +87,7 @@ focus_tree = {
 		x = 5
 		y = 2
 		completion_reward = {
-			add_to_variable = { segregationValue = 0.05 }
+			add_to_variable = { segregationValue = 0.015 }
 			news_event = Goldwater.1
 		}
 	}
@@ -102,7 +110,7 @@ focus_tree = {
 	}
 	focus = {
 		id = USA_GOLDWATER_National_Historic_Preservation_Act
-		icon = GFX_goal_unknown
+		icon = GFX_Paper_Two
 		search_filters = {IC_FILTER}
 		cost = 10.00
 		prerequisite = {
@@ -132,7 +140,7 @@ focus_tree = {
 	}
 	focus = {
 		id = USA_GOLDWATER_Higher_Education_Act
-		icon = GFX_goal_unknown
+		icon = GFX_prioritize_western_education
 		search_filters = {IC_FILTER}
 		cost = 10.00
 		prerequisite = {
@@ -150,7 +158,7 @@ focus_tree = {
 	}
 	focus = {
 		id = USA_GOLDWATER_Cuban_Adjustment_Act
-		icon = GFX_goal_unknown
+		icon = GFX_Generic_Refugee_Focus
 		search_filters = {IC_FILTER}
 		cost = 10.00
 		prerequisite = {
@@ -168,7 +176,7 @@ focus_tree = {
 	}
 	focus = {
 		id = USA_GOLDWATER_Freedom_of_Information_Act
-		icon = GFX_goal_unknown
+		icon = GFX_expand_legal_power
 		search_filters = {IC_FILTER}
 		cost = 10.00
 		prerequisite = {
@@ -233,7 +241,7 @@ focus_tree = {
 	}
 	focus = {
 		id = USA_GOLDWATER_Fight_Inflation
-		icon = GFX_goal_unknown
+		icon = GFX_Fight_Hyperinflation
 		search_filters = {IC_FILTER}
 		cost = 10.00
 		prerequisite = {
@@ -271,7 +279,7 @@ focus_tree = {
 	}
 	focus = {
 		id = USA_GOLDWATER_Cut_Taxes
-		icon = GFX_goal_unknown
+		icon = GFX_ISR_Focus_Tax_Cuts
 		search_filters = {IC_FILTER}
 		cost = 10.00
 		prerequisite = {
@@ -288,7 +296,7 @@ focus_tree = {
 	}
 	focus = {
 		id = USA_GOLDWATER_Emphasize_Personal_Initiative
-		icon = GFX_goal_unknown
+		icon = GFX_goal_USA_america_economic_miracle
 		search_filters = {IC_FILTER}
 		cost = 10.00
 		prerequisite = {
@@ -302,7 +310,7 @@ focus_tree = {
 	}
 	focus = {
 		id = USA_GOLDWATER_Reduce_Government_Bureacracy
-		icon = GFX_goal_unknown
+		icon = GFX_Cut_Funding
 		search_filters = {IC_FILTER}
 		cost = 10.00
 		prerequisite = {
@@ -322,7 +330,7 @@ focus_tree = {
 	}
 	focus = {
 		id = USA_GOLDWATER_A_Choice_Not_an_Echo
-		icon = GFX_goal_unknown
+		icon = GFX_TorchofLiberty
 		search_filters = {IC_FILTER}
 		cost = 10.00
 		prerequisite = {
@@ -343,7 +351,7 @@ focus_tree = {
 	}
 	focus = {
 		id = USA_GOLDWATER_Crime_Control_and_Safe_Streets_Act
-		icon = GFX_goal_unknown
+		icon = GFX_focus_police
 		search_filters = {IC_FILTER}
 		cost = 10.00
 		prerequisite = {

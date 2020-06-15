@@ -10,7 +10,7 @@ focus_tree = {
 	default = no
 	focus = {
 		id = BUL_The_Sovietization_of_Bulgaria
-		icon = GFX_goal_unknown
+		icon = GFX_AppealtoStalin
 		search_filters = {IC_FILTER}
 		cost = 10.00
 		x = 6
@@ -21,7 +21,7 @@ focus_tree = {
 	}
 	focus = {
 		id = BUL_Chairman_Chervenkov
-		icon = GFX_goal_unknown
+		icon = GFX_Secretary_Chervenkov
 		search_filters = {IC_FILTER}
 		cost = 10.00
 		x = 25
@@ -29,10 +29,13 @@ focus_tree = {
 		completion_reward = {
 			add_political_power = 100
 		}
+		available = {
+			always = no
+		}
 	}
 	focus = {
 		id = BUL_The_20th_Congress_of_the_CPSU
-		icon = GFX_goal_unknown
+		icon = GFX_twentieth_congress_of_the_cpsu
 		search_filters = {IC_FILTER}
 		cost = 10.00
 		x = 25
@@ -46,7 +49,7 @@ focus_tree = {
 	}
 	focus = {
 		id = BUL_The_Bulgarian_Peoples_Army
-		icon = GFX_goal_unknown
+		icon = GFX_coat_of_arms_of_bulgaria
 		search_filters = {IC_FILTER}
 		cost = 10.00
 		x = 47
@@ -59,7 +62,7 @@ focus_tree = {
 	}
 	focus = {
 		id = BUL_Socialist_Realism
-		icon = GFX_goal_unknown
+		icon = GFX_focus_socialist_realism
 		search_filters = {IC_FILTER}
 		cost = 10.00
 		prerequisite = {
@@ -73,7 +76,7 @@ focus_tree = {
 	}
 	focus = {
 		id = BUL_Outlaw_Islamic_Organizations
-		icon = GFX_goal_unknown
+		icon = GFX_focus_com_crush_islam
 		search_filters = {IC_FILTER}
 		cost = 10.00
 		prerequisite = {
@@ -87,7 +90,7 @@ focus_tree = {
 	}
 	focus = {
 		id = BUL_Repress_Orthodoxy
-		icon = GFX_goal_unknown
+		icon = GFX_focus_com_crush_christian
 		search_filters = {IC_FILTER}
 		cost = 10.00
 		prerequisite = {
@@ -101,7 +104,7 @@ focus_tree = {
 	}
 	focus = {
 		id = BUL_Encourage_State_Atheism
-		icon = GFX_goal_unknown
+		icon = GFX_focus_atheism
 		search_filters = {IC_FILTER}
 		cost = 10.00
 		prerequisite = {
@@ -118,7 +121,7 @@ focus_tree = {
 	}
 	focus = {
 		id = BUL_Strengthen_the_Bulgarian_Pioneers
-		icon = GFX_goal_unknown
+		icon = GFX_bulgaria_pioneer_organization
 		search_filters = {IC_FILTER}
 		cost = 10.00
 		prerequisite = {
@@ -132,7 +135,7 @@ focus_tree = {
 	}
 	focus = {
 		id = BUL_Encourage_Socialist_Values
-		icon = GFX_goal_unknown
+		icon = GFX_focus_red_propaganda
 		search_filters = {IC_FILTER}
 		cost = 10.00
 		prerequisite = {
@@ -146,12 +149,19 @@ focus_tree = {
 	}
 	focus = {
 		id = BUL_Crush_Internal_Opposition
-		icon = GFX_goal_unknown
+		icon = GFX_CrushResistance
 		search_filters = {IC_FILTER}
 		cost = 10.00
+		available = {
+			NOT = {
+			has_completed_focus = BUL_Secretary_Yugov
+			has_completed_focus = BUL_Secretary_Zhivkov
+		}
+		}
 		prerequisite = {
 			focus = BUL_The_20th_Congress_of_the_CPSU
 		}
+		
 		x = 7
 		y = 10
 		completion_reward = {
@@ -165,7 +175,7 @@ focus_tree = {
 	}
 	focus = {
 		id = BUL_Execute_Yugov
-		icon = GFX_goal_unknown
+		icon = GFX_Purge_Yugov
 		search_filters = {IC_FILTER}
 		cost = 10.00
 		prerequisite = {
@@ -179,7 +189,7 @@ focus_tree = {
 	}
 	focus = {
 		id = BUL_Purge_Zhivkov
-		icon = GFX_goal_unknown
+		icon = GFX_Purge_Zhikov
 		search_filters = {IC_FILTER}
 		cost = 10.00
 		prerequisite = {
@@ -193,7 +203,7 @@ focus_tree = {
 	}
 	focus = {
 		id = BUL_Embrace_Anti_Revisionism
-		icon = GFX_goal_unknown
+		icon = GFX_Spread_Anti_Revisionist_Propaganda
 		search_filters = {IC_FILTER}
 		cost = 10.00
 		prerequisite = {
@@ -219,7 +229,7 @@ focus_tree = {
 	}
 	focus = {
 		id = BUL_Expand_Ties_with_Albania
-		icon = GFX_goal_unknown
+		icon = GFX_Albania_Pennant
 		search_filters = {IC_FILTER}
 		cost = 10.00
 		prerequisite = {
@@ -244,7 +254,7 @@ focus_tree = {
 	}
 	focus = {
 		id = BUL_Align_with_Mao
-		icon = GFX_goal_unknown
+		icon = GFX_goal_PRC_deal
 		search_filters = {IC_FILTER}
 		cost = 10.00
 		prerequisite = {
@@ -296,7 +306,7 @@ focus_tree = {
 	}
 	focus = {
 		id = BUL_Establish_the_Creative_Unions
-		icon = GFX_goal_unknown
+		icon = GFX_Literacy_Campaign
 		search_filters = {IC_FILTER}
 		cost = 10.00
 		prerequisite = {
@@ -310,7 +320,7 @@ focus_tree = {
 	}
 	focus = {
 		id = BUL_Arrest_Political_Opponenents
-		icon = GFX_goal_unknown
+		icon = GFX_generic_arrests
 		search_filters = {IC_FILTER}
 		cost = 10.00
 		prerequisite = {
@@ -340,7 +350,7 @@ focus_tree = {
 	}
 	focus = {
 		id = BUL_Embrace_Peoples_Warfare
-		icon = GFX_goal_unknown
+		icon = GFX_PRC_Legacy_of_the_Liberation_War
 		search_filters = {IC_FILTER}
 		cost = 10.00
 		prerequisite = {
@@ -354,7 +364,7 @@ focus_tree = {
 	}	
 	focus = {
 		id = BUL_Reject_COMECON
-		icon = GFX_goal_unknown
+		icon = GFX_TheRussianBearCurtailed
 		search_filters = {IC_FILTER}
 		cost = 10.00
 		prerequisite = {
@@ -371,7 +381,7 @@ focus_tree = {
 	}
 	focus = {
 		id = BUL_Nationalize_Book_Publishing
-		icon = GFX_goal_unknown
+		icon = GFX_State_Control
 		search_filters = {IC_FILTER}
 		cost = 10.00
 		prerequisite = {
@@ -385,7 +395,7 @@ focus_tree = {
 	}
 	focus = {
 		id = BUL_Reverse_Course_on_Protivobalgarska 
-		icon = GFX_goal_unknown
+		icon = GFX_Mongolian_Political_Investigations
 		search_filters = {IC_FILTER}
 		cost = 10.00
 		prerequisite = {
@@ -414,7 +424,7 @@ focus_tree = {
 	}
 	focus = {
 		id = BUL_The_Foundations_of_a_Socialist_Society
-		icon = GFX_goal_unknown
+		icon = GFX_FocusTrueSocialismForMongolia 
 		search_filters = {IC_FILTER}
 		cost = 10.00
 		prerequisite = {
@@ -438,7 +448,7 @@ focus_tree = {
 	}
 	focus = {
 		id = BUL_Launch_the_Collectivization_Campaign
-		icon = GFX_goal_unknown
+		icon = GFX_Agrarian_Collectivization
 		search_filters = {IC_FILTER}
 		cost = 10.00
 		prerequisite = {
@@ -452,7 +462,7 @@ focus_tree = {
 	}
 	focus = {
 		id = BUL_Propaganda_Campaign
-		icon = GFX_goal_unknown
+		icon = GFX_agrarian_propaganda
 		search_filters = {IC_FILTER}
 		cost = 10.00
 		prerequisite = {
@@ -470,7 +480,7 @@ focus_tree = {
 	}
 	focus = {
 		id = BUL_Modernize_Agriculture
-		icon = GFX_goal_unknown
+		icon = GFX_Agricultural_Mechanization
 		search_filters = {IC_FILTER}
 		cost = 10.00
 		prerequisite = {
@@ -483,15 +493,21 @@ focus_tree = {
 				name = agri_tech_bonus
 				bonus = 1.75
 				uses = 1
-				category = agri_tech
+				category = agriculture
 			}
 		}
 	}
 	focus = {
 		id = BUL_Secretary_Yugov
-		icon = GFX_goal_unknown
+		icon = GFX_Yugov_Bulgaria
 		search_filters = {IC_FILTER}
 		cost = 10.00
+		available = {
+			NOT = {
+				has_completed_focus = BUL_Crush_Internal_Opposition
+				has_completed_focus = BUL_Secretary_Zhivkov
+			}	
+			}
 		prerequisite = {
 			focus = BUL_The_20th_Congress_of_the_CPSU
 		}
@@ -508,7 +524,7 @@ focus_tree = {
 	}
 	focus = {
 		id = BUL_Stack_the_Administration
-		icon = GFX_goal_unknown
+		icon = GFX_CommunistLoyalty
 		search_filters = {IC_FILTER}
 		cost = 10.00
 		prerequisite = {
@@ -523,7 +539,7 @@ focus_tree = {
 	}
 	focus = {
 		id = BUL_Military_Expansion
-		icon = GFX_goal_unknown
+		icon = GFX_RecruitmentDrive
 		search_filters = {IC_FILTER}
 		cost = 10.00
 		prerequisite = {
@@ -540,7 +556,7 @@ focus_tree = {
 	}
 	focus = {
 		id = BUL_Dismiss_Zhivkov
-		icon = GFX_goal_unknown
+		icon = GFX_Room_Meeting
 		search_filters = {IC_FILTER}
 		cost = 10.00
 		prerequisite = {
@@ -554,7 +570,7 @@ focus_tree = {
 	}
 	focus = {
 		id = BUL_Purge_Chervenkov_Loyalitsts
-		icon = GFX_goal_unknown
+		icon = GFX_purge
 		search_filters = {IC_FILTER}
 		cost = 10.00
 		prerequisite = {
@@ -578,7 +594,7 @@ focus_tree = {
 	}
 	focus = {
 		id = BUL_Repair_Yugoslavian_Relations
-		icon = GFX_goal_unknown
+		icon = GFX_goal_YUG_Proclamation
 		search_filters = {IC_FILTER}
 		cost = 10.00
 		prerequisite = {
@@ -606,7 +622,7 @@ focus_tree = {
 	}
 	focus = {
 		id = BUL_Promote_Bulgarian_Nationalism
-		icon = GFX_goal_unknown
+		icon = GFX_fist
 		search_filters = {IC_FILTER}
 		cost = 10.00
 		prerequisite = {
@@ -620,7 +636,7 @@ focus_tree = {
 	}
 	focus = {
 		id = BUL_Rehabilitate_Kostov
-		icon = GFX_goal_unknown
+		icon = GFX_Secretary_Kostov
 		search_filters = {IC_FILTER}
 		cost = 10.00
 		prerequisite = {
@@ -637,7 +653,7 @@ focus_tree = {
 	}
 	focus = {
 		id = BUL_Persecute_the_Landowners
-		icon = GFX_goal_unknown
+		icon = GFX_PurgeKulaks
 		search_filters = {IC_FILTER}
 		cost = 10.00
 		prerequisite = {
@@ -654,7 +670,7 @@ focus_tree = {
 	}
 	focus = {
 		id = BUL_Arrest_The_Resisters
-		icon = GFX_goal_unknown
+		icon = GFX_Communist_Spy
 		search_filters = {IC_FILTER}
 		cost = 10.00
 		prerequisite = {
@@ -684,7 +700,7 @@ focus_tree = {
 	}
 	focus = {
 		id = BUL_Invest_in_the_Communes
-		icon = GFX_goal_unknown
+		icon = GFX_increase_kolkhoz_funding
 		search_filters = {IC_FILTER}
 		cost = 10.00
 		prerequisite = {
@@ -701,7 +717,7 @@ focus_tree = {
 	}
 	focus = {
 		id = BUL_Launch_the_First_Five_Year_Plan
-		icon = GFX_goal_unknown
+		icon = GFX_PlannedEconomy
 		search_filters = {IC_FILTER}
 		cost = 10.00
 		prerequisite = {
@@ -718,7 +734,7 @@ focus_tree = {
 	}
 	focus = {
 		id = BUL_Expand_Gold_Mining
-		icon = GFX_goal_unknown
+		icon = GFX_Gold
 		search_filters = {IC_FILTER}
 		cost = 10.00
 		prerequisite = {
@@ -737,7 +753,7 @@ focus_tree = {
 	}
 	focus = {
 		id = BUL_Invest_in_Lead_Mines
-		icon = GFX_goal_unknown
+		icon = GFX_Mining_Pits
 		search_filters = {IC_FILTER}
 		cost = 10.00
 		prerequisite = {
@@ -756,7 +772,7 @@ focus_tree = {
 	}
 	focus = {
 		id = BUL_Soviet_Technical_Aid
-		icon = GFX_goal_unknown
+		icon = GFX_SOV_Technical_Aid
 		search_filters = {IC_FILTER}
 		cost = 10.00
 		prerequisite = {
@@ -770,7 +786,7 @@ focus_tree = {
 	}
 	focus = {
 		id = BUL_Heavy_Industrial_Investments
-		icon = GFX_goal_unknown
+		icon = GFX_Communist_Heavy_Industry
 		search_filters = {IC_FILTER}
 		cost = 10.00
 		prerequisite = {
@@ -794,7 +810,7 @@ focus_tree = {
 	}
 	focus = {
 		id = BUL_Infrastructure_Investments
-		icon = GFX_goal_unknown
+		icon = GFX_FocusBuildRoads
 		search_filters = {IC_FILTER}
 		cost = 10.00
 		prerequisite = {
@@ -817,7 +833,7 @@ focus_tree = {
 	}
 	focus = {
 		id = BUL_Urbanization
-		icon = GFX_goal_unknown
+		icon = GFX_Urbanisation
 		search_filters = {IC_FILTER}
 		cost = 10.00
 		prerequisite = {
@@ -831,7 +847,7 @@ focus_tree = {
 	}
 	focus = {
 		id = BUL_Light_Industry_Expansion
-		icon = GFX_goal_unknown
+		icon = GFX_FocusExpandTextileIndustry
 		search_filters = {IC_FILTER}
 		cost = 10.00
 		prerequisite = {
@@ -878,7 +894,7 @@ focus_tree = {
 	}
 	focus = {
 		id = BUL_The_Little_Stalin
-		icon = GFX_goal_unknown
+		icon = GFX_neo_stalinism
 		search_filters = {IC_FILTER}
 		cost = 10.00
 		prerequisite = {
@@ -892,7 +908,7 @@ focus_tree = {
 	}
 	focus = {
 		id = BUL_Begin_the_Political_Purges
-		icon = GFX_goal_unknown
+		icon = GFX_European_Communist_Spy
 		search_filters = {IC_FILTER}
 		cost = 10.00
 		prerequisite = {
@@ -909,7 +925,7 @@ focus_tree = {
 	}
 	focus = {
 		id = BUL_Execute_Kostov
-		icon = GFX_goal_unknown
+		icon = GFX_Purge_Kostov
 		search_filters = {IC_FILTER}
 		cost = 10.00
 		prerequisite = {
@@ -923,12 +939,19 @@ focus_tree = {
 	}
 	focus = {
 		id = BUL_Secretary_Zhivkov
-		icon = GFX_goal_unknown
+		icon = GFX_Secretary_Zhikov
 		search_filters = {IC_FILTER}
 		cost = 10.00
+		available = {
+			NOT = {
+				has_completed_focus = BUL_Crush_Internal_Opposition
+				has_completed_focus = BUL_Secretary_Yugov
+			}
+		}
 		prerequisite = {
 			focus = BUL_The_20th_Congress_of_the_CPSU
 		}
+
 		x = 34
 		y = 10
 		completion_reward = {
@@ -942,7 +965,7 @@ focus_tree = {
 	}
 	focus = {
 		id = BUL_Dismiss_Chervenkov
-		icon = GFX_goal_unknown
+		icon = GFX_Break_Treaty
 		search_filters = {IC_FILTER}
 		cost = 10.00
 		prerequisite = {
@@ -956,7 +979,7 @@ focus_tree = {
 	}
 	focus = {
 		id = BUL_Dismantle_the_Personality_Cult
-		icon = GFX_goal_unknown
+		icon = GFX_Destalinization
 		search_filters = {IC_FILTER}
 		cost = 10.00
 		prerequisite = {
@@ -970,7 +993,7 @@ focus_tree = {
 	}
 	focus = {
 		id = BUL_Increase_Soviet_Dependency
-		icon = GFX_goal_unknown
+		icon = GFX_goal_SOV_deal
 		search_filters = {IC_FILTER}
 		cost = 10.00
 		prerequisite = {
@@ -1021,7 +1044,7 @@ focus_tree = {
 	}
 	focus = {
 		id = BUL_Embrace_COMECON_Economic_Planning
-		icon = GFX_goal_unknown
+		icon = GFX_comecon_goal
 		search_filters = {IC_FILTER}
 		cost = 10.00
 		prerequisite = {
@@ -1046,7 +1069,7 @@ focus_tree = {
 	}
 	focus = {
 		id = BUL_Reopen_the_Prison_Camps
-		icon = GFX_goal_unknown
+		icon = GFX_Prison_Camps
 		search_filters = {IC_FILTER}
 		cost = 10.00
 		prerequisite = {
@@ -1063,7 +1086,7 @@ focus_tree = {
 	}
 	focus = {
 		id = BUL_Deepen_Trading_Relations_with_the_Soviets
-		icon = GFX_goal_unknown
+		icon = GFX_NationalizeTrade
 		search_filters = {IC_FILTER}
 		cost = 10.00
 		prerequisite = {
@@ -1078,7 +1101,7 @@ focus_tree = {
 	}
 	focus = {
 		id = BUL_A_Bulgarian_Personality_Cult
-		icon = GFX_goal_unknown
+		icon = GFX_communist_bulgaria
 		search_filters = {IC_FILTER}
 		cost = 10.00
 		prerequisite = {
@@ -1092,7 +1115,7 @@ focus_tree = {
 	}
 	focus = {
 		id = BUL_Crackdown_on_the_Goryani
-		icon = GFX_goal_unknown
+		icon = GFX_focus_internal_dissent
 		search_filters = {IC_FILTER}
 		cost = 10.00
 		prerequisite = {
@@ -1112,7 +1135,7 @@ focus_tree = {
 	}
 	focus = {
 		id = BUL_The_Death_of_Stalin
-		icon = GFX_goal_unknown
+		icon = GFX_Stalin_Cult
 		search_filters = {IC_FILTER}
 		cost = 10.00
 		prerequisite = {
@@ -1138,7 +1161,7 @@ focus_tree = {
 	}
 	focus = {
 		id = BUL_Release_Political_Prisoners
-		icon = GFX_goal_unknown
+		icon = GFX_Amnesty_for_political_prisoners
 		search_filters = {IC_FILTER}
 		cost = 10.00
 		prerequisite = {
@@ -1152,7 +1175,7 @@ focus_tree = {
 	}
 	focus = {
 		id = BUL_Sideline_the_Partisans_Influence
-		icon = GFX_goal_unknown
+		icon = GFX_Communist_Subterfuge
 		search_filters = {IC_FILTER}
 		cost = 10.00
 		prerequisite = {
@@ -1168,7 +1191,7 @@ focus_tree = {
 	}
 	focus = {
 		id = BUL_Criticize_Mao
-		icon = GFX_goal_unknown
+		icon = GFX_microphone
 		search_filters = {IC_FILTER}
 		cost = 10.00
 		prerequisite = {
@@ -1196,7 +1219,7 @@ focus_tree = {
 	}
 	focus = {
 		id = BUL_The_Bulgarian_Air_Force
-		icon = GFX_goal_unknown
+		icon = GFX_bulgarian_air_force
 		search_filters = {IC_FILTER}
 		cost = 10.00
 		prerequisite = {
@@ -1228,7 +1251,7 @@ focus_tree = {
 	}
 	focus = {
 		id = BUL_Deep_Battle_Theory
-		icon = GFX_goal_unknown
+		icon = GFX_RedArmy
 		search_filters = {IC_FILTER}
 		cost = 10.00
 		prerequisite = {
@@ -1262,13 +1285,13 @@ focus_tree = {
 				add_equipment_to_stockpile = {
 						type = jet_multirole_equipment_2
 						amount = 200
-						producer = SOV
+						producer = CUM
 					}
 			}
 	}
 	focus = {
 		id = BUL_Soviet_IL_28_Bombers
-		icon = GFX_goal_unknown
+		icon = GFX_IL_28
 		search_filters = {IC_FILTER}
 		cost = 10.00
 		prerequisite = {
@@ -1286,7 +1309,7 @@ focus_tree = {
 	}
 	focus = {
 		id = BUL_The_Bulgarian_Land_Forces
-		icon = GFX_goal_unknown
+		icon = GFX_bulgarian_land_forces
 		search_filters = {IC_FILTER}
 		cost = 10.00
 		prerequisite = {
@@ -1300,7 +1323,7 @@ focus_tree = {
 	}
 	focus = {
 		id = BUL_Soviet_AK_47s
-		icon = GFX_goal_unknown
+		icon = GFX_FocusAK47s
 		search_filters = {IC_FILTER}
 		cost = 10.00
 		prerequisite = {
@@ -1310,15 +1333,15 @@ focus_tree = {
 		y = 2
 		completion_reward = {
 				add_equipment_to_stockpile = {
-					type = infantry_equipment_0
+					type = infantry_equipment_1
 					amount = 10000
-					producer = SOV
+					producer = CUM
 				}			
 		}
 	}	
 	focus = {
 		id = BUL_Empower_the_Peoples_Militia
-		icon = GFX_goal_unknown
+		icon = GFX_generic_socialist_propaganda
 		search_filters = {IC_FILTER}
 		cost = 10.00
 		prerequisite = {
@@ -1332,7 +1355,7 @@ focus_tree = {
 	}
 	focus = {
 		id = BUL_Artillery_Investments
-		icon = GFX_goal_unknown
+		icon = GFX_goal_generic_army_artillery2
 		search_filters = {IC_FILTER}
 		cost = 10.00
 		prerequisite = {
@@ -1354,7 +1377,7 @@ focus_tree = {
 	}
 	focus = {
 		id = BUL_Soviet_T55s
-		icon = GFX_goal_unknown
+		icon = GFX_T_55
 		search_filters = {IC_FILTER}
 		cost = 10.00
 		prerequisite = {
@@ -1364,15 +1387,15 @@ focus_tree = {
 		y = 4
 		completion_reward = {
 			add_equipment_to_stockpile = {
-				type = mbt_equipment_1
+				type = mbt_equipment_2
 				amount = 200
-				producer = SOV
+				producer = CUM
 			}		
 		}
 	}
 	focus = {
 		id = BUL_The_Bulgarian_Navy
-		icon = GFX_goal_unknown
+		icon = GFX_bulgarian_people_navy
 		search_filters = {IC_FILTER}
 		cost = 10.00
 		prerequisite = {
@@ -1386,7 +1409,7 @@ focus_tree = {
 	}
 	focus = {
 		id = BUL_Expand_the_Marines
-		icon = GFX_goal_unknown
+		icon = GFX_Naval_Infantry
 		search_filters = {IC_FILTER}
 		cost = 10.00
 		prerequisite = {
@@ -1405,7 +1428,7 @@ focus_tree = {
 	}
 	focus = {
 		id = BUL_Expand_Altiya_Naval_Base
-		icon = GFX_goal_unknown
+		icon = GFX_Naval_Academies
 		search_filters = {IC_FILTER}
 		cost = 10.00
 		prerequisite = {
@@ -1426,7 +1449,7 @@ focus_tree = {
 	}
 	focus = {
 		id = BUL_Expand_the_Georgi_Dimitrov_Shipbuilding_Plant
-		icon = GFX_goal_unknown
+		icon = GFX_Communist_Armada
 		search_filters = {IC_FILTER}
 		cost = 10.00
 		prerequisite = {
@@ -1439,45 +1462,22 @@ focus_tree = {
 		y = 3
 		completion_reward = {
 			navy_experience = 10
-					if = {
-							limit = {
-									NOT = {
-											any_owned_state = {
-													dockyard > 0
-													free_building_slots = {
-															building = dockyard
-															size > 2
-															include_locked = yes
-														}
-												}
-										}
-									any_owned_state = {
-											is_coastal = yes
-										}
-								}
-							random_owned_controlled_state = {
-									limit = {
-											is_coastal = yes
-											free_building_slots = {
-													building = dockyard
-													size > 2
-													include_locked = yes
-												}
-										}
-									add_extra_state_shared_building_slots = 2
-									add_building_construction = {
-											type = dockyard
-											level = 2
-											instant_build = yes
-										}
-								}
-							set_country_flag = naval_effort_built
-						}
+			random_owned_controlled_state = {
+				limit = {
+						is_coastal = yes
+					}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = dockyard
+					level = 2
+					instant_build = yes
 				}
+			}
+		}
 	}
 	focus = {
 		id = BUL_Naval_Fortification_Effort
-		icon = GFX_goal_unknown
+		icon = GFX_FortificationEffort
 		search_filters = {IC_FILTER}
 		cost = 10.00
 		prerequisite = {
@@ -1491,7 +1491,7 @@ focus_tree = {
 	}
 	focus = {
 		id = BUL_The_April_Line
-		icon = GFX_goal_unknown
+		icon = GFX_TheRussianBear
 		search_filters = {IC_FILTER}
 		cost = 10.00
 		prerequisite = {
@@ -1508,7 +1508,7 @@ focus_tree = {
 	}
 	focus = {
 		id = BUL_Launch_the_Second_Five_Year_Plan
-		icon = GFX_goal_unknown
+		icon = GFX_Centrally_Planned_Economy
 		search_filters = {IC_FILTER}
 		cost = 10.00
 		prerequisite = {
@@ -1525,7 +1525,7 @@ focus_tree = {
 	}
 	focus = {
 		id = BUL_Agricultural_Growth
-		icon = GFX_goal_unknown
+		icon = GFX_wheat
 		search_filters = {IC_FILTER}
 		cost = 10.00
 		prerequisite = {
@@ -1541,13 +1541,13 @@ focus_tree = {
 				name = agri_tech_bonus
 				bonus = 0.75
 				uses = 1
-				category = agri_tech
+				category = agriculture
 			}		
 		}
 	}
 	focus = {
 		id = BUL_Encourage_Peasent_Migration
-		icon = GFX_goal_unknown
+		icon = GFX_farmer_debt_relief
 		search_filters = {IC_FILTER}
 		cost = 10.00
 		prerequisite = {
@@ -1564,7 +1564,7 @@ focus_tree = {
 	}
 	focus = {
 		id = BUL_Industrial_Growth
-		icon = GFX_goal_unknown
+		icon = GFX_industrial_subsidies
 		search_filters = {IC_FILTER}
 		cost = 10.00
 		prerequisite = {
@@ -1581,7 +1581,7 @@ focus_tree = {
 	}
 	focus = {
 		id = BUL_The_Third_Five_Year_Plan
-		icon = GFX_goal_unknown
+		icon = GFX_CommunistProductionFocus
 		search_filters = {IC_FILTER}
 		cost = 10.00
 		prerequisite = {
@@ -1598,7 +1598,7 @@ focus_tree = {
 	}
 	focus = {
 		id = BUL_Establish_Agricultural_Pensions
-		icon = GFX_goal_unknown
+		icon = GFX_agricultural_banks
 		search_filters = {IC_FILTER}
 		cost = 10.00
 		prerequisite = {
@@ -1627,7 +1627,7 @@ focus_tree = {
 	}
 	focus = {
 		id = BUL_Increase_Consumer_Goods_Production
-		icon = GFX_goal_unknown
+		icon = GFX_ISR_Focus_Increase_Living_Standards
 		search_filters = {IC_FILTER}
 		cost = 10.00
 		prerequisite = {
@@ -1645,7 +1645,7 @@ focus_tree = {
 	}
 	focus = {
 		id = BUL_Declare_Bulgaria_Fully_Collectivized
-		icon = GFX_goal_unknown
+		icon = GFX_Socialist_Consolidation
 		search_filters = {IC_FILTER}
 		cost = 10.00
 		prerequisite = {
@@ -1663,7 +1663,7 @@ focus_tree = {
 	}
 	focus = {
 		id = BUL_COMECON_Aid
-		icon = GFX_goal_unknown
+		icon = GFX_Money
 		search_filters = {IC_FILTER}
 		cost = 10.00
 		prerequisite = {
@@ -1692,7 +1692,7 @@ focus_tree = {
 	}
 	focus = {
 		id = BUL_Expand_Light_Industry
-		icon = GFX_goal_unknown
+		icon = GFX_FactoryTown
 		search_filters = {IC_FILTER}
 		cost = 10.00
 		prerequisite = {
@@ -1736,7 +1736,7 @@ focus_tree = {
 	}
 	focus = {
 		id = BUL_Expand_Electrical_Equipment_Production
-		icon = GFX_goal_unknown
+		icon = GFX_Improved_Electronics
 		search_filters = {IC_FILTER}
 		cost = 10.00
 		prerequisite = {
@@ -1768,7 +1768,7 @@ focus_tree = {
 	}
 	focus = {
 		id = BUL_Industrial_Modernization
-		icon = GFX_goal_unknown
+		icon = GFX_Generic_Industrialization
 		search_filters = {IC_FILTER}
 		cost = 10.00
 		prerequisite = {
@@ -1790,7 +1790,7 @@ focus_tree = {
 	}
 	focus = {
 		id = BUL_Launch_the_Bulgarian_Great_Leap_Forward
-		icon = GFX_goal_unknown
+		icon = GFX_chinese_propaganda
 		search_filters = {IC_FILTER}
 		cost = 10.00
 		prerequisite = {
@@ -1810,7 +1810,7 @@ focus_tree = {
 	}
 	focus = {
 		id = BUL_Empower_Worker_Councils
-		icon = GFX_goal_unknown
+		icon = GFX_Workers_Councils
 		search_filters = {IC_FILTER}
 		cost = 10.00
 		prerequisite = {
@@ -1827,7 +1827,7 @@ focus_tree = {
 	}
 	focus = {
 		id = BUL_Request_More_Soviet_Loans
-		icon = GFX_goal_unknown
+		icon = GFX_Soviet_Loans
 		search_filters = {IC_FILTER}
 		cost = 10.00
 		prerequisite = {
@@ -1847,7 +1847,7 @@ focus_tree = {
 	}
 	focus = {
 		id = BUL_Chinese_Economic_Aid
-		icon = GFX_goal_unknown
+		icon = GFX_PRC_Fiscal
 		search_filters = {IC_FILTER}
 		cost = 10.00
 		prerequisite = {

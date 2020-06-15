@@ -2199,7 +2199,7 @@ focus_tree = {
 	}
 	focus = {
 		id = ENG_Embrace_Free_Trade
-		icon = GFX_goal_unknown
+		icon = GFX_goal_generic_positive_trade_relations
 		search_filters = {IC_FILTER}
 		cost = 10.00
 		prerequisite = {
@@ -2466,6 +2466,7 @@ focus_tree = {
 		x = 47
 		y = 9
 		completion_reward = {
+		 	custom_effect_tooltip = Resource_Efficiency_TT
 			add_ideas = Resource_Efficiency
 		}
 	}
@@ -5264,7 +5265,7 @@ focus_tree = {
 		x = 11
 		y = 9
 			completion_reward = {
-					add_research_slot = 1
+					army_experience = 50
 				}
 
 	}

@@ -5,13 +5,15 @@ oob = "AFG_1949"
 if = {
 	limit = { has_dlc = "Man the Guns"}
 	set_technology = {
-		ww_detection = 1
+		detection_ww = 1
 		ww_armaments = 1
 
 		ww_screens = 1
 	}
 }
-
+set_country_flag = weapon_purchasing_CUM_permit
+set_country_flag = weapon_purchasing_CAP_permit
+set_country_flag = weapon_purchasing_MAO_permit
 set_technology = {
 
 ##### INFRA #####
@@ -135,12 +137,16 @@ add_to_array = { influence_array_val = 10 }
 	elections_allowed = no
 }
 
+#create_country_leader = {
+#	name = "Mohammed Zahir Shah"
+#	picture = "Mohammed_Zahir_Shah.dds"
+#	ideology = monarchy
+#}
 create_country_leader = {
-	name = "Mohammed Zahir Shah"
-	picture = "Mohammed_Zahir_Shah.dds"
+	name = "Mohammed Daoud Khan"
+	picture = "Mohammed_Daoud_Khan.dds"
 	ideology = monarchy
 }
-
 create_country_leader = {
 	name = "Mohammed Omar"
 	picture = "Mohammed_Omar.dds"
@@ -152,7 +158,11 @@ create_country_leader = {
 	picture = "Mohammed_Daoud_Khan.dds"
 	ideology = conservatism
 }
-
+create_country_leader = {
+	name = "Ismael Balkhi"
+	picture = "Ismael_Balkhi.dds"
+	ideology = libertarianism
+}
 create_country_leader = {
 	name = "Nur Muhammad Taraki"
 	picture = "Nur_Muhammad_Taraki.dds"

@@ -17,19 +17,27 @@ technologies = {
 			position = { x = 0 y = 4 }
 		}
 		
-		ai_will_do = {
-			factor = 1
-			
-			modifier = {
-				has_war = yes
-				factor = 2
-			}
-		}
-		
 		categories = {
 			naval_equipment
 			naval_modules_general
 			naval_countermeasures
+		}
+		
+		ai_will_do = {
+			factor = 0
+			
+			modifier = {
+				add = 10
+				AND = {
+					num_of_naval_factories > 3
+					date > 1945.1.1
+				}
+			}
+		}
+		
+		ai_research_weights = {
+			naval_doctrine = -0.1
+			naval_equipment = -0.1
 		}
 	}
 	countermeasures_1 = {
@@ -50,19 +58,27 @@ technologies = {
 			position = { x = 0 y = 8 }
 		}
 		
-		ai_will_do = {
-			factor = 1
-			
-			modifier = {
-				has_war = yes
-				factor = 2
-			}
-		}
-		
 		categories = {
 			naval_equipment
 			naval_modules_general
 			naval_countermeasures
+		}
+		
+		ai_will_do = {
+			factor = 0
+			
+			modifier = {
+				add = 10
+				AND = {
+					num_of_naval_factories > 3
+					date > 1955.1.1
+				}
+			}
+		}
+		
+		ai_research_weights = {
+			naval_doctrine = -0.1
+			naval_equipment = -0.1
 		}
 	}
 	countermeasures_2 = {
@@ -77,25 +93,37 @@ technologies = {
 		research_cost = 3.5
 		
 		start_year = 1965
+		
+		dependencies = {
+			hardware_III = 1
+		}
 
 		folder = {
 			name = mtgnavalmodulefolder
 			position = { x = 0 y = 12 }
 		}
 		
-		ai_will_do = {
-			factor = 1
-			
-			modifier = {
-				has_war = yes
-				factor = 2
-			}
-		}
-		
 		categories = {
 			naval_equipment
 			naval_modules_general
 			naval_countermeasures
+		}
+		
+		ai_will_do = {
+			factor = 0
+			
+			modifier = {
+				add = 10
+				AND = {
+					num_of_naval_factories > 3
+					date > 1965.1.1
+				}
+			}
+		}
+		
+		ai_research_weights = {
+			naval_doctrine = -0.1
+			naval_equipment = -0.1
 		}
 	}
 	countermeasures_3 = {
@@ -114,25 +142,37 @@ technologies = {
 		research_cost = 3.5
 		
 		start_year = 1975
+		
+		dependencies = {
+			hardware_V = 1
+		}
 
 		folder = {
 			name = mtgnavalmodulefolder
 			position = { x = 0 y = 16 }
 		}
 		
-		ai_will_do = {
-			factor = 1
-			
-			modifier = {
-				has_war = yes
-				factor = 2
-			}
-		}
-		
 		categories = {
 			naval_equipment
 			naval_modules_general
 			naval_countermeasures
+		}
+		
+		ai_will_do = {
+			factor = 0
+			
+			modifier = {
+				add = 10
+				AND = {
+					num_of_naval_factories > 3
+					date > 1975.1.1
+				}
+			}
+		}
+		
+		ai_research_weights = {
+			naval_doctrine = -0.1
+			naval_equipment = -0.1
 		}
 	}
 	countermeasures_4 = {
@@ -147,25 +187,37 @@ technologies = {
 		research_cost = 3.5
 		
 		start_year = 1985
+		
+		dependencies = {
+			hardware_VII = 1
+		}
 
 		folder = {
 			name = mtgnavalmodulefolder
 			position = { x = 0 y = 20 }
 		}
 		
-		ai_will_do = {
-			factor = 1
-			
-			modifier = {
-				has_war = yes
-				factor = 2
-			}
-		}
-		
 		categories = {
 			naval_equipment
 			naval_modules_general
 			naval_countermeasures
+		}
+		
+		ai_will_do = {
+			factor = 0
+			
+			modifier = {
+				add = 10
+				AND = {
+					num_of_naval_factories > 3
+					date > 1985.1.1
+				}
+			}
+		}
+		
+		ai_research_weights = {
+			naval_doctrine = -0.1
+			naval_equipment = -0.1
 		}
 	}
 	countermeasures_5 = {
@@ -180,25 +232,37 @@ technologies = {
 		research_cost = 3.5
 		
 		start_year = 1995
+		
+		dependencies = {
+			hardware_IX = 1
+		}
 
 		folder = {
 			name = mtgnavalmodulefolder
 			position = { x = 0 y = 24 }
 		}
 		
-		ai_will_do = {
-			factor = 1
-			
-			modifier = {
-				has_war = yes
-				factor = 2
-			}
-		}
-		
 		categories = {
 			naval_equipment
 			naval_modules_general
 			naval_countermeasures
+		}
+		
+		ai_will_do = {
+			factor = 0
+			
+			modifier = {
+				add = 10
+				AND = {
+					num_of_naval_factories > 3
+					date > 1995.1.1
+				}
+			}
+		}
+		
+		ai_research_weights = {
+			naval_doctrine = -0.1
+			naval_equipment = -0.1
 		}
 	}
 	countermeasures_6 = {
@@ -209,25 +273,37 @@ technologies = {
 		research_cost = 3.5
 		
 		start_year = 2005
+		
+		dependencies = {
+			hardware_XI = 1
+		}
 
 		folder = {
 			name = mtgnavalmodulefolder
 			position = { x = 0 y = 28 }
 		}
 		
-		ai_will_do = {
-			factor = 1
-			
-			modifier = {
-				has_war = yes
-				factor = 2
-			}
-		}
-		
 		categories = {
 			naval_equipment
 			naval_modules_general
 			naval_countermeasures
+		}
+		
+		ai_will_do = {
+			factor = 0
+			
+			modifier = {
+				add = 10
+				AND = {
+					num_of_naval_factories > 3
+					date > 2005.1.1
+				}
+			}
+		}
+		
+		ai_research_weights = {
+			naval_doctrine = -0.1
+			naval_equipment = -0.1
 		}
 	}
 	ciws_0 = {
@@ -239,22 +315,17 @@ technologies = {
 			research_cost_coeff = 1
 		}
 		
-		research_cost = 2
+		research_cost = 3.5
 		
 		start_year = 1980
+		
+		dependencies = {
+			hardware_VIII = 1
+		}
 
 		folder = {
 			name = mtgnavalmodulefolder
 			position = { x = 1 y = 18 }
-		}
-		
-		ai_will_do = {
-			factor = 1
-			
-			modifier = {
-				has_war = yes
-				factor = 2
-			}
 		}
 		
 		categories = {
@@ -262,6 +333,23 @@ technologies = {
 			naval_modules_general
 			naval_countermeasures
 			ciws
+		}
+		
+		ai_will_do = {
+			factor = 0
+			
+			modifier = {
+				add = 10
+				AND = {
+					num_of_naval_factories > 3
+					date > 1980.1.1
+				}
+			}
+		}
+		
+		ai_research_weights = {
+			naval_doctrine = -0.1
+			naval_equipment = -0.1
 		}
 	}
 	ciws_1 = {
@@ -273,22 +361,17 @@ technologies = {
 			research_cost_coeff = 1
 		}
 		
-		research_cost = 1.5
+		research_cost = 3.5
 		
 		start_year = 1990
+		
+		dependencies = {
+			hardware_X = 1
+		}
 
 		folder = {
 			name = mtgnavalmodulefolder
 			position = { x = 1 y = 22 }
-		}
-		
-		ai_will_do = {
-			factor = 1
-			
-			modifier = {
-				has_war = yes
-				factor = 2
-			}
 		}
 		
 		categories = {
@@ -296,6 +379,23 @@ technologies = {
 			naval_modules_general
 			naval_countermeasures
 			ciws
+		}
+		
+		ai_will_do = {
+			factor = 0
+			
+			modifier = {
+				add = 10
+				AND = {
+					num_of_naval_factories > 10
+					date > 1990.1.1
+				}
+			}
+		}
+		
+		ai_research_weights = {
+			naval_doctrine = -0.1
+			naval_equipment = -0.1
 		}
 	}
 	ciws_2 = {
@@ -303,22 +403,17 @@ technologies = {
 			ciws_2
 		}
 		
-		research_cost = 1.5
+		research_cost = 3.5
 		
 		start_year = 2000
+		
+		dependencies = {
+			hardware_XII = 1
+		}
 
 		folder = {
 			name = mtgnavalmodulefolder
 			position = { x = 1 y = 26 }
-		}
-		
-		ai_will_do = {
-			factor = 1
-			
-			modifier = {
-				has_war = yes
-				factor = 2
-			}
 		}
 		
 		categories = {
@@ -326,6 +421,23 @@ technologies = {
 			naval_modules_general
 			naval_countermeasures
 			ciws
+		}
+		
+		ai_will_do = {
+			factor = 0
+			
+			modifier = {
+				add = 10
+				AND = {
+					num_of_naval_factories > 20
+					date > 2000.1.1
+				}
+			}
+		}
+		
+		ai_research_weights = {
+			naval_doctrine = -0.1
+			naval_equipment = -0.1
 		}
 	}
 	maritime_sonar_0 = {
@@ -345,16 +457,7 @@ technologies = {
 		}
 		
 		dependencies = {
-			ww_detection = 1
-		}
-		
-		ai_will_do = {
-			factor = 1
-			
-			modifier = {
-				has_war = yes
-				factor = 2
-			}
+			detection_ww = 1
 		}
 		
 		categories = {
@@ -362,6 +465,23 @@ technologies = {
 			naval_modules_general
 			maritime_sonar
 			naval_antisub
+		}
+		
+		ai_will_do = {
+			factor = 0
+			
+			modifier = {
+				add = 10
+				AND = {
+					num_of_naval_factories > 10
+					date > 1945.1.1
+				}
+			}
+		}
+		
+		ai_research_weights = {
+			naval_doctrine = -0.1
+			naval_equipment = -0.1
 		}
 	}
 	maritime_sonar_1 = {
@@ -376,19 +496,14 @@ technologies = {
 		research_cost = 1.5
 		
 		start_year = 1960
+		
+		dependencies = {
+			hardware_III = 1
+		}
 
 		folder = {
 			name = mtgnavalmodulefolder
 			position = { x = 0 y = 10 }
-		}
-		
-		ai_will_do = {
-			factor = 1
-			
-			modifier = {
-				has_war = yes
-				factor = 2
-			}
 		}
 		
 		categories = {
@@ -396,6 +511,23 @@ technologies = {
 			naval_modules_general
 			maritime_sonar
 			naval_antisub
+		}
+		
+		ai_will_do = {
+			factor = 0
+			
+			modifier = {
+				add = 10
+				AND = {
+					num_of_naval_factories > 10
+					date > 1960.1.1
+				}
+			}
+		}
+		
+		ai_research_weights = {
+			naval_doctrine = -0.1
+			naval_equipment = -0.1
 		}
 	}
 	maritime_sonar_2 = {
@@ -410,19 +542,14 @@ technologies = {
 		research_cost = 1.5
 		
 		start_year = 1975
+		
+		dependencies = {
+			hardware_VI = 1
+		}
 
 		folder = {
 			name = mtgnavalmodulefolder
 			position = { x = 0 y = 16 }
-		}
-		
-		ai_will_do = {
-			factor = 1
-			
-			modifier = {
-				has_war = yes
-				factor = 2
-			}
 		}
 		
 		categories = {
@@ -430,6 +557,23 @@ technologies = {
 			naval_modules_general
 			maritime_sonar
 			naval_antisub
+		}
+		
+		ai_will_do = {
+			factor = 0
+			
+			modifier = {
+				add = 10
+				AND = {
+					num_of_naval_factories > 10
+					date > 1975.1.1
+				}
+			}
+		}
+		
+		ai_research_weights = {
+			naval_doctrine = -0.1
+			naval_equipment = -0.1
 		}
 	}
 	maritime_sonar_3 = {
@@ -444,19 +588,14 @@ technologies = {
 		research_cost = 1.5
 		
 		start_year = 1990
+		
+		dependencies = {
+			hardware_IX = 1
+		}
 
 		folder = {
 			name = mtgnavalmodulefolder
 			position = { x = 0 y = 22 }
-		}
-		
-		ai_will_do = {
-			factor = 1
-			
-			modifier = {
-				has_war = yes
-				factor = 2
-			}
 		}
 		
 		categories = {
@@ -464,6 +603,23 @@ technologies = {
 			naval_modules_general
 			maritime_sonar
 			naval_antisub
+		}
+		
+		ai_will_do = {
+			factor = 0
+			
+			modifier = {
+				add = 10
+				AND = {
+					num_of_naval_factories > 30
+					date > 1995.1.1
+				}
+			}
+		}
+		
+		ai_research_weights = {
+			naval_doctrine = -0.1
+			naval_equipment = -0.1
 		}
 	}
 	maritime_sonar_4 = {
@@ -474,19 +630,14 @@ technologies = {
 		research_cost = 1.5
 		
 		start_year = 2005
+		
+		dependencies = {
+			hardware_XII = 1
+		}
 
 		folder = {
 			name = mtgnavalmodulefolder
 			position = { x = 0 y = 28 }
-		}
-		
-		ai_will_do = {
-			factor = 1
-			
-			modifier = {
-				has_war = yes
-				factor = 2
-			}
 		}
 		
 		categories = {
@@ -494,6 +645,23 @@ technologies = {
 			naval_modules_general
 			maritime_sonar
 			naval_antisub
+		}
+		
+		ai_will_do = {
+			factor = 0
+			
+			modifier = {
+				add = 10
+				AND = {
+					num_of_naval_factories > 30
+					date > 2005.1.1
+				}
+			}
+		}
+		
+		ai_research_weights = {
+			naval_doctrine = -0.1
+			naval_equipment = -0.1
 		}
 	}
 	subkiller_0 = {
@@ -514,20 +682,28 @@ technologies = {
 			position = { x = 0 y = 2 }
 		}
 		
-		ai_will_do = {
-			factor = 1
-			
-			modifier = {
-				has_war = yes
-				factor = 2
-			}
-		}
-		
 		categories = {
 			naval_equipment
 			naval_modules_general
 			naval_subkiller
 			naval_antisub
+		}
+		
+		ai_will_do = {
+			factor = 0
+			
+			modifier = {
+				add = 10
+				AND = {
+					num_of_naval_factories > 10
+					date > 1940.1.1
+				}
+			}
+		}
+		
+		ai_research_weights = {
+			naval_doctrine = -0.1
+			naval_equipment = -0.1
 		}
 	}
 	subkiller_1 = {
@@ -548,20 +724,28 @@ technologies = {
 			position = { x = 0 y = 6 }
 		}
 		
-		ai_will_do = {
-			factor = 1
-			
-			modifier = {
-				has_war = yes
-				factor = 2
-			}
-		}
-		
 		categories = {
 			naval_equipment
 			naval_modules_general
 			naval_subkiller
 			naval_antisub
+		}
+		
+		ai_will_do = {
+			factor = 0
+			
+			modifier = {
+				add = 10
+				AND = {
+					num_of_naval_factories > 10
+					date > 1950.1.1
+				}
+			}
+		}
+		
+		ai_research_weights = {
+			naval_doctrine = -0.1
+			naval_equipment = -0.1
 		}
 	}
 	subkiller_2 = {
@@ -576,19 +760,14 @@ technologies = {
 		research_cost = 1.5
 		
 		start_year = 1960
+		
+		dependencies = {
+			hardware_II = 1
+		}
 
 		folder = {
 			name = mtgnavalmodulefolder
 			position = { x = 0 y = 10 }
-		}
-		
-		ai_will_do = {
-			factor = 1
-			
-			modifier = {
-				has_war = yes
-				factor = 2
-			}
 		}
 		
 		categories = {
@@ -596,6 +775,23 @@ technologies = {
 			naval_modules_general
 			naval_subkiller
 			naval_antisub
+		}
+		
+		ai_will_do = {
+			factor = 0
+			
+			modifier = {
+				add = 10
+				AND = {
+					num_of_naval_factories > 10
+					date > 1960.1.1
+				}
+			}
+		}
+		
+		ai_research_weights = {
+			naval_doctrine = -0.1
+			naval_equipment = -0.1
 		}
 	}
 	subkiller_3 = {
@@ -610,19 +806,14 @@ technologies = {
 		research_cost = 1.5
 		
 		start_year = 1970
+		
+		dependencies = {
+			hardware_IV = 1
+		}
 
 		folder = {
 			name = mtgnavalmodulefolder
 			position = { x = 0 y = 14 }
-		}
-		
-		ai_will_do = {
-			factor = 1
-			
-			modifier = {
-				has_war = yes
-				factor = 2
-			}
 		}
 		
 		categories = {
@@ -630,6 +821,23 @@ technologies = {
 			naval_modules_general
 			naval_subkiller
 			naval_antisub
+		}
+		
+		ai_will_do = {
+			factor = 0
+			
+			modifier = {
+				add = 10
+				AND = {
+					num_of_naval_factories > 10
+					date > 1970.1.1
+				}
+			}
+		}
+		
+		ai_research_weights = {
+			naval_doctrine = -0.1
+			naval_equipment = -0.1
 		}
 	}
 	subkiller_4 = {
@@ -644,19 +852,14 @@ technologies = {
 		research_cost = 1.5
 		
 		start_year = 1980
+		
+		dependencies = {
+			hardware_VI = 1
+		}
 
 		folder = {
 			name = mtgnavalmodulefolder
 			position = { x = 0 y = 18 }
-		}
-		
-		ai_will_do = {
-			factor = 1
-			
-			modifier = {
-				has_war = yes
-				factor = 2
-			}
 		}
 		
 		categories = {
@@ -664,6 +867,23 @@ technologies = {
 			naval_modules_general
 			naval_subkiller
 			naval_antisub
+		}
+		
+		ai_will_do = {
+			factor = 0
+			
+			modifier = {
+				add = 10
+				AND = {
+					num_of_naval_factories > 10
+					date > 1980.1.1
+				}
+			}
+		}
+		
+		ai_research_weights = {
+			naval_doctrine = -0.1
+			naval_equipment = -0.1
 		}
 	}
 	subkiller_5 = {
@@ -678,19 +898,14 @@ technologies = {
 		research_cost = 1.5
 		
 		start_year = 1990
+		
+		dependencies = {
+			hardware_VIII = 1
+		}
 
 		folder = {
 			name = mtgnavalmodulefolder
 			position = { x = 0 y = 22 }
-		}
-		
-		ai_will_do = {
-			factor = 1
-			
-			modifier = {
-				has_war = yes
-				factor = 2
-			}
 		}
 		
 		categories = {
@@ -698,6 +913,23 @@ technologies = {
 			naval_modules_general
 			naval_subkiller
 			naval_antisub
+		}
+		
+		ai_will_do = {
+			factor = 0
+			
+			modifier = {
+				add = 10
+				AND = {
+					num_of_naval_factories > 10
+					date > 1990.1.1
+				}
+			}
+		}
+		
+		ai_research_weights = {
+			naval_doctrine = -0.1
+			naval_equipment = -0.1
 		}
 	}
 	subkiller_6 = {
@@ -708,19 +940,14 @@ technologies = {
 		research_cost = 1.5
 		
 		start_year = 2000
+		
+		dependencies = {
+			hardware_X = 1
+		}
 
 		folder = {
 			name = mtgnavalmodulefolder
 			position = { x = 0 y = 26 }
-		}
-		
-		ai_will_do = {
-			factor = 1
-			
-			modifier = {
-				has_war = yes
-				factor = 2
-			}
 		}
 		
 		categories = {
@@ -729,13 +956,30 @@ technologies = {
 			naval_subkiller
 			naval_antisub
 		}
+		
+		ai_will_do = {
+			factor = 0
+			
+			modifier = {
+				add = 10
+				AND = {
+					num_of_naval_factories > 10
+					date > 2000.1.1
+				}
+			}
+		}
+		
+		ai_research_weights = {
+			naval_doctrine = -0.1
+			naval_equipment = -0.1
+		}
 	}
-	ww_detection = {
+	detection_ww = {
 		enable_equipment_modules = { 
-			ww_detection
+			detection_ww
 		}
 		enable_equipment_modules = { 
-			ww_sonar
+			sonar_ww
 		}
 		path = {
 			leads_to_tech = maritime_ew_ss_0
@@ -759,19 +1003,27 @@ technologies = {
 			position = { x = 0 y = 0 }
 		}
 		
-		ai_will_do = {
-			factor = 1
-			
-			modifier = {
-				has_war = yes
-				factor = 2
-			}
-		}
-		
 		categories = {
 			naval_equipment
 			naval_modules_general
 			naval_sensors
+		}
+		
+		ai_will_do = {
+			factor = 0
+			
+			modifier = {
+				add = 10
+				AND = {
+					num_of_naval_factories > 3
+					date > 1945.1.1
+				}
+			}
+		}
+		
+		ai_research_weights = {
+			naval_doctrine = -0.1
+			naval_equipment = -0.1
 		}
 	}
 	maritime_ew_ss_0 = {
@@ -792,20 +1044,28 @@ technologies = {
 			position = { x = 0 y = 2 }
 		}
 		
-		ai_will_do = {
-			factor = 1
-			
-			modifier = {
-				has_war = yes
-				factor = 2
-			}
-		}
-		
 		categories = {
 			naval_equipment
 			naval_modules_general
 			naval_maritime_ew_ss
 			naval_sensors
+		}
+		
+		ai_will_do = {
+			factor = 0
+			
+			modifier = {
+				add = 10
+				AND = {
+					num_of_naval_factories > 3
+					date > 1945.1.1
+				}
+			}
+		}
+		
+		ai_research_weights = {
+			naval_doctrine = -0.1
+			naval_equipment = -0.1
 		}
 	}
 	maritime_ew_ss_1 = {
@@ -820,19 +1080,14 @@ technologies = {
 		research_cost = 1.5
 		
 		start_year = 1950
+		
+		dependencies = {
+			hardware_I = 1
+		}
 
 		folder = {
 			name = mtgnavalmodulefolder
 			position = { x = 0 y = 6 }
-		}
-		
-		ai_will_do = {
-			factor = 1
-			
-			modifier = {
-				has_war = yes
-				factor = 2
-			}
 		}
 		
 		categories = {
@@ -840,6 +1095,23 @@ technologies = {
 			naval_modules_general
 			naval_maritime_ew_ss
 			naval_sensors
+		}
+		
+		ai_will_do = {
+			factor = 0
+			
+			modifier = {
+				add = 10
+				AND = {
+					num_of_naval_factories > 3
+					date > 1950.1.1
+				}
+			}
+		}
+		
+		ai_research_weights = {
+			naval_doctrine = -0.1
+			naval_equipment = -0.1
 		}
 	}
 	maritime_ew_ss_2 = {
@@ -854,19 +1126,14 @@ technologies = {
 		research_cost = 1.5
 		
 		start_year = 1960
+		
+		dependencies = {
+			hardware_III = 1
+		}
 
 		folder = {
 			name = mtgnavalmodulefolder
 			position = { x = 0 y = 10 }
-		}
-		
-		ai_will_do = {
-			factor = 1
-			
-			modifier = {
-				has_war = yes
-				factor = 2
-			}
 		}
 		
 		categories = {
@@ -874,6 +1141,23 @@ technologies = {
 			naval_modules_general
 			naval_maritime_ew_ss
 			naval_sensors
+		}
+		
+		ai_will_do = {
+			factor = 0
+			
+			modifier = {
+				add = 10
+				AND = {
+					num_of_naval_factories > 3
+					date > 1960.1.1
+				}
+			}
+		}
+		
+		ai_research_weights = {
+			naval_doctrine = -0.1
+			naval_equipment = -0.1
 		}
 	}
 	maritime_ew_ss_3 = {
@@ -887,18 +1171,13 @@ technologies = {
 		
 		research_cost = 1.5
 		start_year = 1970
+		
+		dependencies = {
+			hardware_V = 1
+		}
 		folder = {
 			name = mtgnavalmodulefolder
 			position = { x = 0 y = 14 }
-		}
-		
-		ai_will_do = {
-			factor = 1
-			
-			modifier = {
-				has_war = yes
-				factor = 2
-			}
 		}
 		
 		categories = {
@@ -906,6 +1185,23 @@ technologies = {
 			naval_modules_general
 			naval_maritime_ew_ss
 			naval_sensors
+		}
+		
+		ai_will_do = {
+			factor = 0
+			
+			modifier = {
+				add = 10
+				AND = {
+					num_of_naval_factories > 3
+					date > 1970.1.1
+				}
+			}
+		}
+		
+		ai_research_weights = {
+			naval_doctrine = -0.1
+			naval_equipment = -0.1
 		}
 	}
 	maritime_ew_ss_4 = {
@@ -920,19 +1216,14 @@ technologies = {
 		research_cost = 1.5
 		
 		start_year = 1980
+		
+		dependencies = {
+			hardware_VII = 1
+		}
 
 		folder = {
 			name = mtgnavalmodulefolder
 			position = { x = 0 y = 18 }
-		}
-		
-		ai_will_do = {
-			factor = 1
-			
-			modifier = {
-				has_war = yes
-				factor = 2
-			}
 		}
 		
 		categories = {
@@ -940,6 +1231,23 @@ technologies = {
 			naval_modules_general
 			naval_maritime_ew_ss
 			naval_sensors
+		}
+		
+		ai_will_do = {
+			factor = 0
+			
+			modifier = {
+				add = 10
+				AND = {
+					num_of_naval_factories > 30
+					date > 1980.1.1
+				}
+			}
+		}
+		
+		ai_research_weights = {
+			naval_doctrine = -0.1
+			naval_equipment = -0.1
 		}
 	}
 	maritime_ew_ss_5 = {
@@ -954,19 +1262,14 @@ technologies = {
 		research_cost = 1.5
 		
 		start_year = 1990
+		
+		dependencies = {
+			hardware_IX = 1
+		}
 
 		folder = {
 			name = mtgnavalmodulefolder
 			position = { x = 0 y = 22 }
-		}
-		
-		ai_will_do = {
-			factor = 1
-			
-			modifier = {
-				has_war = yes
-				factor = 2
-			}
 		}
 		
 		categories = {
@@ -974,6 +1277,23 @@ technologies = {
 			naval_modules_general
 			naval_maritime_ew_ss
 			naval_sensors
+		}
+		
+		ai_will_do = {
+			factor = 0
+			
+			modifier = {
+				add = 10
+				AND = {
+					num_of_naval_factories > 30
+					date > 1990.1.1
+				}
+			}
+		}
+		
+		ai_research_weights = {
+			naval_doctrine = -0.1
+			naval_equipment = -0.1
 		}
 	}
 	maritime_ew_ss_6 = {
@@ -984,19 +1304,14 @@ technologies = {
 		research_cost = 1.5
 		
 		start_year = 2000
+		
+		dependencies = {
+			hardware_XI = 1
+		}
 
 		folder = {
 			name = mtgnavalmodulefolder
 			position = { x = 0 y = 26 }
-		}
-		
-		ai_will_do = {
-			factor = 1
-			
-			modifier = {
-				has_war = yes
-				factor = 2
-			}
 		}
 		
 		categories = {
@@ -1004,6 +1319,23 @@ technologies = {
 			naval_modules_general
 			naval_maritime_ew_ss
 			naval_sensors
+		}
+		
+		ai_will_do = {
+			factor = 0
+			
+			modifier = {
+				add = 10
+				AND = {
+					num_of_naval_factories > 30
+					date > 2000.1.1
+				}
+			}
+		}
+		
+		ai_research_weights = {
+			naval_doctrine = -0.1
+			naval_equipment = -0.1
 		}
 	}
 	maritime_ta_fcs_0 = {
@@ -1024,20 +1356,28 @@ technologies = {
 			position = { x = -2 y = 4 }
 		}
 		
-		ai_will_do = {
-			factor = 1
-			
-			modifier = {
-				has_war = yes
-				factor = 2
-			}
-		}
-		
 		categories = {
 			naval_equipment
 			naval_modules_general
 			naval_maritime_ta_fcs
 			naval_sensors
+		}
+		
+		ai_will_do = {
+			factor = 0
+			
+			modifier = {
+				add = 10
+				AND = {
+					num_of_naval_factories > 3
+					date > 1945.1.1
+				}
+			}
+		}
+		
+		ai_research_weights = {
+			naval_doctrine = -0.1
+			naval_equipment = -0.1
 		}
 	}
 	maritime_ta_fcs_1 = {
@@ -1052,19 +1392,14 @@ technologies = {
 		research_cost = 1.5
 		
 		start_year = 1955
+		
+		dependencies = {
+			hardware_II = 1
+		}
 
 		folder = {
 			name = mtgnavalmodulefolder
 			position = { x = -2 y = 8 }
-		}
-		
-		ai_will_do = {
-			factor = 1
-			
-			modifier = {
-				has_war = yes
-				factor = 2
-			}
 		}
 		
 		categories = {
@@ -1072,6 +1407,23 @@ technologies = {
 			naval_modules_general
 			naval_maritime_ta_fcs
 			naval_sensors
+		}
+		
+		ai_will_do = {
+			factor = 0
+			
+			modifier = {
+				add = 10
+				AND = {
+					num_of_naval_factories > 3
+					date > 1955.1.1
+				}
+			}
+		}
+		
+		ai_research_weights = {
+			naval_doctrine = -0.1
+			naval_equipment = -0.1
 		}
 	}
 	maritime_ta_fcs_2 = {
@@ -1086,19 +1438,14 @@ technologies = {
 		research_cost = 1.5
 		
 		start_year = 1965
+		
+		dependencies = {
+			hardware_IV = 1
+		}
 
 		folder = {
 			name = mtgnavalmodulefolder
 			position = { x = -2 y = 12 }
-		}
-		
-		ai_will_do = {
-			factor = 1
-			
-			modifier = {
-				has_war = yes
-				factor = 2
-			}
 		}
 		
 		categories = {
@@ -1106,6 +1453,23 @@ technologies = {
 			naval_modules_general
 			naval_maritime_ta_fcs
 			naval_sensors
+		}
+		
+		ai_will_do = {
+			factor = 0
+			
+			modifier = {
+				add = 10
+				AND = {
+					num_of_naval_factories > 3
+					date > 1965.1.1
+				}
+			}
+		}
+		
+		ai_research_weights = {
+			naval_doctrine = -0.1
+			naval_equipment = -0.1
 		}
 	}
 	maritime_ta_fcs_3 = {
@@ -1120,19 +1484,14 @@ technologies = {
 		research_cost = 1.5
 		
 		start_year = 1975
+		
+		dependencies = {
+			hardware_VI = 1
+		}
 
 		folder = {
 			name = mtgnavalmodulefolder
 			position = { x = -2 y = 16 }
-		}
-		
-		ai_will_do = {
-			factor = 1
-			
-			modifier = {
-				has_war = yes
-				factor = 2
-			}
 		}
 		
 		categories = {
@@ -1140,6 +1499,23 @@ technologies = {
 			naval_modules_general
 			naval_maritime_ta_fcs
 			naval_sensors
+		}
+		
+		ai_will_do = {
+			factor = 0
+			
+			modifier = {
+				add = 10
+				AND = {
+					num_of_naval_factories > 3
+					date > 1975.1.1
+				}
+			}
+		}
+		
+		ai_research_weights = {
+			naval_doctrine = -0.1
+			naval_equipment = -0.1
 		}
 	}
 	maritime_ta_fcs_4 = {
@@ -1154,19 +1530,14 @@ technologies = {
 		research_cost = 1.5
 		
 		start_year = 1985
+		
+		dependencies = {
+			hardware_VIII = 1
+		}
 
 		folder = {
 			name = mtgnavalmodulefolder
 			position = { x = -2 y = 20 }
-		}
-		
-		ai_will_do = {
-			factor = 1
-			
-			modifier = {
-				has_war = yes
-				factor = 2
-			}
 		}
 		
 		categories = {
@@ -1174,6 +1545,23 @@ technologies = {
 			naval_modules_general
 			naval_maritime_ta_fcs
 			naval_sensors
+		}
+		
+		ai_will_do = {
+			factor = 0
+			
+			modifier = {
+				add = 10
+				AND = {
+					num_of_naval_factories > 30
+					date > 1985.1.1
+				}
+			}
+		}
+		
+		ai_research_weights = {
+			naval_doctrine = -0.1
+			naval_equipment = -0.1
 		}
 	}
 	maritime_ta_fcs_5 = {
@@ -1188,19 +1576,14 @@ technologies = {
 		research_cost = 1.5
 		
 		start_year = 1995
+		
+		dependencies = {
+			hardware_X = 1
+		}
 
 		folder = {
 			name = mtgnavalmodulefolder
 			position = { x = -2 y = 24 }
-		}
-		
-		ai_will_do = {
-			factor = 1
-			
-			modifier = {
-				has_war = yes
-				factor = 2
-			}
 		}
 		
 		categories = {
@@ -1208,6 +1591,23 @@ technologies = {
 			naval_modules_general
 			naval_maritime_ta_fcs
 			naval_sensors
+		}
+		
+		ai_will_do = {
+			factor = 0
+			
+			modifier = {
+				add = 10
+				AND = {
+					num_of_naval_factories > 30
+					date > 1995.1.1
+				}
+			}
+		}
+		
+		ai_research_weights = {
+			naval_doctrine = -0.1
+			naval_equipment = -0.1
 		}
 	}
 	maritime_ta_fcs_6 = {
@@ -1221,19 +1621,14 @@ technologies = {
 		research_cost = 1.5
 		
 		start_year = 2005
+		
+		dependencies = {
+			hardware_XII = 1
+		}
 
 		folder = {
 			name = mtgnavalmodulefolder
 			position = { x = -2 y = 28 }
-		}
-		
-		ai_will_do = {
-			factor = 1
-			
-			modifier = {
-				has_war = yes
-				factor = 2
-			}
 		}
 		
 		categories = {
@@ -1241,6 +1636,23 @@ technologies = {
 			naval_modules_general
 			naval_maritime_ta_fcs
 			naval_sensors
+		}
+		
+		ai_will_do = {
+			factor = 0
+			
+			modifier = {
+				add = 10
+				AND = {
+					num_of_naval_factories > 30
+					date > 2005.1.1
+				}
+			}
+		}
+		
+		ai_research_weights = {
+			naval_doctrine = -0.1
+			naval_equipment = -0.1
 		}
 	}
 	maritime_navigation_0 = {
@@ -1261,20 +1673,28 @@ technologies = {
 			position = { x = 2 y = 2 }
 		}
 		
-		ai_will_do = {
-			factor = 1
-			
-			modifier = {
-				has_war = yes
-				factor = 2
-			}
-		}
-		
 		categories = {
 			naval_equipment
 			naval_modules_general
 			naval_maritime_navigation
 			naval_sensors
+		}
+		
+		ai_will_do = {
+			factor = 0
+			
+			modifier = {
+				add = 10
+				AND = {
+					num_of_naval_factories > 10
+					date > 1940.1.1
+				}
+			}
+		}
+		
+		ai_research_weights = {
+			naval_doctrine = -0.1
+			naval_equipment = -0.1
 		}
 	}
 	maritime_navigation_1 = {
@@ -1289,19 +1709,14 @@ technologies = {
 		research_cost = 1.5
 		
 		start_year = 1955
+		
+		dependencies = {
+			hardware_III = 1
+		}
 
 		folder = {
 			name = mtgnavalmodulefolder
 			position = { x = 2 y = 8 }
-		}
-		
-		ai_will_do = {
-			factor = 1
-			
-			modifier = {
-				has_war = yes
-				factor = 2
-			}
 		}
 		
 		categories = {
@@ -1309,6 +1724,23 @@ technologies = {
 			naval_modules_general
 			naval_maritime_navigation
 			naval_sensors
+		}
+		
+		ai_will_do = {
+			factor = 0
+			
+			modifier = {
+				add = 10
+				AND = {
+					num_of_naval_factories > 30
+					date > 1955.1.1
+				}
+			}
+		}
+		
+		ai_research_weights = {
+			naval_doctrine = -0.1
+			naval_equipment = -0.1
 		}
 	}
 	maritime_navigation_2 = {
@@ -1323,19 +1755,14 @@ technologies = {
 		research_cost = 1.5
 		
 		start_year = 1970
+		
+		dependencies = {
+			hardware_VI = 1
+		}
 
 		folder = {
 			name = mtgnavalmodulefolder
 			position = { x = 2 y = 14 }
-		}
-		
-		ai_will_do = {
-			factor = 1
-			
-			modifier = {
-				has_war = yes
-				factor = 2
-			}
 		}
 		
 		categories = {
@@ -1343,6 +1770,23 @@ technologies = {
 			naval_modules_general
 			naval_maritime_navigation
 			naval_sensors
+		}
+		
+		ai_will_do = {
+			factor = 0
+			
+			modifier = {
+				add = 10
+				AND = {
+					num_of_naval_factories > 30
+					date > 1970.1.1
+				}
+			}
+		}
+		
+		ai_research_weights = {
+			naval_doctrine = -0.1
+			naval_equipment = -0.1
 		}
 	}
 	maritime_navigation_3 = {
@@ -1357,19 +1801,14 @@ technologies = {
 		research_cost = 1.5
 		
 		start_year = 1985
+		
+		dependencies = {
+			hardware_VIII = 1
+		}
 
 		folder = {
 			name = mtgnavalmodulefolder
 			position = { x = 2 y = 20 }
-		}
-		
-		ai_will_do = {
-			factor = 1
-			
-			modifier = {
-				has_war = yes
-				factor = 2
-			}
 		}
 		
 		categories = {
@@ -1377,6 +1816,23 @@ technologies = {
 			naval_modules_general
 			naval_maritime_navigation
 			naval_sensors
+		}
+		
+		ai_will_do = {
+			factor = 0
+			
+			modifier = {
+				add = 10
+				AND = {
+					num_of_naval_factories > 30
+					date > 1985.1.1
+				}
+			}
+		}
+		
+		ai_research_weights = {
+			naval_doctrine = -0.1
+			naval_equipment = -0.1
 		}
 	}
 	maritime_navigation_4 = {
@@ -1387,19 +1843,14 @@ technologies = {
 		research_cost = 1.5
 		
 		start_year = 2005
+		
+		dependencies = {
+			hardware_XIII = 1
+		}
 
 		folder = {
 			name = mtgnavalmodulefolder
 			position = { x = 2 y = 28 }
-		}
-		
-		ai_will_do = {
-			factor = 1
-			
-			modifier = {
-				has_war = yes
-				factor = 2
-			}
 		}
 		
 		categories = {
@@ -1407,6 +1858,23 @@ technologies = {
 			naval_modules_general
 			naval_maritime_navigation
 			naval_sensors
+		}
+		
+		ai_will_do = {
+			factor = 0
+			
+			modifier = {
+				add = 10
+				AND = {
+					num_of_naval_factories > 30
+					date > 2005.1.1
+				}
+			}
+		}
+		
+		ai_research_weights = {
+			naval_doctrine = -0.1
+			naval_equipment = -0.1
 		}
 	}
 	ww_armaments = {
@@ -1441,19 +1909,27 @@ technologies = {
 			position = { x = 0 y = 0 }
 		}
 		
-		ai_will_do = {
-			factor = 1
-			
-			modifier = {
-				has_war = yes
-				factor = 2
-			}
-		}
-		
 		categories = {
 			naval_equipment
 			naval_modules_general
 			naval_weapon
+		}
+		
+		ai_will_do = {
+			factor = 0
+			
+			modifier = {
+				add = 10
+				AND = {
+					num_of_naval_factories > 0
+					date > 1935.1.1
+				}
+			}
+		}
+		
+		ai_research_weights = {
+			naval_doctrine = -0.1
+			naval_equipment = -0.1
 		}
 	}
 	ship_armament_light_0 = {
@@ -1474,20 +1950,28 @@ technologies = {
 			position = { x = -2 y = 2 }
 		}
 		
-		ai_will_do = {
-			factor = 1
-			
-			modifier = {
-				has_war = yes
-				factor = 2
-			}
-		}
-		
 		categories = {
 			naval_equipment
 			naval_modules_general
 			naval_ship_armament_light
 			naval_weapon
+		}
+		
+		ai_will_do = {
+			factor = 0
+			
+			modifier = {
+				add = 10
+				AND = {
+					num_of_naval_factories > 3
+					date > 1940.1.1
+				}
+			}
+		}
+		
+		ai_research_weights = {
+			naval_doctrine = -0.1
+			naval_equipment = -0.1
 		}
 	}
 	ship_armament_light_1 = {
@@ -1516,20 +2000,28 @@ technologies = {
 			position = { x = -2 y = 6 }
 		}
 		
-		ai_will_do = {
-			factor = 1
-			
-			modifier = {
-				has_war = yes
-				factor = 2
-			}
-		}
-		
 		categories = {
 			naval_equipment
 			naval_modules_general
 			naval_ship_armament_light
 			naval_weapon
+		}
+		
+		ai_will_do = {
+			factor = 0
+			
+			modifier = {
+				add = 10
+				AND = {
+					num_of_naval_factories > 3
+					date > 1950.1.1
+				}
+			}
+		}
+		
+		ai_research_weights = {
+			naval_doctrine = -0.1
+			naval_equipment = -0.1
 		}
 	}
 	ship_armament_light_2 = {
@@ -1544,19 +2036,14 @@ technologies = {
 		research_cost = 1.5
 		
 		start_year = 1960
+		
+		dependencies = {
+			hardware_I = 1
+		}
 
 		folder = {
 			name = mtgnavalmodulefolder
 			position = { x = -2 y = 10 }
-		}
-		
-		ai_will_do = {
-			factor = 1
-			
-			modifier = {
-				has_war = yes
-				factor = 2
-			}
 		}
 		
 		categories = {
@@ -1564,6 +2051,23 @@ technologies = {
 			naval_modules_general
 			naval_ship_armament_light
 			naval_weapon
+		}
+		
+		ai_will_do = {
+			factor = 0
+			
+			modifier = {
+				add = 10
+				AND = {
+					num_of_naval_factories > 3
+					date > 1960.1.1
+				}
+			}
+		}
+		
+		ai_research_weights = {
+			naval_doctrine = -0.1
+			naval_equipment = -0.1
 		}
 	}
 	ship_armament_light_3 = {
@@ -1582,19 +2086,14 @@ technologies = {
 		research_cost = 1.5
 		
 		start_year = 1970
+		
+		dependencies = {
+			hardware_III = 1
+		}
 
 		folder = {
 			name = mtgnavalmodulefolder
 			position = { x = -2 y = 14 }
-		}
-		
-		ai_will_do = {
-			factor = 1
-			
-			modifier = {
-				has_war = yes
-				factor = 2
-			}
 		}
 		
 		categories = {
@@ -1602,6 +2101,23 @@ technologies = {
 			naval_modules_general
 			naval_ship_armament_light
 			naval_weapon
+		}
+		
+		ai_will_do = {
+			factor = 0
+			
+			modifier = {
+				add = 10
+				AND = {
+					num_of_naval_factories > 3
+					date > 1970.1.1
+				}
+			}
+		}
+		
+		ai_research_weights = {
+			naval_doctrine = -0.1
+			naval_equipment = -0.1
 		}
 	}
 	ship_armament_light_4 = {
@@ -1616,19 +2132,14 @@ technologies = {
 		research_cost = 1.5
 		
 		start_year = 1980
+		
+		dependencies = {
+			hardware_V = 1
+		}
 
 		folder = {
 			name = mtgnavalmodulefolder
 			position = { x = -2 y = 18 }
-		}
-		
-		ai_will_do = {
-			factor = 1
-			
-			modifier = {
-				has_war = yes
-				factor = 2
-			}
 		}
 		
 		categories = {
@@ -1636,6 +2147,23 @@ technologies = {
 			naval_modules_general
 			naval_ship_armament_light
 			naval_weapon
+		}
+		
+		ai_will_do = {
+			factor = 0
+			
+			modifier = {
+				add = 10
+				AND = {
+					num_of_naval_factories > 3
+					date > 1980.1.1
+				}
+			}
+		}
+		
+		ai_research_weights = {
+			naval_doctrine = -0.1
+			naval_equipment = -0.1
 		}
 	}
 	ship_armament_light_5 = {
@@ -1658,19 +2186,14 @@ technologies = {
 		research_cost = 1.5
 		
 		start_year = 1990
+		
+		dependencies = {
+			hardware_VII = 1
+		}
 
 		folder = {
 			name = mtgnavalmodulefolder
 			position = { x = -2 y = 22 }
-		}
-		
-		ai_will_do = {
-			factor = 1
-			
-			modifier = {
-				has_war = yes
-				factor = 2
-			}
 		}
 		
 		categories = {
@@ -1678,6 +2201,23 @@ technologies = {
 			naval_modules_general
 			naval_ship_armament_light
 			naval_weapon
+		}
+		
+		ai_will_do = {
+			factor = 0
+			
+			modifier = {
+				add = 10
+				AND = {
+					num_of_naval_factories > 3
+					date > 1990.1.1
+				}
+			}
+		}
+		
+		ai_research_weights = {
+			naval_doctrine = -0.1
+			naval_equipment = -0.1
 		}
 	}
 	ship_armament_light_6 = {
@@ -1688,19 +2228,14 @@ technologies = {
 		research_cost = 1.5
 		
 		start_year = 2000
+		
+		dependencies = {
+			hardware_IX = 1
+		}
 
 		folder = {
 			name = mtgnavalmodulefolder
 			position = { x = -2 y = 26 }
-		}
-		
-		ai_will_do = {
-			factor = 1
-			
-			modifier = {
-				has_war = yes
-				factor = 2
-			}
 		}
 		
 		categories = {
@@ -1708,6 +2243,23 @@ technologies = {
 			naval_modules_general
 			naval_ship_armament_light
 			naval_weapon
+		}
+		
+		ai_will_do = {
+			factor = 0
+			
+			modifier = {
+				add = 10
+				AND = {
+					num_of_naval_factories > 3
+					date > 2000.1.1
+				}
+			}
+		}
+		
+		ai_research_weights = {
+			naval_doctrine = -0.1
+			naval_equipment = -0.1
 		}
 	}
 	ship_armament_medium_0 = {
@@ -1728,20 +2280,28 @@ technologies = {
 			position = { x = 0 y = 2 }
 		}
 		
-		ai_will_do = {
-			factor = 1
-			
-			modifier = {
-				has_war = yes
-				factor = 2
-			}
-		}
-		
 		categories = {
 			naval_equipment
 			naval_modules_general
 			naval_ship_armament_medium
 			naval_weapon
+		}
+		
+		ai_will_do = {
+			factor = 0
+			
+			modifier = {
+				add = 10
+				AND = {
+					num_of_naval_factories > 10
+					date > 1940.1.1
+				}
+			}
+		}
+		
+		ai_research_weights = {
+			naval_doctrine = -0.1
+			naval_equipment = -0.1
 		}
 	}
 	ship_armament_medium_1 = {
@@ -1770,20 +2330,28 @@ technologies = {
 			position = { x = 0 y = 6 }
 		}
 		
-		ai_will_do = {
-			factor = 1
-			
-			modifier = {
-				has_war = yes
-				factor = 2
-			}
-		}
-		
 		categories = {
 			naval_equipment
 			naval_modules_general
 			naval_ship_armament_medium
 			naval_weapon
+		}
+		
+		ai_will_do = {
+			factor = 0
+			
+			modifier = {
+				add = 10
+				AND = {
+					num_of_naval_factories > 10
+					date > 1950.1.1
+				}
+			}
+		}
+		
+		ai_research_weights = {
+			naval_doctrine = -0.1
+			naval_equipment = -0.1
 		}
 	}
 	ship_armament_medium_2 = {
@@ -1798,19 +2366,14 @@ technologies = {
 		research_cost = 1.5
 		
 		start_year = 1960
+		
+		dependencies = {
+			hardware_II = 1
+		}
 
 		folder = {
 			name = mtgnavalmodulefolder
 			position = { x = 0 y = 10 }
-		}
-		
-		ai_will_do = {
-			factor = 1
-			
-			modifier = {
-				has_war = yes
-				factor = 2
-			}
 		}
 		
 		categories = {
@@ -1818,6 +2381,23 @@ technologies = {
 			naval_modules_general
 			naval_ship_armament_medium
 			naval_weapon
+		}
+		
+		ai_will_do = {
+			factor = 0
+			
+			modifier = {
+				add = 10
+				AND = {
+					num_of_naval_factories > 10
+					date > 1960.1.1
+				}
+			}
+		}
+		
+		ai_research_weights = {
+			naval_doctrine = -0.1
+			naval_equipment = -0.1
 		}
 	}
 	ship_armament_medium_3 = {
@@ -1836,19 +2416,14 @@ technologies = {
 		research_cost = 1.5
 		
 		start_year = 1970
+		
+		dependencies = {
+			hardware_IV = 1
+		}
 
 		folder = {
 			name = mtgnavalmodulefolder
 			position = { x = 0 y = 14 }
-		}
-		
-		ai_will_do = {
-			factor = 1
-			
-			modifier = {
-				has_war = yes
-				factor = 2
-			}
 		}
 		
 		categories = {
@@ -1856,6 +2431,23 @@ technologies = {
 			naval_modules_general
 			naval_ship_armament_medium
 			naval_weapon
+		}
+		
+		ai_will_do = {
+			factor = 0
+			
+			modifier = {
+				add = 10
+				AND = {
+					num_of_naval_factories > 10
+					date > 1970.1.1
+				}
+			}
+		}
+		
+		ai_research_weights = {
+			naval_doctrine = -0.1
+			naval_equipment = -0.1
 		}
 	}
 	ship_armament_medium_4 = {
@@ -1870,19 +2462,14 @@ technologies = {
 		research_cost = 1.5
 		
 		start_year = 1980
+		
+		dependencies = {
+			hardware_VI = 1
+		}
 
 		folder = {
 			name = mtgnavalmodulefolder
 			position = { x = 0 y = 18 }
-		}
-		
-		ai_will_do = {
-			factor = 1
-			
-			modifier = {
-				has_war = yes
-				factor = 2
-			}
 		}
 		
 		categories = {
@@ -1890,6 +2477,23 @@ technologies = {
 			naval_modules_general
 			naval_ship_armament_medium
 			naval_weapon
+		}
+		
+		ai_will_do = {
+			factor = 0
+			
+			modifier = {
+				add = 10
+				AND = {
+					num_of_naval_factories > 10
+					date > 1980.1.1
+				}
+			}
+		}
+		
+		ai_research_weights = {
+			naval_doctrine = -0.1
+			naval_equipment = -0.1
 		}
 	}
 	ship_armament_medium_5 = {
@@ -1912,19 +2516,14 @@ technologies = {
 		research_cost = 1.5
 		
 		start_year = 1990
+		
+		dependencies = {
+			hardware_VIII = 1
+		}
 
 		folder = {
 			name = mtgnavalmodulefolder
 			position = { x = 0 y = 22 }
-		}
-		
-		ai_will_do = {
-			factor = 1
-			
-			modifier = {
-				has_war = yes
-				factor = 2
-			}
 		}
 		
 		categories = {
@@ -1932,6 +2531,23 @@ technologies = {
 			naval_modules_general
 			naval_ship_armament_medium
 			naval_weapon
+		}
+		
+		ai_will_do = {
+			factor = 0
+			
+			modifier = {
+				add = 10
+				AND = {
+					num_of_naval_factories > 10
+					date > 1990.1.1
+				}
+			}
+		}
+		
+		ai_research_weights = {
+			naval_doctrine = -0.1
+			naval_equipment = -0.1
 		}
 	}
 	ship_armament_medium_6 = {
@@ -1942,19 +2558,14 @@ technologies = {
 		research_cost = 1.5
 		
 		start_year = 2000
+		
+		dependencies = {
+			hardware_X = 1
+		}
 
 		folder = {
 			name = mtgnavalmodulefolder
 			position = { x = 0 y = 26 }
-		}
-		
-		ai_will_do = {
-			factor = 1
-			
-			modifier = {
-				has_war = yes
-				factor = 2
-			}
 		}
 		
 		categories = {
@@ -1962,6 +2573,23 @@ technologies = {
 			naval_modules_general
 			naval_ship_armament_medium
 			naval_weapon
+		}
+		
+		ai_will_do = {
+			factor = 0
+			
+			modifier = {
+				add = 10
+				AND = {
+					num_of_naval_factories > 10
+					date > 2000.1.1
+				}
+			}
+		}
+		
+		ai_research_weights = {
+			naval_doctrine = -0.1
+			naval_equipment = -0.1
 		}
 	}
 	ship_armament_heavy_0 = {
@@ -1982,20 +2610,28 @@ technologies = {
 			position = { x = 2 y = 2 }
 		}
 		
-		ai_will_do = {
-			factor = 1
-			
-			modifier = {
-				has_war = yes
-				factor = 2
-			}
-		}
-		
 		categories = {
 			naval_equipment
 			naval_modules_general
 			naval_ship_armament_heavy
 			naval_weapon
+		}
+		
+		ai_will_do = {
+			factor = 0
+			
+			modifier = {
+				add = 10
+				AND = {
+					num_of_naval_factories > 20
+					date > 1940.1.1
+				}
+			}
+		}
+		
+		ai_research_weights = {
+			naval_doctrine = -0.1
+			naval_equipment = -0.1
 		}
 	}
 	ship_armament_heavy_1 = {
@@ -2018,19 +2654,14 @@ technologies = {
 		research_cost = 3
 		
 		start_year = 1950
+		
+		dependencies = {
+			hardware_I = 1
+		}
 
 		folder = {
 			name = mtgnavalmodulefolder
 			position = { x = 2 y = 6 }
-		}
-		
-		ai_will_do = {
-			factor = 1
-			
-			modifier = {
-				has_war = yes
-				factor = 2
-			}
 		}
 		
 		categories = {
@@ -2038,6 +2669,23 @@ technologies = {
 			naval_modules_general
 			naval_ship_armament_heavy
 			naval_weapon
+		}
+		
+		ai_will_do = {
+			factor = 0
+			
+			modifier = {
+				add = 10
+				AND = {
+					num_of_naval_factories > 20
+					date > 1950.1.1
+				}
+			}
+		}
+		
+		ai_research_weights = {
+			naval_doctrine = -0.1
+			naval_equipment = -0.1
 		}
 	}
 	ship_armament_heavy_2 = {
@@ -2048,19 +2696,14 @@ technologies = {
 		research_cost = 3
 		
 		start_year = 2005
+		
+		dependencies = {
+			hardware_XII = 1
+		}
 
 		folder = {
 			name = mtgnavalmodulefolder
 			position = { x = 2 y = 28 }
-		}
-		
-		ai_will_do = {
-			factor = 1
-			
-			modifier = {
-				has_war = yes
-				factor = 2
-			}
 		}
 		
 		categories = {
@@ -2068,6 +2711,23 @@ technologies = {
 			naval_modules_general
 			naval_ship_armament_heavy
 			naval_weapon
+		}
+		
+		ai_will_do = {
+			factor = 0
+			
+			modifier = {
+				add = 10
+				AND = {
+					num_of_naval_factories > 20
+					date > 2000.1.1
+				}
+			}
+		}
+		
+		ai_research_weights = {
+			naval_doctrine = -0.1
+			naval_equipment = -0.1
 		}
 	}
 }

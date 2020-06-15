@@ -2,16 +2,16 @@ technologies = {
 
 	fleet_in_being = {
 
-		screen_hull_large = {
+		battle_hull_light = {
 			max_organisation = 10			
 		}
-		capital_hull = {
+		battle_hull_medium = {
 			max_organisation = 10			
-		}
-		screen_hull_small = {
-			surface_detection = 0.10
 		}
 		screen_hull_medium = {
+			surface_detection = 0.10
+		}
+		screen_hull_heavy = {
 			surface_detection = 0.10
 		}
 
@@ -48,19 +48,29 @@ technologies = {
 		}
 		
 		ai_will_do = {
-			factor = 10
+			factor = 0
+			
+			modifier = {
+				add = 20 #Major Priority
+				AND = {
+					num_of_naval_factories > 15
+					date > 1955.1.1
+				}
+			}
 		}
+		
 		ai_research_weights = {
-			naval_doctrine = -1.0
+			naval_doctrine = -0.1
+			naval_equipment = -0.1
 		}
 	}
 	
 	battlefleet_concentration = {
 		
-		screen_hull_large = {
+		battle_hull_light = {
 			max_organisation = 10			
 		}
-		capital_hull = {
+		battle_hull_medium = {
 			max_organisation = 10			
 		}
 		strike_force_movement_org_loss = -0.2
@@ -88,10 +98,20 @@ technologies = {
 		}
 		
 		ai_will_do = {
-			factor = 10
+			factor = 0
+			
+			modifier = {
+				add = 20 #Major Priority
+				AND = {
+					num_of_naval_factories > 15
+					date > 1955.1.1
+				}
+			}
 		}
+		
 		ai_research_weights = {
-			naval_doctrine = -1.0
+			naval_doctrine = -0.1
+			naval_equipment = -0.1
 		}
 	}
 	
@@ -131,10 +151,20 @@ technologies = {
 		}
 		
 		ai_will_do = {
-			factor = 10
+			factor = 0
+			
+			modifier = {
+				add = 20 #Major Priority
+				AND = {
+					num_of_naval_factories > 15
+					date > 1955.1.1
+				}
+			}
 		}
+		
 		ai_research_weights = {
-			naval_doctrine = -1.0
+			naval_doctrine = -0.1
+			naval_equipment = -0.1
 		}
 	}
 	
@@ -144,11 +174,11 @@ technologies = {
 			max_organisation = 20
 			sub_detection = 0.1
 		}
-		screen_hull_small = {
+		screen_hull_medium = {
 			max_organisation = 10
 			sub_detection = 0.2
 		}
-		screen_hull_medium = {
+		screen_hull_heavy = {
 			max_organisation = 10
 			sub_detection = 0.2
 		}
@@ -177,16 +207,26 @@ technologies = {
 		}
 		
 		ai_will_do = {
-			factor = 10
+			factor = 0
+			
+			modifier = {
+				add = 20 #Major Priority
+				AND = {
+					num_of_naval_factories > 15
+					date > 1955.1.1
+				}
+			}
 		}
+		
 		ai_research_weights = {
-			naval_doctrine = -1.0
+			naval_doctrine = -0.1
+			naval_equipment = -0.1
 		}
 	}
 	
 	floating_fortress = {
 		
-		capital_hull = {
+		battle_hull_medium = {
 			max_organisation = 20
 		}
 		navy_capital_ship_defence_factor = 0.10
@@ -212,12 +252,22 @@ technologies = {
 			name = naval_doctrine_folder
 			position = { x = -2 y = 8 }
 		}
-
+		
 		ai_will_do = {
-			factor = 10
+			factor = 0
+			
+			modifier = {
+				add = 20 #Major Priority
+				AND = {
+					num_of_naval_factories > 15
+					date > 1955.1.1
+				}
+			}
 		}
+		
 		ai_research_weights = {
-			naval_doctrine = -1.0
+			naval_doctrine = -0.1
+			naval_equipment = -0.1
 		}
 	}
 	
@@ -257,19 +307,29 @@ technologies = {
 		}
 		
 		ai_will_do = {
-			factor = 10
+			factor = 0
+			
+			modifier = {
+				add = 20 #Major Priority
+				AND = {
+					num_of_naval_factories > 15
+					date > 1955.1.1
+				}
+			}
 		}
+		
 		ai_research_weights = {
-			naval_doctrine = -1.0
+			naval_doctrine = -0.1
+			naval_equipment = -0.1
 		}
 	}
 	
 	grand_battlefleet = {
 		
-		screen_hull_large = {
+		battle_hull_light = {
 			max_organisation = 20			
 		}
-		capital_hull = {
+		battle_hull_medium = {
 			max_organisation = 20			
 		}
 		navy_anti_air_attack_factor = 0.10
@@ -294,16 +354,26 @@ technologies = {
 		}
 		
 		ai_will_do = {
-			factor = 10
+			factor = 0
+			
+			modifier = {
+				add = 20 #Major Priority
+				AND = {
+					num_of_naval_factories > 15
+					date > 1955.1.1
+				}
+			}
 		}
+		
 		ai_research_weights = {
-			naval_doctrine = -1.0
+			naval_doctrine = -0.1
+			naval_equipment = -0.1
 		}
 	}
 	
 	convoy_sailing = {
 		
-		screen_hull_medium = {
+		screen_hull_heavy = {
 			max_organisation = 20
 			sub_detection = 0.05
 		}
@@ -331,18 +401,28 @@ technologies = {
 			name = naval_doctrine_folder
 			position = { x = 0 y = 2 }
 		}
-		
+
 		ai_will_do = {
-			factor = 10
+			factor = 0
+			
+			modifier = {
+				add = 20 #Major Priority
+				AND = {
+					num_of_naval_factories > 15
+					date > 1955.1.1
+				}
+			}
 		}
+		
 		ai_research_weights = {
-			naval_doctrine = -1.0
+			naval_doctrine = -0.1
+			naval_equipment = -0.1
 		}
 	}
 	
 	convoy_escorts = {
 		
-		screen_hull_small = {
+		screen_hull_medium = {
 			max_organisation = 20
 			sub_detection = 0.05
 		}
@@ -370,12 +450,22 @@ technologies = {
 			name = naval_doctrine_folder
 			position = { x = 0 y = 4 }
 		}
-		
+
 		ai_will_do = {
-			factor = 10
+			factor = 0
+			
+			modifier = {
+				add = 20 #Major Priority
+				AND = {
+					num_of_naval_factories > 15
+					date > 1955.1.1
+				}
+			}
 		}
+		
 		ai_research_weights = {
-			naval_doctrine = -1.0
+			naval_doctrine = -0.1
+			naval_equipment = -0.1
 		}
 	}
 	
@@ -408,22 +498,32 @@ technologies = {
 			name = naval_doctrine_folder
 			position = { x = 0 y = 6 }
 		}
-		
+
 		ai_will_do = {
-			factor = 10
+			factor = 0
+			
+			modifier = {
+				add = 20 #Major Priority
+				AND = {
+					num_of_naval_factories > 15
+					date > 1955.1.1
+				}
+			}
 		}
+		
 		ai_research_weights = {
-			naval_doctrine = -1.0
+			naval_doctrine = -0.1
+			naval_equipment = -0.1
 		}
 	}
 	
 	integrated_convoy_defence = {
 		
-		screen_hull_small = {
+		screen_hull_medium = {
 			max_organisation = 20
 			sub_detection = 0.1
 		}
-		screen_hull_medium = {
+		screen_hull_heavy = {
 			max_organisation = 10
 			sub_detection = 0.15
 		}
@@ -454,12 +554,22 @@ technologies = {
 			name = naval_doctrine_folder
 			position = { x = 0 y = 8 }
 		}
-		
+
 		ai_will_do = {
-			factor = 10
+			factor = 0
+			
+			modifier = {
+				add = 20 #Major Priority
+				AND = {
+					num_of_naval_factories > 15
+					date > 1955.1.1
+				}
+			}
 		}
+		
 		ai_research_weights = {
-			naval_doctrine = -1.0
+			naval_doctrine = -0.1
+			naval_equipment = -0.1
 		}
 	}
 	
@@ -501,12 +611,22 @@ technologies = {
 			name = naval_doctrine_folder
 			position = { x = 2 y = 2 }
 		}
-		
+
 		ai_will_do = {
-			factor = 10
+			factor = 0
+			
+			modifier = {
+				add = 20 #Major Priority
+				AND = {
+					num_of_naval_factories > 15
+					date > 1955.1.1
+				}
+			}
 		}
+		
 		ai_research_weights = {
-			naval_doctrine = -1.0
+			naval_doctrine = -0.1
+			naval_equipment = -0.1
 		}
 	}
 	
@@ -547,12 +667,22 @@ technologies = {
 			name = naval_doctrine_folder
 			position = { x = 2 y = 4 }
 		}
-		
+
 		ai_will_do = {
-			factor = 10
+			factor = 0
+			
+			modifier = {
+				add = 20 #Major Priority
+				AND = {
+					num_of_naval_factories > 15
+					date > 1955.1.1
+				}
+			}
 		}
+		
 		ai_research_weights = {
-			naval_doctrine = -1.0
+			naval_doctrine = -0.1
+			naval_equipment = -0.1
 		}
 	}
 	
@@ -597,12 +727,22 @@ technologies = {
 			name = naval_doctrine_folder
 			position = { x = 2 y = 6 }
 		}
-		
+
 		ai_will_do = {
-			factor = 10
+			factor = 0
+			
+			modifier = {
+				add = 20 #Major Priority
+				AND = {
+					num_of_naval_factories > 15
+					date > 1955.1.1
+				}
+			}
 		}
+		
 		ai_research_weights = {
-			naval_doctrine = -1.0
+			naval_doctrine = -0.1
+			naval_equipment = -0.1
 		}
 	}
 	
@@ -641,12 +781,22 @@ technologies = {
 			name = naval_doctrine_folder
 			position = { x = 2 y = 8 }
 		}
-		
+
 		ai_will_do = {
-			factor = 10
+			factor = 0
+			
+			modifier = {
+				add = 20 #Major Priority
+				AND = {
+					num_of_naval_factories > 15
+					date > 1955.1.1
+				}
+			}
 		}
+		
 		ai_research_weights = {
-			naval_doctrine = -1.0
+			naval_doctrine = -0.1
+			naval_equipment = -0.1
 		}
 	}
 	
@@ -664,7 +814,7 @@ technologies = {
 			max_organisation = 10
 			surface_detection = 0.05
 		}
-		screen_hull_large = {
+		battle_hull_light = {
 			max_organisation = 10
 			surface_detection = 0.05		
 		}
@@ -703,12 +853,22 @@ technologies = {
 			name = naval_doctrine_folder
 			position = { x = 0 y = 0 }
 		}
-		
+
 		ai_will_do = {
-			factor = 10
+			factor = 0
+			
+			modifier = {
+				add = 20 #Major Priority
+				AND = {
+					num_of_naval_factories > 15
+					date > 1955.1.1
+				}
+			}
 		}
+		
 		ai_research_weights = {
-			naval_doctrine = -1.0
+			naval_doctrine = -0.1
+			naval_equipment = -0.1
 		}
 	}
 	
@@ -753,12 +913,22 @@ technologies = {
 			name = naval_doctrine_folder
 			position = { x = 2 y = 2 }
 		}
-		
+
 		ai_will_do = {
-			factor = 10
+			factor = 0
+			
+			modifier = {
+				add = 20 #Major Priority
+				AND = {
+					num_of_naval_factories > 15
+					date > 1955.1.1
+				}
+			}
 		}
+		
 		ai_research_weights = {
-			naval_doctrine = -1.0
+			naval_doctrine = -0.1
+			naval_equipment = -0.1
 		}
 	}
 	
@@ -803,12 +973,22 @@ technologies = {
 			name = naval_doctrine_folder
 			position = { x = 2 y = 4 }
 		}
-		
+
 		ai_will_do = {
-			factor = 10
+			factor = 0
+			
+			modifier = {
+				add = 20 #Major Priority
+				AND = {
+					num_of_naval_factories > 15
+					date > 1955.1.1
+				}
+			}
 		}
+		
 		ai_research_weights = {
-			naval_doctrine = -1.0
+			naval_doctrine = -0.1
+			naval_equipment = -0.1
 		}
 	}
 	
@@ -853,12 +1033,22 @@ technologies = {
 			name = naval_doctrine_folder
 			position = { x = 2 y = 6 }
 		}
-		
+
 		ai_will_do = {
-			factor = 10
+			factor = 0
+			
+			modifier = {
+				add = 20 #Major Priority
+				AND = {
+					num_of_naval_factories > 15
+					date > 1955.1.1
+				}
+			}
 		}
+		
 		ai_research_weights = {
-			naval_doctrine = -1.0
+			naval_doctrine = -0.1
+			naval_equipment = -0.1
 		}
 	}
 	
@@ -905,12 +1095,22 @@ technologies = {
 			name = naval_doctrine_folder
 			position = { x = 2 y = 8 }
 		}
-		
+
 		ai_will_do = {
-			factor = 10
+			factor = 0
+			
+			modifier = {
+				add = 20 #Major Priority
+				AND = {
+					num_of_naval_factories > 15
+					date > 1955.1.1
+				}
+			}
 		}
+		
 		ai_research_weights = {
-			naval_doctrine = -1.0
+			naval_doctrine = -0.1
+			naval_equipment = -0.1
 		}
 	}
 	
@@ -931,17 +1131,17 @@ technologies = {
 			surface_detection = 0.1
 			convoy_raiding_coordination = 0.05
 		}
-		screen_hull_small = {
+		screen_hull_medium = {
 			max_organisation = 10
 			convoy_raiding_coordination = 0.35
 			surface_detection = 0.1
 		}
-		screen_hull_medium = {
+		screen_hull_heavy = {
 			max_organisation = 10
 			convoy_raiding_coordination = 0.35
 			surface_detection = 0.05
 		}
-		screen_hull_large = {
+		battle_hull_light = {
 			max_organisation = 10
 			convoy_raiding_coordination = 0.35
 			surface_detection = 0.05
@@ -964,36 +1164,46 @@ technologies = {
 			name = naval_doctrine_folder
 			position = { x = 2 y = 10 }
 		}
-		
+
 		ai_will_do = {
-			factor = 10
+			factor = 0
+			
+			modifier = {
+				add = 20 #Major Priority
+				AND = {
+					num_of_naval_factories > 15
+					date > 1955.1.1
+				}
+			}
 		}
+		
 		ai_research_weights = {
-			naval_doctrine = -1.0
+			naval_doctrine = -0.1
+			naval_equipment = -0.1
 		}
 	}
 	
 	raider_patrols = {
 		
-		screen_hull_small = {
-			max_organisation = 10
-			surface_visibility = -0.10
-			convoy_raiding_coordination = 0.10
-			surface_detection = 0.10
-		}
 		screen_hull_medium = {
 			max_organisation = 10
 			surface_visibility = -0.10
 			convoy_raiding_coordination = 0.10
 			surface_detection = 0.10
 		}
-		screen_hull_large = {
+		screen_hull_heavy = {
 			max_organisation = 10
 			surface_visibility = -0.10
 			convoy_raiding_coordination = 0.10
 			surface_detection = 0.10
 		}
-		capital_hull = {
+		battle_hull_light = {
+			max_organisation = 10
+			surface_visibility = -0.10
+			convoy_raiding_coordination = 0.10
+			surface_detection = 0.10
+		}
+		battle_hull_medium = {
 			max_organisation = 5
 			surface_visibility = -0.05
 			convoy_raiding_coordination = 0.15
@@ -1021,24 +1231,34 @@ technologies = {
 			name = naval_doctrine_folder
 			position = { x = -2 y = 2 }
 		}
-		
+
 		ai_will_do = {
-			factor = 10
+			factor = 0
+			
+			modifier = {
+				add = 20 #Major Priority
+				AND = {
+					num_of_naval_factories > 15
+					date > 1955.1.1
+				}
+			}
 		}
+		
 		ai_research_weights = {
-			naval_doctrine = -1.0
+			naval_doctrine = -0.1
+			naval_equipment = -0.1
 		}
 	}
 	
 	capital_ship_raiders = {
 		
-		screen_hull_large = {
+		battle_hull_light = {
 			max_organisation = 20
 			surface_visibility = -0.20
 			convoy_raiding_coordination = 0.15
 			surface_detection = 0.15
 		}
-		capital_hull = {
+		battle_hull_medium = {
 			max_organisation = 20
 			surface_visibility = -0.25
 			convoy_raiding_coordination = 0.5
@@ -1067,21 +1287,31 @@ technologies = {
 			name = naval_doctrine_folder
 			position = { x = -2 y = 4 }
 		}
-		
+
 		ai_will_do = {
-			factor = 10
+			factor = 0
+			
+			modifier = {
+				add = 20 #Major Priority
+				AND = {
+					num_of_naval_factories > 15
+					date > 1955.1.1
+				}
+			}
 		}
+		
 		ai_research_weights = {
-			naval_doctrine = -1.0
+			naval_doctrine = -0.1
+			naval_equipment = -0.1
 		}
 	}
 	
 	battlefleet_concentration_ti = {
 
-		screen_hull_large = {
+		battle_hull_light = {
 			max_organisation = 10			
 		}
-		capital_hull = {
+		battle_hull_medium = {
 			max_organisation = 10			
 		}
 		strike_force_movement_org_loss = -0.2
@@ -1107,18 +1337,28 @@ technologies = {
 			name = naval_doctrine_folder
 			position = { x = -2 y =6 }
 		}
-		
+
 		ai_will_do = {
-			factor = 10
+			factor = 0
+			
+			modifier = {
+				add = 20 #Major Priority
+				AND = {
+					num_of_naval_factories > 15
+					date > 1955.1.1
+				}
+			}
 		}
+		
 		ai_research_weights = {
-			naval_doctrine = -1.0
+			naval_doctrine = -0.1
+			naval_equipment = -0.1
 		}
 	}
 	
 	floating_fortress_ti = {
 
-		capital_hull = {
+		battle_hull_medium = {
 			max_organisation = 20
 		}
 		navy_capital_ship_defence_factor = 0.10
@@ -1144,12 +1384,22 @@ technologies = {
 			name = naval_doctrine_folder
 			position = { x = -2 y = 8 }
 		}
-		
+
 		ai_will_do = {
-			factor = 10
+			factor = 0
+			
+			modifier = {
+				add = 20 #Major Priority
+				AND = {
+					num_of_naval_factories > 15
+					date > 1955.1.1
+				}
+			}
 		}
+		
 		ai_research_weights = {
-			naval_doctrine = -1.0
+			naval_doctrine = -0.1
+			naval_equipment = -0.1
 		}
 	}
 	
@@ -1182,12 +1432,22 @@ technologies = {
 			name = naval_doctrine_folder
 			position = { x = -1 y = 10 }
 		}
-		
+
 		ai_will_do = {
-			factor = 10
+			factor = 0
+			
+			modifier = {
+				add = 20 #Major Priority
+				AND = {
+					num_of_naval_factories > 15
+					date > 1955.1.1
+				}
+			}
 		}
+		
 		ai_research_weights = {
-			naval_doctrine = -1.0
+			naval_doctrine = -0.1
+			naval_equipment = -0.1
 		}
 	}
 	
@@ -1227,18 +1487,28 @@ technologies = {
 			name = naval_doctrine_folder
 			position = { x = 0 y = 2 }
 		}
-		
+
 		ai_will_do = {
-			factor = 10
+			factor = 0
+			
+			modifier = {
+				add = 20 #Major Priority
+				AND = {
+					num_of_naval_factories > 15
+					date > 1955.1.1
+				}
+			}
 		}
+		
 		ai_research_weights = {
-			naval_doctrine = -1.0
+			naval_doctrine = -0.1
+			naval_equipment = -0.1
 		}
 	}
 	
 	convoy_sailing_ti = {
 
-		screen_hull_medium = {
+		screen_hull_heavy = {
 			max_organisation = 20
 			sub_detection = 0.05
 		}
@@ -1266,12 +1536,22 @@ technologies = {
 			name = naval_doctrine_folder
 			position = { x = 0 y = 4 }
 		}
-		
+
 		ai_will_do = {
-			factor = 10
+			factor = 0
+			
+			modifier = {
+				add = 20 #Major Priority
+				AND = {
+					num_of_naval_factories > 15
+					date > 1955.1.1
+				}
+			}
 		}
+		
 		ai_research_weights = {
-			naval_doctrine = -1.0
+			naval_doctrine = -0.1
+			naval_equipment = -0.1
 		}
 	}
 	
@@ -1309,12 +1589,22 @@ technologies = {
 			name = naval_doctrine_folder
 			position = { x = 0 y = 6 }
 		}
-		
+
 		ai_will_do = {
-			factor = 10
+			factor = 0
+			
+			modifier = {
+				add = 20 #Major Priority
+				AND = {
+					num_of_naval_factories > 15
+					date > 1955.1.1
+				}
+			}
 		}
+		
 		ai_research_weights = {
-			naval_doctrine = -1.0
+			naval_doctrine = -0.1
+			naval_equipment = -0.1
 		}
 	}
 	
@@ -1354,12 +1644,22 @@ technologies = {
 			name = naval_doctrine_folder
 			position = { x = 0 y = 8 }
 		}
-		
+
 		ai_will_do = {
-			factor = 10
+			factor = 0
+			
+			modifier = {
+				add = 20 #Major Priority
+				AND = {
+					num_of_naval_factories > 15
+					date > 1955.1.1
+				}
+			}
 		}
+		
 		ai_research_weights = {
-			naval_doctrine = -1.0
+			naval_doctrine = -0.1
+			naval_equipment = -0.1
 		}
 	}
 	
@@ -1408,12 +1708,22 @@ technologies = {
 			name = naval_doctrine_folder
 			position = { x = 0 y = 0 }
 		}
-		
+
 		ai_will_do = {
-			factor = 10
+			factor = 0
+			
+			modifier = {
+				add = 20 #Major Priority
+				AND = {
+					num_of_naval_factories > 15
+					date > 1955.1.1
+				}
+			}
 		}
+		
 		ai_research_weights = {
-			naval_doctrine = -1.0
+			naval_doctrine = -0.1
+			naval_equipment = -0.1
 		}
 	}
 	
@@ -1455,12 +1765,22 @@ technologies = {
 			name = naval_doctrine_folder
 			position = { x = 2 y = 2 }
 		}
-		
+
 		ai_will_do = {
-			factor = 10
+			factor = 0
+			
+			modifier = {
+				add = 20 #Major Priority
+				AND = {
+					num_of_naval_factories > 15
+					date > 1955.1.1
+				}
+			}
 		}
+		
 		ai_research_weights = {
-			naval_doctrine = -1.0
+			naval_doctrine = -0.1
+			naval_equipment = -0.1
 		}
 	}
 	
@@ -1475,7 +1795,7 @@ technologies = {
 		carrier_hull_super = {
 			max_organisation = 25			
 		}
-		screen_hull_medium = {
+		screen_hull_heavy = {
 			max_organisation = 20
 		}
 		modifier = {
@@ -1503,12 +1823,22 @@ technologies = {
 			name = naval_doctrine_folder
 			position = { x = 2 y = 4 }
 		}
-		
+
 		ai_will_do = {
-			factor = 10
+			factor = 0
+			
+			modifier = {
+				add = 20 #Major Priority
+				AND = {
+					num_of_naval_factories > 15
+					date > 1955.1.1
+				}
+			}
 		}
+		
 		ai_research_weights = {
-			naval_doctrine = -1.0
+			naval_doctrine = -0.1
+			naval_equipment = -0.1
 		}
 	}
 	
@@ -1546,12 +1876,22 @@ technologies = {
 			name = naval_doctrine_folder
 			position = { x = 2 y = 6 }
 		}
-		
+
 		ai_will_do = {
-			factor = 10
+			factor = 0
+			
+			modifier = {
+				add = 20 #Major Priority
+				AND = {
+					num_of_naval_factories > 15
+					date > 1955.1.1
+				}
+			}
 		}
+		
 		ai_research_weights = {
-			naval_doctrine = -1.0
+			naval_doctrine = -0.1
+			naval_equipment = -0.1
 		}
 	}
 	
@@ -1594,18 +1934,28 @@ technologies = {
 			name = naval_doctrine_folder
 			position = { x = 2 y = 8 }
 		}
-		
+
 		ai_will_do = {
-			factor = 10
+			factor = 0
+			
+			modifier = {
+				add = 20 #Major Priority
+				AND = {
+					num_of_naval_factories > 15
+					date > 1955.1.1
+				}
+			}
 		}
+		
 		ai_research_weights = {
-			naval_doctrine = -1.0
+			naval_doctrine = -0.1
+			naval_equipment = -0.1
 		}
 	}
 	
 	floating_fortress_bs = {
 
-		capital_hull = {
+		battle_hull_medium = {
 			max_organisation = 20
 		}
 		navy_capital_ship_defence_factor = 0.10
@@ -1631,12 +1981,22 @@ technologies = {
 			name = naval_doctrine_folder
 			position = { x = 2 y = 10 }
 		}
-		
+
 		ai_will_do = {
-			factor = 10
+			factor = 0
+			
+			modifier = {
+				add = 20 #Major Priority
+				AND = {
+					num_of_naval_factories > 15
+					date > 1955.1.1
+				}
+			}
 		}
+		
 		ai_research_weights = {
-			naval_doctrine = -1.0
+			naval_doctrine = -0.1
+			naval_equipment = -0.1
 		}
 	}
 	
@@ -1651,7 +2011,7 @@ technologies = {
 		carrier_hull_super = {
 			max_organisation = 25			
 		}
-		screen_hull_medium = {
+		screen_hull_heavy = {
 			max_organisation = 20
 		}
 
@@ -1673,12 +2033,22 @@ technologies = {
 			name = naval_doctrine_folder
 			position = { x = 2 y = 12 }
 		}
-		
+
 		ai_will_do = {
-			factor = 10
+			factor = 0
+			
+			modifier = {
+				add = 20 #Major Priority
+				AND = {
+					num_of_naval_factories > 15
+					date > 1955.1.1
+				}
+			}
 		}
+		
 		ai_research_weights = {
-			naval_doctrine = -1.0
+			naval_doctrine = -0.1
+			naval_equipment = -0.1
 		}
 	}
 	
@@ -1718,12 +2088,22 @@ technologies = {
 			name = naval_doctrine_folder
 			position = { x = 0 y = 2 }
 		}
-		
+
 		ai_will_do = {
-			factor = 10
+			factor = 0
+			
+			modifier = {
+				add = 20 #Major Priority
+				AND = {
+					num_of_naval_factories > 15
+					date > 1955.1.1
+				}
+			}
 		}
+		
 		ai_research_weights = {
-			naval_doctrine = -1.0
+			naval_doctrine = -0.1
+			naval_equipment = -0.1
 		}
 	}
 	
@@ -1762,12 +2142,22 @@ technologies = {
 			name = naval_doctrine_folder
 			position = { x = 0 y = 4 }
 		}
-		
+
 		ai_will_do = {
-			factor = 10
+			factor = 0
+			
+			modifier = {
+				add = 20 #Major Priority
+				AND = {
+					num_of_naval_factories > 15
+					date > 1955.1.1
+				}
+			}
 		}
+		
 		ai_research_weights = {
-			naval_doctrine = -1.0
+			naval_doctrine = -0.1
+			naval_equipment = -0.1
 		}
 	}
 	
@@ -1810,12 +2200,22 @@ technologies = {
 			name = naval_doctrine_folder
 			position = { x = 0 y = 6 }
 		}
-		
+
 		ai_will_do = {
-			factor = 10
+			factor = 0
+			
+			modifier = {
+				add = 20 #Major Priority
+				AND = {
+					num_of_naval_factories > 15
+					date > 1955.1.1
+				}
+			}
 		}
+		
 		ai_research_weights = {
-			naval_doctrine = -1.0
+			naval_doctrine = -0.1
+			naval_equipment = -0.1
 		}
 	}
 	
@@ -1852,18 +2252,28 @@ technologies = {
 			name = naval_doctrine_folder
 			position = { x = 0 y = 8 }
 		}
-		
+
 		ai_will_do = {
-			factor = 10
+			factor = 0
+			
+			modifier = {
+				add = 20 #Major Priority
+				AND = {
+					num_of_naval_factories > 15
+					date > 1955.1.1
+				}
+			}
 		}
+		
 		ai_research_weights = {
-			naval_doctrine = -1.0
+			naval_doctrine = -0.1
+			naval_equipment = -0.1
 		}
 	}
 	
 	convoy_escorts_bs = {
 
-		screen_hull_small = {
+		screen_hull_medium = {
 			max_organisation = 20
 			sub_detection = 0.05
 		}
@@ -1890,12 +2300,22 @@ technologies = {
 			name = naval_doctrine_folder
 			position = { x = -2 y = 2 }
 		}
-		
+
 		ai_will_do = {
-			factor = 10
+			factor = 0
+			
+			modifier = {
+				add = 20 #Major Priority
+				AND = {
+					num_of_naval_factories > 15
+					date > 1955.1.1
+				}
+			}
 		}
+		
 		ai_research_weights = {
-			naval_doctrine = -1.0
+			naval_doctrine = -0.1
+			naval_equipment = -0.1
 		}
 	}
 	
@@ -1905,11 +2325,11 @@ technologies = {
 			max_organisation = 10
 			sub_detection = 0.05
 		}
-		screen_hull_small = {
+		screen_hull_medium = {
 			max_organisation = 10
 			sub_detection = 0.05
 		}
-		screen_hull_medium = {
+		screen_hull_heavy = {
 			max_organisation = 10
 			sub_detection = 0.1
 		}
@@ -1936,18 +2356,28 @@ technologies = {
 			name = naval_doctrine_folder
 			position = { x = -2 y = 4 }
 		}
-		
+
 		ai_will_do = {
-			factor = 10
+			factor = 0
+			
+			modifier = {
+				add = 20 #Major Priority
+				AND = {
+					num_of_naval_factories > 15
+					date > 1955.1.1
+				}
+			}
 		}
+		
 		ai_research_weights = {
-			naval_doctrine = -1.0
+			naval_doctrine = -0.1
+			naval_equipment = -0.1
 		}
 	}
 	
 	convoy_sailing_bs = {
 
-		screen_hull_medium = {
+		screen_hull_heavy = {
 			max_organisation = 20
 			sub_detection = 0.05
 		}
@@ -1974,22 +2404,32 @@ technologies = {
 			name = naval_doctrine_folder
 			position = { x = -2 y = 6 }
 		}
-		
+
 		ai_will_do = {
-			factor = 10
+			factor = 0
+			
+			modifier = {
+				add = 20 #Major Priority
+				AND = {
+					num_of_naval_factories > 15
+					date > 1955.1.1
+				}
+			}
 		}
+		
 		ai_research_weights = {
-			naval_doctrine = -1.0
+			naval_doctrine = -0.1
+			naval_equipment = -0.1
 		}
 	}
 	
 	integrated_convoy_defence_bs = {
 
-		screen_hull_small = {
+		screen_hull_medium = {
 			max_organisation = 20
 			sub_detection = 0.1
 		}
-		screen_hull_medium = {
+		screen_hull_heavy = {
 			max_organisation = 10
 			sub_detection = 0.15
 		}
@@ -2014,12 +2454,22 @@ technologies = {
 			name = naval_doctrine_folder
 			position = { x = -2 y = 8 }
 		}
-		
+
 		ai_will_do = {
-			factor = 10
+			factor = 0
+			
+			modifier = {
+				add = 20 #Major Priority
+				AND = {
+					num_of_naval_factories > 15
+					date > 1955.1.1
+				}
+			}
 		}
+		
 		ai_research_weights = {
-			naval_doctrine = -1.0
+			naval_doctrine = -0.1
+			naval_equipment = -0.1
 		}
 	}
 }

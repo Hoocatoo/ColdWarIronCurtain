@@ -30,7 +30,7 @@ if = {
 		subkiller_0 = 1
 		subkiller_1 = 1
 		maritime_sonar_0 = 1	
-		ww_detection = 1
+		detection_ww = 1
 		maritime_ta_fcs_0 = 1
 		maritime_ew_ss_0 = 1
 		ww_armaments = 1
@@ -40,9 +40,9 @@ if = {
 		ship_armament_heavy_0 = 1
 		
 		ww_capitals = 1
-		capital_hull_0 = 1
+		battle_hull_medium_0 = 1
 		ww_carriers = 1
-		capital_hull_0 = 1
+		battle_hull_medium_0 = 1
 		carrier_hull_0 = 1
 		
 		ww_submarines = 1
@@ -51,9 +51,9 @@ if = {
 		sub_hull_small_single_0 = 1
 		torpedo_small_0 = 1
 		ww_screens = 1
+		screen_hull_heavy_0 = 1
 		screen_hull_medium_0 = 1
-		screen_hull_small_0 = 1
-		screen_hull_large_0 = 1
+		battle_hull_light_0 = 1
 	}
 }
 
@@ -273,7 +273,7 @@ add_to_array = { influence_array_val = 10 }
 		name = "Pietro Nenni"
 		picture = "Pietro_Nenni.dds"
 		ideology = market_socialism
-	}	
+	}
 }
 create_corps_commander = {
 	name = "Giovanni de Lorenzo"
@@ -400,7 +400,7 @@ create_corps_commander = {
 1960.2.1 = {
 	#load_focus_tree = ITA_1960s
 	set_party_name = { ideology = conservative long_name = "Partito Democratico Italiano di Unità Monarchica" name = PDIUM }
-	set_autonomy = { target = SOM autonomy_state = autonomy_free }	
+	set_autonomy = { target = SOM autonomy_state = autonomy_free }
 }
 
 1973.1.1 = {
@@ -469,15 +469,59 @@ if = {
 	limit = { has_dlc = "Man the Guns" }
 	### Variants ###
 	create_equipment_variant = {
-        name = "Fulgore-class"
-        type = ww_screen_hull_medium
+        name = "Ariete-class"
+        type = screen_hull_medium_ww
         parent_version = 0
+		name_group = ITA_MINELAYERS_HISTORICAL
+        modules = {
+            fixed_ship_anti_air_slot = ship_AA_gun_1
+            fixed_ship_battery_slot = ship_armament_light_ww
+            fixed_maritime_slot = sonar_ww
+            fixed_ship_engine_slot = screen_engine_light_ww
+            fixed_ship_torpedo_slot = torpedo_ww
+            mid_1_custom_slot = ship_subkiller_0
+            rear_1_custom_slot = ship_armament_light_ww
+        }
+    }
+	create_equipment_variant = {
+		name = "Flutto-class"
+		type = sub_hull_ww
+		parent_version = 0
+		name_group = ITA_SS_HISTORICAL
+		modules = {
+			fixed_sub_torpedo_slot = sub_torpedo_ww
+			fixed_sub_engine_slot = sub_engine_ww
+			fixed_maritime_slot = sonar_ww
+			mid_1_custom_slot = sub_torpedo_ww
+		}
+	}
+	create_equipment_variant = {
+        name = "Ciclone-class"
+        type = screen_hull_medium_ww
+        parent_version = 0
+		name_group = ITA_CITIES
+        modules = {
+            fixed_ship_anti_air_slot = ship_AA_gun_1
+            fixed_ship_battery_slot = ship_armament_light_ww
+            fixed_maritime_slot = sonar_ww
+            fixed_ship_engine_slot = screen_engine_light_ww
+            fixed_ship_torpedo_slot = torpedo_ww
+            mid_1_custom_slot = ship_subkiller_0
+            rear_1_custom_slot = ship_armament_light_ww
+        }
+    }
+	
+	create_equipment_variant = {
+        name = "Fulgore-class"
+        type = screen_hull_heavy_ww
+        parent_version = 0
+		name_group = ITA_DD_HISTORICAL
         modules = {
             fixed_ship_anti_air_slot = ship_AA_gun_1
             fixed_ship_battery_slot = ship_armament_medium_ww
-            fixed_maritime_slot = ww_sonar 
-            fixed_maritime_slot_2 = ww_detection 
-            fixed_ship_engine_slot = ww_screen_engine
+            fixed_maritime_slot = sonar_ww 
+            fixed_maritime_slot_2 = detection_ww 
+            fixed_ship_engine_slot = screen_engine_ww
             fixed_ship_torpedo_slot = torpedo_ww
             mid_1_custom_slot = ship_subkiller_0
             rear_1_custom_slot = ship_armament_light_ww
@@ -485,20 +529,40 @@ if = {
     }
 	create_equipment_variant = {
 		name = "Condottieri-class" # Cruiser (Antiair/Firepower)
-		type = ww_screen_hull_large
+		type = battle_hull_light_ww
 		parent_version = 0
+		name_group = ITA_CL_HISTORICAL
 		modules = {
 			fixed_ship_battery_slot = ship_armament_medium_ww
             fixed_ship_anti_air_slot = ship_AA_gun_1
-			fixed_maritime_slot = ww_detection
-			fixed_maritime_slot_2 = ww_sonar
-			fixed_ship_engine_slot = ww_screen_engine
+			fixed_maritime_slot = detection_ww
+			fixed_maritime_slot_2 = sonar_ww
+			fixed_ship_engine_slot = screen_engine_ww
 			fixed_ship_torpedo_slot = torpedo_ww
 			front_1_custom_slot = ship_armament_light_ww
 			mid_1_custom_slot = ship_AA_gun_1
 			rear_1_custom_slot = ship_armament_light_ww
 		}
 	}
+	create_equipment_variant = {
+        name = "Classe Capitani Romani"
+        type = battle_hull_heavy_0
+        parent_version = 0
+		name_group = USA_BB_HISTORICAL
+        modules = {
+			fixed_ship_battery_slot = ship_armament_heavy_1
+			fixed_ship_anti_air_slot = ship_AA_gun_1
+			fixed_maritime_slot = sonar_ww
+			fixed_maritime_slot_2 = detection_ww
+			fixed_ship_engine_slot = capital_engine_ww
+			fixed_ship_torpedo_slot = ship_torpedo_medium_0
+			front_1_custom_slot = ship_armament_medium_1
+			mid_1_custom_slot = ship_armament_heavy_1
+			mid_2_custom_slot = ship_armament_heavy_1
+			mid_3_custom_slot = ship_AA_gun_1
+			rear_1_custom_slot = ship_armament_medium_1
+        }
+    }
 }
 
   ITA = { diplomatic_relation = { country = USA relation = military_access active = yes }

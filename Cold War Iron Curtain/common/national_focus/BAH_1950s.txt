@@ -10,7 +10,7 @@ focus_tree = {
 	default = no
 	focus = {
 		id = BAH_An_Oil_Economy
-		icon = GFX_goal_unknown
+		icon = GFX_Tribal_Subsidies
 		search_filters = {IC_FILTER}
 		cost = 10.00
 		x = 7
@@ -52,7 +52,7 @@ focus_tree = {
 	}
 	focus = {
 		id = BAH_Modernization_Campaign
-		icon = GFX_goal_unknown
+		icon = GFX_tribal_factory_workers
 		search_filters = {IC_FILTER}
 		cost = 10.00
 		prerequisite = {
@@ -60,11 +60,18 @@ focus_tree = {
 		}
 		x = 3
 		y = 1
-
+		completion_reward = {
+			add_tech_bonus = {
+				name = modernization_bonus
+				bonus = 1.75
+				uses = 2
+				category = industry
+			}
+		}
 	}
 	focus = {
 		id = BAH_Literacy_Campaign
-		icon = GFX_goal_unknown
+		icon = GFX_Literacy_Campaign
 		search_filters = {IC_FILTER}
 		cost = 10.00
 		prerequisite = {
@@ -72,11 +79,16 @@ focus_tree = {
 		}
 		x = 1
 		y = 2
-
+		completion_reward = {
+			add_timed_idea = {
+				idea = literacy_campaign
+				days = 1250
+			}
+		}	
 	}
 	focus = {
 		id = BAH_Expand_Newspaper_Distribution
-		icon = GFX_goal_unknown
+		icon = GFX_goal_big_news
 		search_filters = {IC_FILTER}
 		cost = 10.00
 		prerequisite = {
@@ -84,7 +96,13 @@ focus_tree = {
 		}
 		x = 1
 		y = 3
-
+		completion_reward = {
+			add_political_power = 50
+			add_popularity = {
+				ideology = nationalism
+				popularity = 0.02
+			}
+		}	
 	}
 	focus = {
 		id = BAH_The_Bab_Al_Bahrain
@@ -96,11 +114,21 @@ focus_tree = {
 		}
 		x = 5
 		y = 2
-
+		completion_reward = {
+			country_event = Bab_Al_Bahrain.1
+			capital_scope = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = office_park
+					level = 1
+					instant_build = yes
+				}	
+			}
+		}
 	}
 	focus = {
 		id = BAH_Anti_Malaria_Campaign
-		icon = GFX_goal_unknown
+		icon = GFX_immunization_campaign
 		search_filters = {IC_FILTER}
 		cost = 10.00
 		prerequisite = {
@@ -108,11 +136,13 @@ focus_tree = {
 		}
 		x = 5
 		y = 3
-
+		completion_reward = {
+			remove_ideas = Failing_Health_System_2
+		}
 	}
 	focus = {
 		id = BAH_Support_Bahraini_Fisherman
-		icon = GFX_goal_unknown
+		icon = GFX_Fishing_Industry
 		search_filters = {IC_FILTER}
 		cost = 10.00
 		prerequisite = {
@@ -123,11 +153,18 @@ focus_tree = {
 		}
 		x = 3
 		y = 4
-
+		completion_reward = {
+			capital_scope = {
+				add_resource = {
+					type = rubber
+					amount = 15
+				}					
+			}
+		}
 	}
 	focus = {
 		id = BAH_Encourage_Urbanization
-		icon = GFX_goal_unknown
+		icon = GFX_focus_Urban_Development
 		search_filters = {IC_FILTER}
 		cost = 10.00
 		prerequisite = {
@@ -144,7 +181,7 @@ focus_tree = {
 	}
 	focus = {
 		id = BAH_The_National_Bank_of_Bahrain
-		icon = GFX_goal_unknown
+		icon = GFX_rebrandbanks
 		search_filters = {IC_FILTER}
 		cost = 10.00
 		prerequisite = {
@@ -152,11 +189,13 @@ focus_tree = {
 		}
 		x = 7
 		y = 4
-
+		completion_reward = {
+			add_ideas = national_bank
+		}
 	}
 	focus = {
 		id = BAH_BAPCO_Revenue
-		icon = GFX_goal_unknown
+		icon = GFX_Money
 		search_filters = {IC_FILTER}
 		cost = 10.00
 		prerequisite = {
@@ -164,11 +203,20 @@ focus_tree = {
 		}
 		x = 11
 		y = 1
-
+		completion_reward = {
+			capital_scope = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = office_park
+					level = 2
+					instant_build = yes
+				}	
+			}
+		}
 	}
 	focus = {
 		id = BAH_Airport_Investments
-		icon = GFX_goal_unknown
+		icon = GFX_Travel_Modernization
 		search_filters = {IC_FILTER}
 		cost = 10.00
 		prerequisite = {
@@ -190,7 +238,7 @@ focus_tree = {
 	}
 	focus = {
 		id = BAH_Expand_Access_to_Water
-		icon = GFX_goal_unknown
+		icon = GFX_Irrigation_Pipes
 		search_filters = {IC_FILTER}
 		cost = 10.00
 		prerequisite = {
@@ -198,11 +246,19 @@ focus_tree = {
 		}
 		x = 9
 		y = 3
-
+		completion_reward = {
+			capital_scope = {
+				add_building_construction = {
+					type = water_infrastructure
+					level = 1
+					instant_build = yes
+				}		
+			}
+		}
 	}
 	focus = {
 		id = BAH_RGO_Modernization
-		icon = GFX_goal_unknown
+		icon = GFX_goal_oil_derrick
 		search_filters = {IC_FILTER}
 		cost = 10.00
 		prerequisite = {
@@ -211,22 +267,18 @@ focus_tree = {
 		x = 13
 		y = 2
 		completion_reward = {
-			add_resource = {
-				type = oil
-				amount = 10
-				state = 1164
-				}
-			add_resource = {
-				type = steel
-				amount = 10
-				state = 1164
-				}
-			}	
+			add_tech_bonus = {
+				name = rgo_bonus
+				bonus = 1.5
+				uses = 2
+				category = rgo
+			}
+		}	
 
 	}
 	focus = {
 		id = BAH_Oil_Windfalls
-		icon = GFX_goal_unknown
+		icon = GFX_goal_oil
 		search_filters = {IC_FILTER}
 		cost = 10.00
 		prerequisite = {
@@ -245,7 +297,7 @@ focus_tree = {
 	}
 	focus = {
 		id = BAH_Expand_the_Refineries
-		icon = GFX_goal_unknown
+		icon = GFX_goal_Further_Oil
 		search_filters = {IC_FILTER}
 		cost = 10.00
 		prerequisite = {
@@ -259,7 +311,7 @@ focus_tree = {
 		completion_reward = {
 			add_resource = {
 				type = oil
-				amount = 40
+				amount = 20
 				state = 1164
 				}
 			}	
@@ -267,7 +319,7 @@ focus_tree = {
 	}
 	focus = {
 		id = BAH_Expand_Manama
-		icon = GFX_goal_unknown
+		icon = GFX_Generic_Industrialization
 		search_filters = {IC_FILTER}
 		cost = 10.00
 		prerequisite = {
@@ -281,11 +333,15 @@ focus_tree = {
 		}
 		x = 7
 		y = 5
-
+		completion_reward = {
+			capital_scope = {
+				add_extra_state_shared_building_slots = 2
+			}
+		}
 	}
 	focus = {
 		id = BAH_Establish_New_Courts
-		icon = GFX_goal_unknown
+		icon = GFX_expand_legal_power
 		search_filters = {IC_FILTER}
 		cost = 10.00
 		prerequisite = {
@@ -293,11 +349,14 @@ focus_tree = {
 		}
 		x = 18
 		y = 1
-
+		completion_reward = {
+			add_political_power = 50
+			add_stability = 0.02
+		}
 	}
 	focus = {
 		id = BAH_Increase_Access_to_Healthcare
-		icon = GFX_goal_unknown
+		icon = GFX_healthcare
 		search_filters = {IC_FILTER}
 		cost = 10.00
 		prerequisite = {
@@ -305,11 +364,16 @@ focus_tree = {
 		}
 		x = 16
 		y = 2
-
+		completion_reward = {
+			add_timed_idea = {
+				idea = access_to_health_care
+				days = 1250
+			}
+		}
 	}
 	focus = {
 		id = BAH_Administrative_Investments
-		icon = GFX_goal_unknown
+		icon = GFX_Paper_Two
 		search_filters = {IC_FILTER}
 		cost = 10.00
 		prerequisite = {
@@ -317,11 +381,16 @@ focus_tree = {
 		}
 		x = 20
 		y = 1
-
+		completion_reward = {
+			add_timed_idea = {
+				idea = reformed_bureacracy
+				days = 1250
+			}
+		}
 	}
 	focus = {
 		id = BAH_Encourage_Bahraini_Nationalism
-		icon = GFX_goal_unknown
+		icon = GFX_microphone
 		search_filters = {IC_FILTER}
 		cost = 10.00
 		prerequisite = {
@@ -333,13 +402,14 @@ focus_tree = {
 		x = 19
 		y = 2
 		completion_reward = {
-			add_stability = 0.1
+			add_stability = 0.025
+			add_political_power = 50
 		}
 
 	}
 	focus = {
 		id = BAH_Increase_Sectarian_Tensions
-		icon = GFX_goal_unknown
+		icon = GFX_focus_rioting
 		search_filters = {IC_FILTER}
 		cost = 10.00
 		prerequisite = {
@@ -350,11 +420,21 @@ focus_tree = {
 		}
 		x = 17
 		y = 3
-
+		completion_reward = {
+			hidden_effect = {
+				remove_ideas = policy_religion_temp_1
+				remove_ideas = policy_religion_temp_2
+				remove_ideas = policy_religion_temp_3
+				remove_ideas = policy_religion_temp_3a
+				remove_ideas = policy_religion_temp_0a
+				remove_ideas = policy_religion_temp_0
+			}
+			add_ideas = policy_religion_temp_1
+		}
 	}
 	focus = {
 		id = BAH_Increase_Political_Repression
-		icon = GFX_goal_unknown
+		icon = GFX_ChampagneRepression
 		search_filters = {IC_FILTER}
 		cost = 10.00
 		prerequisite = {
@@ -362,11 +442,16 @@ focus_tree = {
 		}
 		x = 22
 		y = 2
-
+		completion_reward = {
+			add_timed_idea = {
+				idea = repression
+				days = 1250
+			}
+		}
 	}
 	focus = {
 		id = BAH_Aid_Palestinian_Refugees
-		icon = GFX_goal_unknown
+		icon = GFX_Generic_Refugee_Focus
 		search_filters = {IC_FILTER}
 		cost = 10.00
 		prerequisite = {
@@ -378,8 +463,21 @@ focus_tree = {
 		x = 21
 		y = 3
 		completion_reward = {
-			add_stability = 0.1
-			add_war_support = 0.1
+			add_to_variable = { currentMoney = 50 }
+			custom_effect_tooltip = Add_Fifty_Money_JOR
+			add_stability = 0.02
+			BHR = {
+				add_opinion_modifier = {
+					target = JOR
+					modifier = large_increase
+				}
+			}
+			JOR = {
+				add_opinion_modifier = {
+					target = BAH
+					modifier = large_increase
+				}
+			}			
 		}
 
 	}
@@ -396,11 +494,13 @@ focus_tree = {
 		}
 		x = 19
 		y = 4
-
+		completion_reward = {
+			add_political_power = 75
+		}
 	}
 	focus = {
 		id = BAH_Crackdown_on_Strikers
-		icon = GFX_goal_unknown
+		icon = GFX_Crush_Strikers
 		search_filters = {IC_FILTER}
 		cost = 10.00
 		prerequisite = {
@@ -408,11 +508,16 @@ focus_tree = {
 		}
 		x = 21
 		y = 5
-
+		completion_reward = {
+			add_timed_idea = {
+				idea = martial_law
+				days = 365
+			}
+		}
 	}
 	focus = {
 		id = BAH_Reduce_Wages
-		icon = GFX_goal_unknown
+		icon = GFX_Cut_Funding
 		search_filters = {IC_FILTER}
 		cost = 10.00
 		prerequisite = {
@@ -421,9 +526,17 @@ focus_tree = {
 		x = 22
 		y = 6
 		completion_reward = {
-			add_stability = -0.15
+			hidden_effect = {
+				remove_ideas = policy_union_temp_0
+				remove_ideas = policy_union_temp_1
+				remove_ideas = policy_union_temp_2
+				remove_ideas = policy_union_temp_3
+				remove_ideas = policy_union_temp_4
+				remove_ideas = policy_union_temp_5
+			}
+			add_ideas = policy_union_temp_0
+			add_timed_idea = { idea = union_instability_cooldown days = 365 }
 		}
-
 	}
 	focus = {
 		id = BAH_Bahraini_Public_Defense_Services_Air_Wing
@@ -442,7 +555,7 @@ focus_tree = {
 	}
 	focus = {
 		id = BAH_Anti_Air_Investments
-		icon = GFX_goal_unknown
+		icon = GFX_Anti_Aircraft
 		search_filters = {IC_FILTER}
 		cost = 10.00
 		prerequisite = {
@@ -450,11 +563,19 @@ focus_tree = {
 		}
 		x = 25
 		y = 2
-
+		completion_reward = {
+			capital_scope = {
+				add_building_construction = {
+					type = anti_air_building
+					level = 1
+					instant_build = yes
+				}		
+			}
+		}
 	}
 	focus = {
 		id = BAH_British_Air_Advisors
-		icon = GFX_goal_unknown
+		icon = GFX_British_Advisors
 		search_filters = {IC_FILTER}
 		cost = 10.00
 		prerequisite = {
@@ -462,11 +583,13 @@ focus_tree = {
 		}
 		x = 29
 		y = 2
-
+		completion_reward = {
+			add_ideas = british_air_advisors
+		}
 	}
 	focus = {
 		id = BAH_Construct_New_Airbases
-		icon = GFX_goal_unknown
+		icon = GFX_goal_generic_AirBases
 		search_filters = {IC_FILTER}
 		cost = 10.00
 		prerequisite = {
@@ -482,7 +605,7 @@ focus_tree = {
 				add_building_construction = {
 
 					type = airfield
-					level = 2
+					level = 1
 					instant_build = yes
 				}	
 			}
@@ -490,7 +613,7 @@ focus_tree = {
 	}
 	focus = {
 		id = BAH_Import_British_Aircraft
-		icon = GFX_goal_unknown
+		icon = GFX_goal_ENG_deal
 		search_filters = {IC_FILTER}
 		cost = 10.00
 		prerequisite = {
@@ -498,7 +621,13 @@ focus_tree = {
 		}
 		x = 27
 		y = 4
-
+		completion_reward = {
+			add_equipment_to_stockpile = {
+				type = jet_interceptor_equipment_2
+				amount = 75
+				producer = ENG
+			}		
+		}
 	}
 	focus = {
 		id = BAH_Bahraini_Public_Defense_Land_Forces
@@ -510,11 +639,13 @@ focus_tree = {
 		}
 		x = 34
 		y = 1
-
+		completion_reward = {
+			army_experience = 50
+		}
 	}
 	focus = {
 		id = BAH_British_Advisors
-		icon = GFX_goal_unknown
+		icon = GFX_Mercenaries
 		search_filters = {IC_FILTER}
 		cost = 10.00
 		prerequisite = {
@@ -522,11 +653,13 @@ focus_tree = {
 		}
 		x = 32
 		y = 2
-
+		completion_reward = {
+			add_ideas = british_advisors
+		}
 	}
 	focus = {
 		id = BAH_Expand_Fortifications
-		icon = GFX_goal_unknown
+		icon = GFX_FortificationEffort
 		search_filters = {IC_FILTER}
 		cost = 10.00
 		prerequisite = {
@@ -534,11 +667,16 @@ focus_tree = {
 		}
 		x = 36
 		y = 2
-
+		completion_reward = {
+			add_timed_idea = {
+				idea = fortification_build_up
+				days = 900
+			}
+		}
 	}
 	focus = {
 		id = BAH_British_Surplus_Weaponry
-		icon = GFX_goal_unknown
+		icon = GFX_FocusM16s
 		search_filters = {IC_FILTER}
 		cost = 10.00
 		prerequisite = {
@@ -549,11 +687,18 @@ focus_tree = {
 		}
 		x = 34
 		y = 3
-
+			completion_reward = {
+					add_equipment_to_stockpile = {
+							type = infantry_equipment_0
+							amount = 25000
+							producer = ENG
+						}
+				
+			}
 	}
 	focus = {
 		id = BAH_Motorized_Initiative
-		icon = GFX_goal_unknown
+		icon = GFX_goal_generic_army_motorized
 		search_filters = {IC_FILTER}
 		cost = 10.00
 		prerequisite = {
@@ -561,7 +706,13 @@ focus_tree = {
 		}
 		x = 34
 		y = 4
-
+		completion_reward = {
+			add_equipment_to_stockpile = {
+				type = motorized_equipment_2
+				amount = 250
+				producer = ENG
+			}			
+		}
 	}
 	focus = {
 		id = BAH_Bahraini_Public_Defense_Naval_Service
@@ -573,11 +724,13 @@ focus_tree = {
 		}
 		x = 41
 		y = 1
-
+		completion_reward = {
+			navy_experience = 50
+		}
 	}
 	focus = {
 		id = BAH_Coastal_Defenses
-		icon = GFX_goal_unknown
+		icon = GFX_focus_generic_coastal_fort
 		search_filters = {IC_FILTER}
 		cost = 10.00
 		prerequisite = {
@@ -585,11 +738,16 @@ focus_tree = {
 		}
 		x = 39
 		y = 2
-
+		completion_reward = {
+			add_timed_idea = {
+				idea = navy_boost_general 
+				days = 900
+			}
+		}
 	}
 	focus = {
 		id = BAH_Expand_Dockyards
-		icon = GFX_goal_unknown
+		icon = GFX_NavalOperations
 		search_filters = {IC_FILTER}
 		cost = 10.00
 		prerequisite = {
@@ -597,11 +755,20 @@ focus_tree = {
 		}
 		x = 43
 		y = 2
-
+		completion_reward = {
+			capital_scope = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = dockyard
+					level = 2
+					instant_build = yes
+				}	
+			}
+		}
 	}
 	focus = {
 		id = BAH_Import_Anti_Ship_Weaponry
-		icon = GFX_goal_unknown
+		icon = GFX_Anti_Ship_Missles
 		search_filters = {IC_FILTER}
 		cost = 10.00
 		prerequisite = {
@@ -612,11 +779,18 @@ focus_tree = {
 		}
 		x = 41
 		y = 3
-
+		completion_reward = {
+			add_tech_bonus = {
+				name = anti_ship_missle_bonus
+				bonus = 1.75
+				uses = 2
+				category = asw_tech
+			}		
+		}
 	}
 	focus = {
 		id = BAH_Expand_Coastal_Garrisons
-		icon = GFX_goal_unknown
+		icon = GFX_Naval_Infantry
 		search_filters = {IC_FILTER}
 		cost = 10.00
 		prerequisite = {
@@ -624,11 +798,20 @@ focus_tree = {
 		}
 		x = 41
 		y = 4
-
+		completion_reward = {
+			1164 = {
+				add_building_construction = {
+					type = coastal_bunker
+					level = 2
+					province = 9849
+					instant_build = yes
+				}
+			}
+		}
 	}
 	focus = {
 		id = BAH_Economic_Prosperity
-		icon = GFX_goal_unknown
+		icon = GFX_Gold
 		search_filters = {IC_FILTER}
 		cost = 10.00
 		prerequisite = {
@@ -639,11 +822,16 @@ focus_tree = {
 		}
 		x = 26
 		y = 18
-
+		completion_reward = {
+			add_timed_idea = {
+				idea = economic_growth
+				days = 1250
+			}
+		}
 	}
 	focus = {
 		id = BAH_Exile_NUC_Leaders_to_Saint_Helena
-		icon = GFX_goal_unknown
+		icon = GFX_St_Helena_Exile
 		search_filters = {IC_FILTER}
 		cost = 10.00
 		prerequisite = {
@@ -651,11 +839,13 @@ focus_tree = {
 		}
 		x = 16
 		y = 6
-
+		completion_reward = {
+			country_event = NUC.10
+		}
 	}
 	focus = {
 		id = BAH_Expand_Public_Services
-		icon = GFX_goal_unknown
+		icon = GFX_Public_Service_Funding
 		search_filters = {IC_FILTER}
 		cost = 10.00
 		prerequisite = {
@@ -666,7 +856,15 @@ focus_tree = {
 		}
 		x = 19
 		y = 6
-
+		completion_reward = {
+			hidden_effect = {
+				remove_ideas = policy_services_temp_0
+				remove_ideas = policy_services_temp_1
+				remove_ideas = policy_services_temp_2
+				remove_ideas = policy_services_temp_3
+			}
+			add_ideas = policy_services_temp_2
+		}
 	}
 	focus = {
 		id = BAH_Establish_Royal_Tribunal
@@ -678,11 +876,17 @@ focus_tree = {
 		}
 		x = 17
 		y = 5
-
+		completion_reward = {
+			add_popularity = {
+				ideology = monarchism
+				popularity = 0.05
+			}
+			add_stability = 0.02
+		}
 	}
 	focus = {
 		id = BAH_Establish_the_Education_Council
-		icon = GFX_goal_unknown
+		icon = GFX_prioritize_western_education
 		search_filters = {IC_FILTER}
 		cost = 10.00
 		prerequisite = {
@@ -693,11 +897,13 @@ focus_tree = {
 		}
 		x = 18
 		y = 7
-
+		completion_reward = {
+			add_research_slot = 1
+		}	
 	}
 	focus = {
 		id = BAH_Bring_in_Foriegn_Workers
-		icon = GFX_goal_unknown
+		icon = GFX_Migrant_Workers
 		search_filters = {IC_FILTER}
 		cost = 10.00
 		prerequisite = {
@@ -708,11 +914,15 @@ focus_tree = {
 		}
 		x = 20
 		y = 7
-
+		completion_reward = {
+			capital_scope = {
+				add_manpower = 150000
+			}	
+		}
 	}
 	focus = {
 		id = BAH_The_1956_General_Strike
-		icon = GFX_goal_unknown
+		icon = GFX_Suez_Debate
 		search_filters = {IC_FILTER}
 		cost = 10.00
 		prerequisite = {
@@ -723,11 +933,13 @@ focus_tree = {
 		}
 		x = 19
 		y = 8
-
+		completion_reward = {
+			news_event = General_Strike.1
+		}
 	}
 	focus = {
 		id = BAH_The_Bahrainian_Revolution
-		icon = GFX_goal_unknown
+		icon = GFX_fist
 		search_filters = {IC_FILTER}
 		cost = 10.00
 		prerequisite = {
@@ -738,11 +950,13 @@ focus_tree = {
 		}
 		x = 12
 		y = 11
-
+		completion_reward = {
+			news_event = Bahrainian_Revolution.1
+		}
 	}
 	focus = {
 		id = BAH_Deploy_British_Soldiers
-		icon = GFX_goal_unknown
+		icon = GFX_british_influence_in_iraq
 		search_filters = {IC_FILTER}
 		cost = 10.00
 		prerequisite = {
@@ -753,7 +967,9 @@ focus_tree = {
 		}
 		x = 26
 		y = 11
-
+		completion_reward = {
+			country_event = Suez_Crisis_Gulf.51
+		}
 	}
 	focus = {
 		id = BAH_Legalize_the_National_Union_Committee
@@ -765,11 +981,17 @@ focus_tree = {
 		}
 		x = 17
 		y = 9
-
+		completion_reward = {
+			country_event = NUC.5
+			add_popularity = {
+				ideology = nationalism
+				popularity = 0.05
+			}
+		}
 	}
 	focus = {
 		id = BAH_Establish_the_Bahraini_Labor_Union
-		icon = GFX_goal_unknown
+		icon = GFX_Legalize_Unions
 		search_filters = {IC_FILTER}
 		cost = 10.00
 		prerequisite = {
@@ -780,11 +1002,21 @@ focus_tree = {
 		}
 		x = 26
 		y = 13
-
+		completion_reward = {
+			hidden_effect = {
+				remove_ideas = policy_union_temp_0
+				remove_ideas = policy_union_temp_1
+				remove_ideas = policy_union_temp_2
+				remove_ideas = policy_union_temp_3
+				remove_ideas = policy_union_temp_4
+				remove_ideas = policy_union_temp_5
+			}
+			add_ideas = policy_union_temp_2
+		}
 	}
 	focus = {
 		id = BAH_The_Labor_Law
-		icon = GFX_goal_unknown
+		icon = GFX_CardTricks
 		search_filters = {IC_FILTER}
 		cost = 10.00
 		prerequisite = {
@@ -795,11 +1027,16 @@ focus_tree = {
 		}
 		x = 28
 		y = 14
-
+		completion_reward = {
+			add_timed_idea = {
+				idea = banned_strikes
+				days = 2250
+			}
+		}
 	}
 	focus = {
 		id = BAH_Relax_Censorship
-		icon = GFX_goal_unknown
+		icon = GFX_Press_Liberalization
 		search_filters = {IC_FILTER}
 		cost = 10.00
 		prerequisite = {
@@ -807,11 +1044,20 @@ focus_tree = {
 		}
 		x = 29
 		y = 13
-
+		completion_reward = {
+			hidden_effect = {
+				remove_ideas = policy_media_temp_0
+				remove_ideas = policy_media_temp_1
+				remove_ideas = policy_media_temp_2
+				remove_ideas = policy_media_temp_3
+				remove_ideas = policy_media_temp_3a
+			}
+			add_ideas = policy_media_temp_1
+		}
 	}
 	focus = {
 		id = BAH_A_Bahraini_Legal_System
-		icon = GFX_goal_unknown
+		icon = GFX_Paper
 		search_filters = {IC_FILTER}
 		cost = 10.00
 		prerequisite = {
@@ -819,11 +1065,13 @@ focus_tree = {
 		}
 		x = 23
 		y = 13
-
+		completion_reward = {
+			remove_ideas = archaic_legal_system
+		}
 	}
 	focus = {
 		id = BAH_Encourage_Business_Growth
-		icon = GFX_goal_unknown
+		icon = GFX_FocusSmallBusinesses
 		search_filters = {IC_FILTER}
 		cost = 10.00
 		prerequisite = {
@@ -831,11 +1079,16 @@ focus_tree = {
 		}
 		x = 21
 		y = 14
-
+		completion_reward = {
+			add_timed_idea = {
+				idea = business_growth
+				days = 1250
+			}
+		}
 	}
 	focus = {
 		id = BAH_The_Compensation_Law
-		icon = GFX_goal_unknown
+		icon = GFX_Cash_and_Carry
 		search_filters = {IC_FILTER}
 		cost = 10.00
 		prerequisite = {
@@ -846,11 +1099,13 @@ focus_tree = {
 		}
 		x = 24
 		y = 14
-
+		completion_reward = {
+			add_ideas = minimum_wages
+		}
 	}
 	focus = {
 		id = BAH_Declare_A_State_of_Emergency
-		icon = GFX_goal_unknown
+		icon = GFX_police
 		search_filters = {IC_FILTER}
 		cost = 10.00
 		prerequisite = {
@@ -858,11 +1113,18 @@ focus_tree = {
 		}
 		x = 27
 		y = 12
-
-	}
+		completion_reward = {
+			add_stability = 0.03
+			add_political_power = 50
+			add_popularity = {
+				ideology = nationalism
+				popularity = 0.02
+			}
+		}
+	}	
 	focus = {
 		id = BAH_Empower_the_Commercial_Elite
-		icon = GFX_goal_unknown
+		icon = GFX_Aristocracy
 		search_filters = {IC_FILTER}
 		cost = 10.00
 		prerequisite = {
@@ -870,11 +1132,13 @@ focus_tree = {
 		}
 		x = 31
 		y = 14
-
+		completion_reward = {
+			add_ideas = capitalism_intensifies
+		}
 	}
 	focus = {
 		id = BAH_Education_Investments
-		icon = GFX_goal_unknown
+		icon = GFX_Brainpower
 		search_filters = {IC_FILTER}
 		cost = 10.00
 		prerequisite = {
@@ -885,11 +1149,13 @@ focus_tree = {
 		}
 		x = 26
 		y = 15
-
+		completion_reward = {
+			add_research_slot = 1
+		}
 	}
 	focus = {
 		id = BAH_Increase_the_Quality_of_Life
-		icon = GFX_goal_unknown
+		icon = GFX_support_tribal_farmer
 		search_filters = {IC_FILTER}
 		cost = 10.00
 		prerequisite = {
@@ -900,11 +1166,14 @@ focus_tree = {
 		}
 		x = 22
 		y = 15
-
+		completion_reward = {
+			add_stability = 0.03
+			add_political_power = 50
+		}
 	}
 	focus = {
 		id = BAH_The_Federation_Proposal
-		icon = GFX_goal_unknown
+		icon = GFX_British_Persian_Gulf
 		search_filters = {IC_FILTER}
 		cost = 10.00
 		prerequisite = {
@@ -915,11 +1184,13 @@ focus_tree = {
 		}
 		x = 27
 		y = 17
-
+		completion_reward = {
+			ENG = { country_event = BAH_FEDERATION.1 }	#If Accepts Will gain Cosmetic Tag and annex Trucial States and Oman
+		}
 	}
 	focus = {
 		id = BAH_Employ_British_Expatriates
-		icon = GFX_goal_unknown
+		icon = GFX_UndergroundPolitics
 		search_filters = {IC_FILTER}
 		cost = 10.00
 		prerequisite = {
@@ -930,11 +1201,26 @@ focus_tree = {
 		}
 		x = 29
 		y = 16
-
+		completion_reward = {
+			add_ideas = british_expatriates
+			for_loop_effect = {
+				end = influence_array^num
+				value = v
+				if = {
+					limit = {
+						check_variable = { influence_array^v = ENG }
+					}
+					add_to_variable = { influence_array_val^v = 150 }
+					set_country_flag = found
+				}
+			}
+			clr_country_flag = found
+			recalculate_influence = yes			
+		}
 	}
 	focus = {
 		id = BAH_Ensure_British_Protection
-		icon = GFX_goal_unknown
+		icon = GFX_goal_endless_money
 		search_filters = {IC_FILTER}
 		cost = 10.00
 		prerequisite = {
@@ -942,11 +1228,28 @@ focus_tree = {
 		}
 		x = 26
 		y = 16
-
+		completion_reward = {
+			ENG = {
+				give_guarantee = BHR
+			}
+			for_loop_effect = {
+				end = influence_array^num
+				value = v
+				if = {
+					limit = {
+						check_variable = { influence_array^v = ENG }
+					}
+					add_to_variable = { influence_array_val^v = 150 }
+					set_country_flag = found
+				}
+			}
+			clr_country_flag = found
+			recalculate_influence = yes			
+		}
 	}
 	focus = {
 		id = BAH_Finalize_the_Saudi_Border
-		icon = GFX_goal_unknown
+		icon = GFX_focus_renounce_the_treaty_of_triannon
 		search_filters = {IC_FILTER}
 		cost = 10.00
 		prerequisite = {
@@ -957,11 +1260,25 @@ focus_tree = {
 		}
 		x = 25
 		y = 17
-
+		completion_reward = {
+			add_stability = 0.01
+			BHR = {
+				add_opinion_modifier = {
+					target = SAU
+					modifier = large_increase
+				}
+			}
+			SAU = {
+				add_opinion_modifier = {
+					target = BAH
+					modifier = large_increase
+				}
+			}	
+		}
 	}
 	focus = {
 		id = BAH_Authorize_Monopolies
-		icon = GFX_goal_unknown
+		icon = GFX_Bribery_Alt
 		search_filters = {IC_FILTER}
 		cost = 10.00
 		prerequisite = {
@@ -972,11 +1289,13 @@ focus_tree = {
 		}
 		x = 30
 		y = 15
-
+		completion_reward = {
+			add_ideas = national_monopolies
+		}
 	}
 	focus = {
 		id = BAH_Setup_a_Free_Trade_Zone
-		icon = GFX_goal_unknown
+		icon = GFX_goal_generic_positive_trade_relations
 		search_filters = {IC_FILTER}
 		cost = 10.00
 		prerequisite = {
@@ -987,7 +1306,9 @@ focus_tree = {
 		}
 		x = 23
 		y = 16
-
+		completion_reward = {
+			add_ideas = embrace_free_trade
+		}
 	}
 	focus = {
 		id = BAH_Execute_Belgrave
@@ -999,11 +1320,14 @@ focus_tree = {
 		}
 		x = 11
 		y = 12
-
+		completion_reward = {
+			add_stability = 0.02
+			news_event = Bahrainian_Revolution.2
+		}
 	}
 	focus = {
 		id = BAH_Evict_the_British
-		icon = GFX_goal_unknown
+		icon = GFX_IntotheFlames
 		search_filters = {IC_FILTER}
 		cost = 10.00
 		prerequisite = {
@@ -1011,11 +1335,15 @@ focus_tree = {
 		}
 		x = 13
 		y = 12
-
+		completion_reward = {
+			news_event = Bahrainian_Revolution.3
+			add_to_variable = { var = domestic_influence_amount value = 250 }
+			recalculate_influence = yes
+		}
 	}
 	focus = {
 		id = BAH_Nationalize_BAPCO
-		icon = GFX_goal_unknown
+		icon = GFX_Seize_Industry
 		search_filters = {IC_FILTER}
 		cost = 10.00
 		prerequisite = {
@@ -1026,11 +1354,13 @@ focus_tree = {
 		}
 		x = 12
 		y = 13
-
-	}
+		completion_reward = {
+			add_ideas = nationalized_resources
+		}
+	}	
 	focus = {
 		id = BAH_Condemn_Israel
-		icon = GFX_goal_unknown
+		icon = GFX_Crush_Israel
 		search_filters = {IC_FILTER}
 		cost = 10.00
 		prerequisite = {
@@ -1038,11 +1368,25 @@ focus_tree = {
 		}
 		x = 9
 		y = 13
-
+		completion_reward = {	
+			add_political_power = 50
+			BHR = {
+				add_opinion_modifier = {
+					target = ISR
+					modifier = large_decrease
+				}
+			}
+			ISR = {
+				add_opinion_modifier = {
+					target = BAH
+					modifier = large_decrease
+				}
+			}				
+		}
 	}
 	focus = {
 		id = BAH_Encourage_Sectarian_Tolerance
-		icon = GFX_goal_unknown
+		icon = GFX_Islamic_Secularism
 		search_filters = {IC_FILTER}
 		cost = 10.00
 		prerequisite = {
@@ -1050,11 +1394,21 @@ focus_tree = {
 		}
 		x = 15
 		y = 13
-
+		completion_reward = {
+			hidden_effect = {
+				remove_ideas = policy_religion_temp_1
+				remove_ideas = policy_religion_temp_2
+				remove_ideas = policy_religion_temp_3
+				remove_ideas = policy_religion_temp_3a
+				remove_ideas = policy_religion_temp_0a
+				remove_ideas = policy_religion_temp_0
+			}
+			add_ideas = policy_religion_temp_3
+		}
 	}
 	focus = {
 		id = BAH_Promote_Industrial_Expansion
-		icon = GFX_goal_unknown
+		icon = GFX_industrial_methods
 		search_filters = {IC_FILTER}
 		cost = 10.00
 		prerequisite = {
@@ -1062,11 +1416,16 @@ focus_tree = {
 		}
 		x = 7
 		y = 14
-
+		completion_reward = {
+			add_timed_idea = {
+				idea = industrial_subsidies
+				days = 1200
+			}		
+		}
 	}
 	focus = {
 		id = BAH_Condemn_Iranian_Imperialism
-		icon = GFX_goal_unknown
+		icon = GFX_Recruitment
 		search_filters = {IC_FILTER}
 		cost = 10.00
 		prerequisite = {
@@ -1077,11 +1436,25 @@ focus_tree = {
 		}
 		x = 10
 		y = 14
-
+		completion_reward = {	
+			add_political_power = 50
+			BHR = {
+				add_opinion_modifier = {
+					target = PER
+					modifier = large_decrease
+				}
+			}
+			PER = {
+				add_opinion_modifier = {
+					target = BAH
+					modifier = large_decrease
+				}
+			}				
+		}
 	}
 	focus = {
 		id = BAH_Formulate_a_Constitution
-		icon = GFX_goal_unknown
+		icon = GFX_Adopt_New_Constitiution
 		search_filters = {IC_FILTER}
 		cost = 10.00
 		prerequisite = {
@@ -1092,11 +1465,14 @@ focus_tree = {
 		}
 		x = 14
 		y = 14
-
+		completion_reward = {
+			add_political_power = 75
+			add_stability = 0.02
+		}
 	}
 	focus = {
 		id = BAH_Purge_British_Influences
-		icon = GFX_goal_unknown
+		icon = GFX_Crush_England
 		search_filters = {IC_FILTER}
 		cost = 10.00
 		prerequisite = {
@@ -1104,11 +1480,27 @@ focus_tree = {
 		}
 		x = 17
 		y = 14
-
+		completion_reward = {
+			for_loop_effect = {
+				end = influence_array^num
+				value = v
+				if = {
+					limit = {
+						check_variable = { influence_array^v = ENG }
+					}
+					set_variable = { influence_array_val^v = 0 }
+					set_country_flag = found
+				}
+			}
+			clr_country_flag = found
+			recalculate_influence = yes
+			custom_effect_tooltip = remove_british_influence_tt
+				
+		}
 	}
 	focus = {
 		id = BAH_Seek_Soviet_Aid
-		icon = GFX_goal_unknown
+		icon = GFX_goal_SOV_deal
 		search_filters = {IC_FILTER}
 		cost = 10.00
 		prerequisite = {
@@ -1119,11 +1511,13 @@ focus_tree = {
 		}
 		x = 12
 		y = 15
-
+		completion_reward = {
+			add_offsite_building = { type = industrial_complex level = 2 }
+		}
 	}
 	focus = {
 		id = BAH_Promote_Womens_Rights
-		icon = GFX_goal_unknown
+		icon = GFX_femicon
 		search_filters = {IC_FILTER}
 		cost = 10.00
 		prerequisite = {
@@ -1134,11 +1528,21 @@ focus_tree = {
 		}
 		x = 8
 		y = 15
-
+		completion_reward = {
+			hidden_effect = {
+				remove_ideas = policy_women_temp_0
+				remove_ideas = policy_women_temp_1
+				remove_ideas = policy_women_temp_2
+				remove_ideas = policy_women_temp_3
+				remove_ideas = policy_women_temp_4
+				remove_ideas = policy_women_temp_4a		
+			}
+			add_ideas = policy_women_temp_3
+		}
 	}
 	focus = {
 		id = BAH_Invite_Egyptian_Teachers
-		icon = GFX_goal_unknown
+		icon = GFX_Focus_Egyptian_Teachers
 		search_filters = {IC_FILTER}
 		cost = 10.00
 		prerequisite = {
@@ -1149,11 +1553,14 @@ focus_tree = {
 		}
 		x = 16
 		y = 15
-
+		completion_reward = {
+			remove_ideas = british_advisors
+			add_ideas = egyptian_advisors
+		}
 	}
 	focus = {
 		id = BAH_Spread_Pan_Arab_Propaganda
-		icon = GFX_goal_unknown
+		icon = GFX_cooperate_with_nasser
 		search_filters = {IC_FILTER}
 		cost = 10.00
 		prerequisite = {
@@ -1164,11 +1571,36 @@ focus_tree = {
 		}
 		x = 9
 		y = 16
-
+		completion_reward = {
+			UAE = {
+				add_popularity = {
+					ideology = nationalism
+					popularity = 0.05
+				}
+			}
+			OMA = {
+				add_popularity = {
+					ideology = nationalism
+					popularity = 0.05
+				}
+			}
+			QAT = {
+				add_popularity = {
+					ideology = nationalism
+					popularity = 0.05
+				}
+			}
+			SAU = {
+				add_popularity = {
+					ideology = nationalism
+					popularity = 0.05
+				}
+			}
+		}
 	}
 	focus = {
 		id = BAH_Soviet_Advisors
-		icon = GFX_goal_unknown
+		icon = GFX_focus_soviet_advisors
 		search_filters = {IC_FILTER}
 		cost = 10.00
 		prerequisite = {
@@ -1179,11 +1611,13 @@ focus_tree = {
 		}
 		x = 13
 		y = 17
-
+		completion_reward = {
+			add_ideas = soviet_advisors
+		}
 	}
 	focus = {
 		id = BAH_Soviet_Technical_Advisors
-		icon = GFX_goal_unknown
+		icon = GFX_SOV_Technical_Aid
 		search_filters = {IC_FILTER}
 		cost = 10.00
 		prerequisite = {
@@ -1191,11 +1625,13 @@ focus_tree = {
 		}
 		x = 12
 		y = 16
-
+		completion_reward = {
+			add_ideas = soviet_technical_advisors_PRC
+		}
 	}
 	focus = {
 		id = BAH_Seek_Egyptian_Aid
-		icon = GFX_goal_unknown
+		icon = GFX_Egyptian_Officers
 		search_filters = {IC_FILTER}
 		cost = 10.00
 		prerequisite = {
@@ -1206,11 +1642,13 @@ focus_tree = {
 		}
 		x = 11
 		y = 17
-
+		completion_reward = {
+			add_offsite_building = { type = arms_factory level = 2 }
+		}
 	}
 	focus = {
 		id = BAH_Expand_Ties_with_Yemen
-		icon = GFX_goal_unknown
+		icon = GFX_kingdom_of_yemen_flag
 		search_filters = {IC_FILTER}
 		cost = 10.00
 		prerequisite = {
@@ -1221,11 +1659,24 @@ focus_tree = {
 		}
 		x = 15
 		y = 16
-
+		completion_reward = {
+			BHR = {
+				add_opinion_modifier = {
+					target = YEM
+					modifier = large_increase
+				}
+			}
+			YEM = {
+				add_opinion_modifier = {
+					target = BAH
+					modifier = large_increase
+				}
+			}			
+		}
 	}
 	focus = {
 		id = BAH_Defend_Against_Iranian_Agression
-		icon = GFX_goal_unknown
+		icon = GFX_RecruitmentDrive
 		search_filters = {IC_FILTER}
 		cost = 10.00
 		prerequisite = {
@@ -1236,11 +1687,16 @@ focus_tree = {
 		}
 		x = 12
 		y = 18
-
+		completion_reward = {
+			add_timed_idea = {
+				idea = military_expansion
+				days = 1250
+			}
+		}
 	}
 	focus = {
 		id = BAH_Announce_the_Retirement_of_Belgrave
-		icon = GFX_goal_unknown
+		icon = GFX_StolenPapers
 		search_filters = {IC_FILTER}
 		cost = 10.00
 		prerequisite = {
@@ -1248,11 +1704,13 @@ focus_tree = {
 		}
 		x = 21
 		y = 9
-
+		completion_reward = {
+			country_event = General_Strike.2
+		}
 	}
 	focus = {
 		id = BAH_The_Suez_Crisis
-		icon = GFX_goal_unknown
+		icon = GFX_suez_crisis
 		search_filters = {IC_FILTER}
 		cost = 10.00
 		prerequisite = {
@@ -1263,11 +1721,20 @@ focus_tree = {
 		}
 		x = 19
 		y = 10
-
+		available = {
+			always = no
+		}
+		completion_reward = {
+			add_political_power = 50
+			add_popularity = {
+				ideology = nationalism
+				popularity = 0.075
+			}
+		}
 	}
 	focus = {
 		id = BAH_Crackdown_on_the_National_Union_Committee
-		icon = GFX_goal_unknown
+		icon = GFX_CrushResistance
 		search_filters = {IC_FILTER}
 		cost = 10.00
 		prerequisite = {
@@ -1275,11 +1742,16 @@ focus_tree = {
 		}
 		x = 25
 		y = 12
-
+		completion_reward = {
+			add_timed_idea = {
+				idea = political_crackdown
+				days = 1250
+			}
+		}
 	}
 	focus = {
 		id = BAH_Embrace_Capitalism
-		icon = GFX_goal_unknown
+		icon = GFX_CapitalistSystems
 		search_filters = {IC_FILTER}
 		cost = 10.00
 		prerequisite = {
@@ -1287,6 +1759,11 @@ focus_tree = {
 		}
 		x = 7
 		y = 6
-
+		completion_reward = {
+			add_timed_idea = {
+				idea = capitalism
+				days = 1250
+			}
+		}
 	}
 }

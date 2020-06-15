@@ -1,6 +1,177 @@
 ideas = {
 
 	country = {
+		Anglo_Dominated_Military = {	
+			picture = generic_production_bonus
+			allowed = {
+				always = no 
+			}	
+
+			modifier = {
+				war_support_factor = -0.05
+				conscription_factor = -0.25
+				drift_defence_factor = -0.15
+			}			
+
+		}
+	
+		One_Unit = {	
+			picture = generic_production_bonus
+			allowed = {
+				always = no 
+			}	
+
+			modifier = {
+				stability_factor = -0.03
+				production_speed_buildings_factor = -0.10
+			}			
+
+		}	
+		Partition_Refugees = {
+			picture = generic_production_bonus
+			allowed = {
+				always = no 
+			}	
+
+			modifier = {
+				conscription_factor = -0.2
+				stability_factor = -0.10
+				MONTHLY_POPULATION = 0.10
+			}			
+
+		}	
+		Legacy_of_the_Partition = {
+			picture = generic_production_bonus
+			allowed = {
+				always = no 
+			}	
+
+			modifier = {
+				global_building_slots_factor = -0.25
+				production_factory_efficiency_gain_factor = -0.05
+				production_factory_max_efficiency_factor = -0.10
+			}			
+
+		}		
+		Language_Debate = {	
+			picture = generic_production_bonus
+			allowed = {
+				always = no 
+			}	
+
+			modifier = {
+				stability_factor = -0.10
+				political_power_gain = -0.20
+				research_speed_factor = -0.03
+			}			
+
+		}		
+		Urdu_Supremacy = {	
+			picture = generic_production_bonus
+			allowed = {
+				always = no 
+			}	
+
+			modifier = {
+				stability_factor = -0.10
+				political_power_gain = 0.15
+				research_speed_factor = -0.02
+			}			
+
+		}
+		Islamic_Socialism = {
+			picture = generic_production_bonus
+			allowed = {
+				always = no 
+			}	
+
+			modifier = {
+				stability_factor = 0.05
+				drift_defence_factor = 0.15
+				political_power_gain = 0.15
+			}				
+		}
+		Rapid_Promotions = {	
+			picture = generic_production_bonus
+			allowed = {
+				always = no 
+			}	
+
+			modifier = {
+				training_time_army_factor = -0.15
+				planning_speed = -0.15
+				army_org_factor = -0.15
+			}			
+
+		}	
+		Divided_Military = {	
+			picture = generic_production_bonus
+			allowed = {
+				always = no 
+			}	
+
+			modifier = {
+				war_support_factor = -0.05
+				conscription_factor = -0.15
+			}			
+
+		}
+		Lahore_Riots = {	
+			picture = generic_production_bonus
+			allowed = {
+				always = no 
+			}	
+
+			modifier = {
+				production_speed_buildings_factor = -0.10
+			}			
+
+		}			
+		Lahore_Riots2 = {	
+			picture = generic_production_bonus
+			allowed = {
+				always = no 
+			}	
+
+			modifier = {
+				war_support_factor = 0.05
+				stability_factor = -0.05
+			}			
+
+		}	
+		#End Pakistan Ideas
+	
+		Colonial_Restrictions = {
+			allowed = { always = no }
+
+			allowed_civil_war = {  }
+				
+			modifier = {
+				stability_factor = -0.05
+				political_power_gain = -0.05
+				production_speed_buildings_factor = -0.10
+			}	
+		}	
+		French_Administrative_Controls = {
+			allowed = { always = no }
+
+			allowed_civil_war = {  }
+				
+			modifier = {
+				stability_factor = -0.10
+				political_power_gain = -0.10
+			}	
+		}	
+		French_Military_Controls = {
+			allowed = { always = no }
+
+			allowed_civil_war = {  }
+				
+			modifier = {
+				war_support_factor = -0.10
+				conscription_factor = -0.35
+			}	
+		}	
 		Job_Training_Partnership_Act_idea = {
 			allowed = { always = no }
 
@@ -2813,7 +2984,19 @@ ideas = {
 			}
 			
 		}
-
+		food_shortages = {
+			
+			picture = neutrality_idea
+			
+			allowed = { always = no }
+			allowed_civil_war = {  }
+			
+			modifier = { 
+				MONTHLY_POPULATION = -0.25
+				stability_factor = -0.10
+			}
+			
+		}
 		drought = {
 			
 			picture = neutrality_idea
@@ -2982,7 +3165,25 @@ ideas = {
 				always = no # Triggered via event
 			}
 
-			picture = neutrality_idea
+			picture = payup
+			
+			modifier = {
+				stability_factor = -0.2
+				production_speed_arms_factory_factor = -0.15
+				production_speed_industrial_complex_factor = -0.15
+				consumer_goods_factor = 0.2
+				production_speed_buildings_factor = -0.15
+			}
+	
+
+		}
+		soviet_reparations2 = {	
+			
+			allowed = {
+				always = no # Triggered via event
+			}
+
+			picture = payup
 			
 			modifier = {
 				stability_factor = -0.15
@@ -2995,13 +3196,13 @@ ideas = {
 
 		}
 		
-		soviet_reparations2 = {	
+		soviet_reparations3 = {	
 			
 			allowed = {
 				always = no # Triggered via event
 			}
 
-			picture = neutrality_idea
+			picture = payup
 			
 			modifier = {
 				stability_factor = -0.10
@@ -3013,6 +3214,26 @@ ideas = {
 	
 
 		}
+		
+		soviet_reparations4 = {	
+			
+			allowed = {
+				always = no # Triggered via event
+			}
+
+			picture = payup
+			
+			modifier = {
+				stability_factor = -0.05
+				production_speed_arms_factory_factor = -0.025
+				production_speed_industrial_complex_factor = -0.025
+				consumer_goods_factor = 0.05
+				production_speed_buildings_factor = -0.025
+			}
+	
+
+		}
+		
 		SOVROMS = {	
 			
 			allowed = {
@@ -3416,7 +3637,26 @@ ideas = {
 				stability_factor = -0.025
 			}
 		}
+		Inflation_Crisis3 = {
+			removal_cost = -1
+			allowed = {
+				always = no
+			}
 
+			allowed_civil_war = {
+				
+			}
+
+			removal_cost = -1
+
+			picture = Inflation
+			
+			modifier = {
+				consumer_goods_factor = 0.0125
+				production_factory_max_efficiency_factor = -0.025
+				stability_factor = -0.0125
+			}
+		}
 		Political_Machiavellianism = {
 			
 			allowed = { always = no }
@@ -3621,8 +3861,10 @@ ideas = {
 			picture = generic_manpower_bonus
 			
 			modifier = {
-				research_speed_factor = 0.02
+				research_speed_factor = -0.01
 				stability_factor = -0.02
+				production_factory_efficiency_gain_factor = 0.05
+				production_speed_buildings_factor = 0.10
 			}
 		}
 		education_reform_2 = {
@@ -4307,7 +4549,34 @@ ideas = {
 				MONTHLY_POPULATION = 0.03
 			}			
 
-		}			
+		}	
+		hostile_paramilitaries = {	
+			picture = generic_production_bonus
+			allowed = {
+				always = no 
+			}	
+
+			modifier = {
+				stability_factor = -0.05
+				conscription_factor = -0.15
+				political_power_gain = -0.05
+				drift_defence_factor = -0.25
+			}			
+
+		}	
+		Politically_Divided	= {	
+			picture = generic_production_bonus
+			allowed = {
+				always = no 
+			}	
+
+			modifier = {
+				stability_factor = -0.075
+				war_support_factor = -0.075
+				political_power_gain = -0.05
+			}			
+
+		}	
 		entrenched_aristocracy2 = {	
 			picture = generic_production_bonus
 			allowed = {
@@ -4413,7 +4682,7 @@ ideas = {
 			}			
 
 		}
-		Gun_Control_Act  = {	
+		Gun_Control_Act = {	
 			picture = generic_production_bonus
 			allowed = {
 				always = no 
@@ -4780,6 +5049,24 @@ ideas = {
 			
 			modifier = {
 				consumer_goods_factor = -0.02
+				production_speed_buildings_factor = 0.05
+				production_factory_max_efficiency_factor = 0.05
+			}		
+		}
+		business_growth = {
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				
+			}
+			
+			removal_cost = -1
+
+			picture = generic_intel_bonus
+			
+			modifier = {
 				production_speed_buildings_factor = 0.05
 				production_factory_max_efficiency_factor = 0.05
 			}		
@@ -5234,6 +5521,63 @@ ideas = {
 				no_supply_grace = 17520
 				supply_consumption_factor = -0.30
 				out_of_supply_factor = -0.5
+			}
+
+		}
+		Office_of_Minority_Business_Enterprise = { 
+			removal_cost = -1
+			
+
+			allowed = {
+				always = no # Added via focus
+			}
+
+			allowed_civil_war = {
+				has_government = communism
+			}
+			
+			modifier = {
+				production_speed_buildings_factor = 0.05
+				political_power_gain = 0.02
+			}
+
+		}
+		ERA_Amendment = { 
+			removal_cost = -1
+			
+
+			allowed = {
+				always = no # Added via focus
+			}
+
+			allowed_civil_war = {
+				has_government = communism
+			}
+			
+			modifier = {
+				conscription_factor = 0.15
+				political_power_gain = 0.02
+				stability_factor = 0.05
+				MONTHLY_POPULATION = -0.10
+			}
+
+		}
+		War_Powers_Resolution= { 
+			removal_cost = -1
+			
+
+			allowed = {
+				always = no # Added via focus
+			}
+
+			allowed_civil_war = {
+				has_government = communism
+			}
+			
+			modifier = {
+				stability_factor = 0.05
+				war_support_factor = 0.05
+				political_power_gain = 0.02
 			}
 
 		}
@@ -6109,10 +6453,6 @@ ideas = {
 
 			allowed_civil_war = {  }
 
-			cancel = {
-				has_war = no
-			}
-
 			removal_cost = -1
 
 			modifier = {
@@ -6467,7 +6807,7 @@ ideas = {
 
 			
 			modifier = {
-				production_speed_buildings_factor = -0.05
+				production_factory_max_efficiency_factor = 0.05
 			}
 		}
 		fortification_build_up = {
@@ -6593,10 +6933,10 @@ ideas = {
 			picture = generic_production_bonus
 			
 			modifier = {
-				MONTHLY_POPULATION = -0.1
-				production_speed_industrial_complex_factor = 0.05
-				production_speed_arms_factory_factor = 0.05
-				industrial_capacity_factory = 0.05
+				MONTHLY_POPULATION = -10
+				production_speed_industrial_complex_factor = 0.25
+				production_speed_arms_factory_factor = 0.25
+				industrial_capacity_factory = 0.25
 			}
 		}
 		four_pests = {
@@ -7034,7 +7374,7 @@ ideas = {
 			modifier = {
 				conscription_factor = 0.1
 				consumer_goods_factor = 0.05
-				production_factory_max_efficiency_factor = 0.25
+				production_factory_max_efficiency_factor = 0.1
 			}		
 		}
 		SACTU = {
@@ -7312,7 +7652,93 @@ ideas = {
 				production_speed_buildings_factor = -0.2
 				local_resources_factor = 0.1
 			}
-				targeted_modifier = { tag = USA extra_trade_to_target_factor = 0.5 }
-		    }
-	    }
-    }
+			targeted_modifier = { tag = USA extra_trade_to_target_factor = 0.5 }
+		}
+		The_Vietnam_War_VIN = {
+
+			removal_cost = -1
+			
+			allowed = {
+				always = no # Added via focus
+			}
+			
+			modifier = {
+				send_volunteer_size = 15
+				army_attack_factor = 0.25
+				army_defence_factor = 0.50
+				army_org = 20
+			}
+		}
+		The_Vietnam_War_VIE = {
+
+
+			removal_cost = -1
+			
+			allowed = {
+				always = no # Added via focus
+			}
+			
+			modifier = {
+				army_speed_factor = 0.25
+				army_attack_factor = -0.25
+				army_defence_factor = 0.50
+				army_org = 20
+				resistance_damage_to_garrison = 0.25	
+				compliance_gain	 = -0.01
+				resistance_target = 0.05
+				ai_focus_aggressive_factor = -0.25
+				ai_focus_defense_factor = 10
+				weekly_manpower = 5000	
+			}
+		}
+        The_Vietnam_War_NLF = {
+
+
+			removal_cost = -1
+			
+			allowed = {
+				always = no # Added via focus
+			}
+			
+			modifier = {
+				consumer_goods_factor = -0.9 
+				army_org = 25
+				army_defence_factor = 0.75
+				army_attack_factor = -0.35
+				out_of_supply_factor = -1
+				ai_focus_aggressive_factor = -0.5
+				ai_focus_defense_factor = 10
+				army_speed_factor = -0.95
+				weekly_manpower = 3500	
+			}
+			targeted_modifier = { tag = USA defense_bonus_against = 3 }
+			targeted_modifier = { tag = USA attack_bonus_against = -1 }
+			targeted_modifier = { tag = VIE attack_bonus_against = -0.25 }
+			targeted_modifier = { tag = VIE defense_bonus_against = 8 }
+		}
+		maintain_airlift = {
+			
+			removal_cost = -1
+
+			allowed = {
+				always = no # Added via event
+			}
+
+			modifier = {
+				consumer_goods_factor = 0.01
+			}
+		}
+		suspend_deutsche_mark = {
+
+			removal_cost = -1
+
+			allowed = {
+				always = no # Added via event 
+			}
+
+			modifier = {
+				consumer_goods_factor = -0.05
+			}
+		}
+	}
+}

@@ -10,14 +10,22 @@ state = {
 		set_state_flag = undeveloped
 		1946.1.1 = {
 			owner = SYR
+		buildings = {
+			infrastructure = 3
+			state_infrastructure = 2
 
+			industrial_complex = 1
+			agri_industrial_complex = 1
+		}
 		}
 		1958.1.1 = {
 			owner = EGY
+			add_core_of = EGY
 
 		}
 		1961.1.1 = {
 			owner = SYR
+			remove_core_of = EGY
 
 		}
 		victory_points = {
@@ -26,13 +34,7 @@ state = {
 		victory_points = {
 			3942 1 
 		}
-		buildings = {
-			infrastructure = 3
-			state_infrastructure = 2
 
-			industrial_complex = 1
-			agri_industrial_complex = 1
-		}
 		add_core_of = SYR
 
 	}

@@ -3,7 +3,9 @@
 oob = "PER_1949"
 
 set_research_slots = 3
-
+set_country_flag = weapon_purchasing_CUM_permit
+set_country_flag = weapon_purchasing_CAP_permit
+set_country_flag = weapon_purchasing_MAO_permit
 if = {
 	limit = {
 		not = { has_dlc = "Man the Guns"}
@@ -18,7 +20,7 @@ if = {
 	set_technology = {
 		subkiller_0 = 1
 		maritime_sonar_0 = 1
-		ww_detection = 1
+		detection_ww = 1
 		maritime_ew_ss_0 = 1
 		ww_armaments = 1
 		ship_armament_light_0 = 1
@@ -31,8 +33,8 @@ if = {
 		sub_hull_large_single_0 = 1
 		torpedo_small_0 = 1
 		ww_screens = 1
-		screen_hull_small_0 = 1
 		screen_hull_medium_0 = 1
+		screen_hull_heavy_0 = 1
 	}
 }
 
@@ -171,6 +173,12 @@ create_country_leader = {
 	picture = "Reza.dds"
 	expire = "1965.1.1"
 	ideology = monarchy
+	traits = {
+		ayamehr
+		shanhanshah
+		great_civilisation_dream
+		bozorg_arteshtaran
+	}
 }
 create_country_leader = {
 	name = "Ruhollah Khomeini"
@@ -187,11 +195,21 @@ create_country_leader = {
 	name = "Mohammad Mosaddegh"
 	picture = "Mosaddegh.dds"
 	ideology = left_nationalist
+	traits = {
+		guardian_of_irans_resources
+		convinced_democrat
+		efficient_administrator
+	}
 }
 create_country_leader = {
 	name = "Navvab Safavi"
 	picture = "Navvab_Safavi.dds"
 	ideology = shia_monarchy
+}
+create_country_leader = {
+	name = "Massoud Rajavi"
+	picture = "Massoud_Rajavi.dds"
+	ideology = revolutionary_islamic_socialism
 }
 create_corps_commander = {
 	name = "Hasan Arfa"

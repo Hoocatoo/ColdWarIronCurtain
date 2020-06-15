@@ -21,7 +21,7 @@ focus_tree = {
 	}
 	focus = {
 		id = CAM_Dissolve_the_National_Assembly
-		icon = GFX_goal_unknown
+		icon = GFX_Monarchist_Reduce_Autonomy
 		search_filters = {IC_FILTER}
 		cost = 10.00
 		x = 25
@@ -57,7 +57,7 @@ focus_tree = {
 	}
 	focus = {
 		id = CAM_French_Officers
-		icon = GFX_goal_unknown
+		icon = GFX_focus_generic_military_mission
 		search_filters = {IC_FILTER}
 		cost = 10.00
 		prerequisite = {
@@ -66,7 +66,8 @@ focus_tree = {
 		x = 0
 		y = 2
         completion_reward = {
-        add_ideas = fra_french_advisors
+			army_experience = 25
+			add_manpower = 5000
             }
 	}
 	focus = {
@@ -110,11 +111,20 @@ focus_tree = {
 		}
 		x = 2
 		y = 4
-
+		completion_reward = {
+			985 = {
+				add_building_construction = {
+					type = naval_base
+					level = 1
+					instant_build = yes
+					province = 7404
+				}			
+			}
+		}
 	}
 	focus = {
 		id = CAM_Royal_Cambodian_Army
-		icon = GFX_goal_unknown
+		icon = GFX_Lon_Nol_Cambodia
 		search_filters = {IC_FILTER}
 		cost = 10.00
 		prerequisite = {
@@ -128,7 +138,7 @@ focus_tree = {
 	}
 	focus = {
 		id = CAM_Pursat_Infantry_Training_Centre
-		icon = GFX_goal_unknown
+		icon = GFX_Recruitment
 		search_filters = {IC_FILTER}
 		cost = 10.00
 		prerequisite = {
@@ -146,7 +156,7 @@ focus_tree = {
 	}
 	focus = {
 		id = CAM_Establish_The_5th_and_6th_BCK
-		icon = GFX_goal_unknown
+		icon = GFX_RecruitmentDrive
 		search_filters = {IC_FILTER}
 		cost = 10.00
 		prerequisite = {
@@ -154,11 +164,23 @@ focus_tree = {
 		}
 		x = 11
 		y = 2
-
+		completion_reward = {
+			add_manpower = 15000
+			capital_scope = {
+				create_unit = {
+					division = "name = \"5th BCK\" division_template = \"Infantry Division\" start_experience_factor = 0.75 start_equipment_factor = 0.5"
+					owner = CAM
+				}
+				create_unit = {
+					division = "name = \"6th BCK\" division_template = \"Infantry Division\" start_experience_factor = 0.75 start_equipment_factor = 0.5"
+					owner = AFGCAM
+				}				
+			}
+		}
 	}
 	focus = {
 		id = CAM_Establish_A_Parachute_Battalion
-		icon = GFX_goal_unknown
+		icon = GFX_focus_generic_paratrooper
 		search_filters = {IC_FILTER}
 		cost = 10.00
 		prerequisite = {
@@ -169,11 +191,18 @@ focus_tree = {
 		}
 		x = 9
 		y = 3
-
+		completion_reward = {
+			add_tech_bonus = {
+					name = cam_paratrooper_focus
+					bonus = 1.5
+					uses = 1
+					category = sf_forces
+				}
+		}
 	}
 	focus = {
 		id = CAM_Khmerization_of_the_Army
-		icon = GFX_goal_unknown
+		icon = GFX_RenewedArms
 		search_filters = {IC_FILTER}
 		cost = 10.00
 		prerequisite = {
@@ -181,7 +210,10 @@ focus_tree = {
 		}
 		x = 9
 		y = 4
-
+		completion_reward = {
+			add_war_support = 0.10
+			add_manpower = 25000
+		}
 	}
 	focus = {
 		id = CAM_Royal_Cambodian_Air_Force
@@ -199,19 +231,25 @@ focus_tree = {
 	}
 	focus = {
 		id = CAM_Import_Fletcher_FD_25_Defender
-		icon = GFX_goal_unknown
+		icon = GFX_ImportBearcats
 		search_filters = {IC_FILTER}
 		cost = 10.00
 		prerequisite = {
 			focus = CAM_Royal_Cambodian_Air_Force
 		}
 		x = 14
-		y = 2
-
+		y = 2	
+		completion_reward = {
+			add_equipment_to_stockpile = {
+				type = jet_light_equipment_2
+				amount = 100
+				producer = CAP
+			}
+		}	
 	}
 	focus = {
 		id = CAM_Establish_the_Royal_Flying_School
-		icon = GFX_goal_unknown
+		icon = Jet_Engines
 		search_filters = {IC_FILTER}
 		cost = 10.00
 		prerequisite = {
@@ -219,11 +257,14 @@ focus_tree = {
 		}
 		x = 18
 		y = 2
-
+		completion_reward = {
+			air_experience = 25
+			add_manpower = 2500
+		}
 	}
 	focus = {
 		id = CAM_US_MAAG_Advisors
-		icon = GFX_goal_unknown
+		icon = GFX_focus_american_advisors
 		search_filters = {IC_FILTER}
 		cost = 10.00
 		prerequisite = {
@@ -234,22 +275,31 @@ focus_tree = {
 		}
 		x = 16
 		y = 3
+		completion_reward = {
+			add_ideas = american_air_advisors
+		}		
 	}
 	focus = {
 		id = CAM_Purchase_Sikorsky_H_34_Choctaws
-		icon = GFX_goal_unknown
+		icon = GFX_Helicoptor_Production
 		search_filters = {IC_FILTER}
 		cost = 10.00
 		prerequisite = {
 			focus = CAM_US_MAAG_Advisors
 		}
-		x = 16
+		x = 16 
 		y = 4
-
+		completion_reward = {
+			add_equipment_to_stockpile = {
+				type = utility_helicopter_equipment_1
+				amount = 100
+				producer = CAP
+			}
+		}	
 	}
 	focus = {
 		id = CAM_Fifty_Percent_Independence
-		icon = GFX_goal_unknown
+		icon = GFX_Break_Treaty
 		search_filters = {IC_FILTER}
 		cost = 10.00
 		prerequisite = {
@@ -273,11 +323,13 @@ focus_tree = {
 		}
 		x = 22
 		y = 2
-
+		completion_reward = {
+			remove_ideas = French_Administrative_Controls
+		}
 	}
 	focus = {
 		id = CAM_Military_Autonomy
-		icon = GFX_goal_unknown
+		icon = GFX_MilitaryGovernment
 		search_filters = {IC_FILTER}
 		cost = 10.00
 		prerequisite = {
@@ -285,11 +337,13 @@ focus_tree = {
 		}
 		x = 25
 		y = 2
-
+		completion_reward = {
+			remove_ideas = French_Military_Controls
+		}
 	}
 	focus = {
 		id = CAM_International_Independence_Tour
-		icon = GFX_goal_unknown
+		icon = GFX_Travel_Modernization
 		search_filters = {IC_FILTER}
 		cost = 10.00
 		prerequisite = {
@@ -300,11 +354,13 @@ focus_tree = {
 		}
 		x = 23
 		y = 3
-
+		completion_reward = {
+			add_political_power = 100
+		}
 	}
 	focus = {
 		id = CAM_Additional_French_Bases
-		icon = GFX_goal_unknown
+		icon = GFX_FortificationEffort
 		search_filters = {IC_FILTER}
 		cost = 10.00
 		prerequisite = {
@@ -312,11 +368,37 @@ focus_tree = {
 		}
 		x = 28
 		y = 2
+		completion_reward = {
+			add_to_variable = { currentMoney = 100 }
+			custom_effect_tooltip = Add_Hundred_Money
+				FRA = {
+					CAM = {
+						for_loop_effect = {
+							end = influence_array^num
+							value = v
+							if = {
+								limit = {
+									check_variable = { influence_array^v = PREV }
+								}
+								add_to_variable = { influence_array_val^v = 100 }
+								set_country_flag = found
+							}
+						}
+						if = {
+							limit = { NOT = { has_country_flag = found } }
+								add_to_array = { influence_array = PREV.id }
+								add_to_array = { influence_array_val = 100 }
+						}
+						clr_country_flag = found
+						recalculate_influence = yes
 
+				}
+			}
+		}
 	}
 	focus = {
 		id = CAM_Extended_Asian_Recognition_Campaign
-		icon = GFX_goal_unknown
+		icon = GFX_BullishDiplomacy
 		search_filters = {IC_FILTER}
 		cost = 10.00
 		prerequisite = {
@@ -410,7 +492,7 @@ focus_tree = {
 	}
 	focus = {
 		id = CAM_Demand_Independence
-		icon = GFX_goal_unknown
+		icon = GFX_microphone
 		search_filters = {IC_FILTER}
 		cost = 10.00
 		prerequisite = {
@@ -418,7 +500,11 @@ focus_tree = {
 		}
 		x = 8
 		y = 7
-
+		completion_reward = {
+			drop_cosmetic_tag = yes
+			add_to_variable = { domestic_influence_amount = 100 }
+			recalculate_influence = yes
+		}
 	}
 	focus = {
 		id = CAM_Enforce_Party_Dominance
@@ -430,7 +516,12 @@ focus_tree = {
 		}
 		x = 7
 		y = 8
-
+		completion_reward = {
+			add_popularity = {
+				ideology = Social_Democratic
+				popularity = 0.25
+			}
+		}	
 	}
 	focus = {
 		id = CAM_Attract_the_Intellectual_Elite
@@ -442,7 +533,9 @@ focus_tree = {
 		}
 		x = 12
 		y = 7
-
+		completion_reward = {
+			add_research_slot = 1
+		}
 	}
 	focus = {
 		id = CAM_Reform_Colonial_Policies
@@ -454,7 +547,9 @@ focus_tree = {
 		}
 		x = 13
 		y = 8
-
+		completion_reward = {
+			remove_ideas = Colonial_Restrictions
+		}
 	}
 	focus = {
 		id = CAM_Liberal_Victory
@@ -472,7 +567,7 @@ focus_tree = {
 	}
 	focus = {
 		id = CAM_Support_French_Military_Mission
-		icon = GFX_goal_unknown
+		icon = GFX_FRA_Cooperation
 		search_filters = {IC_FILTER}
 		cost = 10.00
 		prerequisite = {
@@ -480,7 +575,9 @@ focus_tree = {
 		}
 		x = 17
 		y = 7
-
+		completion_reward = {
+			add_ideas = fra_french_advisors
+		}
 	}
 	focus = {
 		id = CAM_Rivalry_with_the_Democratic_Party
@@ -492,7 +589,16 @@ focus_tree = {
 		}
 		x = 16
 		y = 8
-
+		completion_reward = {
+			add_popularity = {
+				ideology = Social_Democratic
+				popularity = 0.05
+			}
+			add_popularity = {
+				ideology = monarchism
+				popularity = 0.05
+			}
+		}
 	}
 	focus = {
 		id = CAM_Support_the_French
@@ -504,11 +610,38 @@ focus_tree = {
 		}
 		x = 21
 		y = 7
+		completion_reward = {
+			add_to_variable = { currentMoney = 100 }
+			custom_effect_tooltip = Add_Hundred_Money
+				FRA = {
+					CAM = {
+						for_loop_effect = {
+							end = influence_array^num
+							value = v
+							if = {
+								limit = {
+									check_variable = { influence_array^v = PREV }
+								}
+								add_to_variable = { influence_array_val^v = 100 }
+								set_country_flag = found
+							}
+						}
+						if = {
+							limit = { NOT = { has_country_flag = found } }
+								add_to_array = { influence_array = PREV.id }
+								add_to_array = { influence_array_val = 100 }
+						}
+						clr_country_flag = found
+						recalculate_influence = yes
+
+				}
+			}
+		}
 
 	}
 	focus = {
 		id = CAM_Take_Advantage_of_Limited_Autonomy
-		icon = GFX_goal_unknown
+		icon = GFX_Paper_Two
 		search_filters = {IC_FILTER}
 		cost = 10.00
 		prerequisite = {
@@ -516,7 +649,11 @@ focus_tree = {
 		}
 		x = 22
 		y = 8
-
+		completion_reward = {
+			add_stability = 0.02
+			add_to_variable = { domestic_influence_amount = 100 }
+			recalculate_influence = yes
+		}
 	}
 	focus = {
 		id = CAM_Victorious_North_East_Party_Victory
@@ -534,7 +671,7 @@ focus_tree = {
 	}
 	focus = {
 		id = CAM_Fund_the_Cambodian_Armed_Forces
-		icon = GFX_goal_unknown
+		icon = GFX_Money
 		search_filters = {IC_FILTER}
 		cost = 10.00
 		prerequisite = {
@@ -548,7 +685,7 @@ focus_tree = {
 	}
 	focus = {
 		id = CAM_Develop_the_Ratanakiri_Factories
-		icon = GFX_goal_unknown
+		icon = GFX_Generic_Arab_Industry
 		search_filters = {IC_FILTER}
 		cost = 10.00
 		prerequisite = {
@@ -580,7 +717,9 @@ focus_tree = {
 		}
 		x = 28
 		y = 8
-
+		completion_reward = {
+			add_offsite_building = { type = arms_factory level = 2 }
+		}
 	}
 	focus = {
 		id = CAM_Economic_Growth
@@ -601,7 +740,7 @@ focus_tree = {
 	}
 	focus = {
 		id = CAM_Protest_the_Treatment_of_Minorities_in_Vietnam
-		icon = GFX_goal_unknown
+		icon = GFX_goal_big_news
 		search_filters = {IC_FILTER}
 		cost = 10.00
 		prerequisite = {
@@ -612,7 +751,20 @@ focus_tree = {
 		}
 		x = 29
 		y = 9
-
+		completion_reward = {
+					CAM = {
+							add_opinion_modifier = {
+									target = VIE
+									modifier = large_decrease
+								}
+						}
+					VIE = {
+							add_opinion_modifier = {
+									target = CAM
+									modifier = large_decrease
+								}
+						}
+				}
 	}
 	focus = {
 		id = CAM_Encourage_Small_Businesses
@@ -688,7 +840,7 @@ focus_tree = {
 				name = agri_tech_bonus
 				bonus = 0.75
 				uses = 1
-				category = agri_tech
+				category = agriculture
 			}
 		}
 	}
@@ -782,7 +934,7 @@ focus_tree = {
 	}
 	focus = {
 		id = CAM_Outreach_to_Fellow_Nationalists
-		icon = GFX_goal_unknown
+		icon = GFX_Subterfuge
 		search_filters = {IC_FILTER}
 		cost = 10.00
 		prerequisite = {
@@ -790,7 +942,12 @@ focus_tree = {
 		}
 		x = 35
 		y = 7
-
+		completion_reward = {
+			add_timed_idea = {
+				idea = revolutionary_fervor
+				days = 1625
+			}
+		}
 	}
 	focus = {
 		id = CAM_Weaken_the_Monarchy
@@ -802,7 +959,16 @@ focus_tree = {
 		}
 		x = 39
 		y = 7
-
+		completion_reward = {
+			add_popularity = {
+				ideology = monarchism
+				popularity = -0.04
+			}
+			add_popularity = {
+				ideology = nationalism
+				popularity = -0.04
+			}
+		}	
 	}
 	focus = {
 		id = CAM_Appeal_to_America
@@ -817,11 +983,24 @@ focus_tree = {
 		}
 		x = 37
 		y = 8
-
+		completion_reward = {
+					CAM = {
+							add_opinion_modifier = {
+									target = USA
+									modifier = small_increase
+								}
+						}
+					USA = {
+							add_opinion_modifier = {
+									target = CAM
+									modifier = small_increase
+								}
+						}
+				}
 	}
 	focus = {
 		id = CAM_Empower_the_Khmer_Serei
-		icon = GFX_goal_unknown
+		icon = GFX_Indochinese_Guerillas
 		search_filters = {IC_FILTER}
 		cost = 10.00
 		prerequisite = {
@@ -835,7 +1014,7 @@ focus_tree = {
 	}
 	focus = {
 		id = CAM_Infilitrate_the_Armed_Forces
-		icon = GFX_goal_unknown
+		icon = GFX_military_service_reduction
 		search_filters = {IC_FILTER}
 		cost = 10.00
 		prerequisite = {
@@ -854,7 +1033,7 @@ focus_tree = {
 	}
 	focus = {
 		id = CAM_Decry_French_Occupation
-		icon = GFX_goal_unknown
+		icon = GFX_goal_FRA_Crush
 		search_filters = {IC_FILTER}
 		cost = 10.00
 		prerequisite = {
@@ -862,11 +1041,27 @@ focus_tree = {
 		}
 		x = 34
 		y = 8
-
+		completion_reward = {
+			add_to_variable = { domestic_influence_amount = 50 }
+			recalculate_influence = yes
+			CAM = {
+				add_opinion_modifier = {
+					target = FRA
+					modifier = large_decrease
+				}
+			}
+			FRA = {
+				add_opinion_modifier = {
+					target = CAM
+					modifier = large_decrease
+				}
+			}
+		}  
+	
 	}
 	focus = {
 		id = CAM_Embrace_Khmer_Nationalism
-		icon = GFX_goal_unknown
+		icon = GFX_focus_rioting
 		search_filters = {IC_FILTER}
 		cost = 10.00
 		prerequisite = {
@@ -901,7 +1096,7 @@ focus_tree = {
 	}
 	focus = {
 		id = CAM_Release_Son_Ngoc_Thanh
-		icon = GFX_goal_unknown
+		icon = GFX_expand_legal_power
 		search_filters = {IC_FILTER}
 		cost = 10.00
 		prerequisite = {
@@ -912,11 +1107,17 @@ focus_tree = {
 		}
 		x = 23
 		y = 11
-
+		completion_reward = {
+			add_popularity = {
+				ideology = nationalism
+				popularity = 0.15
+			}
+			add_war_support = 0.03
+		}
 	}
 	focus = {
 		id = CAM_Purge_Insurgents
-		icon = GFX_goal_unknown
+		icon = GFX_Camp_Rafidah
 		search_filters = {IC_FILTER}
 		cost = 10.00
 		prerequisite = {
@@ -933,7 +1134,7 @@ focus_tree = {
 	}
 	focus = {
 		id = CAM_Border_Fortifications
-		icon = GFX_goal_unknown
+		icon = GFX_Cash_for_Forts
 		search_filters = {IC_FILTER}
 		cost = 10.00
 		prerequisite = {
@@ -953,7 +1154,7 @@ focus_tree = {
 	}
 	focus = {
 		id = CAM_Rural_Infrastructure
-		icon = GFX_goal_unknown
+		icon = GFX_FocusBuildRoads
 		search_filters = {IC_FILTER}
 		cost = 10.00
 		prerequisite = {
@@ -964,11 +1165,16 @@ focus_tree = {
 		}
 		x = 28
 		y = 10
-
+		completion_reward = {
+			add_timed_idea = {
+				idea = public_infrastructure_development
+				days = 1250
+			}
+		}
 	}
 	focus = {
 		id = CAM_Increase_Royalist_Influence
-		icon = GFX_goal_unknown
+		icon = GFX_SIA_buddhisttraditions
 		search_filters = {IC_FILTER}
 		cost = 10.00
 		prerequisite = {
@@ -979,7 +1185,9 @@ focus_tree = {
 		}
 		x = 19
 		y = 8
-
+		completion_reward = {
+			add_ideas = entrenched_aristocracy
+		}
 	}
 	focus = {
 		id = CAM_Appeal_to_French_Intellectuals
@@ -994,7 +1202,9 @@ focus_tree = {
 		}
 		x = 18
 		y = 9
-
+		completion_reward = {
+			add_ideas = more_escuelas
+		}
 	}
 	focus = {
 		id = CAM_Invest_in_Education
@@ -1010,12 +1220,16 @@ focus_tree = {
 		x = 20
 		y = 9
 		completion_reward = {
-			add_ideas = more_escuelas
+			add_timed_idea = {
+				idea = literacy_campaign
+				days = 1250
+			}
 		}
+
 	}
 	focus = {
 		id = CAM_French_Economic_Aid
-		icon = GFX_goal_unknown
+		icon = GFX_Foriegn_Investment
 		search_filters = {IC_FILTER}
 		cost = 10.00
 		prerequisite = {
@@ -1035,7 +1249,7 @@ focus_tree = {
 	}
 	focus = {
 		id = CAM_Defend_the_Khmer_Issarak
-		icon = GFX_goal_unknown
+		icon = GFX_SwingtheSword
 		search_filters = {IC_FILTER}
 		cost = 10.00
 		prerequisite = {
@@ -1052,7 +1266,7 @@ focus_tree = {
 	}
 	focus = {
 		id = CAM_Improve_Living_Conditions
-		icon = GFX_goal_unknown
+		icon = GFX_ImproveUrbanConditions
 		search_filters = {IC_FILTER}
 		cost = 10.00
 		prerequisite = {
@@ -1088,7 +1302,7 @@ focus_tree = {
 	}
 	focus = {
 		id = CAM_Align_with_French_Socialists
-		icon = GFX_goal_unknown
+		icon = GFX_French_Glory
 		search_filters = {IC_FILTER}
 		cost = 10.00
 		prerequisite = {
@@ -1099,7 +1313,35 @@ focus_tree = {
 		}
 		x = 10
 		y = 10
+		completion_reward = {
+			add_popularity = {
+				ideology = Social_Democratic
+				popularity = 0.06
+			}
+				FRA = {
+					CAM = {
+						for_loop_effect = {
+							end = influence_array^num
+							value = v
+							if = {
+								limit = {
+									check_variable = { influence_array^v = PREV }
+								}
+								add_to_variable = { influence_array_val^v = 100 }
+								set_country_flag = found
+							}
+						}
+						if = {
+							limit = { NOT = { has_country_flag = found } }
+								add_to_array = { influence_array = PREV.id }
+								add_to_array = { influence_array_val = 100 }
+						}
+						clr_country_flag = found
+						recalculate_influence = yes
 
+				}
+			}
+		}
 	}
 	focus = {
 		id = CAM_Sihanouks_Power_Grab
@@ -1111,11 +1353,14 @@ focus_tree = {
 		}
 		x = 23
 		y = 12
-
+		completion_reward = {
+			remove_ideas = entrenched_aristocracy
+			add_ideas = entrenched_aristocracy2
+		}
 	}
 	focus = {
 		id = CAM_Suspend_the_Constitution
-		icon = GFX_goal_unknown
+		icon = GFX_Generic_Ripping_Papers
 		search_filters = {IC_FILTER}
 		cost = 10.00
 		prerequisite = {
@@ -1123,7 +1368,12 @@ focus_tree = {
 		}
 		x = 23
 		y = 13
-
+		completion_reward = {
+			add_timed_idea = {
+				idea = martial_law
+				days = 365
+			}
+		}
 	}
 	focus = {
 		id = CAM_Appoint_Sihanouk_Prime_Minister
@@ -1135,7 +1385,9 @@ focus_tree = {
 		}
 		x = 26
 		y = 13
-
+		completion_reward = {
+			add_ideas = idea_JOR_For_The_King
+		}
 	}
 	focus = {
 		id = CAM_Dismiss_the_Cabinet
@@ -1147,11 +1399,14 @@ focus_tree = {
 		}
 		x = 20
 		y = 13
-
+		completion_reward = {
+			add_political_power = 50
+			add_stability = 0.01
+		}
 	}
 	focus = {
 		id = CAM_Declare_Martial_Law
-		icon = GFX_goal_unknown
+		icon = GFX_generic_arrests
 		search_filters = {IC_FILTER}
 		cost = 10.00
 		prerequisite = {
@@ -1163,12 +1418,15 @@ focus_tree = {
 		x = 22
 		y = 14
 		completion_reward = {
-			add_ideas = martial_law
+			add_timed_idea = {
+				idea = martial_law
+				days = 1250
+			}
 		}
 	}
 	focus = {
 		id = CAM_Plead_with_France_for_Independence
-		icon = GFX_goal_unknown
+		icon = GFX_Generic_Radio_Broadcast
 		search_filters = {IC_FILTER}
 		cost = 10.00
 		prerequisite = {
@@ -1179,11 +1437,16 @@ focus_tree = {
 		}
 		x = 23
 		y = 15
-
+		completion_reward = {
+			add_political_power = 50
+			add_to_variable = { domestic_influence_amount = 100 }
+			recalculate_influence = yes
+			
+		}	
 	}
 	focus = {
 		id = CAM_Persecute_the_Nationalist_Republicans
-		icon = GFX_goal_unknown
+		icon = GFX_CrushResistance
 		search_filters = {IC_FILTER}
 		cost = 10.00
 		prerequisite = {
@@ -1191,7 +1454,12 @@ focus_tree = {
 		}
 		x = 25
 		y = 16
-
+		completion_reward = {
+			add_timed_idea = { 
+				idea = one_party_state
+				days = 750
+			}
+		}
 	}
 	focus = {
 		id = CAM_Anti_French_Rhetoric
@@ -1203,11 +1471,40 @@ focus_tree = {
 		}
 		x = 21
 		y = 16
-
+		completion_reward = {
+				CAM = {
+						add_opinion_modifier = {
+								target = FRA
+								modifier = small_decrease
+							}
+					}
+				FRA = {
+						add_opinion_modifier = {
+								target = CAM
+								modifier = small_decrease
+							}
+					}
+				FRA = {
+					CAM = {
+						for_loop_effect = {
+						end = influence_array^num
+						value = v
+						if = {
+							limit = {
+								check_variable = { influence_array^v = PREV }
+							}
+							add_to_variable = { influence_array_val^v = -100 }
+							set_country_flag = found
+						}
+					}
+					recalculate_influence = yes
+				}
+			}
+		}
 	}
 	focus = {
 		id = CAM_Launch_International_Pressure_Campaign
-		icon = GFX_goal_unknown
+		icon = GFX_BurningGlobe
 		search_filters = {IC_FILTER}
 		cost = 10.00
 		prerequisite = {
@@ -1218,7 +1515,25 @@ focus_tree = {
 		}
 		x = 22
 		y = 17
-
+		completion_reward = {
+			add_threat = 1
+				FRA = {
+					CAM = {
+						for_loop_effect = {
+						end = influence_array^num
+						value = v
+						if = {
+							limit = {
+								check_variable = { influence_array^v = PREV }
+							}
+							add_to_variable = { influence_array_val^v = -100 }
+							set_country_flag = found
+						}
+					}
+					recalculate_influence = yes
+				}
+			}
+		}
 	}
 	focus = {
 		id = CAM_Ally_With_Lon_Nol
@@ -1233,11 +1548,18 @@ focus_tree = {
 		}
 		x = 24
 		y = 17
-
+		completion_reward = {
+			add_popularity = {
+				ideology = neutrality
+				popularity = 0.05
+			}
+			set_country_flag = Lon_Nol_Empowered
+			add_stability = 0.01
+		}
 	}
 	focus = {
 		id = CAM_Preperaitons_for_Independence
-		icon = GFX_goal_unknown
+		icon = GFX_focus_renounce_the_treaty_of_triannon
 		search_filters = {IC_FILTER}
 		cost = 10.00
 		prerequisite = {
@@ -1245,11 +1567,13 @@ focus_tree = {
 		}
 		x = 26
 		y = 19
-
+		completion_reward = {
+			remove_ideas = Politically_Divided
+		}
 	}
 	focus = {
 		id = CAM_Self_Imposed_Exile
-		icon = GFX_goal_unknown
+		icon = GFX_Generic_Jet
 		search_filters = {IC_FILTER}
 		cost = 10.00
 		prerequisite = {
@@ -1266,7 +1590,7 @@ focus_tree = {
 	}
 	focus = {
 		id = CAM_Return_from_Exile
-		icon = GFX_goal_unknown
+		icon = GFX_Political_Support
 		search_filters = {IC_FILTER}
 		cost = 10.00
 		prerequisite = {
@@ -1280,7 +1604,7 @@ focus_tree = {
 	}
 	focus = {
 		id = CAM_Integrate_Khmer_Issarak
-		icon = GFX_goal_unknown
+		icon = GFX_UndergroundPolitics
 		search_filters = {IC_FILTER}
 		cost = 10.00
 		prerequisite = {
@@ -1294,7 +1618,7 @@ focus_tree = {
 	}
 	focus = {
 		id = CAM_Defend_Against_Communist_Raids
-		icon = GFX_goal_unknown
+		icon = GFX_TheRussianBearCurtailed
 		search_filters = {IC_FILTER}
 		cost = 10.00
 		prerequisite = {
@@ -1302,7 +1626,9 @@ focus_tree = {
 		}
 		x = 22
 		y = 20
-
+		completion_reward = {
+			add_timed_idea = { idea = fortification_build_up days = 900 }
+		}
 	}
 	focus = {
 		id = CAM_Further_Seperation_from_France
@@ -1317,7 +1643,20 @@ focus_tree = {
 		}
 		x = 20
 		y = 21
-
+		completion_reward = {
+					CAM = {
+							add_opinion_modifier = {
+									target = FRA
+									modifier = large_decrease
+								}
+						}
+					FRA = {
+							add_opinion_modifier = {
+									target = CAM
+									modifier = large_decrease
+								}
+						}
+				}  
 	}
 	focus = {
 		id = CAM_The_Geneva_Conference
@@ -1332,7 +1671,7 @@ focus_tree = {
 	}
 	focus = {
 		id = CAM_Non_Aligned_Foriegn_Policies
-		icon = GFX_goal_unknown
+		icon = GFX_goal_generic_neutrality_focus
 		search_filters = {IC_FILTER}
 		cost = 10.00
 		prerequisite = {
@@ -1346,7 +1685,7 @@ focus_tree = {
 	}
 	focus = {
 		id = CAM_Seize_Control_of_the_Judiciary
-		icon = GFX_goal_unknown
+		icon = GFX_expand_legal_power
 		search_filters = {IC_FILTER}
 		cost = 10.00
 		prerequisite = {
@@ -1354,7 +1693,9 @@ focus_tree = {
 		}
 		x = 28
 		y = 20
-
+		completion_reward = {
+			add_ideas = idea_KEN_extra_judicial_sentancing
+		}
 	}
 	focus = {
 		id = CAM_Cambodianization_of_the_National_Police
@@ -1366,7 +1707,16 @@ focus_tree = {
 		}
 		x = 24
 		y = 20
-
+		completion_reward = {
+			hidden_effect = {
+				remove_ideas = policy_cpi_temp_0
+				remove_ideas = policy_cpi_temp_1
+				remove_ideas = policy_cpi_temp_2
+				remove_ideas = policy_cpi_temp_4
+				remove_ideas = policy_cpi_temp_5	
+			}
+			add_ideas = policy_cpi_temp_3
+		}
 	}
 	focus = {
 		id = CAM_Take_Control_of_the_Financial_Markets
@@ -1387,7 +1737,7 @@ focus_tree = {
 	}
 	focus = {
 		id = CAM_Suspend_the_National_Assembly
-		icon = GFX_goal_unknown
+		icon = GFX_Election_Rigging
 		search_filters = {IC_FILTER}
 		cost = 10.00
 		prerequisite = {
@@ -1398,11 +1748,13 @@ focus_tree = {
 		}
 		x = 24
 		y = 14
-
+		completion_reward = {
+			add_political_power = 100
+		}
 	}
 	focus = {
 		id = CAM_Evict_All_Foriegn_Soldiers
-		icon = GFX_goal_unknown
+		icon = GFX_TheBigPush
 		search_filters = {IC_FILTER}
 		cost = 10.00
 		prerequisite = {
@@ -1410,11 +1762,15 @@ focus_tree = {
 		}
 		x = 26
 		y = 23
-
+		completion_reward = {
+			add_stability = 0.02
+			add_to_variable = { domestic_influence_amount = 100 }
+			recalculate_influence = yes
+		}	
 	}
 	focus = {
 		id = CAM_Demobilize_Cambodian_Resistance_Fighters
-		icon = GFX_goal_unknown
+		icon = GFX_military_service_reduction
 		search_filters = {IC_FILTER}
 		cost = 10.00
 		prerequisite = {
@@ -1422,13 +1778,18 @@ focus_tree = {
 		}
 		x = 20
 		y = 23
-
+		completion_reward = {
+			add_manpower = 15000
+			capital_scope = {
+				add_extra_state_shared_building_slots = 1
+			}
+		}
 	}
 	focus = {
 		id = CAM_Preperations_for_the_Next_Elections
 		icon = GFX_new_democratic_elections
 		search_filters = {IC_FILTER}
-		cost = 10.00
+		cost = 1.00
 		prerequisite = {
 			focus = CAM_Evict_All_Foriegn_Soldiers
 		}
@@ -1437,23 +1798,32 @@ focus_tree = {
 		}
 		x = 23
 		y = 24
-
+		completion_reward = {
+			add_political_power = 50
+		}
 	}
 	focus = {
 		id = CAM_Form_Sangkum
 		icon = GFX_goal_unknown
 		search_filters = {IC_FILTER}
-		cost = 10.00
+		cost = 2.00
 		prerequisite = {
 			focus = CAM_Preperations_for_the_Next_Elections
 		}
 		x = 23
 		y = 25
-
+		completion_reward = {
+			set_party_name = { 
+				ideology = monarchism 
+				long_name = Sangkum 
+				name = Sangkum 
+			}		
+			add_political_power = 25
+		}
 	}
 	focus = {
 		id = CAM_Unify_Right_Wing_Parties
-		icon = GFX_goal_unknown
+		icon = GFX_ProBuddha
 		search_filters = {IC_FILTER}
 		cost = 10.00
 		prerequisite = {
@@ -1461,11 +1831,24 @@ focus_tree = {
 		}
 		x = 20
 		y = 26
-
+		completion_reward = {
+			add_popularity = {
+				ideology = monarchism
+				popularity = 0.15
+			}
+			add_popularity = {
+				ideology = conservative
+				popularity = -0.05
+			}
+			add_popularity = {
+				ideology = neutrality
+				popularity = -0.05
+			}
+		}
 	}
 	focus = {
 		id = CAM_Harrass_the_Democrats
-		icon = GFX_goal_unknown
+		icon = GFX_The_Purge
 		search_filters = {IC_FILTER}
 		cost = 10.00
 		prerequisite = {
@@ -1473,7 +1856,12 @@ focus_tree = {
 		}
 		x = 23
 		y = 26
-
+		completion_reward = {
+			add_timed_idea = {
+				idea = political_harrassment
+				days = 365
+			}
+		}
 	}
 	focus = {
 		id = CAM_Communist_Crackdown
@@ -1553,11 +1941,13 @@ focus_tree = {
 		}
 		x = 14
 		y = 29
-
+		completion_reward = {
+			add_ideas = khmer_nationalism
+		}
 	}
 	focus = {
 		id = CAM_Loyalty_to_the_King
-		icon = GFX_goal_unknown
+		icon = GFX_Aristocracy
 		search_filters = {IC_FILTER}
 		cost = 10.00
 		prerequisite = {
@@ -1565,11 +1955,13 @@ focus_tree = {
 		}
 		x = 12
 		y = 29
-
+		completion_reward = {
+			add_ideas = total_loyalty
+		}
 	}
 	focus = {
 		id = CAM_Promote_Buddhism
-		icon = GFX_goal_unknown
+		icon = GFX_SIA_buddhisttraditions
 		search_filters = {IC_FILTER}
 		cost = 10.00
 		prerequisite = {
@@ -1583,7 +1975,7 @@ focus_tree = {
 	}
 	focus = {
 		id = CAM_Repress_The_Khmer_Serei
-		icon = GFX_goal_unknown
+		icon = GFX_Repress_Student_Protestors
 		search_filters = {IC_FILTER}
 		cost = 10.00
 		prerequisite = {
@@ -1594,7 +1986,9 @@ focus_tree = {
 		}
 		x = 13
 		y = 30
-
+		completion_reward = {
+			remove_ideas = hostile_paramilitaries
+		}
 	}
 	focus = {
 		id = CAM_Anti_Corruption_Measures
@@ -1606,11 +2000,14 @@ focus_tree = {
 		}
 		x = 10
 		y = 30
-
+		completion_reward = {
+			add_to_variable = { CorruptionLevel = -0.05 }
+			corruption_idea_calc = yes		
+		}
 	}
 	focus = {
 		id = CAM_Empower_the_Prime_Minister
-		icon = GFX_goal_unknown
+		icon = GFX_Adopt_New_Constitiution
 		search_filters = {IC_FILTER}
 		cost = 10.00
 		prerequisite = {
@@ -1621,7 +2018,9 @@ focus_tree = {
 		}
 		x = 11
 		y = 31
-
+		completion_reward = {
+			add_ideas = centralization
+		}
 	}
 	focus = {
 		id = CAM_Align_with_the_PRC
@@ -1675,11 +2074,21 @@ focus_tree = {
 		}
 		x = 12
 		y = 32
-
+		completion_reward = {
+			add_popularity = {
+				ideology = Social_Democratic
+				popularity = -0.05
+			}
+			add_popularity = {
+				ideology = monarchism
+				popularity = 0.05
+			}
+			add_political_power = 25
+		}
 	}
 	focus = {
 		id = CAM_Reduce_the_Nobilities_Power
-		icon = GFX_goal_unknown
+		icon = GFX_backwards_feudal_economy
 		search_filters = {IC_FILTER}
 		cost = 10.00
 		prerequisite = {
@@ -1690,7 +2099,9 @@ focus_tree = {
 		}
 		x = 13
 		y = 33
-
+		completion_reward = {
+			remove_ideas = feudal_politics
+		}
 	}
 	focus = {
 		id = CAM_Affordable_Urban_Housing
@@ -1716,7 +2127,13 @@ focus_tree = {
 		}
 		x = 22
 		y = 29
-
+		completion_reward = {
+			add_popularity = {
+				ideology = Social_Democratic
+				popularity = 0.10
+			}
+			add_stability = 0.02
+		}
 	}
 	focus = {
 		id = CAM_Promote_Secular_Values
@@ -1822,7 +2239,7 @@ focus_tree = {
 	}
 	focus = {
 		id = CAM_Relax_Censorship
-		icon = GFX_goal_unknown
+		icon = GFX_Press_Liberalization
 		search_filters = {IC_FILTER}
 		cost = 10.00
 		prerequisite = {
@@ -1833,13 +2250,20 @@ focus_tree = {
 		}
 		x = 24
 		y = 32
-completion_reward = {
-            add_ideas = default_media_laws_0
+		completion_reward = {
+			hidden_effect = {
+				remove_ideas = policy_media_temp_0
+				remove_ideas = policy_media_temp_1
+				remove_ideas = policy_media_temp_2
+				remove_ideas = policy_media_temp_3
+				remove_ideas = policy_media_temp_3a
+			}
+			add_ideas = policy_media_temp_2
         }
 	}
 	focus = {
 		id = CAM_Expand_Voting_Rights
-		icon = GFX_goal_unknown
+		icon = GFX_new_democratic_elections
 		search_filters = {IC_FILTER}
 		cost = 10.00
 		prerequisite = {
@@ -1898,7 +2322,17 @@ completion_reward = {
 		}
 		x = 32
 		y = 29
-
+		completion_reward  {
+			add_popularity = {
+				ideology = communism
+				popularity = -0.03
+			}
+			add_popularity = {
+				ideology = socialist
+				popularity = -0.03
+			}
+			add_political_power = 25
+		}
 	}
 	focus = {
 		id = CAM_Business_Interests
@@ -1956,11 +2390,14 @@ completion_reward = {
 		}
 		x = 30
 		y = 30
-
+		completion_reward = {
+			add_political_power = 25
+			add_stability = 0.02
+		}
 	}
 	focus = {
 		id = CAM_Shift_Our_Policies_to_the_Right
-		icon = GFX_goal_unknown
+		icon = GFX_Generic_Ripping_Papers
 		search_filters = {IC_FILTER}
 		cost = 10.00
 		prerequisite = {
@@ -1977,7 +2414,7 @@ completion_reward = {
 	}
 	focus = {
 		id = CAM_Reinforce_Khmer_Nationalism
-		icon = GFX_goal_unknown
+		icon = GFX_fist
 		search_filters = {IC_FILTER}
 		cost = 10.00
 		prerequisite = {
@@ -1988,8 +2425,10 @@ completion_reward = {
 		}
 		x = 35
 		y = 31
-
-	}
+		completion_reward = {
+			add_ideas = khmer_nationalism
+		}
+	}				
 	focus = {
 		id = CAM_American_Advisors
 		icon = GFX_focus_american_advisors
@@ -2030,7 +2469,7 @@ completion_reward = {
 	}
 	focus = {
 		id = CAM_Outreach_to_Diem
-		icon = GFX_goal_unknown
+		icon = GFX_goal_VIE_Proclamation
 		search_filters = {IC_FILTER}
 		cost = 10.00
 		prerequisite = {
@@ -2070,11 +2509,13 @@ completion_reward = {
 		}
 		x = 28
 		y = 34
-
+		completion_reward = {
+			add_ideas = idea_SYR_CIA_Influence
+		}
 	}
 	focus = {
 		id = CAM_The_Debate
-		icon = GFX_goal_unknown
+		icon = GFX_Election_system_Debate
 		search_filters = {IC_FILTER}
 		cost = 10.00
 		prerequisite = {
@@ -2086,11 +2527,20 @@ completion_reward = {
 		}
 		x = 18
 		y = 34
-
+		completion_reward = {
+			add_popularity = {
+				ideology = monarchism
+				popularity = 0.03
+			}
+			add_popularity = {
+				ideology = communism
+				popularity = -0.03
+			}
+		}
 	}
 	focus = {
 		id = CAM_Public_Humiliation
-		icon = GFX_goal_unknown
+		icon = GFX_generic_arrests
 		search_filters = {IC_FILTER}
 		cost = 10.00
 		prerequisite = {
@@ -2098,7 +2548,13 @@ completion_reward = {
 		}
 		x = 16
 		y = 35
-
+		completion_reward = {
+			add_popularity = {
+				ideology = communism
+				popularity = -0.05
+			}
+			add_political_power = 50
+		}
 	}
 	focus = {
 		id = CAM_Violent_Crackdown
@@ -2110,7 +2566,12 @@ completion_reward = {
 		}
 		x = 20
 		y = 35
-
+		completion_reward = {
+			add_timed_idea = {
+				idea = political_crackdown
+				days = 365
+			}
+		}
 	}
 	focus = {
 		id = CAM_Full_Anti_Praechon_Campaign
@@ -2125,7 +2586,12 @@ completion_reward = {
 		}
 		x = 18
 		y = 36
-
+		completion_reward = {
+			add_timed_idea = {
+				idea = anti_communist_rhetoric
+				days = 365
+			}
+		}
 	}
 	focus = {
 		id = CAM_Nationwide_Anti_Vietnamese_Broadcasts
@@ -2137,7 +2603,32 @@ completion_reward = {
 		}
 		x = 15
 		y = 37
-
+		completion_reward = {
+					CAM = {
+							add_opinion_modifier = {
+									target = VIN
+									modifier = large_decrease
+								}
+						}
+					VIN = {
+							add_opinion_modifier = {
+									target = CAM
+									modifier = large_decrease
+								}
+						}
+					CAM = {
+							add_opinion_modifier = {
+									target = VIE
+									modifier = large_decrease
+								}
+						}
+					VIE = {
+							add_opinion_modifier = {
+									target = CAM
+									modifier = large_decrease
+								}
+						}
+				}
 	}
 	focus = {
 		id = CAM_Publicize_Atrocities
@@ -2149,11 +2640,16 @@ completion_reward = {
 		}
 		x = 18
 		y = 37
-
+		completion_reward = {
+			add_timed_idea = {
+				idea = reign_of_terror
+				days = 365
+			}
+		}
 	}
 	focus = {
 		id = CAM_Intimidate_Praechon_Canidates
-		icon = GFX_goal_unknown
+		icon = GFX_UndergroundPolitics
 		search_filters = {IC_FILTER}
 		cost = 10.00
 		prerequisite = {
@@ -2161,7 +2657,21 @@ completion_reward = {
 		}
 		x = 21
 		y = 37
-
+		completion_reward = {
+			if = {
+				limit = {
+					not = { has_idea = communism_banned }
+				}
+				add_ideas = communism_banned
+			}
+			if = {
+				limit = {
+					has_idea = communism_banned 
+				}
+				add_political_power = 75
+			}
+			
+		}	
 	}
 	focus = {
 		id = CAM_Recruit_Left_Wing_Leaders
@@ -2176,11 +2686,13 @@ completion_reward = {
 		}
 		x = 20
 		y = 38
-
+		completion_reward = {
+			add_country_leader_trait = Unifying_Figure
+		}
 	}
 	focus = {
 		id = CAM_Balanced_Party_Approach
-		icon = GFX_goal_unknown
+		icon = GFX_status
 		search_filters = {IC_FILTER}
 		cost = 10.00
 		prerequisite = {
@@ -2191,7 +2703,9 @@ completion_reward = {
 		}
 		x = 16
 		y = 38
-
+		completion_reward = {
+			add_country_leader_trait = for_the_people
+		}
 	}
 	focus = {
 		id = CAM_Plan_New_Elections
@@ -2206,7 +2720,9 @@ completion_reward = {
 		}
 		x = 18
 		y = 40
-
+		completion_reward = {
+			add_political_power = 75
+		}
 	}
 	focus = {
 		id = CAM_Admit_to_Prior_Vote_Rigging
@@ -2221,7 +2737,10 @@ completion_reward = {
 		}
 		x = 17
 		y = 39
-
+		completion_reward = {
+			add_to_variable = { CorruptionLevel = -0.05 }
+			corruption_idea_calc = yes		
+		}
 	}
 	focus = {
 		id = CAM_The_Threat_of_Communism
@@ -2236,7 +2755,12 @@ completion_reward = {
 		}
 		x = 19
 		y = 39
-
+		completion_reward = {
+			add_timed_idea = {
+				idea = repression
+				days = 1250
+			}
+		}
 	}
 	focus = {
 		id = CAM_The_1958_Elections
@@ -2252,7 +2776,7 @@ completion_reward = {
 	}
 	focus = {
 		id = CAM_Criticize_Prince_Sihanouk
-		icon = GFX_goal_unknown
+		icon = GFX_Generic_Radio_Broadcast
 		search_filters = {IC_FILTER}
 		cost = 10.00
 		prerequisite = {
@@ -2260,7 +2784,13 @@ completion_reward = {
 		}
 		x = 26
 		y = 35
-
+		completion_reward = {
+			add_popularity = {
+				ideology = nationalism
+				popularity = 0.04
+			}
+			add_political_power = 50
+		}
 	}
 	focus = {
 		id = CAM_Repress_Monarchist_Influences
@@ -2272,7 +2802,13 @@ completion_reward = {
 		}
 		x = 30
 		y = 35
-
+		completion_reward = {
+			add_popularity = {
+				ideology = monarchism
+				popularity = -0.06
+			}
+			add_political_power = 50
+		}
 	}
 	focus = {
 		id = CAM_The_Bangkok_Coup
@@ -2328,7 +2864,7 @@ completion_reward = {
 	}
 	focus = {
 		id = CAM_Aid_Cambodian_Minorities
-		icon = GFX_goal_unknown
+		icon = GFX_Freedom
 		search_filters = {IC_FILTER}
 		cost = 10.00
 		prerequisite = {
@@ -2342,7 +2878,7 @@ completion_reward = {
 	}
 	focus = {
 		id = CAM_Integrate_the_Khmer_Serei_into_the_Army
-		icon = GFX_goal_unknown
+		icon = GFX_Military_Intervention
 		search_filters = {IC_FILTER}
 		cost = 10.00
 		prerequisite = {
@@ -2355,11 +2891,12 @@ completion_reward = {
 		y = 38
 		completion_reward = {
 			add_ideas = paramilitarism_focus
+			remove_ideas = hostile_paramilitaries
 		}
 	}
 	focus = {
 		id = CAM_Guarentee_Free_Elections
-		icon = GFX_goal_unknown
+		icon = GFX_TorchofLiberty
 		search_filters = {IC_FILTER}
 		cost = 10.00
 		prerequisite = {
@@ -2385,7 +2922,7 @@ completion_reward = {
 	}
 	focus = {
 		id = CAM_Outlaw_Sangkum
-		icon = GFX_goal_unknown
+		icon = GFX_police
 		search_filters = {IC_FILTER}
 		cost = 10.00
 		prerequisite = {
@@ -2407,7 +2944,7 @@ completion_reward = {
 	}
 	focus = {
 		id = CAM_Establish_a_Multi_Party_System
-		icon = GFX_goal_unknown
+		icon = GFX_TorchofLiberty
 		search_filters = {IC_FILTER}
 		cost = 10.00
 		prerequisite = {
@@ -2436,7 +2973,7 @@ completion_reward = {
 	}
 	focus = {
 		id = CAM_Outlaw_Praechon
-		icon = GFX_goal_unknown
+		icon = GFX_TheRussianBearCurtailed
 		search_filters = {IC_FILTER}
 		cost = 10.00
 		prerequisite = {
@@ -2492,7 +3029,7 @@ completion_reward = {
 	}
 	focus = {
 		id = CAM_Assasinate_Nop_Bophann
-		icon = GFX_goal_unknown
+		icon = GFX_Death_Calls
 		search_filters = {IC_FILTER}
 		cost = 10.00
 		prerequisite = {
@@ -2506,7 +3043,7 @@ completion_reward = {
 	}
 	focus = {
 		id = CAM_Hardline_Anti_Communist_Policies
-		icon = GFX_goal_unknown
+		icon = GFX_TheRussianBearCurtailed
 		search_filters = {IC_FILTER}
 		cost = 10.00
 		prerequisite = {
@@ -2520,7 +3057,7 @@ completion_reward = {
 	}
 	focus = {
 		id = CAM_A_Trail_of_Violence
-		icon = GFX_goal_unknown
+		icon = GFX_reign_of_terror
 		search_filters = {IC_FILTER}
 		cost = 10.00
 		prerequisite = {
@@ -2535,7 +3072,7 @@ completion_reward = {
 	}
 	focus = {
 		id = CAM_Crackdown_on_the_Bangkok_Plotters
-		icon = GFX_goal_unknown
+		icon = GFX_generic_violent_coup
 		search_filters = {IC_FILTER}
 		cost = 10.00
 		prerequisite = {
@@ -2564,12 +3101,19 @@ completion_reward = {
 		x = 12
 		y = 44
 		completion_reward = {
-			add_ideas = free_press_5
+			hidden_effect = {
+				remove_ideas = policy_media_temp_0
+				remove_ideas = policy_media_temp_1
+				remove_ideas = policy_media_temp_2
+				remove_ideas = policy_media_temp_3
+				remove_ideas = policy_media_temp_3a
+			}
+			add_ideas = policy_media_temp_1
 		}
 	}
 	focus = {
 		id = CAM_Military_Investments
-		icon = GFX_goal_unknown
+		icon = GFX_goal_generic_small_arms
 		search_filters = {IC_FILTER}
 		cost = 10.00
 		prerequisite = {
@@ -2586,7 +3130,7 @@ completion_reward = {
 	}
 	focus = {
 		id = CAM_Encourage_Expatriate_Immigration
-		icon = GFX_goal_unknown
+		icon = GFX_CWIC_global_immigration
 		search_filters = {IC_FILTER}
 		cost = 10.00
 		prerequisite = {
@@ -2741,7 +3285,7 @@ completion_reward = {
 	}
 	focus = {
 		id = CAM_Establish_the_Republican_Security_Battalion
-		icon = GFX_goal_unknown
+		icon = GFX_FascistSubterfuge
 		search_filters = {IC_FILTER}
 		cost = 10.00
 		prerequisite = {

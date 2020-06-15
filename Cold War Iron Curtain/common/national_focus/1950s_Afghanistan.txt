@@ -36,6 +36,14 @@ focus_tree = {
 					instant_build = yes
 				}
 			}
+			random_owned_controlled_state = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}					
+			}
 		}
 	}
 	focus = {
@@ -138,7 +146,7 @@ focus_tree = {
 		completion_reward = {
 			add_offsite_building = {
 				type = industrial_complex
-				level = 1
+				level = 2
 			}			
 			add_tech_bonus = {
 				bonus = 1.5
@@ -233,6 +241,14 @@ focus_tree = {
 		x = 9
 		y = 2
 		completion_reward = {
+			random_owned_controlled_state = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}					
+			}
 			add_timed_idea = {
 				idea = american_loans
 				days = 2250
@@ -280,7 +296,7 @@ focus_tree = {
 				name = agri_tech_bonus
 				bonus = 1.75
 				uses = 1
-				category = agri_tech
+				category = agriculture
 			}
 		}
 	}
@@ -370,13 +386,13 @@ focus_tree = {
 			AFG = {
 				add_opinion_modifier = {
 					target = ENG
-					modifier = large_increase
+					modifier = large_decrease
 				}
 			}
 			ENG = {
 				add_opinion_modifier = {
 					target = AFG
-					modifier = large_increase
+					modifier = large_decrease
 				}
 			}
 		}
@@ -622,13 +638,13 @@ focus_tree = {
 		y = 4
 		completion_reward = {
 			hidden_effect = {
-				remove_ideas = Patriarchy
-				remove_ideas = Traditional
-				remove_ideas = Womens_Rights_Policy
-				remove_ideas = Equality
-				remove_ideas = Positive_Action
+				remove_ideas = policy_women_temp_0
+				remove_ideas = policy_women_temp_2
+				remove_ideas = policy_women_temp_3
+				remove_ideas = policy_women_temp_4
+				remove_ideas = policy_women_temp_4a
 			}
-			add_ideas = Cognitive_Patriarchy
+			add_ideas = policy_women_temp_1
 		}
 	}
 	focus = {
@@ -736,7 +752,14 @@ focus_tree = {
 		x = 13
 		y = 9
 		completion_reward = {
-			add_ideas = free_press_2
+			hidden_effect = {
+				remove_ideas = policy_media_temp_0
+				remove_ideas = policy_media_temp_1
+				remove_ideas = policy_media_temp_2
+				remove_ideas = policy_media_temp_3
+				remove_ideas = policy_media_temp_3a
+			}
+			add_ideas = policy_media_temp_3
 		}
 	}
 	focus = {
@@ -859,12 +882,12 @@ focus_tree = {
 		y = 3
 		completion_reward = {
 			hidden_effect = {
-				remove_ideas = Oppressive
-				remove_ideas = Repressive
-				remove_ideas = Segregated
-				remove_ideas = Equal_Rights
+				remove_ideas = policy_minorities_temp_0
+				remove_ideas = policy_minorities_temp_1
+				remove_ideas = policy_minorities_temp_2
+				remove_ideas = policy_minorities_temp_3
 			}
-			add_ideas = Affirimative_Action
+			add_ideas = policy_minorities_temp_3a
 		
 		}
 	}
@@ -910,13 +933,13 @@ focus_tree = {
 		y = 4
 		completion_reward = {
 			hidden_effect = {
-				remove_ideas = State_Theocracy
-				remove_ideas = state_religion
-				remove_ideas = moralism
-				remove_ideas = secularism
-				remove_ideas = atheist_state
+				remove_ideas = policy_religion_temp_0
+				remove_ideas = policy_religion_temp_1
+				remove_ideas = policy_religion_temp_2
+				remove_ideas = policy_religion_temp_3a
+				remove_ideas = policy_religion_temp_0a
 			}
-			add_ideas = pluarlism
+			add_ideas = policy_religion_temp_3
 		}
 	}
 	focus = {
@@ -1388,9 +1411,9 @@ focus_tree = {
 		y = 2
 			completion_reward = {
 					add_equipment_to_stockpile = {
-							type = infantry_equipment_0
+							type = infantry_equipment_1
 							amount = 25000
-							producer = SOV
+							producer = CUM
 						}
 				
 			}
@@ -1429,7 +1452,7 @@ focus_tree = {
 			add_equipment_to_stockpile = {
 				type = mbt_equipment_3
 				amount = 200
-				producer = SOV
+				producer = CUM
 			}		
 		}
 	}
@@ -1522,7 +1545,7 @@ focus_tree = {
 				add_equipment_to_stockpile = {
 						type = jet_multirole_equipment_2
 						amount = 200
-						producer = SOV
+						producer = CUM
 					}
 			}
 	}
@@ -1706,7 +1729,7 @@ focus_tree = {
 					num_provinces = 4
 					on_win = AFG_PAK.20
 					on_lose = AFG_PAK.21
-					on_cancel = AFG_PAK.20
+					on_cancel = Indochina_War.4
 				}
 							
 				defender = {
@@ -1714,7 +1737,7 @@ focus_tree = {
 					num_provinces = 4
 					on_win = AFG_PAK.22
 					on_lose = AFG_PAK.23
-					on_cancel = AFG_PAK.20
+					on_cancel = Indochina_War.4
 				}
 			}		
 		}
@@ -1909,12 +1932,12 @@ focus_tree = {
 		y = 9
 		completion_reward = {
 			hidden_effect = {
-				remove_ideas = Oppressive
-				remove_ideas = Repressive
-				remove_ideas = Segregated
-				remove_ideas = Affirimative_Action
+				remove_ideas = policy_minorities_temp_0
+				remove_ideas = policy_minorities_temp_1
+				remove_ideas = policy_minorities_temp_2
+				remove_ideas = policy_minorities_temp_3a
 			}
-			add_ideas = Equal_Rights
+			add_ideas = policy_minorities_temp_3
 		}
 	}
 	focus = {
@@ -2092,7 +2115,15 @@ focus_tree = {
 		x = 17
 		y = 10
 		completion_reward = {
-			add_ideas = gen_pro_union_1
+			hidden_effect = {
+				remove_ideas = policy_union_temp_0
+				remove_ideas = policy_union_temp_1
+				remove_ideas = policy_union_temp_2
+				remove_ideas = policy_union_temp_3
+				remove_ideas = policy_union_temp_4
+				remove_ideas = policy_union_temp_5
+			}
+			add_ideas = policy_union_temp_4
 		}
 	}
 	focus = {
@@ -2264,13 +2295,13 @@ focus_tree = {
 		y = 13
 		completion_reward = {
 			hidden_effect = {
-				remove_ideas = Patriarchy
-				remove_ideas = Traditional
-				remove_ideas = Cognitive_Patriarchy
-				remove_ideas = Equality
-				remove_ideas = Positive_Action
+				remove_ideas = policy_women_temp_0
+				remove_ideas = policy_women_temp_2
+				remove_ideas = policy_women_temp_1
+				remove_ideas = policy_women_temp_4
+				remove_ideas = policy_women_temp_4a
 			}
-			add_ideas = Womens_Rights_Policy 
+			add_ideas = policy_women_temp_3 
 		}
 	}
 	focus = {
@@ -2327,12 +2358,12 @@ focus_tree = {
 		y = 15
 		completion_reward = {
 			hidden_effect = {
-				remove_ideas = Affirimative_Action
-				remove_ideas = Repressive
-				remove_ideas = Segregated
-				remove_ideas = Equal_Rights
+				remove_ideas = policy_minorities_temp_3a
+				remove_ideas = policy_minorities_temp_1
+				remove_ideas = policy_minorities_temp_2
+				remove_ideas = policy_minorities_temp_3
 			}
-			add_ideas = Oppressive 
+			add_ideas = policy_minorities_temp_0 
 		
 		}
 	}
@@ -2527,6 +2558,9 @@ focus_tree = {
 		completion_reward = {
 			add_political_power = 75
 			add_war_support = 0.02
+			PAK = {
+				country_event = AFG_PAK.24
+			}
 		}
 	}
 	focus = {
@@ -2608,19 +2642,19 @@ focus_tree = {
 		y = 13
 		completion_reward = {
 			add_equipment_to_stockpile = {
-				type = infantry_equipment_0
+				type = infantry_equipment_3
 				amount = 10000
-				producer = SOV
+				producer = CUM
 			}		
 			add_equipment_to_stockpile = {
 				type = motorized_equipment_2
 				amount = 200
-				producer = SOV
+				producer = CUM
 			}			
 			add_equipment_to_stockpile = {
 			 type = mbt_equipment_1 
 				amount = 100
-				producer = SOV
+				producer = CUM
 			}			
 		}
 	}
@@ -2794,17 +2828,17 @@ focus_tree = {
 			add_equipment_to_stockpile = {
 				type = infantry_equipment_0
 				amount = 10000
-				producer = USA
+				producer = CAP
 			}		
 			add_equipment_to_stockpile = {
 				type = motorized_equipment_2
 				amount = 200
-				producer = USA
+				producer = CAP
 			}			
 			add_equipment_to_stockpile = {
 			 type = mbt_equipment_1 
 				amount = 100
-				producer = USA 
+				producer = CAP 
 			}			
 		}
 	}

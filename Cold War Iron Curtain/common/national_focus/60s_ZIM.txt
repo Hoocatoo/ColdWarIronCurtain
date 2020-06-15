@@ -796,8 +796,15 @@ focus_tree = {
 		x = 43
 		y = 18
 			completion_reward = {
-					add_ideas = free_press_5
+				hidden_effect = {
+					remove_ideas = policy_media_temp_0
+					remove_ideas = policy_media_temp_1
+					remove_ideas = policy_media_temp_2
+					remove_ideas = policy_media_temp_3
+					remove_ideas = policy_media_temp_3a
 				}
+				add_ideas = policy_media_temp_3
+			}
 
 	}
 	focus = {
@@ -1261,8 +1268,11 @@ focus_tree = {
 							expire = "2007.11.20"
 							ideology = conservatism
 							traits = {
-
-}
+								paternal_figure
+								hatred_of_communism
+								totally_composed
+								inflexible_white_supremacist
+									}
 						}
 				}
 
@@ -2199,8 +2209,15 @@ focus_tree = {
 		x = 65
 		y = 2
 			completion_reward = {
-					add_ideas = press_censorship_5
+				hidden_effect = {
+					remove_ideas = policy_media_temp_0
+					remove_ideas = policy_media_temp_1
+					remove_ideas = policy_media_temp_2
+					remove_ideas = policy_media_temp_3
+					remove_ideas = policy_media_temp_3a
 				}
+				add_ideas = policy_media_temp_1
+			}
 
 	}
 	focus = {

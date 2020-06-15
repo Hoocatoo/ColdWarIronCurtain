@@ -16,7 +16,7 @@ if = {
 	set_technology = {
 		subkiller_0 = 1
 		maritime_sonar_0 = 1
-		ww_detection = 1
+		detection_ww = 1
 		maritime_ew_ss_0 = 1
 		ww_armaments = 1
 		ship_armament_light_0 = 1
@@ -29,8 +29,8 @@ if = {
 		sub_hull_large_single_0 = 1
 		torpedo_small_0 = 1
 		ww_screens = 1
-		screen_hull_small_0 = 1
 		screen_hull_medium_0 = 1
+		screen_hull_heavy_0 = 1
 	}
 }
 
@@ -103,12 +103,14 @@ set_technology = {
 ##WMD##
 
 }
-
+set_stability = 0.65
 set_convoys = 0
 
 set_cosmetic_tag = BHR_ENG
 
 add_ideas = {
+	archaic_legal_system
+	Failing_Health_System_2
 }
 
 init_influence = yes
@@ -160,6 +162,18 @@ create_country_leader = {
 	name = "Salman bin Hamad Al Khalifa"
 	picture = "Salman_bin_Hamad_Al_Khalifa.dds"
 	ideology = islamic_monarchy
+}
+
+create_country_leader = {
+	name = "Abdulrahman al Bakir"
+	picture = "Abdulrahman_Bakir.dds"
+	ideology = pan_arabism
+}
+
+create_country_leader = {
+	name = "Hassan Nezam"
+	picture = "Hassan_Nezam.dds"
+	ideology = marxism_leninism
 }
 
 1961.1.1 = {

@@ -41,7 +41,10 @@ set_variable = { christian_dem_seats = 0 }
 set_variable = { centre_seats = 69 }
 set_variable = { libertarian_seats = 10 }
 
-set_variable = { segregationValue = -0.20 }
+set_variable = { segregationValue = -0.10 }
+set_variable = { efficiency_cpi = 0.2 }
+set_variable = { efficiency_education = 0.1 }
+
 add_dynamic_modifier = {
 	modifier = segregation_dynamic_modifier
 }
@@ -115,7 +118,7 @@ USA = { diplomatic_relation = { country = WGR relation = military_access active 
 	USA = { diplomatic_relation = { country = WGR relation = guarantee  active = no } }
 }
 1960.1.1 = {
-	set_variable = { segregationValue = -0.15 }
+	set_variable = { segregationValue = -0.075 }
 }
 1990.1.1 = {
 	USA = { diplomatic_relation = { country = SPR relation = military_access active = yes } }
@@ -151,34 +154,23 @@ add_ideas = {
 	social_security_act
 	UN_Security_Council_Member_Perm
 	defcon_system_5
-	Dean_Acheson
-	J_Edgar_Hoover
-	John_Snyder
-	Oscar_Ewing
-	Major_Power_Spy_Bonus
 	
-	#ECON 2.0
-	policy_military_temp_3
-	policy_welfare_temp_1
-	policy_cpi_temp_2
-	policy_education_temp_2
-	policy_healthcare_temp_2
-	policy_services_temp_2
-	Moderate_Taxation
+
+	policy_taxrate_temp_2
 	
-	Restricted_Voting
-	Free_Press
-	Womens_Rights_Policy
-	Segregated
-	pluarlism
-	gen_notsaga_2
+	policy_union_temp_2
+	policy_media_temp_3
+	policy_women_temp_3
+	policy_minorities_temp_2
+	policy_religion_temp_3
+	policy_saga_temp_1
 }
 if = {
 	limit = {
 		has_dlc = "La Resistance"
 	}
+	add_ideas = Major_Power_Spy_Bonus_USA
 	create_intelligence_agency = yes
-	upgrade_intelligence_agency = upgrade_form_department
 	create_operative_leader = {
 		name = "Kermit Roosevelt Jr."
 		GFX = GFX_portrait_Kermit_Roosevelt
@@ -320,7 +312,6 @@ if = {
 		election_frequency = 48
 		elections_allowed = yes
 	}
-	remove_unit_leader = 9500
 	USA = {
 		set_variable = { democratic_total_representatives = 264 }
 		set_variable = { democratic_supportive_representatives = 0 }
@@ -394,7 +385,7 @@ create_country_leader = {
 }
 
 1952.11.4 = {
-	set_autonomy = { target = JAP autonomy_state = autonomy_free }	
+	set_autonomy = { target = JAP autonomy_state = autonomy_free }
 	
 
 		set_popularities = { 
@@ -432,6 +423,7 @@ create_country_leader = {
 	create_country_leader = {
 		name = "Dwight D. Eisenhower"
 		picture = "Dwight_D_Eisenhower.dds"
+		desc = "POL_EISENHOWER"
 		ideology = republican
 		traits = {
 			World_War_II_Hero
@@ -467,6 +459,25 @@ complete_national_focus = USA_EISENHOWER56_The_Eisenhower_Administration_1956
 	
 	oob = "USA_1960"
 	
+	remove_unit_leader = 57 #macarthur
+	remove_unit_leader = 29601 #eisenhower
+	remove_unit_leader = 29600 #bradley
+	remove_unit_leader = 29602 #ruffner retired in 1962 but who cares 
+	remove_unit_leader = 29604 #meloy - 1963
+	remove_unit_leader = 29605 #harkins - 1964
+	remove_unit_leader = 29606 #clarke - 1962
+	remove_unit_leader = 29607 #moore - 1962
+	remove_unit_leader = 29608 #palmer - 1962
+	remove_unit_leader = 29609 #collins -1964
+	remove_unit_leader = 29611 #Trudeau
+	remove_unit_leader = 29612 #Eddleman
+	remove_unit_leader = 29613 #Howze
+	remove_unit_leader = 29614 #White
+	remove_unit_leader = 29615 #Gavin
+
+
+
+	USA = { diplomatic_relation = { country = KOR relation = military_access active = yes } } #korea has a security pact with US
 
 		set_popularities = { 
 			democratic = 0
@@ -528,13 +539,321 @@ complete_national_focus = USA_EISENHOWER56_The_Eisenhower_Administration_1956
 		set_variable = { senate_total_voting_support = 0 }
 		
 		set_variable = { democratic_total_representatives = 0 }
-		set_variable = { democratic_supportive_representatives = 0 }	
+		set_variable = { democratic_supportive_representatives = 0 }
 
 		set_variable = { american_independent_total_representatives = 0 }
 		set_variable = { american_independent_supportive_representatives = 0 }
 
 		set_variable = { socialist_workers_total_senators = 0 }
-		set_variable = { socialist_workers_supportive_senators = 0 }		
+		set_variable = { socialist_workers_supportive_senators = 0 }
+	}
+ 
+	create_corps_commander = {
+		name = "Alexander Haig"
+		picture = "Alexander_Haig.dds"
+		skill = 4
+		traits = { expert_improviser camouflage_expert scavenger }
+		attack_skill = 2
+		defense_skill = 4
+		planning_skill = 4
+		logistics_skill = 3
+	}	
+	
+	create_corps_commander = {
+		name = "Andrew Goodpaster"
+		picture = "Andrew_Goodpaster.dds"
+		skill = 2
+		traits = { infantry_leader }
+		attack_skill = 2
+		defense_skill = 3
+		planning_skill = 2
+		logistics_skill = 3
+	}	
+
+	create_corps_commander = {
+		name = "Bernard W. Rogers"
+		picture = "Bernard_William_Rogers.dds"
+		skill = 3
+		attack_skill = 2
+		defense_skill = 3
+		planning_skill = 3
+		logistics_skill = 4
+		traits = { infantry_leader paratrooper }
+	}
+	
+	create_corps_commander = {
+		name = "Charles H. Bonesteel III"
+		picture = "Charles_H_Bonesteel.dds"
+		skill = 3
+		attack_skill = 3
+		defense_skill = 4
+		planning_skill = 2
+		logistics_skill = 3
+		traits = { infantry_leader urban_assault_specialist  }
+	}
+
+	create_corps_commander = {
+		name = "Donn Albert Starry"
+		picture = "Donn_Albert_Starry.dds"
+		skill = 3
+		attack_skill = 3
+		defense_skill = 2
+		planning_skill = 3
+		logistics_skill = 3
+		traits = {  infantry_leader paratrooper }
+	}
+
+	create_corps_commander = {
+		name = "Edward Charles Meyer"
+		picture = "Edward_Charles_Meyer.dds"
+		skill = 3
+		attack_skill = 3
+		defense_skill = 3
+		planning_skill = 3
+		logistics_skill = 2
+		traits = { panzer_leader infantry_leader }
+	}
+	create_corps_commander = {
+		name = "Frederick Carlton Weyand"
+		picture = "Frederick_Carlton_Weyand.dds"
+		skill = 3
+		attack_skill = 3
+		defense_skill = 2
+		planning_skill = 4
+		logistics_skill = 3
+		traits = {skirmisher commando infantry_leader }
+	}
+	create_corps_commander = {
+		name = "George R. Mather"
+		picture = "George_Robinson_Mather.dds"
+		skill = 3
+		attack_skill = 3
+		defense_skill = 3
+		planning_skill = 3
+		logistics_skill = 2
+		traits = {panzer_leader infantry_leader }
+	}
+    create_corps_commander = {
+		name = "George Smith Patton IV" 
+		picture = "George_Smith_Patton_IV.dds"
+		skill = 3
+		attack_skill = 3
+		defense_skill = 3
+		planning_skill = 3
+		logistics_skill = 2
+		traits = { panzer_leader infantry_leader }
+	}
+
+	create_corps_commander = {
+		name = "Harold Keith Johnson"
+		picture = "Harold_Keith_Johnson.dds"
+		skill = 4
+		attack_skill = 3
+		defense_skill = 4
+		planning_skill = 4
+		logistics_skill = 4
+		traits = { panzer_leader infantry_leader }
+	}
+
+	create_corps_commander = {
+		name = "George Vernon Underwood"
+		picture = "George_Vernon_Underwood.dds"
+		skill = 2
+		attack_skill = 2
+		defense_skill = 1
+		planning_skill = 2
+		logistics_skill = 2
+		traits = { infantry_leader }
+	}
+	create_corps_commander = {
+		name = "John A. Wickham Jr."
+		picture = "John_Adams_Wickham.dds"
+		skill = 2
+		attack_skill = 2
+		defense_skill = 1
+		planning_skill = 1
+		logistics_skill = 2
+		traits = { infantry_leader  }
+	}
+	create_corps_commander = {
+		name = "John Hersey Michaelis"
+		picture = "John_Hersey_Michaelis.dds"
+		skill = 3
+		attack_skill = 2
+		defense_skill = 3
+		planning_skill = 3
+		logistics_skill = 3
+		traits = { paratrooper }
+	}
+    create_corps_commander = {
+		name = "John Halloway Cushman"
+		picture = "John_Holloway_Cushman.dds"
+		skill = 1
+		attack_skill = 1
+		defense_skill = 2
+		planning_skill = 1
+		logistics_skill = 2
+		traits = { infantry_leader }
+	}
+    create_corps_commander = {
+		name = "John Norton"
+		picture = "John_Norton.dds"
+		skill = 3
+		attack_skill = 2									
+		defense_skill = 3
+		planning_skill = 3
+		logistics_skill = 3
+		traits = { infantry_leader paratrooper }
+	}
+    create_corps_commander = {
+		name = "John Tolson"
+		picture = "John_Tolson.dds"
+		skill = 2
+		attack_skill = 2
+		defense_skill = 2
+		planning_skill = 1
+		logistics_skill = 2
+		traits = { infantry_leader }
+	}
+    create_corps_commander = {
+		name = "John William Vessey Jr."
+		picture = "John_William_Vessey_Tolson.dds"
+		skill = 4
+		attack_skill = 5
+		defense_skill = 3
+		planning_skill = 5
+		logistics_skill = 4
+		traits = { expert_improviser bearer_of_artillery infantry_officer career_officer }
+	}
+    create_corps_commander = {
+		name = "Jonathan O. Seaman"
+		picture = "Jonathan_Owen_Seaman.dds"
+		skill = 3
+		attack_skill = 2
+		defense_skill = 4
+		planning_skill = 2
+		logistics_skill = 3
+		traits = { bearer_of_artillery infantry_officer }
+	}
+    create_corps_commander = {
+		name = "Julian Johnson Ewell"
+		picture = "Julian_Ewell.dds"
+		skill = 3
+		attack_skill = 3
+		defense_skill = 4
+		planning_skill = 2
+		logistics_skill = 3
+		traits = { infantry_officer }
+	}
+    create_corps_commander = {
+		name = "Keith L. Ware"
+		picture = "Keith_Lincoln_Ware.dds"
+		skill = 2
+		attack_skill = 3
+		defense_skill = 2
+		planning_skill = 2
+		logistics_skill = 2
+		traits = { infantry_officer }
+	}
+    create_corps_commander = {
+		name = "Lyman Lemnitzer"
+		picture = "Lyman_Lemnitzer.dds"
+		skill = 3
+		attack_skill = 4
+		defense_skill = 3
+		planning_skill = 3
+		logistics_skill = 2
+		traits = { infantry_officer career_officer  }
+	}
+    create_corps_commander = {
+		name = "Melvin Zais"
+		picture = "Melvin_Zais.dds"
+		skill = 1
+		attack_skill = 3
+		defense_skill = 2
+		planning_skill = 3
+		logistics_skill = 3
+		traits = { infantry_leader paratrooper }
+	}
+    create_corps_commander = {
+		name = "Ralph Haines"
+		picture = "Ralph_Haines.dds"
+		skill = 2
+		attack_skill = 1
+		defense_skill = 2
+		planning_skill = 2
+		logistics_skill = 2
+		traits = { infantry_leader }
+	}
+    create_corps_commander = {
+		name = "Robert Leahy Fair"
+		picture = "Robert_Leahy_Fair.dds"
+		skill = 2
+		attack_skill = 3
+		defense_skill = 2
+		planning_skill = 2
+		logistics_skill = 2
+		traits = { infantry_leader panzer_leader }
+	}
+    create_corps_commander = {
+		name = "Samuel William Koster"
+		picture = "Samuel_William_Koster.dds"
+		skill = 1
+		attack_skill = 1
+		defense_skill = 2
+		planning_skill = 2
+		logistics_skill = 1
+		traits = { infantry_leader }
+	}
+    create_corps_commander = {
+		name = "Sidney Bryan Berry"
+		picture = "Sidney_Bryan_Berry.dds"
+		skill = 2
+		attack_skill = 2
+		defense_skill = 2
+		planning_skill = 1
+		logistics_skill = 2
+		traits = { }
+	}
+    create_corps_commander = {
+		name = "Williard Pearson"
+		picture = "Willard_Pearson.dds"
+		skill = 2
+		attack_skill = 2
+		defense_skill = 2
+		planning_skill = 1
+		logistics_skill = 2
+		traits = { }
+	}
+    create_corps_commander = {
+		name = "William A. Knowlton"
+		picture = "William_Allen_Knowlton.dds"
+		skill = 2
+		attack_skill = 2
+		defense_skill = 3
+		planning_skill = 2
+		logistics_skill = 3
+		traits = { guerilla_fighter expert_improviser }
+	}
+    create_corps_commander = {
+		name = "William Bradford Rosson"
+		picture = "William_Bradford_Rosson.dds"
+		skill = 2
+		attack_skill = 1
+		defense_skill = 2
+		planning_skill = 2
+		logistics_skill = 2
+		traits = { }
+	}
+    create_corps_commander = {
+		name = "William E. DePuy"
+		picture = "William_Eugene_DePuy.dds"
+		skill = 2
+		attack_skill = 1
+		defense_skill = 2
+		planning_skill = 2
+		logistics_skill = 2
+		traits = { infantry_leader }
 	}
 }
 
@@ -582,9 +901,11 @@ complete_national_focus = USA_EISENHOWER56_The_Eisenhower_Administration_1956
 		ideology = democratic_america
 	}
 }
-
+1970.1.1 = {
+	load_focus_tree = USA_Nixon_1972
+}
 1973.1.1 = {
-	
+		
 
 		set_popularities = { 
 			democratic = 0
@@ -799,10 +1120,14 @@ complete_national_focus = USA_EISENHOWER56_The_Eisenhower_Administration_1956
 	}
 }
 
+#GENERALS 1950S
+
+
 create_corps_commander = {
 	name = "Omar Bradley"
 	picture = "Omar_Bradley.dds"
 	traits = {  trait_engineer  }
+	id = 29600
 	skill = 5
 	attack_skill = 5
 	defense_skill = 5
@@ -815,6 +1140,7 @@ create_field_marshal = {
 	name = "Dwight D. Eisenhower"
 	picture = "Dwight_D_Eisenhower_GENERAL.dds"
 	traits = { logistics_wizard offensive_doctrine }
+	id = 29601
 	skill = 7
 	attack_skill = 6
 	defense_skill = 6
@@ -828,27 +1154,29 @@ create_field_marshal = {
 	id = 57
 	picture = "Douglas_MacArthur.dds"
 	traits = { defensive_doctrine offensive_doctrine  }
-	skill = 6
-	attack_skill = 6
-	defense_skill = 5
+	skill = 5
+	attack_skill = 4
+	defense_skill = 3
 	planning_skill = 6
-	logistics_skill = 5
+	logistics_skill = 4
 }
 create_corps_commander = {
 	name = "Clark Louis Ruffner"
 	picture = "Clark_Louis_Ruffner.dds"
-	traits = {  }
-	skill = 2
-	attack_skill = 1
-	defense_skill = 2
-	planning_skill = 1
-	logistics_skill = 1
+	traits = { infantry_leader trickster }
+	id = 29602
+	skill = 3
+	attack_skill = 2
+	defense_skill = 4
+	planning_skill = 2
+	logistics_skill = 3
 
 }
 create_corps_commander = {
-	name = "Earle Wheeler"
+	name = "Earle Wheeler"  #memorandum - retires in 1970
 	picture = "Earle_Wheeler.dds"
-	traits = {  }
+	traits = { commando adaptable guerilla_fighter }
+	id = 29603
 	skill = 3
 	attack_skill = 4
 	defense_skill = 2
@@ -859,7 +1187,8 @@ create_corps_commander = {
 create_corps_commander = {
 	name = "Guy Stanley Meloy Jr."
 	picture = "Guy_Stanley_Meloy_Jr.dds"
-	traits = {  }
+	traits = { trait_reckless infantry_leader }
+	id = 29604
 	skill = 4
 	attack_skill = 3
 	defense_skill = 2
@@ -869,13 +1198,14 @@ create_corps_commander = {
 }
 
 create_corps_commander = {
-	name = "Paul Donald Markins"
+	name = "Paul Donal Harkins"
 	picture = "Paul_Donal_Harkins.dds"
-	traits = {  }
-	skill = 2
-	attack_skill = 2
+	traits = { harsh_leader combined_arms_expert ranger }
+	id = 29605 
+	skill = 3
+	attack_skill = 4
 	defense_skill = 2
-	planning_skill = 1
+	planning_skill = 2
 	logistics_skill = 3
 
 }
@@ -883,7 +1213,8 @@ create_corps_commander = {
 create_corps_commander = {
 	name = "Wallace H. Graham"
 	picture = "Wallace_H_Graham.dds"
-	traits = {  }
+	traits = { infantry_leader commando }
+	id = 29705 #retires in 1970
 	skill = 4
 	attack_skill = 3
 	defense_skill = 4
@@ -894,11 +1225,12 @@ create_corps_commander = {
 create_corps_commander = {
 	name = "Bruce Cooper Clarke"
 	picture = "Bruce_Cooper_Clarke.dds"
-	traits = {  }
-	skill = 2
-	attack_skill = 3
-	defense_skill = 1
-	planning_skill = 2
+	traits = { armor_officer infantry_leader }
+	id = 29606 
+	skill = 3
+	attack_skill = 2
+	defense_skill = 4
+	planning_skill = 3
 	logistics_skill = 3
 
 }
@@ -906,7 +1238,8 @@ create_corps_commander = {
 create_corps_commander = {
 	name = "James Edward Moore"
 	picture = "James_Edward_Moore.dds"
-	traits = {  }
+	traits = { skilled_staffer }
+	id = 29607
 	skill = 3
 	attack_skill = 2
 	defense_skill = 1
@@ -918,7 +1251,8 @@ create_corps_commander = {
 create_corps_commander = {
 	name = "Charles Day Palmer Jr."
 	picture = "Charles_Day_Palmer_Jr.dds"
-	traits = {  }
+	traits = { bearer_of_artillery cavalry_officer }
+	id = 29608
 	skill = 3
 	attack_skill = 1
 	defense_skill = 4
@@ -930,20 +1264,22 @@ create_corps_commander = {
 create_corps_commander = {
 	name = "James Francis Collins"
 	picture = "James_Francis_Collins.dds"
-	traits = {  }
+	traits = { bearer_of_artillery }
+	id = 29609
 	skill = 3
 	attack_skill = 3
-	defense_skill = 1
+	defense_skill = 2
 	planning_skill = 2
-	logistics_skill = 3
+	logistics_skill = 4
 
 }
 
 create_corps_commander = {
 	name = "William Westmoreland"
 	picture = "William_Westmoreland.dds"
-	traits = {  }
+	traits = { expert_improviser guerilla_fighter paratrooper combined_arms_expert }
 	skill = 4
+	id = 29610
 	attack_skill = 2
 	defense_skill = 3
 	planning_skill = 4
@@ -951,11 +1287,73 @@ create_corps_commander = {
 
 }
 
+create_corps_commander = {
+	name = "Arthur Trudeau"   #FIX UP LATER
+	picture = "Arthur_Trudeau.dds"
+	skill = 1
+	id = 29611
+	attack_skill = 1
+	defense_skill = 1
+	planning_skill = 1
+	logistics_skill = 1
+	traits = { }
+}
+
+create_corps_commander = {
+	name = "Clyde Eddleman"
+	picture = "Clyde_Eddleman.dds"
+	skill = 1
+	id = 29612
+	attack_skill = 1
+	defense_skill = 1
+	planning_skill = 1
+	logistics_skill = 1
+	traits = { }
+}
+
+create_corps_commander = {
+	name = "Hamilton H. Howze"
+	picture = "Hamilton_Howze.dds"
+	skill = 1
+	id = 29613
+	attack_skill = 1
+	defense_skill = 1
+	planning_skill = 1
+	logistics_skill = 1
+	traits = { }
+}
+
+create_corps_commander = {
+	name = "Isaac D. White"
+	picture = "Isaac_Davis_White.dds"
+	skill = 1
+	id = 29614
+	attack_skill = 1
+	defense_skill = 1
+	planning_skill = 1
+	logistics_skill = 1
+	traits = { }
+}
+
+create_corps_commander = {
+	name = "James Maurice Gavin"  #retires in 1958
+	picture = "James_Maurice_Gavin.dds"
+	skill = 1
+	id = 29615
+	attack_skill = 1
+	defense_skill = 1
+	planning_skill = 1
+	logistics_skill = 1
+	traits = { }
+}
+ 
+#john wilson o dailey needs event for him retiring in 1955
+
 ########################
 
 create_navy_leader = {
 	name = "Ernest King"
-	picture = "Portrait_USA_Earnest_King.dds"
+	picture = "Admiral_Ernest_King.dds"
 	traits = { blockade_runner superior_tactician }
 	skill = 5
 	attack_skill = 5
@@ -963,10 +1361,50 @@ create_navy_leader = {
 	#planning_skill = 5
 	#logistics_skill = 5
 }
+create_navy_leader = {
+	name = "Whelan Anderson"
+	picture = "Admiral_George_Whelan_Anderson.dds"
+	traits = { blockade_runner superior_tactician }
+	skill = 3
+	attack_skill = 5
+	defense_skill = 1
+	#planning_skill = 5
+	#logistics_skill = 5
+}
+create_navy_leader = {
+	name = "Thomas Hinman"
+	picture = "Admiral_Thomas_Hinman_Moorer.dds"
+	traits = { spotter }
+	skill = 2
+	attack_skill = 2
+	defense_skill = 1
+	#planning_skill = 5
+	#logistics_skill = 5
+}
+create_navy_leader = {
+	name = "Ulysses Simpson Grant Sharp"
+	picture = "Admiral_Ulysses_Simpson_Grant_Sharp.dds"
+	traits = {  }
+	skill = 4
+	attack_skill = 5
+	defense_skill = 3
+	#planning_skill = 5
+	#logistics_skill = 5
+}
+create_navy_leader = {
+	name = "Whelan Anderson"
+	picture = "Admiral_John_Sidney_McCain.dds"
+	traits = { spotter }
+	skill = 2
+	attack_skill = 2
+	defense_skill = 1
+	#planning_skill = 5
+	#logistics_skill = 5
+}
 
 create_navy_leader = {
 	name = "Chester W. Nimitz"
-	picture = "Portrait_USA_Chester_W_Nimitz.dds"
+	picture = "Admiral_Chester_William_Nimitz.dds"
 	traits = { superior_tactician spotter }
 	skill = 7
 	attack_skill = 6
@@ -975,13 +1413,45 @@ create_navy_leader = {
 	#logistics_skill = 5
 }
 
+create_navy_leader = {
+	name = "Elmo Zumwalt"
+	picture = "Admiral_Elmo_Zumwalt.dds"
+	traits = { blockade_runner }
+	skill = 6
+	attack_skill = 9
+	defense_skill = 4
+	#planning_skill = 5
+	#logistics_skill = 5
+}
+
 
 create_navy_leader = {
 	name = "William Halsey, Jr."
-	picture = "Portrait_USA_William_Halsey_Jr.dds"
+	picture = "Admiral_William_Halsey.dds"
 	traits = { superior_tactician spotter }
 	skill = 4
 	attack_skill = 4
+	defense_skill = 4
+	#planning_skill = 4
+	#logistics_skill = 4
+}
+create_navy_leader = {
+	name = "William James Crowe"
+	picture = "Admiral_William_James_Crowe.dds"
+	traits = {  }
+	skill = 4
+	attack_skill = 5
+	defense_skill = 6
+	#planning_skill = 4
+	#logistics_skill = 4
+}
+
+create_navy_leader = {
+	name = "Arthur William Radford"
+	picture = "Admiral_Arthur_William_Radford.dds"
+	traits = { superior_tactician spotter }
+	skill = 2
+	attack_skill = 1
 	defense_skill = 4
 	#planning_skill = 4
 	#logistics_skill = 4
@@ -1022,10 +1492,21 @@ create_navy_leader = {
 
 create_navy_leader = {
 	name = "Arleigh Burke"
-	picture = "Portrait_USA_Arleigh_Burke.dds"
+	picture = "Admiral_Arleigh_Albert_Burke.dds"
 	traits = { old_guard_navy superior_tactician }
 	skill = 4
 	attack_skill = 4
+	defense_skill = 4
+	#planning_skill = 4
+	#logistics_skill = 4
+}
+
+create_navy_leader = {
+	name = "Dewey Struble"
+	picture = "Admiral_Arthur_Dewey_Struble.dds"
+	traits = { old_guard_navy superior_tactician }
+	skill = 3
+	attack_skill = 2
 	defense_skill = 4
 	#planning_skill = 4
 	#logistics_skill = 4
@@ -1057,19 +1538,84 @@ create_navy_leader = {
 	}
 
 ### Ship Variants ###
+if = {
+	limit = { NOT = { has_dlc = "Man the Guns" } } 
+	
+	create_equipment_variant = {
+		name = "PC-461-class"
+		type = frigate_ww
+		obsolete = yes
+	}
+	create_equipment_variant = {
+		name = "Town-Class"
+		type = destroyer_ww
+		obsolete = yes
+	}
+	create_equipment_variant = {
+		name = "Juneau-class"
+		type = cruiser_ww
+		obsolete = yes
+	}
+	create_equipment_variant = {
+		name = "Alaska-class"
+		type = battlecruiser_ww
+		obsolete = yes
+	}
+	create_equipment_variant = {
+		name = "Iowa-class"
+		type = battleship_ww
+		obsolete = yes
+	}
+	create_equipment_variant = {
+		name = "Balao-class"
+		type = attack_submarine_ww
+		obsolete = yes
+	}
+	create_equipment_variant = {
+		name = "Independence-class"
+		type = carrier_ww
+		obsolete = yes
+	}
+	
+	create_equipment_variant = {
+		name = "Tacoma-class"
+		type = frigate_1
+	}
+	create_equipment_variant = {
+		name = "Gearing-class"
+		type = destroyer_1
+	}
+	create_equipment_variant = {
+		name = "Oregon City-class"
+		type = cruiser_1
+	}
+	create_equipment_variant = {
+		name = "Worcester-class"
+		type = battlecruiser_1
+	}
+	create_equipment_variant = {
+		name = "Tench-class"
+		type = attack_submarine_1
+	}
+	create_equipment_variant = {
+		name = "Essex-class"
+		type = carrier_1
+	}
+}
 
 if = {
 	limit = { has_dlc = "Man the Guns" }
 	create_equipment_variant = {
 		name = "Town-class" # Destroyer (Antisub)
-		type = ww_screen_hull_medium
+		type = screen_hull_heavy_ww
 		parent_version = 0
+		name_group = USA_DD_HISTORICAL
 		modules = {
 			fixed_ship_battery_slot = ship_armament_medium_ww
             fixed_ship_anti_air_slot = ship_AA_gun_1
-			fixed_maritime_slot = ww_detection
-			fixed_maritime_slot_2 = ww_sonar
-			fixed_ship_engine_slot = ww_screen_engine
+			fixed_maritime_slot = detection_ww
+			fixed_maritime_slot_2 = sonar_ww
+			fixed_ship_engine_slot = screen_engine_ww
 			fixed_ship_torpedo_slot = torpedo_ww
 			mid_1_custom_slot = torpedo_ww
 			rear_1_custom_slot = ship_subkiller_0
@@ -1079,6 +1625,7 @@ if = {
         name = "Essex-class"	##0 not WW
         type = carrier_hull_0
         parent_version = 0
+		name_group = USA_CV_HISTORICAL
         modules = {
 			fixed_ship_anti_air_slot = ship_AA_gun_1
 			fixed_maritime_slot = maritime_sonar_0
@@ -1089,42 +1636,45 @@ if = {
 			rear_1_custom_slot = carrier_deck_light_0
 
         }
-    }		
+    }
 
 	create_equipment_variant = {
         name = "Yorktown-class"
         type = carrier_hull_ww
         parent_version = 0
+		name_group = USA_CV_HISTORICAL
         modules = {
 			fixed_ship_anti_air_slot = ship_AA_gun_1
-			fixed_maritime_slot = ww_sonar
-			fixed_maritime_slot_2 = ww_detection
-			fixed_ship_engine_slot = ww_capital_engine
+			fixed_maritime_slot = sonar_ww
+			fixed_maritime_slot_2 = detection_ww
+			fixed_ship_engine_slot = capital_engine_ww
 			fixed_countermeasures_slot = countermeasures_0
 			mid_1_custom_slot = carrier_deck_heavy_ww
 			rear_1_custom_slot = carrier_deck_light_ww
         }
-    }	
+    }
 	
 	create_equipment_variant = {
         name = "Independence-class"
         type = carrier_hull_ww
         parent_version = 0
+		name_group = USA_CVL_HISTORICAL 
         modules = {
 			fixed_ship_anti_air_slot = ship_AA_gun_1
-			fixed_maritime_slot = ww_sonar
-			fixed_maritime_slot_2 = ww_detection
-			fixed_ship_engine_slot = ww_capital_engine
+			fixed_maritime_slot = sonar_ww
+			fixed_maritime_slot_2 = detection_ww
+			fixed_ship_engine_slot = capital_engine_ww
 			fixed_countermeasures_slot = countermeasures_0
 			mid_1_custom_slot = carrier_deck_light_ww
 			
         }
-    }	
+    }
 		
 	create_equipment_variant = {
         name = "Commencement Bay-class"	##0 not WW
         type = carrier_hull_light
         parent_version = 0
+		name_group = USA_CVL_HISTORICAL 
         modules = {
 			fixed_ship_anti_air_slot = ship_AA_gun_1
 			fixed_maritime_slot = maritime_sonar_0
@@ -1134,30 +1684,32 @@ if = {
 			mid_1_custom_slot = carrier_deck_light_0
 
         }
-    }	
+    }
 	create_equipment_variant = {
         name = "Casablanca-class"
         type = carrier_hull_ww
         parent_version = 0
+		name_group = USA_CVL_HISTORICAL 
         modules = {
 			fixed_ship_anti_air_slot = ship_AA_gun_1
-			fixed_maritime_slot = ww_sonar
-			fixed_maritime_slot_2 = ww_detection
-			fixed_ship_engine_slot = ww_capital_engine
+			fixed_maritime_slot = sonar_ww
+			fixed_maritime_slot_2 = detection_ww
+			fixed_ship_engine_slot = capital_engine_ww
 			fixed_countermeasures_slot = countermeasures_0
 			mid_1_custom_slot = carrier_deck_light_ww
         }
-    }	
+    }
 	create_equipment_variant = {
         name = "Iowa-class"
-        type = capital_hull_large_0
+        type = battle_hull_heavy_0
         parent_version = 0
+		name_group = USA_BB_HISTORICAL
         modules = {
 			fixed_ship_battery_slot = ship_armament_heavy_1
 			fixed_ship_anti_air_slot = ship_AA_gun_1
-			fixed_maritime_slot = ww_sonar
-			fixed_maritime_slot_2 = ww_detection
-			fixed_ship_engine_slot = ww_capital_engine
+			fixed_maritime_slot = sonar_ww
+			fixed_maritime_slot_2 = detection_ww
+			fixed_ship_engine_slot = capital_engine_ww
 			fixed_ship_torpedo_slot = ship_torpedo_medium_0
 			front_1_custom_slot = ship_armament_medium_1
 			mid_1_custom_slot = ship_armament_heavy_1
@@ -1165,63 +1717,67 @@ if = {
 			mid_3_custom_slot = ship_AA_gun_1
 			rear_1_custom_slot = ship_armament_medium_1
         }
-    }	
+    }
 	create_equipment_variant = {
         name = "South Dakota-class"
-        type = ww_capital_hull_large
+        type = battle_hull_heavy_ww
         parent_version = 0
+		name_group = USA_BB_HISTORICAL
         modules = {
 			fixed_ship_battery_slot = ship_armament_medium_ww
 			fixed_ship_anti_air_slot = ship_AA_gun_1
-			fixed_maritime_slot = ww_sonar
-			fixed_maritime_slot_2 = ww_detection
-			fixed_ship_engine_slot = ww_capital_engine
+			fixed_maritime_slot = sonar_ww
+			fixed_maritime_slot_2 = detection_ww
+			fixed_ship_engine_slot = capital_engine_ww
 			fixed_ship_torpedo_slot = torpedo_ww
 			front_1_custom_slot = ship_armament_medium_ww
 			mid_1_custom_slot = ship_AA_gun_1
 			mid_2_custom_slot = ship_AA_gun_1
 			mid_3_custom_slot = ship_armament_medium_ww
-			rear_1_custom_slot = ship_armament_medium_ww
+			rear_1_custom_slot = ship_armament_light_ww
         }
     }
 	create_equipment_variant = {
         name = "North Carolina-class"
-        type = ww_capital_hull_large
+        type = battle_hull_heavy_ww
         parent_version = 0
+		name_group = USA_BB_HISTORICAL
         modules = {
 			fixed_ship_battery_slot = ship_armament_medium_ww
 			fixed_ship_anti_air_slot = ship_AA_gun_1
-			fixed_maritime_slot = ww_sonar
-			fixed_maritime_slot_2 = ww_detection
-			fixed_ship_engine_slot = ww_capital_engine
+			fixed_maritime_slot = sonar_ww
+			fixed_maritime_slot_2 = detection_ww
+			fixed_ship_engine_slot = capital_engine_ww
 			front_1_custom_slot = ship_armament_medium_ww
 			mid_1_custom_slot = ship_AA_gun_1
 			mid_2_custom_slot = ship_AA_gun_1
 			mid_3_custom_slot = ship_armament_medium_ww
-			rear_1_custom_slot = ship_armament_medium_ww
+			rear_1_custom_slot = ship_armament_light_ww
         }
-    }		
+    }
 	create_equipment_variant = {
         name = "Allen M. Sumner-class"
-        type = screen_hull_medium_0
+        type = screen_hull_heavy_0
         parent_version = 0
+		name_group = USA_DD_HISTORICAL
         modules = {
             fixed_ship_anti_air_slot = ship_AA_gun_1
             fixed_ship_battery_slot = ship_armament_medium_0
-            fixed_maritime_slot = ww_sonar 
-            fixed_maritime_slot_2 = ww_detection 
-            fixed_ship_engine_slot = ww_screen_engine
+            fixed_maritime_slot = sonar_ww 
+            fixed_maritime_slot_2 = detection_ww 
+            fixed_ship_engine_slot = screen_engine_ww
             fixed_ship_torpedo_slot = ship_torpedo_medium_0
 			front_2_custom_slot = countermeasures_0
             mid_1_custom_slot = ship_subkiller_0
             rear_1_custom_slot = ship_AA_gun_1
         }
-    }	
+    }
 	
 	create_equipment_variant = {
         name = "Gearing-class"
-        type = screen_hull_medium_0
+        type = screen_hull_heavy_0
         parent_version = 0
+		name_group = USA_DD_HISTORICAL
         modules = {
             fixed_ship_anti_air_slot = ship_AA_gun_1
             fixed_ship_battery_slot = ship_armament_medium_0
@@ -1233,18 +1789,19 @@ if = {
             mid_1_custom_slot = ship_subkiller_0
             rear_1_custom_slot = ship_AA_gun_1
         }
-    }		
+    }
 	
 	create_equipment_variant = {
         name = "Fletcher-class"
-        type = ww_screen_hull_medium
+        type = screen_hull_heavy_ww
         parent_version = 0
+		name_group = USA_DD_HISTORICAL
         modules = {
             fixed_ship_anti_air_slot = ship_AA_gun_1
             fixed_ship_battery_slot = ship_armament_medium_ww
-            fixed_maritime_slot = ww_sonar 
-            fixed_maritime_slot_2 = ww_detection 
-            fixed_ship_engine_slot = ww_screen_engine
+            fixed_maritime_slot = sonar_ww 
+            fixed_maritime_slot_2 = detection_ww 
+            fixed_ship_engine_slot = screen_engine_ww
             fixed_ship_torpedo_slot = torpedo_ww
             mid_1_custom_slot = ship_subkiller_0
             rear_1_custom_slot = ship_armament_light_ww
@@ -1253,14 +1810,15 @@ if = {
 	
 	create_equipment_variant = {
         name = "Gleaves-class"
-        type = ww_screen_hull_medium
+        type = screen_hull_heavy_ww
         parent_version = 0
+		name_group = USA_DD_HISTORICAL
         modules = {
             fixed_ship_anti_air_slot = ship_AA_gun_1
             fixed_ship_battery_slot = ship_armament_medium_ww
-            fixed_maritime_slot = ww_sonar 
-            fixed_maritime_slot_2 = ww_detection 
-            fixed_ship_engine_slot = ww_screen_engine
+            fixed_maritime_slot = sonar_ww 
+            fixed_maritime_slot_2 = detection_ww 
+            fixed_ship_engine_slot = screen_engine_ww
             fixed_ship_torpedo_slot = torpedo_ww
             mid_1_custom_slot = ship_AA_gun_1
             rear_1_custom_slot = ship_armament_light_ww
@@ -1268,46 +1826,48 @@ if = {
     }
 	create_equipment_variant = {
 		name = "Baltimore-class"
-		type = ww_capital_hull  
+		type = battle_hull_medium_ww  
 		parent_version = 0
+		name_group = USA_BC_HISTORICAL
 		modules = {
-			fixed_maritime_slot = ww_sonar 
-			fixed_maritime_slot_2 = ww_detection
-			
 			fixed_ship_battery_slot = ship_armament_medium_ww
-			fixed_ship_engine_slot = ww_capital_engine
+			fixed_ship_engine_slot = capital_engine_ww
+			fixed_ship_anti_air_slot = ship_AA_gun_1
+			fixed_maritime_slot = detection_ww
+			fixed_maritime_slot_2 = detection_ww
 			fixed_ship_torpedo_slot = torpedo_ww
-			front_1_custom_slot = ship_AA_gun_1
+			front_1_custom_slot = ship_armament_medium_ww
 			mid_1_custom_slot = torpedo_ww
 			mid_2_custom_slot = ship_armament_light_ww
 			rear_1_custom_slot = ship_AA_gun_1
 		}
-	}	
+	}
 		
 	create_equipment_variant = {
 		name = "Alaska-class"
-		type = ww_capital_hull  
+		type = battle_hull_medium_ww  
 		parent_version = 0
+		name_group = USA_CA_HISTORICAL
 		modules = {
-			fixed_maritime_slot = ww_sonar 
-			fixed_maritime_slot_2 = ww_detection
-			
 			fixed_ship_battery_slot = ship_armament_medium_ww
-			fixed_ship_engine_slot = ww_capital_engine
+			fixed_ship_engine_slot = capital_engine_ww
 			fixed_ship_torpedo_slot = torpedo_ww
+			fixed_maritime_slot = sonar_ww 
+			fixed_maritime_slot_2 = detection_ww
 			front_1_custom_slot = ship_armament_light_ww
 			mid_1_custom_slot = torpedo_ww
 			mid_2_custom_slot = ship_armament_light_ww
 			rear_1_custom_slot = ship_AA_gun_1
 		}
-	}	
+	}
 	
 	create_equipment_variant = {
 		name = "Oregon City-class"
-		type = capital_hull_0  
+		type = battle_hull_medium_0  
 		parent_version = 0
+		name_group = USA_CA_HISTORICAL
 		modules = {
-			fixed_ship_battery_slot = ship_armament_medium_1
+			fixed_ship_battery_slot = ship_armament_heavy_1
             fixed_maritime_slot = maritime_sonar_0 
             fixed_maritime_slot_2 = maritime_ew_ss_0 
 			fixed_ship_engine_slot = capital_engine_0
@@ -1318,59 +1878,63 @@ if = {
 			mid_2_custom_slot = ship_AA_gun_1
 			rear_1_custom_slot = ship_subkiller_0
 		}
-	}	
+	}
 	
 	create_equipment_variant = {
 		name = "Des Moines-class"
-		type = capital_hull_0  
+		type = battle_hull_medium_0
 		parent_version = 0
+		name_group = USA_CA_HISTORICAL
 		modules = {
 			fixed_ship_battery_slot = ship_armament_heavy_1
             fixed_maritime_slot = maritime_sonar_0 
-            fixed_maritime_slot_2 = maritime_ew_ss_0 
+            fixed_maritime_slot_2 = maritime_ew_ss_0
 			fixed_ship_engine_slot = capital_engine_0
 			fixed_ship_torpedo_slot = ship_torpedo_medium_0
 			front_1_custom_slot = ship_armament_medium_1
 			front_2_custom_slot = countermeasures_0
 			mid_1_custom_slot = ship_AA_gun_1
-			mid_2_custom_slot = ship_armament_medium_1
+			mid_2_custom_slot = ship_armament_light_1
 			rear_1_custom_slot = ship_subkiller_0
 		}
-	}	
+	}
 	create_equipment_variant = {
 		name = "Juneau-class"
-		type = ww_screen_hull_large  
+		type = battle_hull_light_ww  
 		parent_version = 0
+		name_group = USA_CLAA_HISTORICAL
 		modules = {
-			fixed_maritime_slot = ww_sonar 
-			fixed_maritime_slot_2 = ww_detection
+			fixed_maritime_slot = sonar_ww 
+			fixed_maritime_slot_2 = detection_ww
 			fixed_ship_battery_slot = ship_armament_medium_ww
-			fixed_ship_engine_slot = ww_screen_engine
+			fixed_ship_engine_slot = screen_engine_ww
 			fixed_ship_torpedo_slot = torpedo_ww
 			mid_1_custom_slot = ship_AA_gun_1
 			rear_1_custom_slot = ship_AA_gun_1
 		}
-	}	
+	}
 	
 	create_equipment_variant = {
-		name = "Cleveland-class	"
-		type = ww_screen_hull_large  
+		name = "Cleveland-class"
+		type = battle_hull_light_ww  
 		parent_version = 0
+		name_group = USA_CL_HISTORICAL
 		modules = {
-			fixed_maritime_slot = ww_sonar 
-			fixed_maritime_slot_2 = ww_detection
+			fixed_maritime_slot = sonar_ww 
+			fixed_maritime_slot_2 = detection_ww
 			fixed_ship_battery_slot = ship_armament_medium_ww
-			fixed_ship_engine_slot = ww_screen_engine
+			fixed_ship_engine_slot = screen_engine_ww
 			fixed_ship_torpedo_slot = torpedo_ww
 			mid_1_custom_slot = ship_AA_gun_1
 			rear_1_custom_slot = ship_armament_light_ww
 		}
-	}	
+	}
 	
 	create_equipment_variant = {
 		name = "Worcester-class"
-		type = screen_hull_large_0  
+		type = battle_hull_light_0  
 		parent_version = 0
+		name_group = USA_CL_HISTORICAL
 		modules = {			
 			fixed_ship_battery_slot = ship_armament_medium_1
             fixed_maritime_slot = maritime_sonar_0 
@@ -1382,35 +1946,38 @@ if = {
 			mid_1_custom_slot = ship_torpedo_medium_0
 			rear_1_custom_slot = ship_AA_gun_1
 		}
-	}	
+	}
 	create_equipment_variant = {
 		name = "Balao-class"
 		type = sub_hull_ww  
 		parent_version = 0
+		name_group = USA_SS_HISTORICAL
 		modules = {
-			fixed_sub_torpedo_slot = torpedo_ww
-			fixed_sub_engine_slot = ww_sub_engine
-			fixed_maritime_slot = ww_sonar 
-			mid_1_custom_slot = torpedo_ww
+			fixed_sub_torpedo_slot = sub_torpedo_ww
+			fixed_sub_engine_slot = sub_engine_ww
+			fixed_maritime_slot = sonar_ww 
+			mid_1_custom_slot = sub_torpedo_ww
 		}
-	}	
+	}
 	
 	create_equipment_variant = {
 		name = "Tench-class"
 		type = sub_hull_large_single_0  
 		parent_version = 0
+		name_group = USA_SS_HISTORICAL
 		modules = {
-			fixed_maritime_slot = ww_sonar
-			fixed_sub_engine_slot = ww_sub_engine
+			fixed_maritime_slot = sonar_ww
+			fixed_sub_engine_slot = sub_engine_ww
 			fixed_sub_torpedo_slot = sub_torpedo_medium_0
 			front_1_custom_slot = sub_torpedo_small_0
 			mid_1_custom_slot = sub_torpedo_small_0
 		}
-	}		
+	}
 	create_equipment_variant = {
 		name = "Tang-class"
 		type = sub_hull_large_single_0  
 		parent_version = 0
+		name_group = USA_SS_HISTORICAL
 		modules = {
 			fixed_maritime_slot = maritime_sonar_0
 			fixed_sub_engine_slot = sub_engine_alpha_0
@@ -1418,30 +1985,32 @@ if = {
 			front_1_custom_slot = sub_torpedo_small_0
 			mid_1_custom_slot = sub_torpedo_small_0
 		}
-	}	
+	}
 	create_equipment_variant = {	#ww
 		name = "Buckley-class"
-		type = ww_screen_hull_small  
+		type = screen_hull_medium_ww  
 		parent_version = 0
+		name_group = USA_MINELAYERS_HISTORICAL
 		modules = {	
 			fixed_ship_battery_slot = ship_armament_light_ww
 			fixed_ship_anti_air_slot = ship_AA_gun_1
-			fixed_maritime_slot = ww_sonar 
-			fixed_ship_engine_slot = ww_screen_engine
+			fixed_maritime_slot = sonar_ww 
+			fixed_ship_engine_slot = screen_engine_light_ww
 			fixed_ship_torpedo_slot = torpedo_ww
 			mid_1_custom_slot = ship_subkiller_0
 			rear_1_custom_slot = ship_armament_light_ww
 		}
-	}	
+	}
 	create_equipment_variant = {	#ww
 		name = "Cannon-class"
-		type = ww_screen_hull_small  
+		type = screen_hull_medium_ww  
 		parent_version = 0
+		name_group = USA_DE_HISTORICAL
 		modules = {	
 			fixed_ship_battery_slot = ship_armament_light_ww
 			fixed_ship_anti_air_slot = ship_AA_gun_1
-			fixed_maritime_slot = ww_sonar 
-			fixed_ship_engine_slot = ww_screen_engine
+			fixed_maritime_slot = sonar_ww 
+			fixed_ship_engine_slot = screen_engine_light_ww
 			fixed_ship_torpedo_slot = torpedo_ww
 			mid_1_custom_slot = ship_subkiller_0
 			rear_1_custom_slot = ship_AA_gun_1
@@ -1451,42 +2020,45 @@ if = {
 		
 	create_equipment_variant = {	
 		name = "John C. Butler-class"
-		type = screen_hull_small_0
+		type = screen_hull_medium_0
 		parent_version = 0
+		name_group = USA_DE_HISTORICAL
 		modules = {	
 			fixed_ship_battery_slot = ship_armament_light_0 
             fixed_maritime_slot = maritime_ew_ss_0
-			fixed_ship_engine_slot = screen_engine_0
+			fixed_ship_engine_slot = screen_engine_light_0
 			fixed_ship_torpedo_slot = ship_torpedo_small_0
 			front_2_custom_slot = countermeasures_0
 			mid_1_custom_slot = ship_subkiller_0
 			rear_1_custom_slot = ship_AA_gun_1
 		}
-	}	
+	}
 	
 	create_equipment_variant = {	
 		name = "Tacoma-class"
-		type = screen_hull_small_0  
+		type = screen_hull_medium_0  
 		parent_version = 0
+		name_group = USA_DE_HISTORICAL
 		modules = {	
 			fixed_ship_battery_slot = ship_armament_light_0 
             fixed_maritime_slot = maritime_ew_ss_0
-			fixed_ship_engine_slot = screen_engine_0
+			fixed_ship_engine_slot = screen_engine_light_0
 			fixed_ship_torpedo_slot = ship_torpedo_small_0
 			front_2_custom_slot = countermeasures_0
 			mid_1_custom_slot = ship_AA_gun_1
 			rear_1_custom_slot = ship_armament_light_0
 		}
-	}	
+	}
 	### Variants ###
 	create_equipment_variant = {
         name = "PC-461-class"
-        type = ww_screen_hull_small
+        type = screen_hull_medium_ww
         parent_version = 0
+		name_group = USA_DE_HISTORICAL
         modules = {
 			fixed_ship_battery_slot = ship_armament_light_0 
             fixed_maritime_slot = maritime_sonar_0
-			fixed_ship_engine_slot = screen_engine_0
+			fixed_ship_engine_slot = screen_engine_light_0
 			fixed_ship_torpedo_slot = ship_torpedo_small_0
 			mid_1_custom_slot = ship_AA_gun_1
 			rear_1_custom_slot = ship_armament_light_0
@@ -1527,7 +2099,7 @@ if = {
 		subkiller_0 = 1
 		subkiller_1 = 1
 		maritime_sonar_0 = 1
-		ww_detection = 1
+		detection_ww = 1
 		maritime_ta_fcs_0 = 1
 		maritime_ew_ss_0 = 1
 		ww_armaments = 1
@@ -1537,7 +2109,7 @@ if = {
 		ship_armament_heavy_0 = 1
 		
 		ww_capitals = 1
-		capital_hull_0 = 1
+		battle_hull_medium_0 = 1
 		ww_carriers = 1
 		carrier_hull_0 = 1
 		
@@ -1547,9 +2119,9 @@ if = {
 		sub_hull_small_single_0 = 1
 		torpedo_small_0 = 1
 		ww_screens = 1
+		screen_hull_heavy_0 = 1
 		screen_hull_medium_0 = 1
-		screen_hull_small_0 = 1
-		screen_hull_large_0 = 1
+		battle_hull_light_0 = 1
 	}
 }
 
@@ -1714,7 +2286,7 @@ set_technology = {
 	atomic_research = 1
 	atomic_reactor_0 = 1
 	atomic_reactor_fission_0 = 1
-	atomic_weapon_armament_0
+	atomic_weapons_armament_0 = 1
 	atomic_weapons = 1
 	NBC_research = 1
 	nbc_nerve_weapon_0 = 1
@@ -1738,9 +2310,9 @@ if = {
 if = {
 	limit = { has_dlc = "Man the Guns"}
 	set_technology = {
-		screen_hull_small_1 = 1
 		screen_hull_medium_1 = 1
-		screen_hull_large_1 = 1
+		screen_hull_heavy_1 = 1
+		battle_hull_light_1 = 1
 		screen_aviation_1 = 1
 		sub_hull_large_double_0 = 1
 		sub_hull_large_single_1 = 1

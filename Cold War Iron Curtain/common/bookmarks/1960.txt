@@ -1,7 +1,7 @@
 
 bookmarks = {
 	bookmark = {
-		name = "Decade of Crisis (Early Access)"
+		name = "Decade of Crisis"
 		desc = "DECADE_CRISIS_DESC"
 		date = 1960.1.1.12
 		picture = "GFX_select_date_1939"
@@ -19,7 +19,6 @@ bookmarks = {
 			focuses = {
 				USA_George_Wallace_1968
 				USA_The_Great_Society_1964
-				USA_Nixon_68
 			}
 		}
 

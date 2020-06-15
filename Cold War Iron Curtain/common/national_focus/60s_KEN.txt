@@ -128,7 +128,7 @@ focus_tree = {
 	}
 	focus = {
 		id = KEN_60s_ethnic_reconcilliation
-		icon = GFX_goal_unknown
+		icon = GFX_Paper_Two
 		search_filters = {IC_FILTER}
 		cost = 10.00
 		x = 11
@@ -205,7 +205,7 @@ focus_tree = {
 	}
 	focus = {
 		id = KEN_60s_eric_griffith_jones_keeps_power
-		icon = GFX_goal_unknown
+		icon = GFX_focus_rioting
 		search_filters = {IC_FILTER}
 		cost = 14.00
 		x = 32
@@ -790,7 +790,7 @@ focus_tree = {
 	}
 	focus = {
 		id = KEN_60s_unban_the_kenyan_african_national_union
-		icon = GFX_
+		icon = GFX_KAU_established
 		search_filters = {IC_FILTER}
 		cost = 10.00
 		x = -14
@@ -1264,7 +1264,7 @@ focus_tree = {
 	}
 	focus = {
 		id = KEN_60s_greater_kanu_domination
-		icon = GFX_
+		icon = GFX_KAU_established
 		search_filters = {IC_FILTER}
 		cost = 10.00
 		x = -24
@@ -1356,7 +1356,7 @@ focus_tree = {
 	}
 	focus = {
 		id = KEN_60s_diplomatic_union
-		icon = GFX_
+		icon = GFX_Room_Meeting
 		search_filters = {IC_FILTER}
 		cost = 10.00
 		x = -11
@@ -1374,7 +1374,7 @@ focus_tree = {
 			focus = KEN_60s_operation_bunyoro
 		}
 		prerequisite = {
-			focus =  KEN_60s_the_east_african_conference
+			focus = KEN_60s_the_east_african_conference
 		}
 		completion_reward = {
 			add_ideas = East_African_Federation
@@ -1403,7 +1403,7 @@ focus_tree = {
 			focus = KEN_60s_operation_bunyoro
 		}
 		prerequisite = {
-			focus =  KEN_60s_the_east_african_conference
+			focus = KEN_60s_the_east_african_conference
 		}
 		completion_reward = {
 			add_stability = +0.2
@@ -1431,7 +1431,7 @@ focus_tree = {
 			focus = KEN_60s_one_people_one_destiny
 		}
 		prerequisite = {
-			focus =  KEN_60s_the_east_african_conference
+			focus = KEN_60s_the_east_african_conference
 		}
 		completion_reward = {
 			declare_war_on = { type = annex_everything    target = UGA }
@@ -1468,7 +1468,7 @@ focus_tree = {
 	}
 	focus = {
 		id = KEN_60s_denounce_white_minority_rule
-		icon = GFX_
+		icon = GFX_white_men_state
 		search_filters = {IC_FILTER}
 		cost = 10.00
 		x = -12
@@ -1545,15 +1545,17 @@ focus_tree = {
 				attacker = {
 					state = 1197
 					num_provinces = 2
-
+					on_win = kenya_bw.1
+					on_lose = kenya_bw.2
+					on_cancel = Indochina_War.4
 				}
 							
 				defender = {
 					state = 1137
 					num_provinces = 2
-					on_win = obote_invade.1
-					on_lose = obote_invade.2
-					on_cancel = japan_border_conflict.4
+					on_win = kenya_bw.2
+					on_lose = kenya_bw.1
+					on_cancel = Indochina_War.4
 				}
 			}
 		}
@@ -1641,7 +1643,7 @@ focus_tree = {
 			focus = KEN_60s_declaration_of_the_east_african_federation
 		}
 		completion_reward = {
-			add_political_power =  +50
+			add_political_power = 50
 			country_event = kenya.33
 			add_opinion_modifier = { 
 				target = MLI
@@ -1860,7 +1862,7 @@ focus_tree = {
 	}
 	focus = {
 		id = KEN_60s_KANU_victory
-		icon = GFX_
+		icon = GFX_KAU_established
 		search_filters = {IC_FILTER}
 		cost = 10.00
 		x = -22
@@ -2403,7 +2405,7 @@ focus_tree = {
 	}
 	focus = {
 		id = KEN_60_united_country_party_victory
-		icon = GFX_
+		icon = GFX_focus_conservative
 		search_filters = {IC_FILTER}
 		cost = 10.00
 		x = 32
@@ -2606,7 +2608,7 @@ focus_tree = {
 	}
 	focus = {
 		id = KEN_60s_KADU_victory
-		icon = GFX_goal_democratic_support
+		icon = GFX_ally_with_the_leftists
 		search_filters = {IC_FILTER}
 		cost = 10.00
 		x = 28
@@ -2626,7 +2628,7 @@ focus_tree = {
 	}
 	focus = {
 		id = KEN_60s_UCP_victory
-		icon = GFX_focus_Conservative
+		icon = GFX_focus_conservative
 		search_filters = {IC_FILTER}
 		cost = 10.00
 		x = 36
@@ -3208,7 +3210,7 @@ focus_tree = {
 			add_equipment_to_stockpile = {
 				type = infantry_equipment_1
 				amount = +10000
-				producer = PRC
+				producer = MAO
 			
 			}
 			add_popularity = {
@@ -3400,7 +3402,7 @@ focus_tree = {
 			add_equipment_to_stockpile = {
 				type = infantry_equipment_1
 				amount = +10000
-				producer = SOV
+				producer = CUM
 			
 			}
 			add_popularity = {

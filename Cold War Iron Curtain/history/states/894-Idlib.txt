@@ -10,25 +10,27 @@ state = {
 		set_state_flag = semideveloed
 		1946.1.1 = {
 			owner = SYR
-
-		}
-		1958.1.1 = {
-			owner = EGY
-
-		}
-		1961.1.1 = {
-			owner = SYR
-
-		}
-		victory_points = {
-			7140 1 
-		}
 		buildings = {
 			infrastructure = 2
 			state_infrastructure = 2
 
 			agri_industrial_complex = 1
 		}
+		}
+		1958.1.1 = {
+			owner = EGY
+			add_core_of = EGY
+
+		}
+		1961.1.1 = {
+			owner = SYR
+			remove_core_of = EGY
+
+		}
+		victory_points = {
+			7140 1 
+		}
+
 		add_core_of = SYR
 
 	}

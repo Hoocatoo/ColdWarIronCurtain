@@ -11,7 +11,15 @@ state = {
 		set_state_flag = poor
 		1946.1.1 = {
 			owner = SYR
+			buildings = {
+				infrastructure = 2
+				state_infrastructure = 2
+				industrial_complex = 1
 
+				air_base = 1
+				fossil_fuel_powerplant = 1
+
+			}
 		}
 		1957.1.1 = {
 			add_extra_state_shared_building_slots = 2
@@ -22,25 +30,22 @@ state = {
 		}
 		1958.1.1 = {
 			owner = EGY
+			add_core_of = EGY
 
 		}
 		1961.1.1 = {
 			owner = SYR
+			remove_core_of = EGY
 
 		}
 		1971.1.1 = {
-			
+			add_extra_state_shared_building_slots = 2
+			buildings = {
+				arms_factory = 3
+			}
 		}
 		victory_points = {
 			4111 15 
-		}
-		buildings = {
-			infrastructure = 2
-			state_infrastructure = 2
-
-			air_base = 1
-			fossil_fuel_powerplant = 1
-
 		}
 		add_core_of = SYR
 

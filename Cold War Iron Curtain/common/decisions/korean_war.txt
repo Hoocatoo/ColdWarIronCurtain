@@ -1,7 +1,55 @@
 korean_war_prc_category = {
-	cross_the_yaoulu_river = {
+	withdraw_from_korea = {
 		icon = generic_propaganda
-		cost = 50
+		fire_only_once = yes
+		allowed = {
+			tag = PRC
+		}
+		ai_will_do = { factor = 100 }
+
+		available = {
+			PRC = {
+				has_war_with = KOR
+			}
+			KOR = {
+				has_full_control_of_state = 748
+				has_full_control_of_state = 527
+				has_full_control_of_state = 1205
+				has_full_control_of_state = 747
+				has_full_control_of_state = 745
+			}
+		}
+		complete_effect = {
+			PRC = {
+				white_peace = KOR
+				white_peace = USA
+				white_peace = CHI
+			}
+			USA = {
+				white_peace = PRC
+				dismantle_faction = yes
+			}
+			CHI = {
+				white_peace = PRC
+				dismantle_faction = yes
+			}
+			KPA = {
+				white_peace = KOR
+			}
+			KOR = {
+				white_peace = PRC
+				white_peace = KPA
+				dismantle_faction = yes
+				news_event = korea.12
+				annex_country = { target = KPA transfer_troops = yes }				
+				set_global_flag = KOREA_CEASEFIRE_UN
+			}
+		}
+	}
+
+
+	cross_the_yalu_river = {
+		icon = generic_propaganda
 		fire_only_once = yes
 		days_remove = 31
 		allowed = {
@@ -9,19 +57,20 @@ korean_war_prc_category = {
 		}
 		ai_will_do = { factor = 100 }
 		visible = {
-			has_global_flag = fall_of_pyeongyang
+			has_global_flag = korean_war_china_can_intervene
 			NOT = {
 				has_country_flag = sent_reinforcements_to_korea1 #this will prevent the PRC spamming divisions to north korea
 			}
 		}
 		available = {
-			has_global_flag = fall_of_pyeongyang
+			has_global_flag = korean_war_china_can_intervene
 		}
 		complete_effect = {
 			add_named_threat = { 
 				threat = 20
 				name = korean_war_intervantion
 			}
+			
 	   	KPA = {
 			load_oob = PRC_communist_reinforcements_Korean_War_initial
 		}
@@ -34,22 +83,112 @@ korean_war_prc_category = {
 			KPA = {
 				add_timed_idea = {
 				idea = fight_against_the_imperialist1
-				days = 100
+				days = 70
 				}
 			}
 			add_timed_idea = {
 			idea = fight_against_the_imperialist1
-			days = 100
+			days = 70
+			}
+			add_timed_idea = {
+				idea = korean_war
+				days = 1800
+			}
+			KOR = {
+				add_timed_idea = {
+					idea = unprepared_defenses
+					days = 90
+				}
+			}
+			USA = {
+				add_timed_idea = {
+					idea = unprepared_defenses
+					days = 90
+				}
 			}
 			news_event = PRC_Focus.20
 			set_country_flag = KPA_INTERVENTION_1
-			activate_mission = Korean_War_Ceasefire
-			USA = { activate_mission = Korean_War_Ceasefire }
-			ENG = { activate_mission = Korean_War_Ceasefire }
-			JAP = { activate_mission = Korean_War_Ceasefire }
-			KOR = { activate_mission = Korean_War_Ceasefire }
-			KPA = { activate_mission = Korean_War_Ceasefire }
-			SOV = { activate_mission = Korean_War_Ceasefire }
+			
+			747 = {
+				#38th Corps
+				create_unit = {
+					division = "name = \"112th Division\" division_template = \"Qīngxíng Jīdòng huà Bùbīng Shī\" start_experience_factor = 1 start_equipment_factor = 1"
+					owner = PRC
+				}
+				create_unit = {
+					division = "name = \"113th Division\" division_template = \"Qīngxíng Jīdòng huà Bùbīng Shī\" start_experience_factor = 1 start_equipment_factor = 1"
+					owner = PRC
+				}
+				create_unit = {
+					division = "name = \"114th Division\" division_template = \"Qīngxíng Jīdòng huà Bùbīng Shī\" start_experience_factor = 1 start_equipment_factor = 1"
+					owner = PRC
+				}
+				#39th Corps
+				create_unit = {
+					division = "name = \"115th Division\" division_template = \"Juntuán\" start_experience_factor = 1 start_equipment_factor = 1"
+					owner = PRC
+				}
+				create_unit = {
+					division = "name = \"116th Division\" division_template = \"Juntuán\" start_experience_factor = 1 start_equipment_factor = 1"
+					owner = PRC
+				}
+				create_unit = {
+					division = "name = \"117th Division\" division_template = \"Juntuán\" start_experience_factor = 1 start_equipment_factor = 1"
+					owner = PRC
+				}
+				#40th Corps
+				create_unit = {
+					division = "name = \"118th Division\" division_template = \"Juntuán\" start_experience_factor = 1 start_equipment_factor = 1"
+					owner = PRC
+				}
+				create_unit = {
+					division = "name = \"119th Division\" division_template = \"Juntuán\" start_experience_factor = 1 start_equipment_factor = 1"
+					owner = PRC
+				}
+				create_unit = {
+					division = "name = \"120th Division\" division_template = \"Juntuán\" start_experience_factor = 1 start_equipment_factor = 1"
+					owner = PRC
+				}
+				#42nd Corps
+				create_unit = {
+					division = "name = \"124th Division\" division_template = \"Juntuán\" start_experience_factor = 1 start_equipment_factor = 1"
+					owner = PRC
+				}
+				create_unit = {
+					division = "name = \"125th Division\" division_template = \"Juntuán\" start_experience_factor = 1 start_equipment_factor = 1"
+					owner = PRC
+				}
+				create_unit = {
+					division = "name = \"126th Division\" division_template = \"Juntuán\" start_experience_factor = 1 start_equipment_factor = 1"
+					owner = PRC
+				}
+				#55th Corps
+				create_unit = {
+					division = "name = \"148th Division\" division_template = \"Juntuán\" start_experience_factor = 1 start_equipment_factor = 1"
+					owner = PRC
+				}
+				create_unit = {
+					division = "name = \"149th Division\" division_template = \"Shān Bùbīng Shī\" start_experience_factor = 1 start_equipment_factor = 1"
+					owner = PRC
+				}
+				create_unit = {
+					division = "name = \"150th Division\" division_template = \"Qīngxíng Jīdòng huà Bùbīng Shī\" start_experience_factor = 1 start_equipment_factor = 1"
+					owner = PRC
+				}
+				#66th Corps
+				create_unit = {
+					division = "name = \"196th Division\" division_template = \"Juntuán\" start_experience_factor = 1 start_equipment_factor = 1"
+					owner = PRC
+				}
+				create_unit = {
+					division = "name = \"197th Division\" division_template = \"Juntuán\" start_experience_factor = 1 start_equipment_factor = 1"
+					owner = PRC
+				}
+				create_unit = {
+					division = "name = \"198th Division\" division_template = \"Juntuán\" start_experience_factor = 1 start_equipment_factor = 1"
+					owner = PRC
+				}
+			}
 		}
 		remove_effect = {
 			PRC = {
@@ -150,7 +289,7 @@ korean_war_prc_category = {
 				set_country_flag = sent_reinforcements_to_korea4
 				clr_country_flag = sent_reinforcements_to_korea3
 			}
-		}	
+		}
 		}
 		operation_ripper = {
 			icon = generic_propaganda
@@ -181,13 +320,7 @@ korean_war_prc_category = {
 			always = no
 		}
 		visible = {
-			tag = PRC
 			tag = USA
-			tag = KPA
-			tag = ENG
-			tag = KOR
-			tag = JAP
-			tag = SOV
 		}
 		available = {
 			always = no
@@ -197,15 +330,12 @@ korean_war_prc_category = {
 				has_war_with = KOR
 			}
 			PRC = {
-				has_country_flag = sent_reinforcements_to_korea1
+				has_war_with = KOR
 			}
 			NOT = { has_global_flag = KOREA_CEASEFIRE_UN }
 		}
 		cancel_trigger = {
-			OR = {
-				NOT = { country_exists = KPA }
-				NOT = { country_exists = KOR }
-			}
+			NOT = { KOR = { has_war_with = KPA } }
 		}
 		
 		is_good = no
@@ -217,9 +347,74 @@ korean_war_prc_category = {
 			if = {
 				limit = {
 					NOT = { has_global_flag = KOREA_CEASEFIRE_UN }
+					KOR = { has_war_with = KPA } 
+					NOT = { KPA = { has_capitulated = yes } }
 				}
-				country_event = korea.21 
-				set_global_flag = KOREA_CEASEFIRE_UN
+				KOR = {
+					country_event = korea.16
+					set_global_flag = KOREA_CEASEFIRE_UN
+					white_peace = KOR
+					white_peace = USA
+					white_peace = ENG
+					white_peace = AST
+					white_peace = NZL
+					white_peace = CAN
+					white_peace = SAF
+					white_peace = CHI
+					PRC = {
+						white_peace = CHI
+					}
+					USA = {
+						white_peace = PRC
+						white_peace = SOV
+					}
+					KOR = {
+						dismantle_faction = yes
+						white_peace = PRC
+						white_peace = SOV
+						white_peace = KPA
+					}
+					KPA = {
+						dismantle_faction = yes
+						transfer_state = 525
+						white_peace = KOR
+					}
+					CHI = {
+						white_peace = SOV
+						white_peace = PRC
+					}
+					KOR = { transfer_state = 866 }
+					SOV = { give_guarantee = KPA }
+					PRC = { give_guarantee = KPA }
+					USA = { give_guarantee = KOR }
+				}
+			}
+			if = {
+				limit = {
+					NOT = { has_global_flag = KOREA_CEASEFIRE_UN }
+					KOR = { has_war_with = KPA } 
+					KPA = { has_capitulated = yes } 
+				}
+				USA = {
+					white_peace = PRC
+					dismantle_faction = yes
+				}
+				CHI = {
+					white_peace = PRC
+					dismantle_faction = yes
+				}
+				KPA = {
+					white_peace = KOR
+				}
+				KOR = {
+					white_peace = PRC
+					white_peace = KPA
+					dismantle_faction = yes
+					news_event = korea.12
+					annex_country = { target = KPA transfer_troops = yes }				
+					set_global_flag = KOREA_CEASEFIRE_UN
+				}
+
 			}
 		}
 
@@ -227,9 +422,25 @@ korean_war_prc_category = {
 			if = {
 				limit = {
 					NOT = { has_global_flag = KOREA_CEASEFIRE_UN }
+					KOR = { has_war_with = KPA } 
+					NOT = { KPA = { has_capitulated = yes } }
 				}
-				country_event = korea.21 
-				set_global_flag = KOREA_CEASEFIRE_UN
+				KOR = {
+					country_event = korea.21 
+					set_global_flag = KOREA_CEASEFIRE_UN
+				}
+			}
+			if = {
+				limit = {
+					NOT = { has_global_flag = KOREA_CEASEFIRE_UN }
+					KOR = { has_war_with = KPA } 
+					KPA = { has_capitulated = yes } 
+				}
+				KOR = {
+					news_event = korea.27
+					annex_country = { target = KPA transfer_troops = yes }				
+					set_global_flag = KOREA_CEASEFIRE_UN
+				}
 			}
 		}
 		ai_will_do = {

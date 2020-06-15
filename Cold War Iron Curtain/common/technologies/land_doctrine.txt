@@ -40,19 +40,20 @@ technologies = {
 		}
 		
 		ai_will_do = {
-			factor = 15
+			factor = 0
+			
 			modifier = {
-				factor = 0
-				tag = USA
-			}
-			modifier = {
-				factor = 30
-				tag = SOV
+				add = 20 #Major Priority
+				AND = {
+				}
 			}
 		}
 		
 		ai_research_weights = {
-			armor = 4.0
+			armor = -0.1
+			infantry_vehicles = -0.1
+			support_weapons = -0.1
+			land_doctrine = -0.1
 		}
 	}
 	
@@ -85,11 +86,20 @@ technologies = {
 		}
 		
 		ai_will_do = {
-			factor = 20
+			factor = 0
+			
+			modifier = {
+				add = 20 #Major Priority
+				AND = {
+				}
+			}
 		}
 		
 		ai_research_weights = {
-			armor = 3.0
+			armor = -0.1
+			infantry_vehicles = -0.1
+			support_weapons = -0.1
+			land_doctrine = -0.1
 		}
 	}
 	
@@ -124,7 +134,7 @@ technologies = {
 		categories = {
 			land_doctrine
 			cat_mobile_warfare
-		}	
+		}
 		
 		folder = {
 			name = land_doctrine_folder
@@ -132,11 +142,20 @@ technologies = {
 		}
 		
 		ai_will_do = {
-			factor = 20
+			factor = 0
+			
+			modifier = {
+				add = 20 #Major Priority
+				AND = {
+				}
+			}
 		}
 		
 		ai_research_weights = {
-			armor = 2.0
+			armor = -0.1
+			infantry_vehicles = -0.1
+			support_weapons = -0.1
+			land_doctrine = -0.1
 		}
 	}
 	
@@ -148,7 +167,7 @@ technologies = {
 		allow = {
 			NOT = { is_researching_technology = armored_spearhead }
 			NOT = { has_tech = armored_spearhead }
-		}	
+		}
 		motorized_infantry = {
 			maximum_speed = 0.1
 			default_morale = 0.2
@@ -179,21 +198,27 @@ technologies = {
 		}
 		
 		ai_will_do = {
-			factor = 10
+			factor = 0
+			
+			modifier = {
+				add = 20 #Major Priority
+				AND = {
+				}
+			}
 		}
 		
 		ai_research_weights = {
-			armor = 1.0
-			defensive = -2.0
-			motorized_equipment = 3.0
-			cat_mechanized_equipment = 5.0
+			armor = -0.1
+			infantry_vehicles = -0.1
+			support_weapons = -0.1
+			land_doctrine = -0.1
 		}
 	}
 	
 	mass_motorization = {
 		category_all_infantry = {
 			max_organisation = 10
-		}	
+		}
 		
 		
 		path = {
@@ -216,12 +241,20 @@ technologies = {
 		}
 		
 		ai_will_do = {
-			factor = 10
+			factor = 0
+			
+			modifier = {
+				add = 20 #Major Priority
+				AND = {
+				}
+			}
 		}
 		
 		ai_research_weights = {
-			armor = 2.0
-			defensive = -12.0
+			armor = -0.1
+			infantry_vehicles = -0.1
+			support_weapons = -0.1
+			land_doctrine = -0.1
 		}
 	}
 	
@@ -247,7 +280,6 @@ technologies = {
 			leads_to_tech = kampfgruppe 
 			research_cost_coeff = 1
 		}
-
 		
 		doctrine = yes	
 		research_cost = 3
@@ -256,7 +288,6 @@ technologies = {
 			land_doctrine
 			cat_mobile_warfare
 		}
-
 		
 		folder = {
 			name = land_doctrine_folder
@@ -264,13 +295,20 @@ technologies = {
 		}
 		
 		ai_will_do = {
-			factor = 5
+			factor = 0
+			
+			modifier = {
+				add = 20 #Major Priority
+				AND = {
+				}
+			}
 		}
 		
 		ai_research_weights = {
-			armor = 2.0
-			motorized_equipment = 2.0
-			cat_mechanized_equipment = 2.0
+			armor = -0.1
+			infantry_vehicles = -0.1
+			support_weapons = -0.1
+			land_doctrine = -0.1
 		}
 	}
 ############################# 002	
@@ -287,7 +325,7 @@ technologies = {
 		allow = {
 			NOT = { is_researching_technology = mobile_infantry }
 			NOT = { has_tech = mobile_infantry }
-		}		
+		}
 		path = {
 			leads_to_tech = schwerpunk 
 			research_cost_coeff = 1
@@ -301,8 +339,6 @@ technologies = {
 			land_doctrine
 			cat_mobile_warfare
 		}
-
-
 		
 		folder = {
 			name = land_doctrine_folder
@@ -310,13 +346,20 @@ technologies = {
 		}
 		
 		ai_will_do = {
-			factor = 30
+			factor = 0
+			
+			modifier = {
+				add = 20 #Major Priority
+				AND = {
+				}
+			}
 		}
 		
 		ai_research_weights = {
-			armor = 16.0
-			offensive = -1.0
-			cat_mechanized_equipment = 2.0
+			armor = -0.1
+			infantry_vehicles = -0.1
+			support_weapons = -0.1
+			land_doctrine = -0.1
 		}
 	}
 	
@@ -351,13 +394,20 @@ technologies = {
 		}
 		
 		ai_will_do = {
-			factor = 10
+			factor = 0
+			
+			modifier = {
+				add = 20 #Major Priority
+				AND = {
+				}
+			}
 		}
 		
 		ai_research_weights = {
-			armor = 2.5
-			offensive = -2.0
-			cat_mechanized_equipment = 1.5
+			armor = -0.1
+			infantry_vehicles = -0.1
+			support_weapons = -0.1
+			land_doctrine = -0.1
 		}
 	}
 	
@@ -378,7 +428,7 @@ technologies = {
 		}
 		mechanized_infantry = {
 			max_organisation = 5
-		}		
+		}
 
 		
 		path = {
@@ -402,12 +452,20 @@ technologies = {
 		}
 		
 		ai_will_do = {
-			factor = 5
+			factor = 0
+			
+			modifier = {
+				add = 20 #Major Priority
+				AND = {
+				}
+			}
 		}
 		
 		ai_research_weights = {
-			armor = 2.5
-			cat_mechanized_equipment = 1.5
+			armor = -0.1
+			infantry_vehicles = -0.1
+			support_weapons = -0.1
+			land_doctrine = -0.1
 		}
 	}
 	
@@ -447,11 +505,20 @@ technologies = {
 		}
 		
 		ai_will_do = {
-			factor = 5
+			factor = 0
+			
+			modifier = {
+				add = 20 #Major Priority
+				AND = {
+				}
+			}
 		}
 		
 		ai_research_weights = {
-			armor = 3.0
+			armor = -0.1
+			infantry_vehicles = -0.1
+			support_weapons = -0.1
+			land_doctrine = -0.1
 		}
 	}
 	
@@ -460,7 +527,7 @@ technologies = {
 		allow = {
 			NOT = { is_researching_technology = volkssturm }
 			NOT = { has_tech = volkssturm }
-		}			
+		}
 		category_all_infantry = {
 			max_organisation = 10
 		}
@@ -490,11 +557,20 @@ technologies = {
 		}
 		
 		ai_will_do = {
-			factor = 2
+			factor = 0
+			
+			modifier = {
+				add = 20 #Major Priority
+				AND = {
+				}
+			}
 		}
 		
 		ai_research_weights = {
-			armor = 2.0
+			armor = -0.1
+			infantry_vehicles = -0.1
+			support_weapons = -0.1
+			land_doctrine = -0.1
 		}
 	}
 	
@@ -524,11 +600,20 @@ technologies = {
 		}
 		
 		ai_will_do = {
-			factor = 2
+			factor = 0
+			
+			modifier = {
+				add = 20 #Major Priority
+				AND = {
+				}
+			}
 		}
 		
 		ai_research_weights = {
-			armor = 2.0
+			armor = -0.1
+			infantry_vehicles = -0.1
+			support_weapons = -0.1
+			land_doctrine = -0.1
 		}
 	}
 	
@@ -563,11 +648,20 @@ technologies = {
 		}
 		
 		ai_will_do = {
-			factor = 2
+			factor = 0
+			
+			modifier = {
+				add = 20 #Major Priority
+				AND = {
+				}
+			}
 		}
 		
 		ai_research_weights = {
-			armor = 2.0
+			armor = -0.1
+			infantry_vehicles = -0.1
+			support_weapons = -0.1
+			land_doctrine = -0.1
 		}
 	}
 	
@@ -577,7 +671,7 @@ technologies = {
 		allow = {
 			NOT = { is_researching_technology = firebrigades }
 			NOT = { has_tech = firebrigades }
-		}	
+		}
 		
 		conscription = 0.02
 		
@@ -602,11 +696,20 @@ technologies = {
 		}
 		
 		ai_will_do = {
-			factor = 2
+			factor = 0
+			
+			modifier = {
+				add = 20 #Major Priority
+				AND = {
+				}
+			}
 		}
 		
 		ai_research_weights = {
-			armor = 2.0
+			armor = -0.1
+			infantry_vehicles = -0.1
+			support_weapons = -0.1
+			land_doctrine = -0.1
 		}
 	}
 	
@@ -635,11 +738,20 @@ technologies = {
 		}
 		
 		ai_will_do = {
-			factor = 2
+			factor = 0
+			
+			modifier = {
+				add = 20 #Major Priority
+				AND = {
+				}
+			}
 		}
 		
 		ai_research_weights = {
-			armor = 2.0
+			armor = -0.1
+			infantry_vehicles = -0.1
+			support_weapons = -0.1
+			land_doctrine = -0.1
 		}
 	}
 	
@@ -666,11 +778,20 @@ technologies = {
 		}
 		
 		ai_will_do = {
-			factor = 2
+			factor = 0
+			
+			modifier = {
+				add = 20 #Major Priority
+				AND = {
+				}
+			}
 		}
 		
 		ai_research_weights = {
-			armor = 2.0
+			armor = -0.1
+			infantry_vehicles = -0.1
+			support_weapons = -0.1
+			land_doctrine = -0.1
 		}
 	}
 	
@@ -685,7 +806,7 @@ technologies = {
 			
 			NOT = { is_researching_technology = mass_assault }
 			NOT = { has_tech = mass_assault }
-		}	
+		}
 		path = {
 			leads_to_tech = sup_delay 
 			research_cost_coeff = 1
@@ -712,19 +833,20 @@ technologies = {
 		}
 		
 		ai_will_do = {
-			factor = 15
+			factor = 0
+			
 			modifier = {
-				factor = 30
-				tag = USA
-			}
-			modifier = {
-				factor = 0
-				tag = SOV
+				add = 20 #Major Priority
+				AND = {
+				}
 			}
 		}
 		
 		ai_research_weights = {
-			artillery = 4.0
+			armor = -0.1
+			infantry_vehicles = -0.1
+			support_weapons = -0.1
+			land_doctrine = -0.1
 		}
 	}
 	
@@ -755,11 +877,20 @@ technologies = {
 		}
 		
 		ai_will_do = {
-			factor = 20
+			factor = 0
+			
+			modifier = {
+				add = 20 #Major Priority
+				AND = {
+				}
+			}
 		}
 		
 		ai_research_weights = {
-			artillery = 3.0
+			armor = -0.1
+			infantry_vehicles = -0.1
+			support_weapons = -0.1
+			land_doctrine = -0.1
 		}
 	}
 	
@@ -797,11 +928,20 @@ technologies = {
 		}
 		
 		ai_will_do = {
-			factor = 20
+			factor = 0
+			
+			modifier = {
+				add = 20 #Major Priority
+				AND = {
+				}
+			}
 		}
 		
 		ai_research_weights = {
-			artillery = 2.0
+			armor = -0.1
+			infantry_vehicles = -0.1
+			support_weapons = -0.1
+			land_doctrine = -0.1
 		}
 	}
 	
@@ -810,7 +950,7 @@ technologies = {
 		allow = {
 			NOT = { is_researching_technology = dispersed_support }
 			NOT = { has_tech = dispersed_support }
-		}	
+		}
 	
 		category_support_battalions = {
 			max_organisation = 10
@@ -838,11 +978,20 @@ technologies = {
 		}
 		
 		ai_will_do = {
-			factor = 10
+			factor = 0
+			
+			modifier = {
+				add = 20 #Major Priority
+				AND = {
+				}
+			}
 		}
 		
 		ai_research_weights = {
-			artillery = 1.0
+			armor = -0.1
+			infantry_vehicles = -0.1
+			support_weapons = -0.1
+			land_doctrine = -0.1
 		}
 	}
 	
@@ -875,11 +1024,20 @@ technologies = {
 		}
 		
 		ai_will_do = {
-			factor = 10
+			factor = 0
+			
+			modifier = {
+				add = 20 #Major Priority
+				AND = {
+				}
+			}
 		}
 		
 		ai_research_weights = {
-			artillery = 1.0
+			armor = -0.1
+			infantry_vehicles = -0.1
+			support_weapons = -0.1
+			land_doctrine = -0.1
 		}
 	}
 	
@@ -889,7 +1047,7 @@ technologies = {
 		allow = {
 			NOT = { is_researching_technology = intergrated_support }
 			NOT = { has_tech = intergrated_support }
-		}			
+		}
 		category_line_artillery = {
 			default_morale = 0.2
 		}
@@ -915,11 +1073,20 @@ technologies = {
 		}
 		
 		ai_will_do = {
-			factor = 10
+			factor = 0
+			
+			modifier = {
+				add = 20 #Major Priority
+				AND = {
+				}
+			}
 		}
 		
 		ai_research_weights = {
-			artillery = 1.0
+			armor = -0.1
+			infantry_vehicles = -0.1
+			support_weapons = -0.1
+			land_doctrine = -0.1
 		}
 	}
 	
@@ -952,11 +1119,20 @@ technologies = {
 		}
 		
 		ai_will_do = {
-			factor = 10
+			factor = 0
+			
+			modifier = {
+				add = 20 #Major Priority
+				AND = {
+				}
+			}
 		}
 		
 		ai_research_weights = {
-			artillery = 1.0
+			armor = -0.1
+			infantry_vehicles = -0.1
+			support_weapons = -0.1
+			land_doctrine = -0.1
 		}
 	}
 	
@@ -995,11 +1171,20 @@ technologies = {
 		}
 		
 		ai_will_do = {
-			factor = 5
+			factor = 0
+			
+			modifier = {
+				add = 20 #Major Priority
+				AND = {
+				}
+			}
 		}
 		
 		ai_research_weights = {
-			artillery = 1.0
+			armor = -0.1
+			infantry_vehicles = -0.1
+			support_weapons = -0.1
+			land_doctrine = -0.1
 		}
 	}
 	
@@ -1008,7 +1193,7 @@ technologies = {
 		allow = {
 			NOT = { is_researching_technology = centralized_fire_control }
 			NOT = { has_tech = centralized_fire_control }
-		}	
+		}
 		category_army = {
 			hard_attack = 0.10
 		}
@@ -1034,11 +1219,20 @@ technologies = {
 		}
 		
 		ai_will_do = {
-			factor = 5
+			factor = 0
+			
+			modifier = {
+				add = 20 #Major Priority
+				AND = {
+				}
+			}
 		}
 		
 		ai_research_weights = {
-			artillery = 1.0
+			armor = -0.1
+			infantry_vehicles = -0.1
+			support_weapons = -0.1
+			land_doctrine = -0.1
 		}
 	}
 	
@@ -1073,11 +1267,20 @@ technologies = {
 		}
 		
 		ai_will_do = {
-			factor = 2
+			factor = 0
+			
+			modifier = {
+				add = 20 #Major Priority
+				AND = {
+				}
+			}
 		}
 		
 		ai_research_weights = {
-			artillery = 1.0
+			armor = -0.1
+			infantry_vehicles = -0.1
+			support_weapons = -0.1
+			land_doctrine = -0.1
 		}
 	}
 	
@@ -1108,11 +1311,20 @@ technologies = {
 		}
 		
 		ai_will_do = {
-			factor = 2
+			factor = 0
+			
+			modifier = {
+				add = 20 #Major Priority
+				AND = {
+				}
+			}
 		}
 		
 		ai_research_weights = {
-			artillery = 1.0
+			armor = -0.1
+			infantry_vehicles = -0.1
+			support_weapons = -0.1
+			land_doctrine = -0.1
 		}
 	}
 	
@@ -1145,11 +1357,20 @@ technologies = {
 		}
 		
 		ai_will_do = {
-			factor = 2
+			factor = 0
+			
+			modifier = {
+				add = 20 #Major Priority
+				AND = {
+				}
+			}
 		}
 		
 		ai_research_weights = {
-			artillery = 1.0
+			armor = -0.1
+			infantry_vehicles = -0.1
+			support_weapons = -0.1
+			land_doctrine = -0.1
 		}
 	}
 	
@@ -1158,7 +1379,7 @@ technologies = {
 		allow = {
 			NOT = { is_researching_technology = concentrated_fire_plans }
 			NOT = { has_tech = concentrated_fire_plans }
-		}	
+		}
 
 		category_army = {
 			soft_attack = 0.05
@@ -1185,11 +1406,20 @@ technologies = {
 		}
 		
 		ai_will_do = {
-			factor = 5
+			factor = 0
+			
+			modifier = {
+				add = 20 #Major Priority
+				AND = {
+				}
+			}
 		}
 		
 		ai_research_weights = {
-			artillery = 1.0
+			armor = -0.1
+			infantry_vehicles = -0.1
+			support_weapons = -0.1
+			land_doctrine = -0.1
 		}
 	}
 	
@@ -1222,11 +1452,20 @@ technologies = {
 		}
 		
 		ai_will_do = {
-			factor = 2
+			factor = 0
+			
+			modifier = {
+				add = 20 #Major Priority
+				AND = {
+				}
+			}
 		}
 		
 		ai_research_weights = {
-			artillery = 1.0
+			armor = -0.1
+			infantry_vehicles = -0.1
+			support_weapons = -0.1
+			land_doctrine = -0.1
 		}
 	}
 	
@@ -1267,11 +1506,20 @@ technologies = {
 		}
 		
 		ai_will_do = {
-			factor = 2
+			factor = 0
+			
+			modifier = {
+				add = 20 #Major Priority
+				AND = {
+				}
+			}
 		}
 		
 		ai_research_weights = {
-			artillery = 1.0
+			armor = -0.1
+			infantry_vehicles = -0.1
+			support_weapons = -0.1
+			land_doctrine = -0.1
 		}
 	}
 	
@@ -1304,11 +1552,20 @@ technologies = {
 		}
 		
 		ai_will_do = {
-			factor = 2
+			factor = 0
+			
+			modifier = {
+				add = 20 #Major Priority
+				AND = {
+				}
+			}
 		}
 		
 		ai_research_weights = {
-			artillery = 1.0
+			armor = -0.1
+			infantry_vehicles = -0.1
+			support_weapons = -0.1
+			land_doctrine = -0.1
 		}
 	}
 	
@@ -1324,7 +1581,7 @@ technologies = {
 			
 			NOT = { is_researching_technology = mass_assault }
 			NOT = { has_tech = mass_assault }
-		}		
+		}
 		max_dig_in = 10
 		dig_in_speed_factor = 0.25 #25% bonus
 		
@@ -1349,20 +1606,21 @@ technologies = {
 		}
 		
 		ai_will_do = {
-			factor = 15
+			factor = 0
+			
 			modifier = {
-				factor = 0
-				tag = USA
-			}
-			modifier = {
-				factor = 0
-				tag = SOV
+				add = 20 #Major Priority
+				NOT = {
+					num_of_military_factories > 30
+				}
 			}
 		}
 		
 		ai_research_weights = {
-			infantry_weapons = 1.5
-			motorized_equipment = 1.0
+			armor = -0.1
+			infantry_vehicles = -0.1
+			support_weapons = -0.1
+			land_doctrine = -0.1
 		}
 	}
 	
@@ -1392,12 +1650,21 @@ technologies = {
 		}
 		
 		ai_will_do = {
-			factor = 20
+			factor = 0
+			
+			modifier = {
+				add = 20 #Major Priority
+				NOT = {
+					num_of_military_factories > 30
+				}
+			}
 		}
 		
 		ai_research_weights = {
-			infantry_weapons = 2.5
-			motorized_equipment = 2.0
+			armor = -0.1
+			infantry_vehicles = -0.1
+			support_weapons = -0.1
+			land_doctrine = -0.1
 		}
 	}
 	
@@ -1430,12 +1697,21 @@ technologies = {
 		}
 		
 		ai_will_do = {
-			factor = 20
+			factor = 0
+			
+			modifier = {
+				add = 20 #Major Priority
+				NOT = {
+					num_of_military_factories > 30
+				}
+			}
 		}
 		
 		ai_research_weights = {
-			infantry_weapons = 1.5
-			motorized_equipment = 1.0
+			armor = -0.1
+			infantry_vehicles = -0.1
+			support_weapons = -0.1
+			land_doctrine = -0.1
 		}
 	}
 	
@@ -1472,12 +1748,21 @@ technologies = {
 		}
 		
 		ai_will_do = {
-			factor = 10
+			factor = 0
+			
+			modifier = {
+				add = 20 #Major Priority
+				NOT = {
+					num_of_military_factories > 30
+				}
+			}
 		}
 		
 		ai_research_weights = {
-			infantry_weapons = 1.5
-			motorized_equipment = 1.0
+			armor = -0.1
+			infantry_vehicles = -0.1
+			support_weapons = -0.1
+			land_doctrine = -0.1
 		}
 	}
 	
@@ -1486,7 +1771,7 @@ technologies = {
 		allow = {
 			NOT = { is_researching_technology = infantry_offensive }
 			NOT = { has_tech = infantry_offensive }
-		}		
+		}
 		motorized_infantry = {
 			max_organisation = 5
 		}
@@ -1518,13 +1803,21 @@ technologies = {
 		}
 		
 		ai_will_do = {
-			factor = 10
+			factor = 0
+			
+			modifier = {
+				add = 20 #Major Priority
+				NOT = {
+					num_of_military_factories > 30
+				}
+			}
 		}
 		
 		ai_research_weights = {
-			infantry_weapons = 1.5
-			motorized_equipment = 1.0
-			cat_mechanized_equipment = 1.0
+			armor = -0.1
+			infantry_vehicles = -0.1
+			support_weapons = -0.1
+			land_doctrine = -0.1
 		}
 	}
 	
@@ -1554,13 +1847,21 @@ technologies = {
 		}
 		
 		ai_will_do = {
-			factor = 5
+			factor = 0
+			
+			modifier = {
+				add = 20 #Major Priority
+				NOT = {
+					num_of_military_factories > 30
+				}
+			}
 		}
 		
 		ai_research_weights = {
-			infantry_weapons = 1.5
-			motorized_equipment = 1.0
-			cat_mechanized_equipment = 1.0
+			armor = -0.1
+			infantry_vehicles = -0.1
+			support_weapons = -0.1
+			land_doctrine = -0.1
 		}
 	}
 	
@@ -1593,12 +1894,21 @@ technologies = {
 		}
 		
 		ai_will_do = {
-			factor = 5
+			factor = 0
+			
+			modifier = {
+				add = 20 #Major Priority
+				NOT = {
+					num_of_military_factories > 30
+				}
+			}
 		}
 		
 		ai_research_weights = {
-			infantry_weapons = 1.5
-			motorized_equipment = 1.0
+			armor = -0.1
+			infantry_vehicles = -0.1
+			support_weapons = -0.1
+			land_doctrine = -0.1
 		}
 	}
 	
@@ -1631,13 +1941,21 @@ technologies = {
 		}
 		
 		ai_will_do = {
-			factor = 2
+			factor = 0
+			
+			modifier = {
+				add = 20 #Major Priority
+				NOT = {
+					num_of_military_factories > 30
+				}
+			}
 		}
 		
 		ai_research_weights = {
-			infantry_weapons = 1.5
-			motorized_equipment = 1.0
-			cat_mechanized_equipment = 1.0
+			armor = -0.1
+			infantry_vehicles = -0.1
+			support_weapons = -0.1
+			land_doctrine = -0.1
 		}
 	}
 	
@@ -1667,12 +1985,21 @@ technologies = {
 		}
 		
 		ai_will_do = {
-			factor = 2
+			factor = 0
+			
+			modifier = {
+				add = 20 #Major Priority
+				NOT = {
+					num_of_military_factories > 30
+				}
+			}
 		}
 		
 		ai_research_weights = {
-			infantry_weapons = 1.5
-			motorized_equipment = 1.0
+			armor = -0.1
+			infantry_vehicles = -0.1
+			support_weapons = -0.1
+			land_doctrine = -0.1
 		}
 	}
 	
@@ -1694,7 +2021,7 @@ technologies = {
 		path = {
 			leads_to_tech = forging_the_shield
 			research_cost_coeff = 1
-		}		
+		}
 		
 		doctrine = yes	
 		research_cost = 3
@@ -1711,12 +2038,21 @@ technologies = {
 		}
 		
 		ai_will_do = {
-			factor = 2
+			factor = 0
+			
+			modifier = {
+				add = 20 #Major Priority
+				NOT = {
+					num_of_military_factories > 30
+				}
+			}
 		}
 		
 		ai_research_weights = {
-			infantry_weapons = 1.5
-			motorized_equipment = 1.0
+			armor = -0.1
+			infantry_vehicles = -0.1
+			support_weapons = -0.1
+			land_doctrine = -0.1
 		}
 	}
 	
@@ -1725,7 +2061,7 @@ technologies = {
 		allow = {
 			NOT = { is_researching_technology = grand_mechanized_offensive }
 			NOT = { has_tech = grand_mechanized_offensive }
-		}				
+		}
 		category_light_infantry = {
 			max_organisation = 5
 			breakthrough = 0.1
@@ -1753,12 +2089,21 @@ technologies = {
 		}
 		
 		ai_will_do = {
-			factor = 10
+			factor = 0
+			
+			modifier = {
+				add = 20 #Major Priority
+				NOT = {
+					num_of_military_factories > 30
+				}
+			}
 		}
 		
 		ai_research_weights = {
-			infantry_weapons = 1.5
-			motorized_equipment = 1.0
+			armor = -0.1
+			infantry_vehicles = -0.1
+			support_weapons = -0.1
+			land_doctrine = -0.1
 		}
 	}
 	
@@ -1795,12 +2140,21 @@ technologies = {
 		}
 		
 		ai_will_do = {
-			factor = 10
+			factor = 0
+			
+			modifier = {
+				add = 20 #Major Priority
+				NOT = {
+					num_of_military_factories > 30
+				}
+			}
 		}
 		
 		ai_research_weights = {
-			infantry_weapons = 1.5
-			motorized_equipment = 1.0
+			armor = -0.1
+			infantry_vehicles = -0.1
+			support_weapons = -0.1
+			land_doctrine = -0.1
 		}
 	}
 	
@@ -1829,12 +2183,21 @@ technologies = {
 		}
 		
 		ai_will_do = {
-			factor = 5
+			factor = 0
+			
+			modifier = {
+				add = 20 #Major Priority
+				NOT = {
+					num_of_military_factories > 30
+				}
+			}
 		}
 		
 		ai_research_weights = {
-			infantry_weapons = 1.5
-			motorized_equipment = 1.0
+			armor = -0.1
+			infantry_vehicles = -0.1
+			support_weapons = -0.1
+			land_doctrine = -0.1
 		}
 	}
 	
@@ -1866,12 +2229,21 @@ technologies = {
 		}
 		
 		ai_will_do = {
-			factor = 5
+			factor = 0
+			
+			modifier = {
+				add = 20 #Major Priority
+				NOT = {
+					num_of_military_factories > 30
+				}
+			}
 		}
 		
 		ai_research_weights = {
-			infantry_weapons = 1.5
-			motorized_equipment = 1.0
+			armor = -0.1
+			infantry_vehicles = -0.1
+			support_weapons = -0.1
+			land_doctrine = -0.1
 		}
 	}
 	
@@ -1882,7 +2254,7 @@ technologies = {
 		}
 		category_tanks = {
 			max_organisation = 1
-		}		
+		}
 		path = {
 			leads_to_tech = infiltration_in_depth 
 			research_cost_coeff = 1
@@ -1903,12 +2275,21 @@ technologies = {
 		}
 		
 		ai_will_do = {
-			factor = 2
+			factor = 0
+			
+			modifier = {
+				add = 20 #Major Priority
+				NOT = {
+					num_of_military_factories > 30
+				}
+			}
 		}
 		
 		ai_research_weights = {
-			infantry_weapons = 1.5
-			motorized_equipment = 1.0
+			armor = -0.1
+			infantry_vehicles = -0.1
+			support_weapons = -0.1
+			land_doctrine = -0.1
 		}
 	}
 	
@@ -1940,12 +2321,21 @@ technologies = {
 		}
 		
 		ai_will_do = {
-			factor = 2
+			factor = 0
+			
+			modifier = {
+				add = 20 #Major Priority
+				NOT = {
+					num_of_military_factories > 30
+				}
+			}
 		}
 		
 		ai_research_weights = {
-			infantry_weapons = 1.5
-			motorized_equipment = 1.0
+			armor = -0.1
+			infantry_vehicles = -0.1
+			support_weapons = -0.1
+			land_doctrine = -0.1
 		}
 	}
 	
@@ -1960,7 +2350,7 @@ technologies = {
 			
 			NOT = { is_researching_technology = trench_warfare }
 			NOT = { has_tech = trench_warfare }
-		}	
+		}
 		path = {
 			leads_to_tech = pocket_defence 
 			research_cost_coeff = 1
@@ -1987,27 +2377,27 @@ technologies = {
 		}
 		
 		ai_will_do = {
-			factor = 5
+			factor = 0
+			
 			modifier = {
-				factor = 0
-				tag = SOV
-			}
-			modifier = {
-				factor = 40
-				tag = PRC
-			}
-			modifier = {
-				factor = 40
-				tag = CHI
-			}
-			modifier = {
-				factor = 0
-				tag = USA
+				add = 20 #Major Priority
+				AND = {
+					num_of_military_factories < 45
+					OR = {
+						has_government = maoism
+						has_government = radical_shiaism
+						has_government = Salafism
+						has_government = Salafism
+					}
+				}
 			}
 		}
 		
 		ai_research_weights = {
-			industry = 2.0
+			armor = -0.1
+			infantry_vehicles = -0.1
+			support_weapons = -0.1
+			land_doctrine = -0.1
 		}
 	}
 	
@@ -2038,11 +2428,27 @@ technologies = {
 		}
 		
 		ai_will_do = {
-			factor = 20
+			factor = 0
+			
+			modifier = {
+				add = 20 #Major Priority
+				AND = {
+					num_of_military_factories < 45
+					OR = {
+						has_government = maoism
+						has_government = radical_shiaism
+						has_government = Salafism
+						has_government = Salafism
+					}
+				}
+			}
 		}
 		
 		ai_research_weights = {
-			industry = 2.0
+			armor = -0.1
+			infantry_vehicles = -0.1
+			support_weapons = -0.1
+			land_doctrine = -0.1
 		}
 	}
 	
@@ -2079,11 +2485,27 @@ technologies = {
 		}
 		
 		ai_will_do = {
-			factor = 20
+			factor = 0
+			
+			modifier = {
+				add = 20 #Major Priority
+				AND = {
+					num_of_military_factories < 45
+					OR = {
+						has_government = maoism
+						has_government = radical_shiaism
+						has_government = Salafism
+						has_government = Salafism
+					}
+				}
+			}
 		}
 		
 		ai_research_weights = {
-			industry = 2.0
+			armor = -0.1
+			infantry_vehicles = -0.1
+			support_weapons = -0.1
+			land_doctrine = -0.1
 		}
 	}
 	
@@ -2092,7 +2514,7 @@ technologies = {
 		allow = {
 			NOT = { is_researching_technology = peoples_army }
 			NOT = { has_tech = peoples_army }
-		}	
+		}
 
 
 		supply_consumption_factor = -0.10
@@ -2119,11 +2541,27 @@ technologies = {
 		}
 		
 		ai_will_do = {
-			factor = 20
+			factor = 0
+			
+			modifier = {
+				add = 20 #Major Priority
+				AND = {
+					num_of_military_factories < 45
+					OR = {
+						has_government = maoism
+						has_government = radical_shiaism
+						has_government = Salafism
+						has_government = Salafism
+					}
+				}
+			}
 		}
 		
 		ai_research_weights = {
-			industry = 2.0
+			armor = -0.1
+			infantry_vehicles = -0.1
+			support_weapons = -0.1
+			land_doctrine = -0.1
 		}
 	}
 	
@@ -2155,11 +2593,27 @@ technologies = {
 		}
 		
 		ai_will_do = {
-			factor = 10
+			factor = 0
+			
+			modifier = {
+				add = 20 #Major Priority
+				AND = {
+					num_of_military_factories < 45
+					OR = {
+						has_government = maoism
+						has_government = radical_shiaism
+						has_government = Salafism
+						has_government = Salafism
+					}
+				}
+			}
 		}
 		
 		ai_research_weights = {
-			industry = 2.0
+			armor = -0.1
+			infantry_vehicles = -0.1
+			support_weapons = -0.1
+			land_doctrine = -0.1
 		}
 	}
 	
@@ -2189,11 +2643,27 @@ technologies = {
 		}
 		
 		ai_will_do = {
-			factor = 10
+			factor = 0
+			
+			modifier = {
+				add = 20 #Major Priority
+				AND = {
+					num_of_military_factories < 45
+					OR = {
+						has_government = maoism
+						has_government = radical_shiaism
+						has_government = Salafism
+						has_government = Salafism
+					}
+				}
+			}
 		}
 		
 		ai_research_weights = {
-			industry = 2.0
+			armor = -0.1
+			infantry_vehicles = -0.1
+			support_weapons = -0.1
+			land_doctrine = -0.1
 		}
 	}
 	
@@ -2228,11 +2698,27 @@ technologies = {
 		}
 		
 		ai_will_do = {
-			factor = 5
+			factor = 0
+			
+			modifier = {
+				add = 20 #Major Priority
+				AND = {
+					num_of_military_factories < 45
+					OR = {
+						has_government = maoism
+						has_government = radical_shiaism
+						has_government = Salafism
+						has_government = Salafism
+					}
+				}
+			}
 		}
 		
 		ai_research_weights = {
-			industry = 2.0
+			armor = -0.1
+			infantry_vehicles = -0.1
+			support_weapons = -0.1
+			land_doctrine = -0.1
 		}
 	}
 	
@@ -2268,12 +2754,29 @@ technologies = {
 			position = { x = -2 y = 14 }
 		}
 		
+		
 		ai_will_do = {
-			factor = 5
+			factor = 0
+			
+			modifier = {
+				add = 20 #Major Priority
+				AND = {
+					num_of_military_factories < 45
+					OR = {
+						has_government = maoism
+						has_government = radical_shiaism
+						has_government = Salafism
+						has_government = Salafism
+					}
+				}
+			}
 		}
 		
 		ai_research_weights = {
-			industry = 2.0
+			armor = -0.1
+			infantry_vehicles = -0.1
+			support_weapons = -0.1
+			land_doctrine = -0.1
 		}
 	}
 	
@@ -2293,7 +2796,7 @@ technologies = {
 		motorized_infantry = {
 			max_organisation = 10
 			default_morale = 0.1
-		}		
+		}
 		
 		path = {
 			leads_to_tech = continuous_offensive
@@ -2315,12 +2818,27 @@ technologies = {
 		}
 		
 		ai_will_do = {
-			factor = 2
+			factor = 0
+			
+			modifier = {
+				add = 20 #Major Priority
+				AND = {
+					num_of_military_factories < 45
+					OR = {
+						has_government = maoism
+						has_government = radical_shiaism
+						has_government = Salafism
+						has_government = Salafism
+					}
+				}
+			}
 		}
 		
 		ai_research_weights = {
-			industry = 2.0
-			cat_mechanized_equipment = 3.0
+			armor = -0.1
+			infantry_vehicles = -0.1
+			support_weapons = -0.1
+			land_doctrine = -0.1
 		}
 	}
 	
@@ -2350,11 +2868,27 @@ technologies = {
 		}
 		
 		ai_will_do = {
-			factor = 2
+			factor = 0
+			
+			modifier = {
+				add = 20 #Major Priority
+				AND = {
+					num_of_military_factories < 45
+					OR = {
+						has_government = maoism
+						has_government = radical_shiaism
+						has_government = Salafism
+						has_government = Salafism
+					}
+				}
+			}
 		}
 		
 		ai_research_weights = {
-			industry = 2.0
+			armor = -0.1
+			infantry_vehicles = -0.1
+			support_weapons = -0.1
+			land_doctrine = -0.1
 		}
 	}
 	
@@ -2363,7 +2897,7 @@ technologies = {
 		allow = {
 			NOT = { is_researching_technology = large_front_operations }
 			NOT = { has_tech = large_front_operations }
-		}	
+		}
 		
 		
 		#Increased Partisan effect on your land occupied by others
@@ -2394,11 +2928,27 @@ technologies = {
 		}
 		
 		ai_will_do = {
-			factor = 10
+			factor = 0
+			
+			modifier = {
+				add = 20 #Major Priority
+				AND = {
+					num_of_military_factories < 45
+					OR = {
+						has_government = maoism
+						has_government = radical_shiaism
+						has_government = Salafism
+						has_government = Salafism
+					}
+				}
+			}
 		}
 		
 		ai_research_weights = {
-			industry = 2.0
+			armor = -0.1
+			infantry_vehicles = -0.1
+			support_weapons = -0.1
+			land_doctrine = -0.1
 		}
 	}
 	
@@ -2430,11 +2980,27 @@ technologies = {
 		}
 		
 		ai_will_do = {
-			factor = 10
+			factor = 0
+			
+			modifier = {
+				add = 20 #Major Priority
+				AND = {
+					num_of_military_factories < 45
+					OR = {
+						has_government = maoism
+						has_government = radical_shiaism
+						has_government = Salafism
+						has_government = Salafism
+					}
+				}
+			}
 		}
 		
 		ai_research_weights = {
-			industry = 2.0
+			armor = -0.1
+			infantry_vehicles = -0.1
+			support_weapons = -0.1
+			land_doctrine = -0.1
 		}
 	}
 	
@@ -2468,11 +3034,27 @@ technologies = {
 		}
 		
 		ai_will_do = {
-			factor = 5
+			factor = 0
+			
+			modifier = {
+				add = 20 #Major Priority
+				AND = {
+					num_of_military_factories < 45
+					OR = {
+						has_government = maoism
+						has_government = radical_shiaism
+						has_government = Salafism
+						has_government = Salafism
+					}
+				}
+			}
 		}
 		
 		ai_research_weights = {
-			industry = 2.0
+			armor = -0.1
+			infantry_vehicles = -0.1
+			support_weapons = -0.1
+			land_doctrine = -0.1
 		}
 	}
 	
@@ -2507,12 +3089,27 @@ technologies = {
 		}
 		
 		ai_will_do = {
-			factor = 5
+			factor = 0
+			
+			modifier = {
+				add = 20 #Major Priority
+				AND = {
+					num_of_military_factories < 45
+					OR = {
+						has_government = maoism
+						has_government = radical_shiaism
+						has_government = Salafism
+						has_government = Salafism
+					}
+				}
+			}
 		}
 		
 		ai_research_weights = {
-			infantry_weapons = 1.0
-			industry = 2.0
+			armor = -0.1
+			infantry_vehicles = -0.1
+			support_weapons = -0.1
+			land_doctrine = -0.1
 		}
 	}
 	
@@ -2545,11 +3142,27 @@ technologies = {
 		}
 		
 		ai_will_do = {
-			factor = 2
+			factor = 0
+			
+			modifier = {
+				add = 20 #Major Priority
+				AND = {
+					num_of_military_factories < 45
+					OR = {
+						has_government = maoism
+						has_government = radical_shiaism
+						has_government = Salafism
+						has_government = Salafism
+					}
+				}
+			}
 		}
 		
 		ai_research_weights = {
-			industry = 2.0
+			armor = -0.1
+			infantry_vehicles = -0.1
+			support_weapons = -0.1
+			land_doctrine = -0.1
 		}
 	}
 	#new mobility land doctrines
@@ -2587,11 +3200,21 @@ technologies = {
 		}
 		
 		ai_will_do = {
-			factor = 2
+			factor = 0
+			
+			modifier = {
+				add = 20 #Major Priority
+				AND = {
+					date > 1947.1.1
+				}
+			}
 		}
 		
 		ai_research_weights = {
-			armor = 2.0
+			armor = -0.1
+			infantry_vehicles = -0.1
+			support_weapons = -0.1
+			land_doctrine = -0.1
 		}
 	}
 	#modernization of forward observers/
@@ -2605,7 +3228,7 @@ technologies = {
 		allow = {
 			NOT = { is_researching_technology = tide_breaker }
 			NOT = { has_tech = tide_breaker }
-		}			
+		}
 		doctrine = yes	
 		research_cost = 3
 		
@@ -2627,11 +3250,21 @@ technologies = {
 		}
 		
 		ai_will_do = {
-			factor = 2
+			factor = 0
+			
+			modifier = {
+				add = 20 #Major Priority
+				AND = {
+					date > 1951.1.1
+				}
+			}
 		}
 		
 		ai_research_weights = {
-			armor = 2.0
+			armor = -0.1
+			infantry_vehicles = -0.1
+			support_weapons = -0.1
+			land_doctrine = -0.1
 		}
 	}
 	nbc_armored_warfare = {
@@ -2642,7 +3275,7 @@ technologies = {
 
 		category_all_armor = {
 			default_morale = 0.1
-		}		
+		}
 		
 		doctrine = yes	
 		research_cost = 3
@@ -2664,11 +3297,21 @@ technologies = {
 		}
 		
 		ai_will_do = {
-			factor = 2
+			factor = 0
+			
+			modifier = {
+				add = 20 #Major Priority
+				AND = {
+					date > 1955.1.1
+				}
+			}
 		}
 		
 		ai_research_weights = {
-			armor = 2.0
+			armor = -0.1
+			infantry_vehicles = -0.1
+			support_weapons = -0.1
+			land_doctrine = -0.1
 		}
 	}
 	#MOMAR/ROAD Concept
@@ -2700,11 +3343,21 @@ technologies = {
 		}
 		
 		ai_will_do = {
-			factor = 2
+			factor = 0
+			
+			modifier = {
+				add = 20 #Major Priority
+				AND = {
+					date > 1960.1.1
+				}
+			}
 		}
 		
 		ai_research_weights = {
-			armor = 2.0
+			armor = -0.1
+			infantry_vehicles = -0.1
+			support_weapons = -0.1
+			land_doctrine = -0.1
 		}
 	}
 	#combined international/inter branch ops
@@ -2733,11 +3386,21 @@ technologies = {
 		}
 		
 		ai_will_do = {
-			factor = 2
+			factor = 0
+			
+			modifier = {
+				add = 20 #Major Priority
+				AND = {
+					date > 1967.1.1
+				}
+			}
 		}
 		
 		ai_research_weights = {
-			armor = 2.0
+			armor = -0.1
+			infantry_vehicles = -0.1
+			support_weapons = -0.1
+			land_doctrine = -0.1
 		}
 	}
 	#51 korea experience
@@ -2746,7 +3409,7 @@ technologies = {
 		allow = {
 			NOT = { is_researching_technology = massed_fires_on_call }
 			NOT = { has_tech = massed_fires_on_call }
-		}	
+		}
 		category_all_infantry = {
 			defense = 0.10
 		}
@@ -2773,11 +3436,21 @@ technologies = {
 		}
 		
 		ai_will_do = {
-			factor = 2
+			factor = 0
+			
+			modifier = {
+				add = 20 #Major Priority
+				AND = {
+					date > 1951.1.1
+				}
+			}
 		}
 		
 		ai_research_weights = {
-			armor = 2.0
+			armor = -0.1
+			infantry_vehicles = -0.1
+			support_weapons = -0.1
+			land_doctrine = -0.1
 		}
 	}
 	
@@ -2810,11 +3483,21 @@ technologies = {
 		}
 		
 		ai_will_do = {
-			factor = 2
+			factor = 0
+			
+			modifier = {
+				add = 20 #Major Priority
+				AND = {
+					date > 1955.1.1
+				}
+			}
 		}
 		
 		ai_research_weights = {
-			armor = 2.0
+			armor = -0.1
+			infantry_vehicles = -0.1
+			support_weapons = -0.1
+			land_doctrine = -0.1
 		}
 	}
 	#hueys lead the way ;)
@@ -2844,13 +3527,23 @@ technologies = {
 		}
 		
 		ai_will_do = {
-			factor = 2
+			factor = 0
+			
+			modifier = {
+				add = 20 #Major Priority
+				AND = {
+					date > 1960.1.1
+				}
+			}
 		}
 		
 		ai_research_weights = {
-			armor = 2.0
+			armor = -0.1
+			infantry_vehicles = -0.1
+			support_weapons = -0.1
+			land_doctrine = -0.1
 		}
-	}	
+	}
 	#full metal jacket
 	rural_pacification = {
 
@@ -2878,13 +3571,23 @@ technologies = {
 		}
 		
 		ai_will_do = {
-			factor = 2
+			factor = 0
+			
+			modifier = {
+				add = 20 #Major Priority
+				AND = {
+					date > 1967.1.1
+				}
+			}
 		}
 		
 		ai_research_weights = {
-			armor = 2.0
+			armor = -0.1
+			infantry_vehicles = -0.1
+			support_weapons = -0.1
+			land_doctrine = -0.1
 		}
-	}	
+	}
 	#regular OPFOR exercises
 	Opfor_excercises = {
 
@@ -2911,11 +3614,21 @@ technologies = {
 		}
 		
 		ai_will_do = {
-			factor = 2
+			factor = 0
+			
+			modifier = {
+				add = 20 #Major Priority
+				AND = {
+					date > 1974.1.1
+				}
+			}
 		}
 		
 		ai_research_weights = {
-			armor = 2.0
+			armor = -0.1
+			infantry_vehicles = -0.1
+			support_weapons = -0.1
+			land_doctrine = -0.1
 		}
 	}
 	#modern AirLand Battle
@@ -2949,11 +3662,21 @@ technologies = {
 		}
 		
 		ai_will_do = {
-			factor = 2
+			factor = 0
+			
+			modifier = {
+				add = 20 #Major Priority
+				AND = {
+					date > 1981.1.1
+				}
+			}
 		}
 		
 		ai_research_weights = {
-			armor = 2.0
+			armor = -0.1
+			infantry_vehicles = -0.1
+			support_weapons = -0.1
+			land_doctrine = -0.1
 		}
 	}
 	#dynamic density defence
@@ -2985,11 +3708,21 @@ technologies = {
 		}
 		
 		ai_will_do = {
-			factor = 2
+			factor = 0
+			
+			modifier = {
+				add = 20 #Major Priority
+				AND = {
+					date > 1985.1.1
+				}
+			}
 		}
 		
 		ai_research_weights = {
-			armor = 2.0
+			armor = -0.1
+			infantry_vehicles = -0.1
+			support_weapons = -0.1
+			land_doctrine = -0.1
 		}
 	}
 	#assault breaker doctrine/ recon-strike complex
@@ -3022,11 +3755,21 @@ technologies = {
 		}
 		
 		ai_will_do = {
-			factor = 2
+			factor = 0
+			
+			modifier = {
+				add = 20 #Major Priority
+				AND = {
+					date > 1989.1.1
+				}
+			}
 		}
 		
 		ai_research_weights = {
-			armor = 2.0
+			armor = -0.1
+			infantry_vehicles = -0.1
+			support_weapons = -0.1
+			land_doctrine = -0.1
 		}
 	}
 	#effect based operations (EBO)
@@ -3055,11 +3798,21 @@ technologies = {
 		}
 		
 		ai_will_do = {
-			factor = 2
+			factor = 0
+			
+			modifier = {
+				add = 20 #Major Priority
+				AND = {
+					date > 1991.1.1
+				}
+			}
 		}
 		
 		ai_research_weights = {
-			armor = 2.0
+			armor = -0.1
+			infantry_vehicles = -0.1
+			support_weapons = -0.1
+			land_doctrine = -0.1
 		}
 	}
 	#three block war
@@ -3091,11 +3844,21 @@ technologies = {
 		}
 		
 		ai_will_do = {
-			factor = 2
+			factor = 0
+			
+			modifier = {
+				add = 20 #Major Priority
+				AND = {
+					date > 1993.1.1
+				}
+			}
 		}
 		
 		ai_research_weights = {
-			armor = 2.0
+			armor = -0.1
+			infantry_vehicles = -0.1
+			support_weapons = -0.1
+			land_doctrine = -0.1
 		}
 	}
 	#urban warfare priority
@@ -3133,11 +3896,21 @@ technologies = {
 		}
 		
 		ai_will_do = {
-			factor = 2
+			factor = 0
+			
+			modifier = {
+				add = 20 #Major Priority
+				AND = {
+					date > 1997.1.1
+				}
+			}
 		}
 		
 		ai_research_weights = {
-			armor = 2.0
+			armor = -0.1
+			infantry_vehicles = -0.1
+			support_weapons = -0.1
+			land_doctrine = -0.1
 		}
 	}
 	#FSO
@@ -3146,7 +3919,7 @@ technologies = {
 		allow = {
 			NOT = { is_researching_technology = force_xxi }
 			NOT = { has_tech = force_xxi }
-		}		
+		}
 		land_reinforce_rate = 0.02
 		max_planning = 0.1
 		planning_speed = 0.1
@@ -3168,11 +3941,21 @@ technologies = {
 		}
 		
 		ai_will_do = {
-			factor = 2
+			factor = 0
+			
+			modifier = {
+				add = 20 #Major Priority
+				AND = {
+					date > 2000.1.1
+				}
+			}
 		}
 		
 		ai_research_weights = {
-			armor = 2.0
+			armor = -0.1
+			infantry_vehicles = -0.1
+			support_weapons = -0.1
+			land_doctrine = -0.1
 		}
 	}
 	#Force21 modernization
@@ -3182,7 +3965,7 @@ technologies = {
 		allow = {
 			NOT = { is_researching_technology = full_spectrum_operations }
 			NOT = { has_tech = full_spectrum_operations }
-		}		
+		}
 
 		land_reinforce_rate = 0.02
 		category_all_infantry = {
@@ -3209,11 +3992,21 @@ technologies = {
 		}
 		
 		ai_will_do = {
-			factor = 2
+			factor = 0
+			
+			modifier = {
+				add = 20 #Major Priority
+				AND = {
+					date > 2000.1.1
+				}
+			}
 		}
 		
 		ai_research_weights = {
-			armor = 2.0
+			armor = -0.1
+			infantry_vehicles = -0.1
+			support_weapons = -0.1
+			land_doctrine = -0.1
 		}
 	}
 	###
@@ -3245,11 +4038,21 @@ technologies = {
 		}
 		
 		ai_will_do = {
-			factor = 2
+			factor = 0
+			
+			modifier = {
+				add = 20 #Major Priority
+				AND = {
+					date > 1947.1.1
+				}
+			}
 		}
 		
 		ai_research_weights = {
-			artillery = 1.0
+			armor = -0.1
+			infantry_vehicles = -0.1
+			support_weapons = -0.1
+			land_doctrine = -0.1
 		}
 	}
 	Area_lockdown = {
@@ -3281,11 +4084,21 @@ technologies = {
 		}
 		
 		ai_will_do = {
-			factor = 2
+			factor = 0
+			
+			modifier = {
+				add = 20 #Major Priority
+				AND = {
+					date > 1951.1.1
+				}
+			}
 		}
 		
 		ai_research_weights = {
-			artillery = 1.0
+			armor = -0.1
+			infantry_vehicles = -0.1
+			support_weapons = -0.1
+			land_doctrine = -0.1
 		}
 	}
 	Rural_pacification2 = {
@@ -3319,11 +4132,21 @@ technologies = {
 		}
 		
 		ai_will_do = {
-			factor = 2
+			factor = 0
+			
+			modifier = {
+				add = 20 #Major Priority
+				AND = {
+					date > 1959.1.1
+				}
+			}
 		}
 		
 		ai_research_weights = {
-			artillery = 1.0
+			armor = -0.1
+			infantry_vehicles = -0.1
+			support_weapons = -0.1
+			land_doctrine = -0.1
 		}
 	}
 	frontier_presence = {
@@ -3346,7 +4169,7 @@ technologies = {
 		allow = {
 			NOT = { is_researching_technology = mass_motorization2 }
 			NOT = { has_tech = mass_motorization2 }
-		}						
+		}
 		doctrine = yes	
 		research_cost = 3
 		
@@ -3364,11 +4187,21 @@ technologies = {
 		}
 		
 		ai_will_do = {
-			factor = 2
+			factor = 0
+			
+			modifier = {
+				add = 20 #Major Priority
+				AND = {
+					date > 1965.1.1
+				}
+			}
 		}
 		
 		ai_research_weights = {
-			artillery = 1.0
+			armor = -0.1
+			infantry_vehicles = -0.1
+			support_weapons = -0.1
+			land_doctrine = -0.1
 		}
 	}
 	loss_exchange_ratio = {
@@ -3396,18 +4229,28 @@ technologies = {
 		}
 		
 		ai_will_do = {
-			factor = 2
+			factor = 0
+			
+			modifier = {
+				add = 20 #Major Priority
+				AND = {
+					date > 1969.1.1
+				}
+			}
 		}
 		
 		ai_research_weights = {
-			artillery = 1.0
+			armor = -0.1
+			infantry_vehicles = -0.1
+			support_weapons = -0.1
+			land_doctrine = -0.1
 		}
 	}
 	mass_motorization2 = {
 
 		category_all_infantry = {
 			max_organisation = 10
-		}	
+		}
 		
 		path = {
 			leads_to_tech = modern_branch_interoperability
@@ -3417,7 +4260,7 @@ technologies = {
 		allow = {
 			NOT = { is_researching_technology = frontier_presence }
 			NOT = { has_tech = frontier_presence }
-		}				
+		}
 		doctrine = yes	
 		research_cost = 3
 		
@@ -3435,11 +4278,21 @@ technologies = {
 		}
 		
 		ai_will_do = {
-			factor = 2
+			factor = 0
+			
+			modifier = {
+				add = 20 #Major Priority
+				AND = {
+					date > 1965.1.1
+				}
+			}
 		}
 		
 		ai_research_weights = {
-			artillery = 1.0
+			armor = -0.1
+			infantry_vehicles = -0.1
+			support_weapons = -0.1
+			land_doctrine = -0.1
 		}
 	}
 	modern_branch_interoperability = {
@@ -3468,11 +4321,21 @@ technologies = {
 		}
 		
 		ai_will_do = {
-			factor = 2
+			factor = 0
+			
+			modifier = {
+				add = 20 #Major Priority
+				AND = {
+					date > 1969.1.1
+				}
+			}
 		}
 		
 		ai_research_weights = {
-			artillery = 1.0
+			armor = -0.1
+			infantry_vehicles = -0.1
+			support_weapons = -0.1
+			land_doctrine = -0.1
 		}
 	}
 	overseas_officer_training = {
@@ -3486,7 +4349,7 @@ technologies = {
 		path = {
 			leads_to_tech = vertical_envelopment
 			research_cost_coeff = 1
-		}		
+		}
 		
 				
 		doctrine = yes	
@@ -3505,11 +4368,21 @@ technologies = {
 		}
 		
 		ai_will_do = {
-			factor = 2
+			factor = 0
+			
+			modifier = {
+				add = 20 #Major Priority
+				AND = {
+					date > 1973.1.1
+				}
+			}
 		}
 		
 		ai_research_weights = {
-			artillery = 1.0
+			armor = -0.1
+			infantry_vehicles = -0.1
+			support_weapons = -0.1
+			land_doctrine = -0.1
 		}
 	}
 	infantry_primacy = {
@@ -3524,7 +4397,7 @@ technologies = {
 		allow = {
 			NOT = { is_researching_technology = vertical_envelopment }
 			NOT = { has_tech = vertical_envelopment }
-		}				
+		}
 		path = {
 			leads_to_tech = culture_of_fear
 			research_cost_coeff = 1
@@ -3546,11 +4419,21 @@ technologies = {
 		}
 		
 		ai_will_do = {
-			factor = 2
+			factor = 0
+			
+			modifier = {
+				add = 20 #Major Priority
+				AND = {
+					date > 1977.1.1
+				}
+			}
 		}
 		
 		ai_research_weights = {
-			artillery = 1.0
+			armor = -0.1
+			infantry_vehicles = -0.1
+			support_weapons = -0.1
+			land_doctrine = -0.1
 		}
 	}
 	culture_of_fear = {
@@ -3579,11 +4462,21 @@ technologies = {
 		}
 		
 		ai_will_do = {
-			factor = 2
+			factor = 0
+			
+			modifier = {
+				add = 20 #Major Priority
+				AND = {
+					date > 1981.1.1
+				}
+			}
 		}
 		
 		ai_research_weights = {
-			artillery = 1.0
+			armor = -0.1
+			infantry_vehicles = -0.1
+			support_weapons = -0.1
+			land_doctrine = -0.1
 		}
 	}
 	vertical_envelopment = {
@@ -3596,7 +4489,7 @@ technologies = {
 		allow = {
 			NOT = { is_researching_technology = infantry_primacy }
 			NOT = { has_tech = infantry_primacy }
-		}			
+		}
 		path = {
 			leads_to_tech = peacekeeping_operations
 			research_cost_coeff = 1
@@ -3618,11 +4511,21 @@ technologies = {
 		}
 		
 		ai_will_do = {
-			factor = 2
+			factor = 0
+			
+			modifier = {
+				add = 20 #Major Priority
+				AND = {
+					date > 1977.1.1
+				}
+			}
 		}
 		
 		ai_research_weights = {
-			artillery = 1.0
+			armor = -0.1
+			infantry_vehicles = -0.1
+			support_weapons = -0.1
+			land_doctrine = -0.1
 		}
 	}
 	peacekeeping_operations = {
@@ -3653,11 +4556,21 @@ technologies = {
 		}
 		
 		ai_will_do = {
-			factor = 2
+			factor = 0
+			
+			modifier = {
+				add = 20 #Major Priority
+				AND = {
+					date > 1981.1.1
+				}
+			}
 		}
 		
 		ai_research_weights = {
-			artillery = 1.0
+			armor = -0.1
+			infantry_vehicles = -0.1
+			support_weapons = -0.1
+			land_doctrine = -0.1
 		}
 	}
 	professional_paramilitaries = {
@@ -3690,11 +4603,21 @@ technologies = {
 		}
 		
 		ai_will_do = {
-			factor = 2
+			factor = 0
+			
+			modifier = {
+				add = 20 #Major Priority
+				AND = {
+					date > 1986.1.1
+				}
+			}
 		}
 		
 		ai_research_weights = {
-			artillery = 1.0
+			armor = -0.1
+			infantry_vehicles = -0.1
+			support_weapons = -0.1
+			land_doctrine = -0.1
 		}
 	}
 	international_arms_procurement = {
@@ -3724,11 +4647,21 @@ technologies = {
 		}
 		
 		ai_will_do = {
-			factor = 2
+			factor = 0
+			
+			modifier = {
+				add = 20 #Major Priority
+				AND = {
+					date > 1991.1.1
+				}
+			}
 		}
 		
 		ai_research_weights = {
-			artillery = 1.0
+			armor = -0.1
+			infantry_vehicles = -0.1
+			support_weapons = -0.1
+			land_doctrine = -0.1
 		}
 	}
 	private_military_contractors = {
@@ -3759,16 +4692,26 @@ technologies = {
 		}
 		
 		ai_will_do = {
-			factor = 2
+			factor = 0
+			
+			modifier = {
+				add = 20 #Major Priority
+				AND = {
+					date > 1994.1.1
+				}
+			}
 		}
 		
 		ai_research_weights = {
-			artillery = 1.0
+			armor = -0.1
+			infantry_vehicles = -0.1
+			support_weapons = -0.1
+			land_doctrine = -0.1
 		}
 	}
 	#represents certain second world countries where the military creates their own industrial conglomerates.
 	army_industry_chiefdoms = {
-		#on_research_complete = { add_to_variable = { resourceEfficiencyGain = 0.10  }	}
+		#on_research_complete = { add_to_variable = { resourceEfficiencyGain = 0.10  }}
 		production_speed_buildings_factor = 0.10
 		industrial_capacity_factory = 0.10
 		
@@ -3793,51 +4736,28 @@ technologies = {
 		}
 		
 		ai_will_do = {
-			factor = 2
+			factor = 0
+			
+			modifier = {
+				add = 20 #Major Priority
+				AND = {
+					date > 1997.1.1
+				}
+			}
 		}
 		
 		ai_research_weights = {
-			artillery = 1.0
-		}
-	}
-	regionally_aligned_forces = {
-	
-		max_planning = 0.20
-		planning_speed = 0.10
-		
-		path = {
-			leads_to_tech = xxx
-			research_cost_coeff = 1
-		}
-				
-		doctrine = yes	
-		research_cost = 3
-		
-		start_year = 2000
-		
-		categories = {
-			land_doctrine
-			cat_superior_firepower
-		}
-		
-		folder = {
-			name = land_doctrine_folder
-			position = { x = 0 y = 44 }
-		}
-		
-		ai_will_do = {
-			factor = 2
-		}
-		
-		ai_research_weights = {
-			artillery = 1.0
+			armor = -0.1
+			infantry_vehicles = -0.1
+			support_weapons = -0.1
+			land_doctrine = -0.1
 		}
 	}
 	###Comintern tree
 	###leads from: continuous_offensive###
 	labour_armies = {
 
-		#on_research_complete = { add_to_variable = { resourceEfficiencyGain = 0.10  }	}
+		#on_research_complete = { add_to_variable = { resourceEfficiencyGain = 0.10  }}
 		production_speed_buildings_factor = 0.05
 		
 		path = {
@@ -3861,12 +4781,21 @@ technologies = {
 		}
 		
 		ai_will_do = {
-			factor = 2
+			factor = 0
+			
+			modifier = {
+				add = 20 #Major Priority
+				AND = {
+					date > 1947.1.1
+				}
+			}
 		}
 		
 		ai_research_weights = {
-			industry = 2.0
-			cat_mechanized_equipment = 3.0
+			armor = -0.1
+			infantry_vehicles = -0.1
+			support_weapons = -0.1
+			land_doctrine = -0.1
 		}
 	}
 	mass_motorstrelki = {
@@ -3902,12 +4831,21 @@ technologies = {
 		}
 		
 		ai_will_do = {
-			factor = 2
+			factor = 0
+			
+			modifier = {
+				add = 20 #Major Priority
+				AND = {
+					date > 1951.1.1
+				}
+			}
 		}
 		
 		ai_research_weights = {
-			industry = 2.0
-			cat_mechanized_equipment = 3.0
+			armor = -0.1
+			infantry_vehicles = -0.1
+			support_weapons = -0.1
+			land_doctrine = -0.1
 		}
 	}
 	through_the_cloud = {
@@ -3935,12 +4873,21 @@ technologies = {
 		}
 		
 		ai_will_do = {
-			factor = 2
+			factor = 0
+			
+			modifier = {
+				add = 20 #Major Priority
+				AND = {
+					date > 1954.1.1
+				}
+			}
 		}
 		
 		ai_research_weights = {
-			industry = 2.0
-			cat_mechanized_equipment = 3.0
+			armor = -0.1
+			infantry_vehicles = -0.1
+			support_weapons = -0.1
+			land_doctrine = -0.1
 		}
 	}
 	permanent_war_economy = {
@@ -3970,12 +4917,21 @@ technologies = {
 		}
 		
 		ai_will_do = {
-			factor = 2
+			factor = 0
+			
+			modifier = {
+				add = 20 #Major Priority
+				AND = {
+					date > 1958.1.1
+				}
+			}
 		}
 		
 		ai_research_weights = {
-			industry = 2.0
-			cat_mechanized_equipment = 3.0
+			armor = -0.1
+			infantry_vehicles = -0.1
+			support_weapons = -0.1
+			land_doctrine = -0.1
 		}
 	}
 	shadow_divisional_system = {
@@ -4005,12 +4961,21 @@ technologies = {
 		}
 		
 		ai_will_do = {
-			factor = 2
+			factor = 0
+			
+			modifier = {
+				add = 20 #Major Priority
+				AND = {
+					date > 1963.1.1
+				}
+			}
 		}
 		
 		ai_research_weights = {
-			industry = 2.0
-			cat_mechanized_equipment = 3.0
+			armor = -0.1
+			infantry_vehicles = -0.1
+			support_weapons = -0.1
+			land_doctrine = -0.1
 		}
 	}
 	reconnaissance_in_force = {
@@ -4040,12 +5005,21 @@ technologies = {
 		}
 		
 		ai_will_do = {
-			factor = 2
+			factor = 0
+			
+			modifier = {
+				add = 20 #Major Priority
+				AND = {
+					date > 1968.1.1
+				}
+			}
 		}
 		
 		ai_research_weights = {
-			industry = 2.0
-			cat_mechanized_equipment = 3.0
+			armor = -0.1
+			infantry_vehicles = -0.1
+			support_weapons = -0.1
+			land_doctrine = -0.1
 		}
 	}
 	maskirovka = {
@@ -4078,12 +5052,21 @@ technologies = {
 		}
 		
 		ai_will_do = {
-			factor = 2
+			factor = 0
+			
+			modifier = {
+				add = 20 #Major Priority
+				AND = {
+					date > 1973.1.1
+				}
+			}
 		}
 		
 		ai_research_weights = {
-			industry = 2.0
-			cat_mechanized_equipment = 3.0
+			armor = -0.1
+			infantry_vehicles = -0.1
+			support_weapons = -0.1
+			land_doctrine = -0.1
 		}
 	}
 	flying_tank_doctrine = {
@@ -4116,12 +5099,21 @@ technologies = {
 		}
 		
 		ai_will_do = {
-			factor = 2
+			factor = 0
+			
+			modifier = {
+				add = 20 #Major Priority
+				AND = {
+					date > 1978.1.1
+				}
+			}
 		}
 		
 		ai_research_weights = {
-			industry = 2.0
-			cat_mechanized_equipment = 3.0
+			armor = -0.1
+			infantry_vehicles = -0.1
+			support_weapons = -0.1
+			land_doctrine = -0.1
 		}
 	}
 	operational_maneuver_group = {
@@ -4152,12 +5144,21 @@ technologies = {
 		}
 		
 		ai_will_do = {
-			factor = 2
+			factor = 0
+			
+			modifier = {
+				add = 20 #Major Priority
+				AND = {
+					date > 1982.1.1
+				}
+			}
 		}
 		
 		ai_research_weights = {
-			industry = 2.0
-			cat_mechanized_equipment = 3.0
+			armor = -0.1
+			infantry_vehicles = -0.1
+			support_weapons = -0.1
+			land_doctrine = -0.1
 		}
 	}
 	cold_start_doctrine = {
@@ -4185,12 +5186,21 @@ technologies = {
 		}
 		
 		ai_will_do = {
-			factor = 2
+			factor = 0
+			
+			modifier = {
+				add = 20 #Major Priority
+				AND = {
+					date > 1985.1.1
+				}
+			}
 		}
 		
 		ai_research_weights = {
-			industry = 2.0
-			cat_mechanized_equipment = 3.0
+			armor = -0.1
+			infantry_vehicles = -0.1
+			support_weapons = -0.1
+			land_doctrine = -0.1
 		}
 	}
 	recon_strike_complex = {
@@ -4224,12 +5234,21 @@ technologies = {
 		}
 		
 		ai_will_do = {
-			factor = 2
+			factor = 0
+			
+			modifier = {
+				add = 20 #Major Priority
+				AND = {
+					date > 1992.1.1
+				}
+			}
 		}
 		
 		ai_research_weights = {
-			industry = 2.0
-			cat_mechanized_equipment = 3.0
+			armor = -0.1
+			infantry_vehicles = -0.1
+			support_weapons = -0.1
+			land_doctrine = -0.1
 		}
 	}
 	urban_envelopment_doctrine = {
@@ -4262,12 +5281,21 @@ technologies = {
 		}
 		
 		ai_will_do = {
-			factor = 2
+			factor = 0
+			
+			modifier = {
+				add = 20 #Major Priority
+				AND = {
+					date > 1998.1.1
+				}
+			}
 		}
 		
 		ai_research_weights = {
-			industry = 2.0
-			cat_mechanized_equipment = 3.0
+			armor = -0.1
+			infantry_vehicles = -0.1
+			support_weapons = -0.1
+			land_doctrine = -0.1
 		}
 	}
 	#second sub tree
@@ -4301,12 +5329,21 @@ technologies = {
 		}
 		
 		ai_will_do = {
-			factor = 2
+			factor = 0
+			
+			modifier = {
+				add = 20 #Major Priority
+				AND = {
+					date > 1978.1.1
+				}
+			}
 		}
 		
 		ai_research_weights = {
-			industry = 2.0
-			cat_mechanized_equipment = 3.0
+			armor = -0.1
+			infantry_vehicles = -0.1
+			support_weapons = -0.1
+			land_doctrine = -0.1
 		}
 	}
 	republican_guard_doctrine = {
@@ -4340,12 +5377,21 @@ technologies = {
 		}
 		
 		ai_will_do = {
-			factor = 2
+			factor = 0
+			
+			modifier = {
+				add = 20 #Major Priority
+				AND = {
+					date > 1982.1.1
+				}
+			}
 		}
 		
 		ai_research_weights = {
-			industry = 2.0
-			cat_mechanized_equipment = 3.0
+			armor = -0.1
+			infantry_vehicles = -0.1
+			support_weapons = -0.1
+			land_doctrine = -0.1
 		}
 	}
 	#iran-iraq scud barrages
@@ -4377,12 +5423,21 @@ technologies = {
 		}
 		
 		ai_will_do = {
-			factor = 2
+			factor = 0
+			
+			modifier = {
+				add = 20 #Major Priority
+				AND = {
+					date > 1985.1.1
+				}
+			}
 		}
 		
 		ai_research_weights = {
-			industry = 2.0
-			cat_mechanized_equipment = 3.0
+			armor = -0.1
+			infantry_vehicles = -0.1
+			support_weapons = -0.1
+			land_doctrine = -0.1
 		}
 	}
 	war_under_hightech_conditions = {
@@ -4416,12 +5471,21 @@ technologies = {
 		}
 		
 		ai_will_do = {
-			factor = 2
+			factor = 0
+			
+			modifier = {
+				add = 20 #Major Priority
+				AND = {
+					date > 1992.1.1
+				}
+			}
 		}
 		
 		ai_research_weights = {
-			industry = 2.0
-			cat_mechanized_equipment = 3.0
+			armor = -0.1
+			infantry_vehicles = -0.1
+			support_weapons = -0.1
+			land_doctrine = -0.1
 		}
 	}
 	flexible_response_doctrine = {
@@ -4457,12 +5521,21 @@ technologies = {
 		}
 		
 		ai_will_do = {
-			factor = 2
+			factor = 0
+			
+			modifier = {
+				add = 20 #Major Priority
+				AND = {
+					date > 1998.1.1
+				}
+			}
 		}
 		
 		ai_research_weights = {
-			industry = 2.0
-			cat_mechanized_equipment = 3.0
+			armor = -0.1
+			infantry_vehicles = -0.1
+			support_weapons = -0.1
+			land_doctrine = -0.1
 		}
 	}
 	assault_breaker_negation = {
@@ -4487,12 +5560,21 @@ technologies = {
 		}
 		
 		ai_will_do = {
-			factor = 2
+			factor = 0
+			
+			modifier = {
+				add = 20 #Major Priority
+				AND = {
+					date > 2000.1.1
+				}
+			}
 		}
 		
 		ai_research_weights = {
-			industry = 2.0
-			cat_mechanized_equipment = 3.0
+			armor = -0.1
+			infantry_vehicles = -0.1
+			support_weapons = -0.1
+			land_doctrine = -0.1
 		}
 	}
 	#asymmetrical tree
@@ -4523,11 +5605,21 @@ technologies = {
 		}
 		
 		ai_will_do = {
-			factor = 10
+			factor = 0
+			
+			modifier = {
+				add = 20 #Major Priority
+				AND = {
+					date > 1947.1.1
+				}
+			}
 		}
 		
 		ai_research_weights = {
-			industry = 2.0
+			armor = -0.1
+			infantry_vehicles = -0.1
+			support_weapons = -0.1
+			land_doctrine = -0.1
 		}
 	}
 	short_attack = {
@@ -4563,11 +5655,21 @@ technologies = {
 		}
 		
 		ai_will_do = {
-			factor = 10
+			factor = 0
+			
+			modifier = {
+				add = 20 #Major Priority
+				AND = {
+					date > 1951.1.1
+				}
+			}
 		}
 		
 		ai_research_weights = {
-			industry = 2.0
+			armor = -0.1
+			infantry_vehicles = -0.1
+			support_weapons = -0.1
+			land_doctrine = -0.1
 		}
 	}
 	indoctrination_methods = {
@@ -4578,7 +5680,7 @@ technologies = {
 		allow = {
 			NOT = { is_researching_technology = natural_defences }
 			NOT = { has_tech = natural_defences }
-		}		
+		}
 		path = {
 			leads_to_tech = tunnel_warfare
 			research_cost_coeff = 1
@@ -4600,11 +5702,21 @@ technologies = {
 		}
 		
 		ai_will_do = {
-			factor = 10
+			factor = 0
+			
+			modifier = {
+				add = 20 #Major Priority
+				AND = {
+					date > 1958.1.1
+				}
+			}
 		}
 		
 		ai_research_weights = {
-			industry = 2.0
+			armor = -0.1
+			infantry_vehicles = -0.1
+			support_weapons = -0.1
+			land_doctrine = -0.1
 		}
 	}
 	tunnel_warfare = {
@@ -4632,11 +5744,21 @@ technologies = {
 		}
 		
 		ai_will_do = {
-			factor = 10
+			factor = 0
+			
+			modifier = {
+				add = 20 #Major Priority
+				AND = {
+					date > 1965.1.1
+				}
+			}
 		}
 		
 		ai_research_weights = {
-			industry = 2.0
+			armor = -0.1
+			infantry_vehicles = -0.1
+			support_weapons = -0.1
+			land_doctrine = -0.1
 		}
 	}
 	psychological_warfare = {
@@ -4664,11 +5786,21 @@ technologies = {
 		}
 		
 		ai_will_do = {
-			factor = 10
+			factor = 0
+			
+			modifier = {
+				add = 20 #Major Priority
+				AND = {
+					date > 1970.1.1
+				}
+			}
 		}
 		
 		ai_research_weights = {
-			industry = 2.0
+			armor = -0.1
+			infantry_vehicles = -0.1
+			support_weapons = -0.1
+			land_doctrine = -0.1
 		}
 	}
 	hugging_the_belt = {
@@ -4697,11 +5829,21 @@ technologies = {
 		}
 		
 		ai_will_do = {
-			factor = 10
+			factor = 0
+			
+			modifier = {
+				add = 20 #Major Priority
+				AND = {
+					date > 1974.1.1
+				}
+			}
 		}
 		
 		ai_research_weights = {
-			industry = 2.0
+			armor = -0.1
+			infantry_vehicles = -0.1
+			support_weapons = -0.1
+			land_doctrine = -0.1
 		}
 	}
 	focalism_doctrine = {
@@ -4731,11 +5873,21 @@ technologies = {
 		}
 		
 		ai_will_do = {
-			factor = 10
+			factor = 0
+			
+			modifier = {
+				add = 20 #Major Priority
+				AND = {
+					date > 1979.1.1
+				}
+			}
 		}
 		
 		ai_research_weights = {
-			industry = 2.0
+			armor = -0.1
+			infantry_vehicles = -0.1
+			support_weapons = -0.1
+			land_doctrine = -0.1
 		}
 	}
 	clandestine_cell_system = {
@@ -4767,11 +5919,21 @@ technologies = {
 		}
 		
 		ai_will_do = {
-			factor = 10
+			factor = 0
+			
+			modifier = {
+				add = 20 #Major Priority
+				AND = {
+					date > 1982.1.1
+				}
+			}
 		}
 		
 		ai_research_weights = {
-			industry = 2.0
+			armor = -0.1
+			infantry_vehicles = -0.1
+			support_weapons = -0.1
+			land_doctrine = -0.1
 		}
 	}
 	#second tree
@@ -4785,7 +5947,7 @@ technologies = {
 		allow = {
 			NOT = { is_researching_technology = indoctrination_methods }
 			NOT = { has_tech = indoctrination_methods }
-		}				
+		}
 		path = {
 			leads_to_tech = civil_resistance
 			research_cost_coeff = 1
@@ -4807,11 +5969,21 @@ technologies = {
 		}
 		
 		ai_will_do = {
-			factor = 10
+			factor = 0
+			
+			modifier = {
+				add = 20 #Major Priority
+				AND = {
+					date > 1958.1.1
+				}
+			}
 		}
 		
 		ai_research_weights = {
-			industry = 2.0
+			armor = -0.1
+			infantry_vehicles = -0.1
+			support_weapons = -0.1
+			land_doctrine = -0.1
 		}
 	}
 	civil_resistance = {
@@ -4840,11 +6012,21 @@ technologies = {
 		}
 		
 		ai_will_do = {
-			factor = 10
+			factor = 0
+			
+			modifier = {
+				add = 20 #Major Priority
+				AND = {
+					date > 1965.1.1
+				}
+			}
 		}
 		
 		ai_research_weights = {
-			industry = 2.0
+			armor = -0.1
+			infantry_vehicles = -0.1
+			support_weapons = -0.1
+			land_doctrine = -0.1
 		}
 	}
 	overwhelming_attacks = {
@@ -4872,11 +6054,21 @@ technologies = {
 		}
 		
 		ai_will_do = {
-			factor = 10
+			factor = 0
+			
+			modifier = {
+				add = 20 #Major Priority
+				AND = {
+					date > 1970.1.1
+				}
+			}
 		}
 		
 		ai_research_weights = {
-			industry = 2.0
+			armor = -0.1
+			infantry_vehicles = -0.1
+			support_weapons = -0.1
+			land_doctrine = -0.1
 		}
 	}
 	urban_shield_doctrine = {
@@ -4907,15 +6099,25 @@ technologies = {
 		}
 		
 		ai_will_do = {
-			factor = 10
+			factor = 0
+			
+			modifier = {
+				add = 20 #Major Priority
+				AND = {
+					date > 1974.1.1
+				}
+			}
 		}
 		
 		ai_research_weights = {
-			industry = 2.0
+			armor = -0.1
+			infantry_vehicles = -0.1
+			support_weapons = -0.1
+			land_doctrine = -0.1
 		}
 	}
 	army_industry_chiefdoms2 = {
-		#on_research_complete = { add_to_variable = { resourceEfficiencyGain = 0.10  }	}
+		#on_research_complete = { add_to_variable = { resourceEfficiencyGain = 0.10  }}
 		production_speed_buildings_factor = 0.10
 		
 		industrial_capacity_factory = 0.10
@@ -4941,11 +6143,21 @@ technologies = {
 		}
 		
 		ai_will_do = {
-			factor = 10
+			factor = 0
+			
+			modifier = {
+				add = 20 #Major Priority
+				AND = {
+					date > 1979.1.1
+				}
+			}
 		}
 		
 		ai_research_weights = {
-			industry = 2.0
+			armor = -0.1
+			infantry_vehicles = -0.1
+			support_weapons = -0.1
+			land_doctrine = -0.1
 		}
 	}
 	national_military_economic_complex = {
@@ -4974,11 +6186,21 @@ technologies = {
 		}
 		
 		ai_will_do = {
-			factor = 10
+			factor = 0
+			
+			modifier = {
+				add = 20 #Major Priority
+				AND = {
+					date > 1982.1.1
+				}
+			}
 		}
 		
 		ai_research_weights = {
-			industry = 2.0
+			armor = -0.1
+			infantry_vehicles = -0.1
+			support_weapons = -0.1
+			land_doctrine = -0.1
 		}
 	}
 	martyrdom_doctrine = {
@@ -5010,11 +6232,21 @@ technologies = {
 		}
 		
 		ai_will_do = {
-			factor = 10
+			factor = 0
+			
+			modifier = {
+				add = 20 #Major Priority
+				AND = {
+					date > 1985.1.1
+				}
+			}
 		}
 		
 		ai_research_weights = {
-			industry = 2.0
+			armor = -0.1
+			infantry_vehicles = -0.1
+			support_weapons = -0.1
+			land_doctrine = -0.1
 		}
 	}
 	long_range_mass_fires2 = {
@@ -5045,11 +6277,21 @@ technologies = {
 		}
 		
 		ai_will_do = {
-			factor = 10
+			factor = 0
+			
+			modifier = {
+				add = 20 #Major Priority
+				AND = {
+					date > 1989.1.1
+				}
+			}
 		}
 		
 		ai_research_weights = {
-			industry = 2.0
+			armor = -0.1
+			infantry_vehicles = -0.1
+			support_weapons = -0.1
+			land_doctrine = -0.1
 		}
 	}
 	forth_generation_warfare = {
@@ -5081,11 +6323,21 @@ technologies = {
 		}
 		
 		ai_will_do = {
-			factor = 10
+			factor = 0
+			
+			modifier = {
+				add = 20 #Major Priority
+				AND = {
+					date > 1994.1.1
+				}
+			}
 		}
 		
 		ai_research_weights = {
-			industry = 2.0
+			armor = -0.1
+			infantry_vehicles = -0.1
+			support_weapons = -0.1
+			land_doctrine = -0.1
 		}
 	}
 	independent_cell_swarming = {
@@ -5113,12 +6365,21 @@ technologies = {
 		}
 		
 		ai_will_do = {
-			factor = 10
+			factor = 0
+			
+			modifier = {
+				add = 20 #Major Priority
+				AND = {
+					date > 1999.1.1
+				}
+			}
 		}
 		
 		ai_research_weights = {
-			industry = 2.0
+			armor = -0.1
+			infantry_vehicles = -0.1
+			support_weapons = -0.1
+			land_doctrine = -0.1
 		}
 	}
-		
 }

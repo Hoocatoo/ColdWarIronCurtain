@@ -11,7 +11,7 @@ oob = "KAG_1949"
 if = {
 	limit = { has_dlc = "Man the Guns"}
 	set_technology = {
-		ww_detection = 1
+		detection_ww = 1
 		ww_armaments = 1
 
 		ww_screens = 1
@@ -123,6 +123,7 @@ set_convoys = 0
 create_country_leader = {
 	name = "Moïse Tshombe"
 	picture = "Moise_Tshombe.dds"
+	desc = POLITICS_TSHOMBE_DESC
 	ideology = nationalist_ideology
 	traits = {
 		successful_african_businessman

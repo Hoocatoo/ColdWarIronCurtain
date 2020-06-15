@@ -35,22 +35,20 @@ technologies = {
 		}
 		
 		research_cost = 1.5
-
 		start_year = 1935
-		
 		folder = {
 			name = artillery_folder
 			position = { x = 0 y = 0 }
-		}
-		
-		ai_will_do = {
-			factor = 1000
 		}
 		
 		categories = {
 			support_weapons
 			support_anti_air
 			support_autocannon
+		}
+		
+		ai_will_do = {
+			factor = 5000
 		}
 	}
 	
@@ -78,6 +76,9 @@ technologies = {
 		enable_equipment_modules = { 
 			ship_AA_gun_2
 		}
+		on_research_complete = {
+			custom_effect_tooltip = artillery_autocannon_2_tt
+		}
 		
 		research_cost = 1.5
 		
@@ -93,20 +94,28 @@ technologies = {
 			position = { x = 0 y = 6 }
 		}
 		
-		ai_will_do = {
-			factor = 6
-			
-			modifier = {
-				factor = 10
-				date > "1965.1.1"
-			}
-			
-		}
-		
 		categories = {
 			support_weapons
 			support_anti_air
 			support_autocannon
+		}
+		
+		ai_will_do = {
+			factor = 0
+			
+			modifier = {
+				add = 20 #Major Priority
+				AND = {
+					date > 1950.1.1
+				}
+			}
+		}
+		
+		ai_research_weights = {
+			armor = -0.1
+			infantry_vehicles = -0.1
+			support_weapons = -0.1
+			land_doctrine = -0.1
 		}
 	}
 	
@@ -150,20 +159,28 @@ technologies = {
 			position = { x = 0 y = 12 }
 		}
 		
-		ai_will_do = {
-			factor = 6
-			
-			modifier = {
-				factor = 10
-				date > "1980.1.1"
-			}
-			
-		}
-		
 		categories = {
 			support_weapons
 			support_anti_air
 			support_autocannon
+		}
+		
+		ai_will_do = {
+			factor = 0
+			
+			modifier = {
+				add = 10
+				AND = {
+					date > 1965.1.1
+				}
+			}
+		}
+		
+		ai_research_weights = {
+			armor = -0.1
+			infantry_vehicles = -0.1
+			support_weapons = -0.1
+			land_doctrine = -0.1
 		}
 	}
 	
@@ -191,6 +208,9 @@ technologies = {
 		enable_equipment_modules = { 
 			ship_AA_gun_4
 		}
+		on_research_complete = {
+			custom_effect_tooltip = artillery_autocannon_4_tt
+		}
 		
 		research_cost = 1.5
 		
@@ -207,20 +227,28 @@ technologies = {
 			position = { x = 0 y = 18 }
 		}
 		
-		ai_will_do = {
-			factor = 6
-			
-			modifier = {
-				factor = 10
-				date > "1995.1.1"
-			}
-			
-		}
-		
 		categories = {
 			support_weapons
 			support_anti_air
 			support_autocannon
+		}
+		
+		ai_will_do = {
+			factor = 0
+			
+			modifier = {
+				add = 10
+				AND = {
+					date > 1980.1.1
+				}
+			}
+		}
+		
+		ai_research_weights = {
+			armor = -0.1
+			infantry_vehicles = -0.1
+			support_weapons = -0.1
+			land_doctrine = -0.1
 		}
 	}
 	
@@ -264,19 +292,28 @@ technologies = {
 			position = { x = 0 y = 24 }
 		}
 		
-		ai_will_do = {
-			factor = 6
-			
-			modifier = {
-				factor = 10
-				date > "2010.1.1"
-			}
-		}
-		
 		categories = {
 			support_weapons
 			support_anti_air
 			support_autocannon
+		}
+		
+		ai_will_do = {
+			factor = 0
+			
+			modifier = {
+				add = 10
+				AND = {
+					date > 1995.1.1
+				}
+			}
+		}
+		
+		ai_research_weights = {
+			armor = -0.1
+			infantry_vehicles = -0.1
+			support_weapons = -0.1
+			land_doctrine = -0.1
 		}
 	}
 	
@@ -300,7 +337,7 @@ technologies = {
 		}
 		
 		ai_will_do = {
-			factor = 1000
+			factor = 5000
 		}
 		
 		categories = {
@@ -330,25 +367,30 @@ technologies = {
 			hardware_I = 1
 		}
 		
-		ai_will_do = {
-			factor = 4
-			
-			modifier = {
-				factor = 5
-				date > "1970.1.1"
-			}
-			
-			modifier = {
-				factor = 0
-				num_of_military_factories < 10
-			}
-		}
-		
 		categories = {
 			support_weapons
 			vehicles
 			support_anti_air
 			support_autocannon
+		}
+		
+		ai_will_do = {
+			factor = 0
+			
+			modifier = {
+				add = 10
+				AND = {
+					date > 1935.1.1
+					num_of_military_factories > 15
+				}
+			}
+		}
+		
+		ai_research_weights = {
+			armor = -0.1
+			infantry_vehicles = -0.1
+			support_weapons = -0.1
+			land_doctrine = -0.1
 		}
 	}
 	
@@ -371,25 +413,30 @@ technologies = {
 			position = { x = 0 y = 14 }
 		}
 		
-		ai_will_do = {
-			factor = 4
-			
-			modifier = {
-				factor = 5
-				date > "1985.1.1"
-			}
-			
-			modifier = {
-				factor = 0
-				num_of_military_factories < 10
-			}
-		}
-		
 		categories = {
 			support_weapons
 			vehicles
 			support_anti_air
 			support_autocannon
+		}
+		
+		ai_will_do = {
+			factor = 0
+			
+			modifier = {
+				add = 10
+				AND = {
+					date > 1970.1.1
+					num_of_military_factories > 15
+				}
+			}
+		}
+		
+		ai_research_weights = {
+			armor = -0.1
+			infantry_vehicles = -0.1
+			support_weapons = -0.1
+			land_doctrine = -0.1
 		}
 	}
 	
@@ -412,25 +459,30 @@ technologies = {
 			position = { x = 0 y = 20 }
 		}
 		
-		ai_will_do = {
-			factor = 4
-			
-			modifier = {
-				factor = 5
-				date > "2000.1.1"
-			}
-
-			modifier = {
-				factor = 0
-				num_of_military_factories < 10
-			}
-		}
-		
 		categories = {
 			support_weapons
 			vehicles
 			support_anti_air
 			support_autocannon
+		}
+		
+		ai_will_do = {
+			factor = 0
+			
+			modifier = {
+				add = 10
+				AND = {
+					date > 1985.1.1
+					num_of_military_factories > 15
+				}
+			}
+		}
+		
+		ai_research_weights = {
+			armor = -0.1
+			infantry_vehicles = -0.1
+			support_weapons = -0.1
+			land_doctrine = -0.1
 		}
 	}
 	
@@ -453,29 +505,34 @@ technologies = {
 			position = { x = 0 y = 26 }
 		}
 		
-		ai_will_do = {
-			factor = 4
-			
-			modifier = {
-				factor = 5
-				date > "2015.1.1"
-			}
-			
-			modifier = {
-				factor = 0
-				num_of_military_factories < 10
-			}
-		}
-		
 		categories = {
 			support_weapons
 			vehicles
 			support_anti_air
 			support_autocannon
 		}
+		
+		ai_will_do = {
+			factor = 0
+			
+			modifier = {
+				add = 10
+				AND = {
+					date > 2000.1.1
+					num_of_military_factories > 15
+				}
+			}
+		}
+		
+		ai_research_weights = {
+			armor = -0.1
+			infantry_vehicles = -0.1
+			support_weapons = -0.1
+			land_doctrine = -0.1
+		}
 	}
 	
-	cannon_ammo_1 = {	
+	cannon_ammo_1 = {
 	
 		on_research_complete = {
 			custom_effect_tooltip = ammo_tooltip
@@ -484,7 +541,7 @@ technologies = {
 		path = {
 			leads_to_tech = autocannon_2
 			research_cost_coeff = 1
-		}		
+		}
 		
 		research_cost = 1.5
 		start_year = 1945
@@ -498,22 +555,36 @@ technologies = {
 			ammunition_upgrades
 			support_anti_air
 		}
-
+		
 		ai_will_do = {
-			factor = 70
+			factor = 0
+			
+			modifier = {
+				add = 10
+				AND = {
+					date > 1945.1.1
+				}
+			}
+		}
+		
+		ai_research_weights = {
+			armor = -0.1
+			infantry_vehicles = -0.1
+			support_weapons = -0.1
+			land_doctrine = -0.1
 		}
 	}
 	
-	cannon_ammo_2 = {	
+	cannon_ammo_2 = {
 	
 		on_research_complete = {
 			custom_effect_tooltip = ammo_tooltip
-		}	
+		}
 
 		path = {
 			leads_to_tech = autocannon_3
 			research_cost_coeff = 1
-		}	
+		}
 		
 		research_cost = 1.5
 		start_year = 1960
@@ -529,20 +600,34 @@ technologies = {
 		}
 		
 		ai_will_do = {
-			factor = 70
+			factor = 0
+			
+			modifier = {
+				add = 10
+				AND = {
+					date > 1960.1.1
+				}
+			}
+		}
+		
+		ai_research_weights = {
+			armor = -0.1
+			infantry_vehicles = -0.1
+			support_weapons = -0.1
+			land_doctrine = -0.1
 		}
 	}
 	
-	cannon_ammo_3 = {	
+	cannon_ammo_3 = {
 	
 		on_research_complete = {
 			custom_effect_tooltip = ammo_tooltip
-		}	
+		}
 
 		path = {
 			leads_to_tech = autocannon_4
 			research_cost_coeff = 1
-		}		
+		}
 		
 		research_cost = 1.5
 		start_year = 1975
@@ -558,20 +643,34 @@ technologies = {
 		}
 		
 		ai_will_do = {
-			factor = 70
+			factor = 0
+			
+			modifier = {
+				add = 10
+				AND = {
+					date > 1975.1.1
+				}
+			}
+		}
+		
+		ai_research_weights = {
+			armor = -0.1
+			infantry_vehicles = -0.1
+			support_weapons = -0.1
+			land_doctrine = -0.1
 		}
 	}
 	
-	cannon_ammo_4 = {	
+	cannon_ammo_4 = {
 	
 		on_research_complete = {
 			custom_effect_tooltip = ammo_tooltip
-		}	
+		}
 
 		path = {
 			leads_to_tech = autocannon_5
 			research_cost_coeff = 1
-		}		
+		}
 		
 		research_cost = 1.5
 		start_year = 1990
@@ -587,15 +686,29 @@ technologies = {
 		}
 		
 		ai_will_do = {
-			factor = 70
+			factor = 0
+			
+			modifier = {
+				add = 10
+				AND = {
+					date > 1990.1.1
+				}
+			}
+		}
+		
+		ai_research_weights = {
+			armor = -0.1
+			infantry_vehicles = -0.1
+			support_weapons = -0.1
+			land_doctrine = -0.1
 		}
 	}
 	
-	cannon_ammo_5 = {	
+	cannon_ammo_5 = {
 	
 		on_research_complete = {
 			custom_effect_tooltip = ammo_tooltip
-		}		
+		}
 		
 		research_cost = 1.5
 		start_year = 2005
@@ -611,7 +724,21 @@ technologies = {
 		}
 		
 		ai_will_do = {
-			factor = 70
+			factor = 0
+			
+			modifier = {
+				add = 10
+				AND = {
+					date > 2005.1.1
+				}
+			}
+		}
+		
+		ai_research_weights = {
+			armor = -0.1
+			infantry_vehicles = -0.1
+			support_weapons = -0.1
+			land_doctrine = -0.1
 		}
 	}
 	
@@ -629,12 +756,12 @@ technologies = {
 			hard_attack = 0.05 
 			defense = 0.25
 			air_attack = 0.1
-		}	
+		}
 
 		path = {
 			leads_to_tech = autocannon_2
 			research_cost_coeff = 1
-		}		
+		}
 		
 		research_cost = 1.5
 		start_year = 1945
@@ -650,7 +777,21 @@ technologies = {
 		}
 		
 		ai_will_do = {
-			factor = 70
+			factor = 0
+			
+			modifier = {
+				add = 10
+				AND = {
+					date > 1945.1.1
+				}
+			}
+		}
+		
+		ai_research_weights = {
+			armor = -0.1
+			infantry_vehicles = -0.1
+			support_weapons = -0.1
+			land_doctrine = -0.1
 		}
 	}
 	
@@ -668,12 +809,12 @@ technologies = {
 			hard_attack = 0.05 
 			defense = 0.25
 			air_attack = 0.1
-		}	
+		}
 
 		path = {
 			leads_to_tech = autocannon_3
 			research_cost_coeff = 1
-		}		
+		}
 		
 		research_cost = 1.5
 		start_year = 1960
@@ -689,7 +830,21 @@ technologies = {
 		}
 		
 		ai_will_do = {
-			factor = 70
+			factor = 0
+			
+			modifier = {
+				add = 10
+				AND = {
+					date > 1960.1.1
+				}
+			}
+		}
+		
+		ai_research_weights = {
+			armor = -0.1
+			infantry_vehicles = -0.1
+			support_weapons = -0.1
+			land_doctrine = -0.1
 		}
 	}
 	
@@ -707,12 +862,12 @@ technologies = {
 			hard_attack = 0.05 
 			defense = 0.25
 			air_attack = 0.1
-		}	
+		}
 
 		path = {
 			leads_to_tech = autocannon_4
 			research_cost_coeff = 1
-		}		
+		}
 		
 		research_cost = 1.5
 		start_year = 1975
@@ -728,7 +883,21 @@ technologies = {
 		}
 		
 		ai_will_do = {
-			factor = 70
+			factor = 0
+			
+			modifier = {
+				add = 10
+				AND = {
+					date > 1975.1.1
+				}
+			}
+		}
+		
+		ai_research_weights = {
+			armor = -0.1
+			infantry_vehicles = -0.1
+			support_weapons = -0.1
+			land_doctrine = -0.1
 		}
 	}
 	
@@ -746,12 +915,12 @@ technologies = {
 			hard_attack = 0.05 
 			defense = 0.25
 			air_attack = 0.1
-		}	
+		}
 
 		path = {
 			leads_to_tech = autocannon_5
 			research_cost_coeff = 1
-		}		
+		}
 		
 		research_cost = 1.5
 		start_year = 1990
@@ -767,7 +936,21 @@ technologies = {
 		}
 		
 		ai_will_do = {
-			factor = 70
+			factor = 0
+			
+			modifier = {
+				add = 10
+				AND = {
+					date > 1990.1.1
+				}
+			}
+		}
+		
+		ai_research_weights = {
+			armor = -0.1
+			infantry_vehicles = -0.1
+			support_weapons = -0.1
+			land_doctrine = -0.1
 		}
 	}
 	
@@ -785,7 +968,7 @@ technologies = {
 			hard_attack = 0.05 
 			defense = 0.25
 			air_attack = 0.1
-		}			
+		}
 		
 		research_cost = 1.5
 		start_year = 2005
@@ -801,7 +984,21 @@ technologies = {
 		}
 		
 		ai_will_do = {
-			factor = 70
+			factor = 0
+			
+			modifier = {
+				add = 10
+				AND = {
+					date > 2005.1.1
+				}
+			}
+		}
+		
+		ai_research_weights = {
+			armor = -0.1
+			infantry_vehicles = -0.1
+			support_weapons = -0.1
+			land_doctrine = -0.1
 		}
 	}
 	
@@ -857,7 +1054,7 @@ technologies = {
 		}
 		
 		ai_will_do = {
-			factor = 1000
+			factor = 5000
 		}
 	}
 	
@@ -908,12 +1105,21 @@ technologies = {
 		}
 		
 		ai_will_do = {
-			factor = 6
+			factor = 0
 			
 			modifier = {
-				factor = 10
-				date > "1965.1.1"
+				add = 10
+				AND = {
+					date > 1950.1.1
+				}
 			}
+		}
+		
+		ai_research_weights = {
+			armor = -0.1
+			infantry_vehicles = -0.1
+			support_weapons = -0.1
+			land_doctrine = -0.1
 		}
 	}
 	
@@ -965,12 +1171,21 @@ technologies = {
 		}
 		
 		ai_will_do = {
-			factor = 6
+			factor = 0
 			
 			modifier = {
-				factor = 10
-				date > "1980.1.1"
+				add = 10
+				AND = {
+					date > 1965.1.1
+				}
 			}
+		}
+		
+		ai_research_weights = {
+			armor = -0.1
+			infantry_vehicles = -0.1
+			support_weapons = -0.1
+			land_doctrine = -0.1
 		}
 	}
 	
@@ -1022,12 +1237,21 @@ technologies = {
 		}
 		
 		ai_will_do = {
-			factor = 6
+			factor = 0
 			
 			modifier = {
-				factor = 10
-				date > "1995.1.1"
+				add = 10
+				AND = {
+					date > 1980.1.1
+				}
 			}
+		}
+		
+		ai_research_weights = {
+			armor = -0.1
+			infantry_vehicles = -0.1
+			support_weapons = -0.1
+			land_doctrine = -0.1
 		}
 	}
 	
@@ -1082,12 +1306,21 @@ technologies = {
 		}
 		
 		ai_will_do = {
-			factor = 6
+			factor = 0
 			
 			modifier = {
-				factor = 10
-				date > "2010.1.1"
+				add = 10
+				AND = {
+					date > 1995.1.1
+				}
 			}
+		}
+		
+		ai_research_weights = {
+			armor = -0.1
+			infantry_vehicles = -0.1
+			support_weapons = -0.1
+			land_doctrine = -0.1
 		}
 	}
 	
@@ -1111,7 +1344,7 @@ technologies = {
 		}
 		
 		ai_will_do = {
-			factor = 1000
+			factor = 5000
 		}
 		
 		categories = {
@@ -1141,20 +1374,6 @@ technologies = {
 			position = { x = 0 y = 10 }
 		}
 		
-		ai_will_do = {
-			factor = 5
-			
-			modifier = {
-				factor = 3
-				date > "1985.1.1"
-			}
-			
-			modifier = {
-				factor = 0
-				num_of_military_factories < 15
-			}
-		}
-		
 		categories = {
 			support_weapons
 			vehicles
@@ -1162,6 +1381,23 @@ technologies = {
 			artillery_medium
 		}
 		
+		ai_will_do = {
+			factor = 0
+			
+			modifier = {
+				add = 10
+				AND = {
+					date > 1960.1.1
+				}
+			}
+		}
+		
+		ai_research_weights = {
+			armor = -0.1
+			infantry_vehicles = -0.1
+			support_weapons = -0.1
+			land_doctrine = -0.1
+		}
 	}
 	
 	sp_artillery_3 = {
@@ -1183,25 +1419,29 @@ technologies = {
 			position = { x = 0 y = 16 }
 		}
 		
-		ai_will_do = {
-			factor = 5
-			
-			modifier = {
-				factor = 3
-				date > "1985.1.1"
-			}
-			
-			modifier = {
-				factor = 0
-				num_of_military_factories < 15
-			}
-		}
-		
 		categories = {
 			support_weapons
 			vehicles
 			support_artillery
 			artillery_medium
+		}
+		
+		ai_will_do = {
+			factor = 0
+			
+			modifier = {
+				add = 10
+				AND = {
+					date > 1975.1.1
+				}
+			}
+		}
+		
+		ai_research_weights = {
+			armor = -0.1
+			infantry_vehicles = -0.1
+			support_weapons = -0.1
+			land_doctrine = -0.1
 		}
 	}
 	
@@ -1224,24 +1464,29 @@ technologies = {
 			position = { x = 0 y = 22 }
 		}
 		
-		ai_will_do = {
-			factor = 5
-			
-			modifier = {
-				factor = 3
-				date > "2000.1.1"
-			}
-			modifier = {
-				factor = 0
-				num_of_military_factories < 15
-			}
-		}
-		
 		categories = {
 			support_weapons
 			vehicles
 			support_artillery
 			artillery_medium
+		}
+		
+		ai_will_do = {
+			factor = 0
+			
+			modifier = {
+				add = 10
+				AND = {
+					date > 1990.1.1
+				}
+			}
+		}
+		
+		ai_research_weights = {
+			armor = -0.1
+			infantry_vehicles = -0.1
+			support_weapons = -0.1
+			land_doctrine = -0.1
 		}
 	}
 	
@@ -1264,25 +1509,29 @@ technologies = {
 			position = { x = 0 y = 28 }
 		}
 		
-		ai_will_do = {
-			factor = 5
-			
-			modifier = {
-				factor = 3
-				date > "2015.1.1"
-			}
-			
-			modifier = {
-				factor = 0
-				num_of_military_factories < 15
-			}
-		}
-		
 		categories = {
 			support_weapons
 			vehicles
 			support_artillery
 			artillery_medium
+		}
+		
+		ai_will_do = {
+			factor = 0
+			
+			modifier = {
+				add = 10
+				AND = {
+					date > 2005.1.1
+				}
+			}
+		}
+		
+		ai_research_weights = {
+			armor = -0.1
+			infantry_vehicles = -0.1
+			support_weapons = -0.1
+			land_doctrine = -0.1
 		}
 	}
 	
@@ -1319,7 +1568,7 @@ technologies = {
 		}
 		
 		ai_will_do = {
-			factor = 1000
+			factor = 5000
 		}
 		
 		categories = {
@@ -1353,19 +1602,28 @@ technologies = {
 			position = { x = -4 y = 8 }
 		}
 		
-		ai_will_do = {
-			factor = 6
-			
-			modifier = {
-				factor = 5
-				date > "1970.1.1"
-			}
-		}
-		
 		categories = {
 			support_weapons
 			support_artillery
 			artillery_light
+		}
+		
+		ai_will_do = {
+			factor = 0
+			
+			modifier = {
+				add = 20 #Major Priority
+				AND = {
+					date > 1955.1.1
+				}
+			}
+		}
+		
+		ai_research_weights = {
+			armor = -0.1
+			infantry_vehicles = -0.1
+			support_weapons = -0.1
+			land_doctrine = -0.1
 		}
 	}
 	
@@ -1393,19 +1651,28 @@ technologies = {
 			position = { x = -4 y = 14 }
 		}
 		
-		ai_will_do = {
-			factor = 6
-			
-			modifier = {
-				factor = 5
-				date > "1985.1.1"
-			}
-		}
-		
 		categories = {
 			support_weapons
 			support_artillery
 			artillery_light
+		}
+		
+		ai_will_do = {
+			factor = 0
+			
+			modifier = {
+				add = 20 #Major Priority
+				AND = {
+					date > 1970.1.1
+				}
+			}
+		}
+		
+		ai_research_weights = {
+			armor = -0.1
+			infantry_vehicles = -0.1
+			support_weapons = -0.1
+			land_doctrine = -0.1
 		}
 	}
 	
@@ -1433,19 +1700,28 @@ technologies = {
 			position = { x = -4 y = 20 }
 		}
 		
-		ai_will_do = {
-			factor = 6
-			
-			modifier = {
-				factor = 5
-				date > "2000.1.1"
-			}
-		}
-		
 		categories = {
 			support_weapons
 			support_artillery
 			artillery_light
+		}
+		
+		ai_will_do = {
+			factor = 0
+			
+			modifier = {
+				add = 20 #Major Priority
+				AND = {
+					date > 1985.1.1
+				}
+			}
+		}
+		
+		ai_research_weights = {
+			armor = -0.1
+			infantry_vehicles = -0.1
+			support_weapons = -0.1
+			land_doctrine = -0.1
 		}
 	}
 	
@@ -1473,19 +1749,28 @@ technologies = {
 			position = { x = -4 y = 26 }
 		}
 		
-		ai_will_do = {
-			factor = 6
-			
-			modifier = {
-				factor = 5
-				date > "2015.1.1"
-			}
-		}
-		
 		categories = {
 			support_weapons
 			support_artillery
 			artillery_light
+		}
+		
+		ai_will_do = {
+			factor = 0
+			
+			modifier = {
+				add = 20 #Major Priority
+				AND = {
+					date > 2000.1.1
+				}
+			}
+		}
+		
+		ai_research_weights = {
+			armor = -0.1
+			infantry_vehicles = -0.1
+			support_weapons = -0.1
+			land_doctrine = -0.1
 		}
 	}
 	
@@ -1513,7 +1798,7 @@ technologies = {
 		}
 		
 		ai_will_do = {
-			factor = 1000
+			factor = 5000
 		}
 		
 		categories = {
@@ -1543,20 +1828,30 @@ technologies = {
 			position = { x = -4 y = 10 }
 		}
 		
-		ai_will_do = {
-			factor = 5
-			
-			modifier = {
-				factor = 4
-				date > "1975.1.1"
-			}
-		}
-		
 		categories = {
 			support_weapons
 			vehicles
 			support_artillery
 			artillery_light
+		}
+		
+		ai_will_do = {
+			factor = 0
+			
+			modifier = {
+				add = 10
+				AND = {
+					date > 1960.1.1
+					num_of_military_factories > 30
+				}
+			}
+		}
+		
+		ai_research_weights = {
+			armor = -0.1
+			infantry_vehicles = -0.1
+			support_weapons = -0.1
+			land_doctrine = -0.1
 		}
 	}
 	
@@ -1579,20 +1874,30 @@ technologies = {
 			position = { x = -4 y = 16 }
 		}
 		
-		ai_will_do = {
-			factor = 5
-			
-			modifier = {
-				factor = 4
-				date > "1990.1.1"
-			}
-		}
-		
 		categories = {
 			support_weapons
 			vehicles
 			support_artillery
 			artillery_light
+		}
+		
+		ai_will_do = {
+			factor = 0
+			
+			modifier = {
+				add = 10
+				AND = {
+					date > 1975.1.1
+					num_of_military_factories > 30
+				}
+			}
+		}
+		
+		ai_research_weights = {
+			armor = -0.1
+			infantry_vehicles = -0.1
+			support_weapons = -0.1
+			land_doctrine = -0.1
 		}
 	}
 	
@@ -1615,20 +1920,30 @@ technologies = {
 			position = { x = -4 y = 22 }
 		}
 		
-		ai_will_do = {
-			factor = 5
-			
-			modifier = {
-				factor = 4
-				date > "2005.1.1"
-			}
-		}
-		
 		categories = {
 			support_weapons
 			vehicles
 			support_artillery
 			artillery_light
+		}
+		
+		ai_will_do = {
+			factor = 0
+			
+			modifier = {
+				add = 10
+				AND = {
+					date > 1990.1.1
+					num_of_military_factories > 30
+				}
+			}
+		}
+		
+		ai_research_weights = {
+			armor = -0.1
+			infantry_vehicles = -0.1
+			support_weapons = -0.1
+			land_doctrine = -0.1
 		}
 	}
 	
@@ -1651,20 +1966,30 @@ technologies = {
 			position = { x = -4 y = 28 }
 		}
 		
-		ai_will_do = {
-			factor = 5
-			
-			modifier = {
-				factor = 4
-				date > "2020.1.1"
-			}
-		}
-		
 		categories = {
 			support_weapons
 			vehicles
 			support_artillery
 			artillery_light
+		}
+		
+		ai_will_do = {
+			factor = 0
+			
+			modifier = {
+				add = 10
+				AND = {
+					date > 2005.1.1
+					num_of_military_factories > 30
+				}
+			}
+		}
+		
+		ai_research_weights = {
+			armor = -0.1
+			infantry_vehicles = -0.1
+			support_weapons = -0.1
+			land_doctrine = -0.1
 		}
 	}
 	
@@ -1698,7 +2023,7 @@ technologies = {
 		}
 		
 		ai_will_do = {
-			factor = 1000
+			factor = 5000
 		}
 		
 		categories = {
@@ -1733,24 +2058,29 @@ technologies = {
 			position = { x = 4 y = 8 }
 		}
 		
-		ai_will_do = {
-			factor = 4
-			
-			modifier = {
-				factor = 5
-				date > "1985.1.1"
-			}
-			
-			modifier = {
-				factor = 0
-				num_of_military_factories < 10
-			}
-		}
-		
 		categories = {
 			support_weapons
 			support_artillery
 			artillery_heavy
+		}
+		
+		ai_will_do = {
+			factor = 0
+			
+			modifier = {
+				add = 10
+				AND = {
+					date > 1955.1.1
+					num_of_military_factories > 15
+				}
+			}
+		}
+		
+		ai_research_weights = {
+			armor = -0.1
+			infantry_vehicles = -0.1
+			support_weapons = -0.1
+			land_doctrine = -0.1
 		}
 	}
 	
@@ -1779,24 +2109,29 @@ technologies = {
 			position = { x = 4 y = 14 }
 		}
 		
-		ai_will_do = {
-			factor = 4
-			
-			modifier = {
-				factor = 5
-				date > "1985.1.1"
-			}
-			
-			modifier = {
-				factor = 0
-				num_of_military_factories < 10
-			}
-		}
-		
 		categories = {
 			support_weapons
 			support_artillery
 			artillery_heavy
+		}
+		
+		ai_will_do = {
+			factor = 0
+			
+			modifier = {
+				add = 10
+				AND = {
+					date > 1970.1.1
+					num_of_military_factories > 15
+				}
+			}
+		}
+		
+		ai_research_weights = {
+			armor = -0.1
+			infantry_vehicles = -0.1
+			support_weapons = -0.1
+			land_doctrine = -0.1
 		}
 	}
 	
@@ -1825,24 +2160,29 @@ technologies = {
 			position = { x = 4 y = 20 }
 		}
 		
-		ai_will_do = {
-			factor = 4
-			
-			modifier = {
-				factor = 5
-				date > "2000.1.1"
-			}
-			
-			modifier = {
-				factor = 0
-				num_of_military_factories < 10
-			}
-		}
-		
 		categories = {
 			support_weapons
 			support_artillery
 			artillery_heavy
+		}
+		
+		ai_will_do = {
+			factor = 0
+			
+			modifier = {
+				add = 10
+				AND = {
+					date > 1985.1.1
+					num_of_military_factories > 15
+				}
+			}
+		}
+		
+		ai_research_weights = {
+			armor = -0.1
+			infantry_vehicles = -0.1
+			support_weapons = -0.1
+			land_doctrine = -0.1
 		}
 	}
 	
@@ -1871,24 +2211,29 @@ technologies = {
 			position = { x = 4 y = 26 }
 		}
 		
-		ai_will_do = {
-			factor = 4
-			
-			modifier = {
-				factor = 5
-				date > "2015.1.1"
-			}
-			
-			modifier = {
-				factor = 0
-				num_of_military_factories < 10
-			}
-		}
-		
 		categories = {
 			support_weapons
 			support_artillery
 			artillery_heavy
+		}
+		
+		ai_will_do = {
+			factor = 0
+			
+			modifier = {
+				add = 10
+				AND = {
+					date > 2000.1.1
+					num_of_military_factories > 15
+				}
+			}
+		}
+		
+		ai_research_weights = {
+			armor = -0.1
+			infantry_vehicles = -0.1
+			support_weapons = -0.1
+			land_doctrine = -0.1
 		}
 	}
 	
@@ -1916,12 +2261,7 @@ technologies = {
 		}
 		
 		ai_will_do = {
-			factor = 1000
-			
-			modifier = {
-				factor = 0
-				num_of_military_factories < 30
-			}
+			factor = 5000
 		}
 		
 		categories = {
@@ -1951,25 +2291,30 @@ technologies = {
 			position = { x = 4 y = 10 }
 		}
 		
-		ai_will_do = {
-			factor = 3
-			
-			modifier = {
-				factor = 5
-				date > "1975.1.1"
-			}
-
-			modifier = {
-				factor = 0
-				num_of_military_factories < 30
-			}
-		}
-		
 		categories = {
 			support_weapons
 			vehicles
 			support_artillery
 			artillery_heavy
+		}
+		
+		ai_will_do = {
+			factor = 0
+			
+			modifier = {
+				add = 10
+				AND = {
+					date > 1960.1.1
+					num_of_military_factories > 60
+				}
+			}
+		}
+		
+		ai_research_weights = {
+			armor = -0.1
+			infantry_vehicles = -0.1
+			support_weapons = -0.1
+			land_doctrine = -0.1
 		}
 	}
 	
@@ -1992,25 +2337,30 @@ technologies = {
 			position = { x = 4 y = 16 }
 		}
 		
-		ai_will_do = {
-			factor = 3
-			
-			modifier = {
-				factor = 5
-				date > "1990.1.1"
-			}
-			
-			modifier = {
-				factor = 0
-				num_of_military_factories < 30
-			}
-		}
-		
 		categories = {
 			support_weapons
 			vehicles
 			support_artillery
 			artillery_heavy
+		}
+		
+		ai_will_do = {
+			factor = 0
+			
+			modifier = {
+				add = 10
+				AND = {
+					date > 1975.1.1
+					num_of_military_factories > 60
+				}
+			}
+		}
+		
+		ai_research_weights = {
+			armor = -0.1
+			infantry_vehicles = -0.1
+			support_weapons = -0.1
+			land_doctrine = -0.1
 		}
 	}
 	
@@ -2033,25 +2383,30 @@ technologies = {
 			position = { x = 4 y = 22 }
 		}
 		
-		ai_will_do = {
-			factor = 3
-			
-			modifier = {
-				factor = 5
-				date > "2005.1.1"
-			}
-			
-			modifier = {
-				factor = 0
-				num_of_military_factories < 30
-			}
-		}
-		
 		categories = {
 			support_weapons
 			vehicles
 			support_artillery
 			artillery_heavy
+		}
+		
+		ai_will_do = {
+			factor = 0
+			
+			modifier = {
+				add = 10
+				AND = {
+					date > 1990.1.1
+					num_of_military_factories > 60
+				}
+			}
+		}
+		
+		ai_research_weights = {
+			armor = -0.1
+			infantry_vehicles = -0.1
+			support_weapons = -0.1
+			land_doctrine = -0.1
 		}
 	}
 	
@@ -2074,25 +2429,30 @@ technologies = {
 			position = { x = 4 y = 28 }
 		}
 		
-		ai_will_do = {
-			factor = 3
-			
-			modifier = {
-				factor = 5
-				date > "2020.1.1"
-			}
-			
-			modifier = {
-				factor = 0
-				num_of_military_factories < 30
-			}
-		}
-		
 		categories = {
 			support_weapons
 			vehicles
 			support_artillery
 			artillery_heavy
+		}
+		
+		ai_will_do = {
+			factor = 0
+			
+			modifier = {
+				add = 10
+				AND = {
+					date > 2005.1.1
+					num_of_military_factories > 60
+				}
+			}
+		}
+		
+		ai_research_weights = {
+			armor = -0.1
+			infantry_vehicles = -0.1
+			support_weapons = -0.1
+			land_doctrine = -0.1
 		}
 	}
 	
@@ -2100,12 +2460,12 @@ technologies = {
 		
 		on_research_complete = {
 			custom_effect_tooltip = ammo_tooltip
-		}	
+		}
 
 		path = {
 			leads_to_tech = artillery_2
 			research_cost_coeff = 1
-		}		
+		}
 		
 		research_cost = 1.5
 		start_year = 1945
@@ -2121,20 +2481,34 @@ technologies = {
 		}
 		
 		ai_will_do = {
-			factor = 70
+			factor = 0
+			
+			modifier = {
+				add = 10
+				AND = {
+					date > 1945.1.1
+				}
+			}
+		}
+		
+		ai_research_weights = {
+			armor = -0.1
+			infantry_vehicles = -0.1
+			support_weapons = -0.1
+			land_doctrine = -0.1
 		}
 	}
 	
-	art_ammo_2 = {	
+	art_ammo_2 = {
 	
 		on_research_complete = {
 			custom_effect_tooltip = ammo_tooltip
-		}	
+		}
 
 		path = {
 			leads_to_tech = artillery_3
 			research_cost_coeff = 1
-		}		
+		}
 		
 		research_cost = 1.5
 		start_year = 1960
@@ -2150,20 +2524,34 @@ technologies = {
 		}
 		
 		ai_will_do = {
-			factor = 70
+			factor = 0
+			
+			modifier = {
+				add = 10
+				AND = {
+					date > 1960.1.1
+				}
+			}
+		}
+		
+		ai_research_weights = {
+			armor = -0.1
+			infantry_vehicles = -0.1
+			support_weapons = -0.1
+			land_doctrine = -0.1
 		}
 	}
 	
-	art_ammo_3 = {	
+	art_ammo_3 = {
 	
 		on_research_complete = {
 			custom_effect_tooltip = ammo_tooltip
-		}	
+		}
 
 		path = {
 			leads_to_tech = artillery_4
 			research_cost_coeff = 1
-		}		
+		}
 		
 		research_cost = 1.5
 		start_year = 1975
@@ -2179,20 +2567,34 @@ technologies = {
 		}
 		
 		ai_will_do = {
-			factor = 70
+			factor = 0
+			
+			modifier = {
+				add = 10
+				AND = {
+					date > 1975.1.1
+				}
+			}
+		}
+		
+		ai_research_weights = {
+			armor = -0.1
+			infantry_vehicles = -0.1
+			support_weapons = -0.1
+			land_doctrine = -0.1
 		}
 	}
 	
-	art_ammo_4 = {	
+	art_ammo_4 = {
 	
 		on_research_complete = {
 			custom_effect_tooltip = ammo_tooltip
-		}	
+		}
 
 		path = {
 			leads_to_tech = artillery_5
 			research_cost_coeff = 1
-		}		
+		}
 		
 		research_cost = 1.5
 		start_year = 1990
@@ -2208,15 +2610,29 @@ technologies = {
 		}
 		
 		ai_will_do = {
-			factor = 70
+			factor = 0
+			
+			modifier = {
+				add = 10
+				AND = {
+					date > 1990.1.1
+				}
+			}
+		}
+		
+		ai_research_weights = {
+			armor = -0.1
+			infantry_vehicles = -0.1
+			support_weapons = -0.1
+			land_doctrine = -0.1
 		}
 	}
 	
-	art_ammo_5 = {	
+	art_ammo_5 = {
 	
 		on_research_complete = {
 			custom_effect_tooltip = ammo_tooltip
-		}	
+		}
 
 		research_cost = 1.5
 		start_year = 2005
@@ -2232,23 +2648,37 @@ technologies = {
 		}
 		
 		ai_will_do = {
-			factor = 70
+			factor = 0
+			
+			modifier = {
+				add = 10
+				AND = {
+					date > 2005.1.1
+				}
+			}
+		}
+		
+		ai_research_weights = {
+			armor = -0.1
+			infantry_vehicles = -0.1
+			support_weapons = -0.1
+			land_doctrine = -0.1
 		}
 	}
 	
-	art_upgrade_1 = {	
+	art_upgrade_1 = {
 	
 		category_artillery_indirect = {
 			soft_attack = 0.05 
 			hard_attack = 0.05 
 			defense = 0.25
 			breakthrough = 0.25	
-		}	
+		}
 
 		path = {
 			leads_to_tech = artillery_2
 			research_cost_coeff = 1
-		}		
+		}
 		
 		research_cost = 1.5
 		start_year = 1945
@@ -2264,23 +2694,37 @@ technologies = {
 		}
 		
 		ai_will_do = {
-			factor = 70
+			factor = 0
+			
+			modifier = {
+				add = 10
+				AND = {
+					date > 1945.1.1
+				}
+			}
+		}
+		
+		ai_research_weights = {
+			armor = -0.1
+			infantry_vehicles = -0.1
+			support_weapons = -0.1
+			land_doctrine = -0.1
 		}
 	}
 	
-	art_upgrade_2 = {	
+	art_upgrade_2 = {
 	
 		category_artillery_indirect = {
 			soft_attack = 0.04 
 			hard_attack = 0.04 
 			defense = 0.25
 			breakthrough = 0.25	
-		}		
+		}
 
 		path = {
 			leads_to_tech = artillery_3
 			research_cost_coeff = 1
-		}		
+		}
 		
 		research_cost = 1.5
 		start_year = 1960
@@ -2296,23 +2740,37 @@ technologies = {
 		}
 		
 		ai_will_do = {
-			factor = 70
+			factor = 0
+			
+			modifier = {
+				add = 10
+				AND = {
+					date > 1960.1.1
+				}
+			}
+		}
+		
+		ai_research_weights = {
+			armor = -0.1
+			infantry_vehicles = -0.1
+			support_weapons = -0.1
+			land_doctrine = -0.1
 		}
 	}
 	
-	art_upgrade_3 = {	
+	art_upgrade_3 = {
 	
 		category_artillery_indirect = {
 			soft_attack = 0.04 
 			hard_attack = 0.04 
 			defense = 0.25
 			breakthrough = 0.25	
-		}		
+		}
 
 		path = {
 			leads_to_tech = artillery_4
 			research_cost_coeff = 1
-		}		
+		}
 		
 		research_cost = 1.5
 		start_year = 1975
@@ -2328,23 +2786,37 @@ technologies = {
 		}
 		
 		ai_will_do = {
-			factor = 70
+			factor = 0
+			
+			modifier = {
+				add = 10
+				AND = {
+					date > 1975.1.1
+				}
+			}
+		}
+		
+		ai_research_weights = {
+			armor = -0.1
+			infantry_vehicles = -0.1
+			support_weapons = -0.1
+			land_doctrine = -0.1
 		}
 	}
 	
-	art_upgrade_4 = {	
+	art_upgrade_4 = {
 	
 		category_artillery_indirect = {
 			soft_attack = 0.05 
 			hard_attack = 0.06 
 			defense = 0.25
 			breakthrough = 0.25	
-		}		
+		}
 
 		path = {
 			leads_to_tech = artillery_5
 			research_cost_coeff = 1
-		}		
+		}
 		
 		research_cost = 1.5
 		start_year = 1990
@@ -2360,11 +2832,25 @@ technologies = {
 		}
 		
 		ai_will_do = {
-			factor = 70
+			factor = 0
+			
+			modifier = {
+				add = 10
+				AND = {
+					date > 1990.1.1
+				}
+			}
+		}
+		
+		ai_research_weights = {
+			armor = -0.1
+			infantry_vehicles = -0.1
+			support_weapons = -0.1
+			land_doctrine = -0.1
 		}
 	}
 	
-	art_upgrade_5 = {	
+	art_upgrade_5 = {
 	
 		category_artillery_indirect = {
 			soft_attack = 0.07 
@@ -2387,7 +2873,21 @@ technologies = {
 		}
 		
 		ai_will_do = {
-			factor = 70
+			factor = 0
+			
+			modifier = {
+				add = 10
+				AND = {
+					date > 2005.1.1
+				}
+			}
+		}
+		
+		ai_research_weights = {
+			armor = -0.1
+			infantry_vehicles = -0.1
+			support_weapons = -0.1
+			land_doctrine = -0.1
 		}
 	}
 
@@ -2415,7 +2915,7 @@ technologies = {
 		}
 		
 		ai_will_do = {
-			factor = 1000
+			factor = 5000
 		}
 		
 		categories = {
@@ -2450,26 +2950,31 @@ technologies = {
 			research_cost_coeff = 1
 		}
 		
-		ai_will_do = {
-			factor = 4
-			
-			modifier = {
-				factor = 5
-				date > "1975.1.1"
-			}
-			
-			modifier = {
-				factor = 0
-				num_of_military_factories < 20
-			}
-		}
-		
 		categories = {
 			support_weapons
 			vehicles
 			support_artillery
 			rocketry
 			artillery_rocket
+		}
+		
+		ai_will_do = {
+			factor = 0
+			
+			modifier = {
+				add = 10
+				AND = {
+					date > 1960.1.1
+					num_of_military_factories > 30
+				}
+			}
+		}
+		
+		ai_research_weights = {
+			armor = -0.1
+			infantry_vehicles = -0.1
+			support_weapons = -0.1
+			land_doctrine = -0.1
 		}
 	}
 	
@@ -2496,25 +3001,31 @@ technologies = {
 			research_cost_coeff = 1
 		}
 		
-		ai_will_do = {
-			factor = 20
-			
-			modifier = {
-				factor = 5
-				date > "1990.1.1"
-			}
-			modifier = {
-				factor = 0
-				num_of_military_factories < 20
-			}
-		}
-		
 		categories = {
 			support_weapons
 			vehicles
 			rocketry
 			support_artillery
 			artillery_rocket
+		}
+		
+		ai_will_do = {
+			factor = 0
+			
+			modifier = {
+				add = 10
+				AND = {
+					date > 1975.1.1
+					num_of_military_factories > 30
+				}
+			}
+		}
+		
+		ai_research_weights = {
+			armor = -0.1
+			infantry_vehicles = -0.1
+			support_weapons = -0.1
+			land_doctrine = -0.1
 		}
 	}
 	
@@ -2541,25 +3052,31 @@ technologies = {
 			research_cost_coeff = 1
 		}
 		
-		ai_will_do = {
-			factor = 4
-			
-			modifier = {
-				factor = 5
-				date > "2005.1.1"
-			}
-			modifier = {
-				factor = 0
-				num_of_military_factories < 20
-			}
-		}
-		
 		categories = {
 			support_weapons
 			vehicles
 			rocketry
 			support_artillery
 			artillery_rocket
+		}
+		
+		ai_will_do = {
+			factor = 0
+			
+			modifier = {
+				add = 10
+				AND = {
+					date > 1990.1.1
+					num_of_military_factories > 30
+				}
+			}
+		}
+		
+		ai_research_weights = {
+			armor = -0.1
+			infantry_vehicles = -0.1
+			support_weapons = -0.1
+			land_doctrine = -0.1
 		}
 	}
 	
@@ -2581,25 +3098,31 @@ technologies = {
 			position = { x = 0 y = 28 }
 		}
 		
-		ai_will_do = {
-			factor = 4
-			
-			modifier = {
-				factor = 5
-				date > "2020.1.1"
-			}
-			modifier = {
-				factor = 0
-				num_of_military_factories < 20
-			}
-		}
-		
 		categories = {
 			support_weapons
 			vehicles
 			rocketry
 			support_artillery
 			artillery_rocket
+		}
+		
+		ai_will_do = {
+			factor = 0
+			
+			modifier = {
+				add = 10
+				AND = {
+					date > 2005.1.1
+					num_of_military_factories > 30
+				}
+			}
+		}
+		
+		ai_research_weights = {
+			armor = -0.1
+			infantry_vehicles = -0.1
+			support_weapons = -0.1
+			land_doctrine = -0.1
 		}
 	}
 	
@@ -2633,7 +3156,7 @@ technologies = {
 			research_cost_coeff = 1
 		}
 		
-		research_cost = 1.5
+		research_cost = 1
 
 		start_year = 1935
 		
@@ -2643,7 +3166,7 @@ technologies = {
 		}
 		
 		ai_will_do = {
-			factor = 1000
+			factor = 5000
 		}
 		
 		categories = {
@@ -2671,7 +3194,7 @@ technologies = {
 			research_cost_coeff = 1
 		}
 		
-		research_cost = 1.5
+		research_cost = 1
 
 		start_year = 1950
 		
@@ -2680,18 +3203,27 @@ technologies = {
 			position = { x = 0 y = 6 }
 		}
 		
-		ai_will_do = {
-			factor = 6
-			
-			modifier = {
-				factor = 5
-				date > "1965.1.1"
-			}
-		}
-		
 		categories = {
 			support_weapons
 			support_anti_tank
+		}
+		
+		ai_will_do = {
+			factor = 0
+			
+			modifier = {
+				add = 20 #Major Priority
+				AND = {
+					date > 1950.1.1
+				}
+			}
+		}
+		
+		ai_research_weights = {
+			armor = -0.1
+			infantry_vehicles = -0.1
+			support_weapons = -0.1
+			land_doctrine = -0.1
 		}
 	}
 	
@@ -2718,7 +3250,7 @@ technologies = {
 			hardware_I = 1
 		}
 		
-		research_cost = 1.5
+		research_cost = 1
 		start_year = 1965
 		
 		folder = {
@@ -2726,18 +3258,27 @@ technologies = {
 			position = { x = 0 y = 12 }
 		}
 		
-		ai_will_do = {
-			factor = 6
-			
-			modifier = {
-				factor = 5
-				date > "1980.1.1"
-			}
-		}
-		
 		categories = {
 			support_weapons
 			support_anti_tank
+		}
+		
+		ai_will_do = {
+			factor = 0
+			
+			modifier = {
+				add = 20 #Major Priority
+				AND = {
+					date > 1965.1.1
+				}
+			}
+		}
+		
+		ai_research_weights = {
+			armor = -0.1
+			infantry_vehicles = -0.1
+			support_weapons = -0.1
+			land_doctrine = -0.1
 		}
 	}
 	
@@ -2764,7 +3305,7 @@ technologies = {
 			hardware_III = 1
 		}
 		
-		research_cost = 1.5
+		research_cost = 1
 		start_year = 1980
 		
 		folder = {
@@ -2772,18 +3313,27 @@ technologies = {
 			position = { x = 0 y = 18 }
 		}
 		
-		ai_will_do = {
-			factor = 6
-			
-			modifier = {
-				factor = 5
-				date > "1995.1.1"
-			}
-		}
-		
 		categories = {
 			support_weapons
 			support_anti_tank
+		}
+		
+		ai_will_do = {
+			factor = 0
+			
+			modifier = {
+				add = 20 #Major Priority
+				AND = {
+					date > 1980.1.1
+				}
+			}
+		}
+		
+		ai_research_weights = {
+			armor = -0.1
+			infantry_vehicles = -0.1
+			support_weapons = -0.1
+			land_doctrine = -0.1
 		}
 	}
 	
@@ -2810,7 +3360,7 @@ technologies = {
 			hardware_VII = 1
 		}
 		
-		research_cost = 1.5
+		research_cost = 1
 		start_year = 1995
 		
 		folder = {
@@ -2818,33 +3368,42 @@ technologies = {
 			position = { x = 0 y = 24 }
 		}
 		
-		ai_will_do = {
-			factor = 6
-			
-			modifier = {
-				factor = 5
-				date > "2010.1.1"
-			}
-		}
-		
 		categories = {
 			support_weapons
 			support_anti_tank
 		}
+		
+		ai_will_do = {
+			factor = 0
+			
+			modifier = {
+				add = 20 #Major Priority
+				AND = {
+					date > 1995.1.1
+				}
+			}
+		}
+		
+		ai_research_weights = {
+			armor = -0.1
+			infantry_vehicles = -0.1
+			support_weapons = -0.1
+			land_doctrine = -0.1
+		}
 	}
 	
-	at_ammo_1 = {	
+	at_ammo_1 = {
 	
 		on_research_complete = {
 			custom_effect_tooltip = ammo_tooltip
-		}	
+		}
 
 		path = {
 			leads_to_tech = direct_fire_gun_2
 			research_cost_coeff = 1
-		}		
+		}
 		
-		research_cost = 1.5
+		research_cost = 1
 		start_year = 1945
 		folder = {
 			name = artillery_folder
@@ -2858,22 +3417,36 @@ technologies = {
 		}
 		
 		ai_will_do = {
-			factor = 70
+			factor = 0
+			
+			modifier = {
+				add = 20 #Major Priority
+				AND = {
+					date > 1945.1.1
+				}
+			}
+		}
+		
+		ai_research_weights = {
+			armor = -0.1
+			infantry_vehicles = -0.1
+			support_weapons = -0.1
+			land_doctrine = -0.1
 		}
 	}
 	
-	at_ammo_2 = {	
+	at_ammo_2 = {
 	
 		on_research_complete = {
 			custom_effect_tooltip = ammo_tooltip
-		}	
+		}
 
 		path = {
 			leads_to_tech = direct_fire_gun_3
 			research_cost_coeff = 1
-		}		
+		}
 		
-		research_cost = 1.5
+		research_cost = 1
 		start_year = 1960
 		folder = {
 			name = artillery_folder
@@ -2887,22 +3460,36 @@ technologies = {
 		}
 		
 		ai_will_do = {
-			factor = 70
+			factor = 0
+			
+			modifier = {
+				add = 20 #Major Priority
+				AND = {
+					date > 1960.1.1
+				}
+			}
+		}
+		
+		ai_research_weights = {
+			armor = -0.1
+			infantry_vehicles = -0.1
+			support_weapons = -0.1
+			land_doctrine = -0.1
 		}
 	}
 	
-	at_ammo_3 = {	
+	at_ammo_3 = {
 	
 		on_research_complete = {
 			custom_effect_tooltip = ammo_tooltip
-		}	
+		}
 
 		path = {
 			leads_to_tech = direct_fire_gun_4
 			research_cost_coeff = 1
-		}		
+		}
 		
-		research_cost = 1.5
+		research_cost = 1
 		start_year = 1975
 		folder = {
 			name = artillery_folder
@@ -2916,22 +3503,36 @@ technologies = {
 		}
 		
 		ai_will_do = {
-			factor = 70
+			factor = 0
+			
+			modifier = {
+				add = 20 #Major Priority
+				AND = {
+					date > 1975.1.1
+				}
+			}
+		}
+		
+		ai_research_weights = {
+			armor = -0.1
+			infantry_vehicles = -0.1
+			support_weapons = -0.1
+			land_doctrine = -0.1
 		}
 	}
 	
-	at_ammo_4 = {	
+	at_ammo_4 = {
 	
 		on_research_complete = {
 			custom_effect_tooltip = ammo_tooltip
-		}	
+		}
 
 		path = {
 			leads_to_tech = direct_fire_gun_5
 			research_cost_coeff = 1
-		}		
+		}
 		
-		research_cost = 1.5
+		research_cost = 1
 		start_year = 1990
 		folder = {
 			name = artillery_folder
@@ -2945,17 +3546,31 @@ technologies = {
 		}
 		
 		ai_will_do = {
-			factor = 70
+			factor = 0
+			
+			modifier = {
+				add = 20 #Major Priority
+				AND = {
+					date > 1990.1.1
+				}
+			}
+		}
+		
+		ai_research_weights = {
+			armor = -0.1
+			infantry_vehicles = -0.1
+			support_weapons = -0.1
+			land_doctrine = -0.1
 		}
 	}
 	
-	at_ammo_5 = {	
+	at_ammo_5 = {
 	
 		on_research_complete = {
 			custom_effect_tooltip = ammo_tooltip
-		}			
+		}
 		
-		research_cost = 1.5
+		research_cost = 1
 		start_year = 2005
 		folder = {
 			name = artillery_folder
@@ -2969,7 +3584,21 @@ technologies = {
 		}
 		
 		ai_will_do = {
-			factor = 70
+			factor = 0
+			
+			modifier = {
+				add = 20 #Major Priority
+				AND = {
+					date > 2005.1.1
+				}
+			}
+		}
+		
+		ai_research_weights = {
+			armor = -0.1
+			infantry_vehicles = -0.1
+			support_weapons = -0.1
+			land_doctrine = -0.1
 		}
 	}
 	
@@ -2992,9 +3621,9 @@ technologies = {
 		path = {
 			leads_to_tech = direct_fire_gun_2
 			research_cost_coeff = 1
-		}		
+		}
 		
-		research_cost = 1.5
+		research_cost = 1
 		start_year = 1945
 		folder = {
 			name = artillery_folder
@@ -3008,7 +3637,21 @@ technologies = {
 		}
 		
 		ai_will_do = {
-			factor = 70
+			factor = 0
+			
+			modifier = {
+				add = 20 #Major Priority
+				AND = {
+					date > 1945.1.1
+				}
+			}
+		}
+		
+		ai_research_weights = {
+			armor = -0.1
+			infantry_vehicles = -0.1
+			support_weapons = -0.1
+			land_doctrine = -0.1
 		}
 	}
 	
@@ -3026,14 +3669,14 @@ technologies = {
 			hard_attack = 0.04
 			defense = 0.25
 			breakthrough = 0.25	
-		}	
+		}
 
 		path = {
 			leads_to_tech = direct_fire_gun_3
 			research_cost_coeff = 1
-		}		
+		}
 		
-		research_cost = 1.5
+		research_cost = 1
 		start_year = 1960
 		folder = {
 			name = artillery_folder
@@ -3047,7 +3690,21 @@ technologies = {
 		}
 		
 		ai_will_do = {
-			factor = 70
+			factor = 0
+			
+			modifier = {
+				add = 20 #Major Priority
+				AND = {
+					date > 1960.1.1
+				}
+			}
+		}
+		
+		ai_research_weights = {
+			armor = -0.1
+			infantry_vehicles = -0.1
+			support_weapons = -0.1
+			land_doctrine = -0.1
 		}
 	}
 	
@@ -3065,14 +3722,14 @@ technologies = {
 			hard_attack = 0.04 
 			defense = 0.25
 			breakthrough = 0.25	
-		}	
+		}
 
 		path = {
 			leads_to_tech = direct_fire_gun_4
 			research_cost_coeff = 1
-		}		
+		}
 		
-		research_cost = 1.5
+		research_cost = 1
 		start_year = 1975
 		folder = {
 			name = artillery_folder
@@ -3086,7 +3743,21 @@ technologies = {
 		}
 		
 		ai_will_do = {
-			factor = 70
+			factor = 0
+			
+			modifier = {
+				add = 20 #Major Priority
+				AND = {
+					date > 1975.1.1
+				}
+			}
+		}
+		
+		ai_research_weights = {
+			armor = -0.1
+			infantry_vehicles = -0.1
+			support_weapons = -0.1
+			land_doctrine = -0.1
 		}
 	}
 	
@@ -3104,14 +3775,14 @@ technologies = {
 			hard_attack = 0.06 
 			defense = 0.25
 			breakthrough = 0.25	
-		}	
+		}
 
 		path = {
 			leads_to_tech = direct_fire_gun_5
 			research_cost_coeff = 1
-		}		
+		}
 		
-		research_cost = 1.5
+		research_cost = 1
 		start_year = 1990
 		folder = {
 			name = artillery_folder
@@ -3125,7 +3796,21 @@ technologies = {
 		}
 		
 		ai_will_do = {
-			factor = 70
+			factor = 0
+			
+			modifier = {
+				add = 20 #Major Priority
+				AND = {
+					date > 1990.1.1
+				}
+			}
+		}
+		
+		ai_research_weights = {
+			armor = -0.1
+			infantry_vehicles = -0.1
+			support_weapons = -0.1
+			land_doctrine = -0.1
 		}
 	}
 	
@@ -3145,7 +3830,7 @@ technologies = {
 			breakthrough = 0.25	
 		}
 	
-		research_cost = 1.5
+		research_cost = 1
 		start_year = 2005
 		folder = {
 			name = artillery_folder
@@ -3159,7 +3844,21 @@ technologies = {
 		}
 		
 		ai_will_do = {
-			factor = 70
+			factor = 0
+			
+			modifier = {
+				add = 20 #Major Priority
+				AND = {
+					date > 2005.1.1
+				}
+			}
+		}
+		
+		ai_research_weights = {
+			armor = -0.1
+			infantry_vehicles = -0.1
+			support_weapons = -0.1
+			land_doctrine = -0.1
 		}
 	}
 	
@@ -3173,7 +3872,7 @@ technologies = {
 			tank_destroyer
 		}
 		
-		research_cost = 1.5
+		research_cost = 1
 
 		start_year = 1940
 		folder = {
@@ -3188,7 +3887,7 @@ technologies = {
 		}
 		
 		ai_will_do = {
-			factor = 1000
+			factor = 5000
 		}
 	}
 	
@@ -3202,7 +3901,7 @@ technologies = {
 			hardware_I = 1
 		}
 		
-		research_cost = 1.5
+		research_cost = 1
 
 		start_year = 1955
 		folder = {
@@ -3217,16 +3916,21 @@ technologies = {
 		}
 		
 		ai_will_do = {
-			factor = 5
+			factor = 0
 			
 			modifier = {
-				factor = 5
-				date > "1970.1.1"
+				add = 20 #Major Priority
+				AND = {
+					date > 1955.1.1
+				}
 			}
-			modifier = {
-				factor = 0
-				num_of_military_factories < 15
-			}
+		}
+		
+		ai_research_weights = {
+			armor = -0.1
+			infantry_vehicles = -0.1
+			support_weapons = -0.1
+			land_doctrine = -0.1
 		}
 	}
 	
@@ -3240,7 +3944,7 @@ technologies = {
 			hardware_IV = 1
 		}
 		
-		research_cost = 1.5
+		research_cost = 1
 
 		start_year = 1970
 		folder = {
@@ -3255,16 +3959,21 @@ technologies = {
 		}
 		
 		ai_will_do = {
-			factor = 5
+			factor = 0
 			
 			modifier = {
-				factor = 5
-				date > "1985.1.1"
+				add = 20 #Major Priority
+				AND = {
+					date > 1970.1.1
+				}
 			}
-			modifier = {
-				factor = 0
-				num_of_military_factories < 15
-			}
+		}
+		
+		ai_research_weights = {
+			armor = -0.1
+			infantry_vehicles = -0.1
+			support_weapons = -0.1
+			land_doctrine = -0.1
 		}
 	}
 	
@@ -3278,7 +3987,7 @@ technologies = {
 			hardware_VI = 1
 		}
 		
-		research_cost = 1.5
+		research_cost = 3
 
 		start_year = 1985
 		folder = {
@@ -3293,16 +4002,21 @@ technologies = {
 		}
 		
 		ai_will_do = {
-			factor = 5
+			factor = 0
 			
 			modifier = {
-				factor = 5
-				date > "2000.1.1"
+				add = 20 #Major Priority
+				AND = {
+					date > 1985.1.1
+				}
 			}
-			modifier = {
-				factor = 0
-				num_of_military_factories < 15
-			}
+		}
+		
+		ai_research_weights = {
+			armor = -0.1
+			infantry_vehicles = -0.1
+			support_weapons = -0.1
+			land_doctrine = -0.1
 		}
 	}
 	
@@ -3316,7 +4030,7 @@ technologies = {
 			hardware_XII = 1
 		}
 		
-		research_cost = 1.5
+		research_cost = 3
 
 		start_year = 2000
 		folder = {
@@ -3331,17 +4045,21 @@ technologies = {
 		}
 		
 		ai_will_do = {
-			factor = 5
+			factor = 0
 			
 			modifier = {
-				factor = 5
-				date > "2015.1.1"
-			}
-			modifier = {
-				factor = 0
-				num_of_military_factories < 15
+				add = 20 #Major Priority
+				AND = {
+					date > 2000.1.1
+				}
 			}
 		}
+		
+		ai_research_weights = {
+			armor = -0.1
+			infantry_vehicles = -0.1
+			support_weapons = -0.1
+			land_doctrine = -0.1
+		}
 	}
-
 }

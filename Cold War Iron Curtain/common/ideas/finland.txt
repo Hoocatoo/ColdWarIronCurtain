@@ -1,6 +1,25 @@
 ideas = {
 
 country = {
+		paris_paris_treaty_FIN = {
+			picture = paris_treaty
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				
+			}
+
+			removal_cost = -1
+
+			
+			modifier = {
+				war_support_factor = -0.05
+				conscription_factor = -0.25
+				production_cost_max_ship_hull_submarine = 6500
+			}
+		}
 		heroin_epidemic = {
 			picture = heroin
 			allowed = {
@@ -69,6 +88,23 @@ country = {
 				decryption = 1
 				stability_factor = -0.05
 			}
+		}
+		
+		right_wing_banned = {
+			allowed = {
+				always = no # Triggered via event
+			}
+
+			picture = pan_arabism_drift_bonus
+			
+			modifier = {
+				nationalism_drift = -0.05
+				fascism_drift = -0.05
+				monarchism_drift = -0.05
+				neutrality_drift = -0.05
+			}
+	
+
 		}
 	}
 	

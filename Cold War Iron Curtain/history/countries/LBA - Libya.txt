@@ -3,7 +3,9 @@
 #TECH CULTURE#
 set_country_flag = tech_gfx_african
 set_country_flag = tech_alignment_western
-
+set_country_flag = weapon_purchasing_CUM_permit
+set_country_flag = weapon_purchasing_CAP_permit
+set_country_flag = weapon_purchasing_MAO_permit
 #TECH/OOBS
 
 oob = "LBA_1949"
@@ -22,7 +24,7 @@ if = {
 	set_technology = {
 		subkiller_0 = 1
 		maritime_sonar_0 = 1
-		ww_detection = 1
+		detection_ww = 1
 		maritime_ew_ss_0 = 1
 		ww_armaments = 1
 		ship_armament_light_0 = 1
@@ -35,8 +37,8 @@ if = {
 		sub_hull_large_single_0 = 1
 		torpedo_small_0 = 1
 		ww_screens = 1
-		screen_hull_small_0 = 1
 		screen_hull_medium_0 = 1
+		screen_hull_heavy_0 = 1
 	}
 }
 
@@ -63,6 +65,7 @@ set_technology = {
 ##Armor##
 
 	iw_armored_vehicles = 1
+	motorised_infantry = 1
 	
 ##Artillery##
 	
@@ -70,8 +73,14 @@ set_technology = {
 	
 	artillery_1 = 1
 	light_artillery_1 = 1
+	sp_artillery_1 = 1
+	heavy_artillery_1 = 1
+	light_sp_artillery_1 = 1
+	heavy_sp_artillery_1 = 1
+	sp_rocket1 = 1
 	
 	direct_fire_gun_1 = 1
+	tank_destroyer_1 = 1
 	
 ##Land Doc##
 	
@@ -259,7 +268,7 @@ create_corps_commander = {
 		idea_LBA_omar_mukhtar
 		idea_LBA_insufficent_resource_management
 		idea_LBA_foreign_defense_contractors
-	}	  
+	}  
 	oob = "LBA_1960"
 	set_technology = {
 		ww_production = 1
@@ -483,7 +492,7 @@ create_corps_commander = {
 		long_name = "Arab Socialist Union"
 		name = "ASU"
 	}
-}	
+}
 1992.1.1 = {
 	create_country_leader = {
 		name = "Mohammed El Senussi"

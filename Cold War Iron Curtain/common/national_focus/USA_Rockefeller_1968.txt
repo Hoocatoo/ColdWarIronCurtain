@@ -6,16 +6,16 @@ focus_tree = {
 	}
 	default = no
 	shared_focus = USA_60s_The_CIA
-	shared_focus = USA_60s_Domestic_Affairs
+	
 	shared_focus = USA_60s_The_American_Armed_Forces
 	shared_focus = USA_60s_State_Department
 	shared_focus = USA_60s_Rethinking_our_Foriegn_Policies
 
 	focus = {
 		id = USA_ROCKEFELLER_The_Rockefeller_Administration
-		icon = GFX_goal_unknown
+		icon = GFX_RockefellerAdministration
 		search_filters = {IC_FILTER}
-		cost = 10.00
+		cost = 5.00
 		x = 5
 		y = 0
 		completion_reward = {
@@ -24,9 +24,9 @@ focus_tree = {
 	}
 	focus = {
 		id = USA_ROCKEFELLER_Tax_Reform_Act
-		icon = GFX_goal_unknown
+		icon = GFX_ISR_Focus_Tax_Cuts
 		search_filters = {IC_FILTER}
-		cost = 10.00
+		cost = 5.00
 		prerequisite = {
 			focus = USA_ROCKEFELLER_The_Rockefeller_Administration
 		}
@@ -39,9 +39,9 @@ focus_tree = {
 	}
 	focus = {
 		id = USA_ROCKEFELLER_Increase_Space_Funding
-		icon = GFX_goal_unknown
+		icon = GFX_spacerace
 		search_filters = {IC_FILTER}
-		cost = 10.00
+		cost = 5.00
 		prerequisite = {
 			focus = USA_ROCKEFELLER_Tax_Reform_Act
 		}
@@ -64,9 +64,9 @@ focus_tree = {
 	}
 	focus = {
 		id = USA_ROCKEFELLER_The_Coal_Act
-		icon = GFX_goal_unknown
+		icon = GFX_Industrial_Articles
 		search_filters = {IC_FILTER}
-		cost = 10.00
+		cost = 5.00
 		prerequisite = {
 			focus = USA_ROCKEFELLER_The_Rockefeller_Administration
 		}
@@ -79,9 +79,9 @@ focus_tree = {
 	}
 	focus = {
 		id = USA_ROCKEFELLER_Stabilize_Welfare_Spending
-		icon = GFX_goal_unknown
+		icon = GFX_Public_Service_Funding
 		search_filters = {IC_FILTER}
-		cost = 10.00
+		cost = 5.00
 		prerequisite = {
 			focus = USA_ROCKEFELLER_Tax_Reform_Act
 		}
@@ -98,9 +98,9 @@ focus_tree = {
 	}
 	focus = {
 		id = USA_ROCKEFELLER_Public_Health_Service_Act
-		icon = GFX_goal_unknown
+		icon = GFX_Generic_Healthcare
 		search_filters = {IC_FILTER}
-		cost = 10.00
+		cost = 5.00
 		prerequisite = {
 			focus = USA_ROCKEFELLER_Increase_Space_Funding
 		}
@@ -116,9 +116,9 @@ focus_tree = {
 	}
 	focus = {
 		id = USA_ROCKEFELLER_Controlled_Substances_Act
-		icon = GFX_goal_unknown
+		icon = GFX_Narcotics_Crackdown
 		search_filters = {IC_FILTER}
-		cost = 10.00
+		cost = 5.00
 		prerequisite = {
 			focus = USA_ROCKEFELLER_Public_Health_Service_Act
 		}
@@ -131,9 +131,9 @@ focus_tree = {
 	}
 	focus = {
 		id = USA_ROCKEFELLER_Postal_Reorganization_Act
-		icon = GFX_goal_unknown
+		icon = GFX_US_Post_Office
 		search_filters = {IC_FILTER}
-		cost = 10.00
+		cost = 5.00
 		prerequisite = {
 			focus = USA_ROCKEFELLER_The_Coal_Act
 		}
@@ -148,7 +148,7 @@ focus_tree = {
 		id = USA_ROCKEFELLER_National_Environmental_Policy_Act
 		icon = GFX_goal_unknown
 		search_filters = {IC_FILTER}
-		cost = 10.00
+		cost = 5.00
 		prerequisite = {
 			focus = USA_ROCKEFELLER_Stabilize_Welfare_Spending
 		}
@@ -164,9 +164,9 @@ focus_tree = {
 	}
 	focus = {
 		id = USA_ROCKEFELLER_Economic_Stabilization_Act
-		icon = GFX_goal_unknown
+		icon = GFX_industrial_methods
 		search_filters = {IC_FILTER}
-		cost = 10.00
+		cost = 5.00
 		prerequisite = {
 			focus = USA_ROCKEFELLER_Public_Health_Service_Act
 		}
@@ -182,9 +182,9 @@ focus_tree = {
 	}
 	focus = {
 		id = USA_ROCKEFELLER_Housing_and_Urban_Development_Act
-		icon = GFX_goal_unknown
+		icon = GFX_focus_public_housing
 		search_filters = {IC_FILTER}
-		cost = 10.00
+		cost = 5.00
 		prerequisite = {
 			focus = USA_ROCKEFELLER_National_Environmental_Policy_Act
 		}
@@ -197,9 +197,9 @@ focus_tree = {
 	}
 	focus = {
 		id = USA_ROCKEFELLER_Organized_Crime_Control_Act
-		icon = GFX_goal_unknown
+		icon = GFX_Mafia_Icon
 		search_filters = {IC_FILTER}
-		cost = 10.00
+		cost = 5.00
 		prerequisite = {
 			focus = USA_ROCKEFELLER_Housing_and_Urban_Development_Act
 		}
@@ -215,9 +215,9 @@ focus_tree = {
 	}
 	focus = {
 		id = USA_ROCKEFELLER_Increase_Education_Funding
-		icon = GFX_goal_unknown
+		icon = GFX_universities
 		search_filters = {IC_FILTER}
-		cost = 10.00
+		cost = 5.00
 		prerequisite = {
 			focus = USA_ROCKEFELLER_Organized_Crime_Control_Act
 		}
@@ -229,9 +229,9 @@ focus_tree = {
 	}
 	focus = {
 		id = USA_ROCKEFELLER_Urban_Mass_Transit_Act
-		icon = GFX_goal_unknown
+		icon = GFX_metro
 		search_filters = {IC_FILTER}
-		cost = 10.00
+		cost = 5.00
 		prerequisite = {
 			focus = USA_ROCKEFELLER_Increase_Education_Funding
 		}
@@ -247,9 +247,9 @@ focus_tree = {
 	}
 	focus = {
 		id = USA_ROCKEFELLER_Increase_Funding_for_the_Arts
-		icon = GFX_goal_unknown
+		icon = GFX_Cash_and_Carry
 		search_filters = {IC_FILTER}
-		cost = 10.00
+		cost = 5.00
 		prerequisite = {
 			focus = USA_ROCKEFELLER_Establish_OSHA
 		}
@@ -263,9 +263,9 @@ focus_tree = {
 	}
 	focus = {
 		id = USA_ROCKEFELLER_Equal_Employmeny_Opportunity_Act
-		icon = GFX_goal_unknown
+		icon = GFX_expand_legal_power
 		search_filters = {IC_FILTER}
-		cost = 10.00
+		cost = 5.00
 		prerequisite = {
 			focus = USA_ROCKEFELLER_Increase_Funding_for_the_Arts
 		}
@@ -281,9 +281,9 @@ focus_tree = {
 	}
 	focus = {
 		id = USA_ROCKEFELLER_Establish_OSHA
-		icon = GFX_goal_unknown
+		icon = GFX_SP_focus_trade_unions
 		search_filters = {IC_FILTER}
-		cost = 10.00
+		cost = 5.00
 		prerequisite = {
 			focus = USA_ROCKEFELLER_Economic_Stabilization_Act
 		}
@@ -299,9 +299,9 @@ focus_tree = {
 	}
 	focus = {
 		id = USA_ROCKEFELLER_Title_IX_Amendment_of_the_Higher_Education_Act
-		icon = GFX_goal_unknown
+		icon = GFX_prioritize_western_education
 		search_filters = {IC_FILTER}
-		cost = 10.00
+		cost = 5.00
 		prerequisite = {
 			focus = USA_ROCKEFELLER_Fight_Water_Pollution
 		}
@@ -319,7 +319,7 @@ focus_tree = {
 		id = USA_ROCKEFELLER_Establish_the_Office_of_Minority_Business_Enterprise
 		icon = GFX_goal_unknown
 		search_filters = {IC_FILTER}
-		cost = 10.00
+		cost = 5.00
 		prerequisite = {
 			focus = USA_ROCKEFELLER_Establish_OSHA
 		}
@@ -330,13 +330,13 @@ focus_tree = {
 		y = 6
 		completion_reward = {
 			add_ideas = Office_of_Minority_Business_Enterprise
-		}	
+		}
 	}
 	focus = {
 		id = USA_ROCKEFELLER_Fight_Water_Pollution
 		icon = GFX_goal_unknown
 		search_filters = {IC_FILTER}
-		cost = 10.00
+		cost = 5.00
 		prerequisite = {
 			focus = USA_ROCKEFELLER_Equal_Employmeny_Opportunity_Act
 		}
@@ -348,9 +348,9 @@ focus_tree = {
 	}
 	focus = {
 		id = USA_ROCKEFELLER_Consumer_Product_Safety_Act
-		icon = GFX_goal_unknown
+		icon = GFX_Paper_Two
 		search_filters = {IC_FILTER}
-		cost = 10.00
+		cost = 5.00
 		prerequisite = {
 			focus = USA_ROCKEFELLER_Urban_Mass_Transit_Act
 		}

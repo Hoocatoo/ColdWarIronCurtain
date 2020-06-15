@@ -81,8 +81,18 @@ cultural_revolution_dynamic_modifier = {	#Socio-Cultural Modernity
 	production_speed_buildings_factor = var_MilPol2	#0.15
 	army_org_factor = var_MilPol2	
 }
-segregation_dynamic_modifier = {
+apartheid_dynamic_modifier = {
 	icon = "GFX_idea_neutrality_idea" 
+	enable = { original_tag = SAF } 
+
+	# list of modifiers		
+	stability_factor = apartheidValue
+	war_support_factor = apartheidValue
+	conscription_factor = apartheidValueNeg
+	drift_defence_factor = apartheidValue
+}
+segregation_dynamic_modifier = {
+	icon = "GFX_idea_saf_history_of_segregation" 
 	enable = { original_tag = USA } 
 
 	# list of modifiers		
@@ -93,7 +103,7 @@ segregation_dynamic_modifier = {
 }
 
 consumer_goods_spending = {
-	icon = "GFX_idea_neutrality_idea" 
+	icon = "GFX_idea_generic_goods_red_bonus" 
 	enable = { original_tag = SOV } 
 
 	# list of modifiers	
@@ -104,7 +114,7 @@ consumer_goods_spending = {
 }
 
 clergy_tolerance = {
-	icon = "GFX_idea_neutrality_idea" 
+	icon = "GFX_idea_YUG_orthodox_church_support" 
 	enable = { original_tag = SOV } 
 
 	# list of modifiers	
@@ -117,7 +127,7 @@ clergy_tolerance = {
 }
 
 cpsu_party_strength = {
-	icon = "GFX_idea_neutrality_idea" 
+	icon = "GFX_idea_socialist_science_focus" 
 	enable = { original_tag = SOV } 
 
 	# list of modifiers	
@@ -136,11 +146,10 @@ Slavic_Nationalism = {
 	
 }
 soviet_repression = {
-	icon = "GFX_idea_neutrality_idea" 
+	icon = "GFX_idea_officers_purged" 
 	enable = { original_tag = SOV } 
 
 	# list of modifiers	
-	stability_weekly = gulag_factor				#0.01 Per Tick
 	political_power_gain = gulag_factor			
 	conscription_factor = gulag_factor_neg		#-0.01 Per Tick
 	

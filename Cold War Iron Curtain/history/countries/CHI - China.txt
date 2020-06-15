@@ -16,7 +16,7 @@ if = {
 	set_technology = {
 		subkiller_0 = 1
 		maritime_sonar_0 = 1
-		ww_detection = 1
+		detection_ww = 1
 		maritime_ew_ss_0 = 1
 		ww_armaments = 1
 		ship_armament_light_0 = 1
@@ -29,8 +29,8 @@ if = {
 		sub_hull_large_single_0 = 1
 		torpedo_small_0 = 1
 		ww_screens = 1
-		screen_hull_small_0 = 1
 		screen_hull_medium_0 = 1
+		screen_hull_heavy_0 = 1
 	}
 }
 
@@ -86,9 +86,14 @@ set_technology = {
 	
 	artillery_1 = 1
 	light_artillery_1 = 1
+	sp_artillery_1 = 1
+	heavy_artillery_1 = 1
 	light_sp_artillery_1 = 1
+	heavy_sp_artillery_1 = 1
+	sp_rocket1 = 1
 	
 	direct_fire_gun_1 = 1
+	tank_destroyer_1 = 1
 	
 ##Land Doc##
 	
@@ -165,6 +170,12 @@ set_stability = 0.60
 set_war_support = 0.95
 give_guarantee = TRS
 
+
+	add_timed_idea = {
+		idea = civil_war_fervor
+		days = 365
+	}
+
 add_opinion_modifier = { target = PRC modifier = hostile_status }
 
 init_influence = yes
@@ -180,7 +191,7 @@ if = {
 		target = XSM
 		autonomous_state = autonomy_integrated_puppet
 		freedom_level = 0.1
-	}	
+	}
 	else = {
 		puppet = XSM		
 	}
@@ -216,7 +227,7 @@ if = {
 	ruling_party = conservative
 	last_election = "1948.3.22"
 	election_frequency = 72
-	elections_allowed = yes
+	elections_allowed = no
 }
 
 create_country_leader = {
@@ -232,9 +243,21 @@ create_country_leader = {
 }
 
 create_country_leader = {
-	name = "Chiang Peng-chien"
-	picture = "Chiang_Peng_chien.dds"
+	name = "Xie Xuehong"
+	picture = "Xie_Xuehong.dds"
+	ideology = liberal_communism
+}
+
+create_country_leader = {
+	name = "Thomas Liao"
+	picture = "Thomas_Liao.dds"
 	ideology = social_liberal
+}
+
+create_country_leader = {
+	name = "Zhang Junmai"
+	picture = "Zhang_Junmai.dds"
+	ideology = democratic_socialist
 }
 
 create_field_marshal = {
@@ -342,7 +365,7 @@ create_corps_commander = {
 	set_capital = 593
 	white_peace = PRC
 	oob = "CHI_1950"
-	set_autonomy = { target = XSM autonomy_state = autonomy_free }	
+	set_autonomy = { target = XSM autonomy_state = autonomy_free }
 	create_country_leader = {
 		name = "Chiang Kai-shek"
 		picture = "Chiang_Kai_Shek.dds"

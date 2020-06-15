@@ -1,4 +1,4 @@
-﻿###########################
+###########################
 # Israel Events
 ###########################
 
@@ -31,7 +31,7 @@ country_event = {
 	picture = GFX_jerusalem
 
 	is_triggered_only = yes
-	
+
 
 	option = {
 		name = "How exciting!"
@@ -56,7 +56,7 @@ country_event = {
 	picture = GFX_Ben_Gurion_posing
 
 	is_triggered_only = yes
-	
+
 
 	option = {
 		name = "I understand"
@@ -71,7 +71,7 @@ country_event = {
 	picture = GFX_jerusalem
 
 	is_triggered_only = yes
-	
+
 
 	option = {
 		name = "Yedioth Ahronoth"
@@ -90,7 +90,7 @@ country_event = {
 		set_country_flag = haaretz
 		clr_country_flag = yediothahronoth
 		clr_country_flag = maariv
-	}	
+	}
 }
 
 #Invitation to the Alliance Democratic Middle East
@@ -113,14 +113,14 @@ country_event = {
 	}
 	desc = {
 		text = israel.1.d2
-		trigger = { 
+		trigger = {
 			NOT = { FROM = { tag = ISR } }
 		}
 	}
 	#picture = GFX_report_event_israel_flag
-	
+
 	is_triggered_only = yes
-	
+
 	option = {	#We accept
 		name = israel.1.o1
 		#set_country_flag = seek_israel_alliance
@@ -155,14 +155,14 @@ country_event = {
 			}
 		}
 	}
-	
+
 	option = {	#We reject
 		name = israel.1.o2
 		ISR = { country_event = generic.4 }
 		ai_chance = {
 			factor = 10
 			modifier = {
-				tag = PAL 
+				tag = PAL
 				add = -10
 			}
 			modifier = {
@@ -197,9 +197,9 @@ country_event = {
 	title = israel.2.t
 	desc = israel.2.d
 	#picture = GFX_report_event_political_deal2
-	
+
 	is_triggered_only = yes
-	
+
 	option = {	#Excellent.
 		name = israel.2.o1
 	}
@@ -211,9 +211,9 @@ country_event = {
 	title = israel.3.t
 	desc = israel.3.d
 	#picture = GFX_report_event_political_deal2
-	
+
 	is_triggered_only = yes
-	
+
 	option = {	#Well, too bad.
 		name = israel.3.o1
 	}
@@ -224,7 +224,7 @@ country_event = {
 	id = israel.4
 	title = "Arab Invasion Imminent"
 	desc = "The Mossad has detected major troop movements by Jordan, Egypt & Syria on our borders. the Prime Minister recognizes this as a major threat, should we act preemptively or let them come to us?"
-	
+
 	is_triggered_only = yes
 
 	fire_only_once = yes
@@ -235,7 +235,7 @@ country_event = {
 		declare_war_on = { target = JOR type = annex_everything }
 		declare_war_on = { target = SYR type = annex_everything }
 	}
-	
+
 	option = {
 		name = "Let them come to us!"
 		hidden_effect = {
@@ -251,8 +251,8 @@ news_event = {
 	title = "[GetNewspaperHeader]Israel joins the United Nations"
 	desc = "israel.5.d"
 	picture = GFX_news_event_un_new_member
-	
-	is_triggered_only = yes	
+
+	is_triggered_only = yes
 
 	major = yes
 
@@ -266,8 +266,8 @@ news_event = {
 	title = "[GetNewspaperHeader]Mapai triumphant in Israeli Election"
 	desc = "israelelectionnews.1.d"
 	picture = GFX_Mapai1951
-	
-	is_triggered_only = yes	
+
+	is_triggered_only = yes
 
 	major = yes
 
@@ -281,9 +281,9 @@ news_event = {
 	title = "[GetNewspaperHeader]General Zionists triumphant in Israeli Election"
 	desc = "israelelectionnews.2.d"
 	picture = GFX_GeneralZionists1951
-	
-	
-	is_triggered_only = yes	
+
+
+	is_triggered_only = yes
 
 	major = yes
 
@@ -297,8 +297,8 @@ news_event = {
 	title = "[GetNewspaperHeader]Pro-USSR Socialists win Israeli Election"
 	desc = "israelelectionnews.3.d"
 	picture = GFX_Mapam1951
-	
-	is_triggered_only = yes	
+
+	is_triggered_only = yes
 
 	major = yes
 
@@ -312,9 +312,9 @@ news_event = {
 	title = "[GetNewspaperHeader]Former Irgun leader elected PM of Israel"
 	desc = "israelelectionnews.4.d"
 	picture = GFX_Herut1951
-	
+
 	is_triggered_only = yes
-	
+
 	major = yes
 
 	option = {
@@ -329,7 +329,7 @@ country_event = {
 	picture = GFX_jerusalem
 
 	is_triggered_only = yes
-	
+
 
 	option = {
 		name = "Interesting"
@@ -342,7 +342,7 @@ country_event = {
 	picture = GFX_israeli_troops
 
 	is_triggered_only = yes
-	
+
 	fire_only_once = yes
 
 	option = {
@@ -356,7 +356,7 @@ country_event = {
 	picture = GFX_israel_fashion
 
 	is_triggered_only = yes
-	
+
 
 	option = {
 		name = "For Every City a Mayor"
@@ -370,13 +370,18 @@ country_event = {
 	picture = GFX_politics
 
 	is_triggered_only = yes
-	
+
 	fire_only_once = yes
 
 	option = {
 		name = "They're Welcome!"
 		add_timed_idea = { idea = idea_ISR_Olim_Population  days = 365 }
 		set_country_flag = Olim
+		country_event = { id = israelOlim.1 days = 60 }
+		country_event = { id = israelOlim.2 days = 120 }
+		country_event = { id = israelOlim.3 days = 180 }
+		country_event = { id = israelOlim.2 days = 240 }
+		country_event = { id = israelOlim.3 days = 300 }	
 		add_to_variable = { var = ISR_Olim_anger value = 60 }
 		custom_effect_tooltip = "We will now be able deal with the new Olim via new decisions."
 	}
@@ -389,8 +394,8 @@ country_event = {
 	picture = GFX_politics
 
 	is_triggered_only = yes
-	
-	fire_only_once = yes
+
+	fire_only_once = no
 
 	option = {
 		name = "We can't let the coalition break down"
@@ -405,8 +410,8 @@ country_event = {
 	picture = GFX_politics
 
 	is_triggered_only = yes
-	
-	fire_only_once = yes
+
+	fire_only_once = no
 
 	option = {
 		name = "Integrate it into the IDF"
@@ -421,8 +426,8 @@ country_event = {
 	picture = GFX_politics
 
 	is_triggered_only = yes
-	
-	fire_only_once = yes
+
+	fire_only_once = no
 
 	option = {
 		name = "We must improve conditions there"
@@ -438,8 +443,8 @@ country_event = {
 	picture = GFX_politics
 
 	is_triggered_only = yes
-	
-	fire_only_once = yes
+
+	fire_only_once = no
 
 	option = {
 		name = "We shouldn't be so harsh"
@@ -458,7 +463,7 @@ country_event = {
 		date > 1952.1.1
 		date < 1952.12.1
 	}
-	
+
 	fire_only_once = yes
 
 	option = {
@@ -490,7 +495,7 @@ country_event = {
 		date < 1952.6.30
 		has_country_flag = Mapai1951
 	}
-	
+
 	fire_only_once = yes
 
 	option = {
@@ -510,7 +515,7 @@ country_event = {
 		date > 1953.9.30
 		date < 1953.11.5
 	}
-	
+
 	fire_only_once = yes
 
 	option = {
@@ -538,13 +543,7 @@ country_event = {
 
 	fire_only_once = yes
 
-	trigger = {
-		tag = ISR
-		has_country_flag = MapaiLoses
-		}
-	mean_time_to_happen = {
-		days = 20
-	}
+	is_triggered_only = yes
 
 	option = {
 		name = "Eshkol opposes the anti Ben-Gurionists"
@@ -700,8 +699,8 @@ picture = GFX_politics
 		tag = ISR
 		has_country_flag = FedayeenAttacks
 		}
-	mean_time_to_happen = {
-		months = 2
+	mean_time_to_happen = { ##will be changed to something else later
+		months = 4
 	}
 
 option = {
@@ -711,7 +710,8 @@ option = {
 option = {
 	   name = "Start a reprisal operation"
 	   add_political_power = -100
-	   add_stability = 0.04
+	   add_stability = 0.02
+	   add_war_support = 0.02
 		}
 	}
 
@@ -731,7 +731,7 @@ option = {
 	   set_country_flag = weakened_fedayeen
 		}
 	}
-	
+
 country_event = {
 id = israel.25
 title = "Reprisal Operation in the West Bank"
@@ -748,7 +748,7 @@ option = {
 	   clr_country_flag = weakened_fedayeen
 		}
 	}
-	
+
 country_event = {
 id = israel.26
 title = "The Kastner Trial - Verdict"
@@ -771,12 +771,12 @@ country_event = {
 	title = "1951 Knesset Election"
 	desc = "israelelection.1.d"
 	picture = GFX_Ben_Gurion_posing
-	
+
 	is_triggered_only = yes
-	
-	fire_only_once = yes
-	
-	
+
+	fire_only_once = no
+
+
 	option = {
 		name = israelelection.1.a
 		ai_chance = { factor = 100 }
@@ -793,7 +793,11 @@ country_event = {
 		}
 	set_country_flag = Mapai1951
 	set_country_flag = URFLost
-	set_country_flag = Election1951	
+	set_country_flag = Election1951
+	country_event = { id = israel.29 days = 40 }
+	country_event = { id = israel.30 days = 75 }
+	country_event = { id = israel.31 days = 90 }
+	country_event = { id = israel.33 days = 120 }	
 					hidden_effect = {
 							news_event = israelelectionnews.1
 							set_variable = { communism_seats_parliament = 4 }
@@ -814,7 +818,7 @@ country_event = {
 							set_variable = { trotskyism_seats_parliament = 8 }
 							set_variable = { maoism_seats_parliament = 0 }
 							set_variable = { radical_shiaism_seats_parliament = 0 }
-							set_variable = { Salafism_seats_parliament = 0 }	
+							set_variable = { Salafism_seats_parliament = 0 }
 
 							set_variable = { communism_seats_parliament2 = communism_seats_parliament }
 							set_variable = { socialist_seats_parliament2 = socialist_seats_parliament }
@@ -834,10 +838,10 @@ country_event = {
 							set_variable = { trotskyism_seats_parliament2 = trotskyism_seats_parliament }
 							set_variable = { maoism_seats_parliament2 = maoism_seats_parliament }
 							set_variable = { radical_shiaism_seats_parliament2 = radical_shiaism_seats_parliament }
-							set_variable = { Salafism_seats_parliament2 = Salafism_seats_parliament }	
-							
-							set_parliament_graphics = yes									
-						}	
+							set_variable = { Salafism_seats_parliament2 = Salafism_seats_parliament }
+
+							set_parliament_graphics = yes
+						}
 	}
 
 	option = {
@@ -851,13 +855,19 @@ country_event = {
 			ideology = socialist
 			popularity = -0.08
 	}
-		set_politics = {
-				ruling_party = liberal
-		}
+	set_politics = {
+			ruling_party = liberal
+	}
+	country_event = { id = israel.18 days = 20 }
 	set_country_flag = GenZionist1951
-	set_country_flag = URFLost	
+	set_country_flag = URFLost
 	set_country_flag = Election1951
 	set_country_flag = MapaiLoses
+	country_event = { id = israel.35 days = 40 }
+	country_event = { id = israel.33 days = 120 }
+	country_event = { id = israel.36 days = 180 }
+	country_event = { id = israel.37 days = 100 }
+	country_event = { id = israel.38 days = 140 }	
 					hidden_effect = {
 							news_event = israelelectionnews.2
 							set_variable = { communism_seats_parliament = 4 }
@@ -878,7 +888,7 @@ country_event = {
 							set_variable = { trotskyism_seats_parliament = 8 }
 							set_variable = { maoism_seats_parliament = 0 }
 							set_variable = { radical_shiaism_seats_parliament = 0 }
-							set_variable = { Salafism_seats_parliament = 0 }	
+							set_variable = { Salafism_seats_parliament = 0 }
 
 							set_variable = { communism_seats_parliament2 = communism_seats_parliament }
 							set_variable = { socialist_seats_parliament2 = socialist_seats_parliament }
@@ -898,12 +908,11 @@ country_event = {
 							set_variable = { trotskyism_seats_parliament2 = trotskyism_seats_parliament }
 							set_variable = { maoism_seats_parliament2 = maoism_seats_parliament }
 							set_variable = { radical_shiaism_seats_parliament2 = radical_shiaism_seats_parliament }
-							set_variable = { Salafism_seats_parliament2 = Salafism_seats_parliament }	
-							
-							set_parliament_graphics = yes								
-						}	
-	}
-	
+							set_variable = { Salafism_seats_parliament2 = Salafism_seats_parliament }
+
+							set_parliament_graphics = yes
+						}
+					}
 	option = {
 		name = israelelection.1.c
 		ai_chance = { factor = 0 }
@@ -918,13 +927,15 @@ country_event = {
 			ideology = socialist
 			popularity = -0.07
 	}
-		set_politics = {
-				ruling_party = trotskyism
-		}
+	set_politics = {
+			ruling_party = trotskyism
+	}
+	country_event = { id = israel.18 days = 20 }
 	set_country_flag = Mapam1951
-	set_country_flag = URFLost	
+	set_country_flag = URFLost
 	set_country_flag = Election1951
 	set_country_flag = MapaiLoses
+	country_event = { id = israel.39 days = 40 }
 					hidden_effect = {
 							news_event = israelelectionnews.3
 							set_variable = { communism_seats_parliament = 5 }
@@ -945,7 +956,7 @@ country_event = {
 							set_variable = { trotskyism_seats_parliament = 33 }
 							set_variable = { maoism_seats_parliament = 0 }
 							set_variable = { radical_shiaism_seats_parliament = 0 }
-							set_variable = { Salafism_seats_parliament = 0 }	
+							set_variable = { Salafism_seats_parliament = 0 }
 
 							set_variable = { communism_seats_parliament2 = communism_seats_parliament }
 							set_variable = { socialist_seats_parliament2 = socialist_seats_parliament }
@@ -965,12 +976,12 @@ country_event = {
 							set_variable = { trotskyism_seats_parliament2 = trotskyism_seats_parliament }
 							set_variable = { maoism_seats_parliament2 = maoism_seats_parliament }
 							set_variable = { radical_shiaism_seats_parliament2 = radical_shiaism_seats_parliament }
-							set_variable = { Salafism_seats_parliament2 = Salafism_seats_parliament }	
-							
-							set_parliament_graphics = yes										
-						}	
+							set_variable = { Salafism_seats_parliament2 = Salafism_seats_parliament }
+
+							set_parliament_graphics = yes
+						}
 	}
-	
+
 	option = {
 		name = israelelection.1.e
 		trigger = {
@@ -989,9 +1000,10 @@ country_event = {
 			ideology = socialist
 			popularity = -0.08
 	}
-		set_politics = {
-				ruling_party = nationalism
-		}
+	set_politics = {
+			ruling_party = nationalism
+	}
+	country_event = { id = israel.18 days = 20 }
 	set_country_flag = Religious1951
 	set_country_flag = Election1951
 	set_country_flag = MapaiLoses
@@ -1015,7 +1027,7 @@ country_event = {
 							set_variable = { trotskyism_seats_parliament = 6 }
 							set_variable = { maoism_seats_parliament = 0 }
 							set_variable = { radical_shiaism_seats_parliament = 0 }
-							set_variable = { Salafism_seats_parliament = 0 }	
+							set_variable = { Salafism_seats_parliament = 0 }
 
 							set_variable = { communism_seats_parliament2 = communism_seats_parliament }
 							set_variable = { socialist_seats_parliament2 = socialist_seats_parliament }
@@ -1035,10 +1047,10 @@ country_event = {
 							set_variable = { trotskyism_seats_parliament2 = trotskyism_seats_parliament }
 							set_variable = { maoism_seats_parliament2 = maoism_seats_parliament }
 							set_variable = { radical_shiaism_seats_parliament2 = radical_shiaism_seats_parliament }
-							set_variable = { Salafism_seats_parliament2 = Salafism_seats_parliament }	
-							
-							set_parliament_graphics = yes									
-						}	
+							set_variable = { Salafism_seats_parliament2 = Salafism_seats_parliament }
+
+							set_parliament_graphics = yes
+						}
 	}
 
 	option = {
@@ -1055,13 +1067,20 @@ country_event = {
 			ideology = socialist
 			popularity = -0.05
 	}
-		set_politics = {
-				ruling_party = nationalism
-		}
+	set_politics = {
+			ruling_party = nationalism
+	}
+	country_event = { id = israel.18 days = 20 }
 	set_country_flag = Herut1951
 	set_country_flag = URFLost
 	set_country_flag = Election1951
 	set_country_flag = MapaiLoses
+	country_event = { id = israel.42 days = 40 }
+	country_event = { id = israel.43 days = 70 }
+	country_event = { id = israel.44 days = 120 }
+	country_event = { id = israel.45 days = 180 }
+	country_event = { id = israel.46 days = 250 }
+	country_event = { id = israel.47 days = 350 }	
 					hidden_effect = {
 							news_event = israelelectionnews.4
 							set_variable = { communism_seats_parliament = 4 }
@@ -1082,7 +1101,7 @@ country_event = {
 							set_variable = { trotskyism_seats_parliament = 6 }
 							set_variable = { maoism_seats_parliament = 0 }
 							set_variable = { radical_shiaism_seats_parliament = 0 }
-							set_variable = { Salafism_seats_parliament = 0 }	
+							set_variable = { Salafism_seats_parliament = 0 }
 
 							set_variable = { communism_seats_parliament2 = communism_seats_parliament }
 							set_variable = { socialist_seats_parliament2 = socialist_seats_parliament }
@@ -1102,10 +1121,10 @@ country_event = {
 							set_variable = { trotskyism_seats_parliament2 = trotskyism_seats_parliament }
 							set_variable = { maoism_seats_parliament2 = maoism_seats_parliament }
 							set_variable = { radical_shiaism_seats_parliament2 = radical_shiaism_seats_parliament }
-							set_variable = { Salafism_seats_parliament2 = Salafism_seats_parliament }	
-							
-							set_parliament_graphics = yes								
-						}	
+							set_variable = { Salafism_seats_parliament2 = Salafism_seats_parliament }
+
+							set_parliament_graphics = yes
+						}
 	}
 }
 
@@ -1149,12 +1168,12 @@ country_event = {
 			}
 		}
 	picture = GFX_politics
-	
+
 	is_triggered_only = yes
-	
-	fire_only_once = yes
-	
-	
+
+	fire_only_once = no
+
+
 	option = {
 		name = israelelection.2.a
 		ai_chance = { factor = 100 }
@@ -1189,7 +1208,7 @@ country_event = {
 	set_country_flag = Election1955
 	set_country_flag = MapaiLoses
 	}
-	
+
 	option = {
 		name = israelelection.2.c
 		trigger = {
@@ -1212,7 +1231,7 @@ country_event = {
 	set_country_flag = Election1955
 	set_country_flag = MapaiLoses
 	}
-	
+
 	option = {
 		name = israelelection.2.e
 		trigger = {
@@ -1297,7 +1316,7 @@ is_triggered_only = yes
 
 option = {
 	   name = "An Intersting Recovery"
-		
+
 		}
 	}
 
@@ -1317,7 +1336,7 @@ fire_only_once = yes
 
 option = {
 	   name = "Nobody opposes Weizmann it seems"
-		
+
 		}
 	}
 
@@ -1337,11 +1356,11 @@ fire_only_once = yes
 
 option = {
 	   name = "Rest in Peace"
-	   
+
 	remove_ideas = idea_Chaim_Weizmann
 		}
 	}
-	
+
 country_event = {
 id = israelpresidents.3
 title = "1952 Israeli Presidential Election"
@@ -1356,7 +1375,7 @@ title = "1952 Israeli Presidential Election"
 		trigger = {
 			has_country_flag = EinsteinPresident
 			}
-		}		
+		}
 picture = GFX_politics
 
 fire_only_once = yes
@@ -1371,34 +1390,34 @@ option = {
 	   name = "Ben-Zvi is the new President"
 		trigger = {
 		has_country_flag = EinsteinNotPresident
-		}	   
-	   
+		}
+
 	add_ideas = idea_YitzhakBenZvi
 	add_popularity = {
 			ideology = socialist
 			popularity = 0.02
-	}	
+	}
 }
 option = {
 	   name = "Nurock is the new President"
 		trigger = {
 		has_country_flag = EinsteinNotPresident
-		}	   
-	   
+		}
+
 	add_ideas = idea_Mordechai_Nurock
 	add_popularity = {
 			ideology = conservative
 			popularity = 0.02
-	}	
-		}		
+	}
+		}
 option = {
 	   name = "Albert Einstein is the new President"
 		trigger = {
 		has_country_flag = EinsteinPresident
-		}	   
-	   
+		}
+
 	add_ideas = President_Einstein
-		}		
+		}
 	}
 
 country_event = {
@@ -1419,15 +1438,15 @@ is_triggered_only = yes
 
 option = {
 	   name = "Einstein refuses"
-	   
+
 	set_country_flag = EinsteinNotPresident
 		}
 option = {
 	   name = "Einstein accepts"
-	   
+
 	set_country_flag = EinsteinPresident
-		}		
-	}	
+		}
+	}
 
 country_event = {
 id = lavonmania.1
@@ -1456,7 +1475,7 @@ option = {
 		}
 		country_event = { id = lavonmania.1 days = 0 }
 		set_country_flag = PMSharett
-		set_country_flag = LavonDefenseMinister		
+		set_country_flag = LavonDefenseMinister
 	}
 }
 
@@ -1568,7 +1587,7 @@ option = {
 	militaristic_posture
     Western_sympaties
 	plays_tough
-           } 
+           }
 		}
 	}
 }
@@ -1609,12 +1628,15 @@ option = {
 			has_country_flag = Mapai1951
 			}
 	   set_country_flag = GermanReparations
+	   country_event = { id = german_reparations.2 days = 8 }
 	}
 option = {
 	   name = "Refuse the proposal, they can't pay for our blood with money"
 		trigger = {
 			has_country_flag = MapaiLoses
 			}
+	   country_event = { id = german_reparations.5 days = 15 }
+	   country_event = { id = german_reparations.8 days = 30 }	   
 	   set_country_flag = NoGermanReparations
 	}
 }
@@ -1627,17 +1649,11 @@ picture = GFX_politics
 
 fire_only_once = yes
 
-	trigger = {
-		tag = ISR
-		has_country_flag = GermanReparations
-	}
-	
-mean_time_to_happen = {
-		days = 10
-	}
+	is_triggered_only = yes
 
 option = {
 	   name = "When will they shut up?"
+	   country_event = { id = german_reparations.3 days = 20 }
 	}
 }
 
@@ -1649,22 +1665,14 @@ picture = GFX_politics
 
 fire_only_once = yes
 
-	trigger = {
-		tag = ISR
-		has_country_flag = GermanReparations
-	}
-	
-mean_time_to_happen = {
-		days = 20
-	}
+is_triggered_only = yes
 
-option = {
-	   name = "My God"
+
+	option = {
+	   name = "Elohim Yishmor!"
 		add_stability = -0.2
-		country_event = {
-			id = german_reparations.7
-			days = 7
-		}		
+	   country_event = { id = german_reparations.7 days = 15 }
+	   country_event = { id = german_reparations.2 days = 5 }
 	}
 }
 
@@ -1676,16 +1684,10 @@ picture = GFX_politics
 
 fire_only_once = yes
 
-	trigger = {
-		tag = ISR
-		has_country_flag = GermanReparations
-	}
-	
-mean_time_to_happen = {
-		days = 30
-	}
+is_triggered_only = yes
 
-option = {
+
+	option = {
 	   name = "Hmmm"
 	add_political_power = -50
 	}
@@ -1699,37 +1701,24 @@ picture = GFX_politics
 
 fire_only_once = yes
 
-	trigger = {
-		tag = ISR
-		has_country_flag = NoGermanReparations
-	}
-	
-mean_time_to_happen = {
-		days = 7
-	}
+is_triggered_only = yes
 
 option = {
 	   name = "Do they really want to deal with the devil?"
-	add_political_power = -50
+	   add_political_power = -50
+	   country_event = { id = german_reparations.6 days = 7 }
 	}
 }
 
 country_event = {
 id = german_reparations.6
-title = "Ben-Gurion speaks"
+title = "Ben-Gurion Speaks"
 desc = german_reparations.6.d
 picture = GFX_politics
 
 fire_only_once = yes
 
-	trigger = {
-		tag = ISR
-		has_country_flag = NoGermanReparations
-	}
-	
-mean_time_to_happen = {
-		days = 15
-	}
+is_triggered_only = yes
 
 option = {
 	   name = "They can't repay the sins they have done in the Holocaust, end of story."
@@ -1737,7 +1726,7 @@ option = {
 		country_event = {
 			id = german_reparations.8
 			days = 7
-		}	
+		}
 	}
 }
 
@@ -1755,7 +1744,7 @@ option = {
 	   name = "At least the Economy is going to survive"
 	add_political_power = -100
 			swap_ideas = {
-				remove_idea = idea_ISR_economy_is_fucking_shit_and_now_there_is_fucking_austerity
+				remove_idea = idea_ISR_economy_austerity
 				add_idea = idea_ISR_German_Reparations
 		}
 	}
@@ -1934,7 +1923,7 @@ is_triggered_only = yes
 
 option = {
 	   name = "That will show them"
-			805 = {	
+			805 = {
 	set_building_level = {
 		type = state_infrastructure
 		level = 0
@@ -1999,7 +1988,7 @@ option = {
 		}
 			453 = {
 				set_demilitarized_zone = yes
-				}	
+				}
 			801 = {
 				set_demilitarized_zone = yes
 			}
@@ -2023,7 +2012,7 @@ option = {
 	   name = "At least that's over"
 		clr_country_flag = FedayeenAttacks
 	}
-}	
+}
 
 country_event = {
 	id = israelOlim.1
@@ -2031,14 +2020,7 @@ country_event = {
 	desc = "israelOlim.1.d"
 	picture = GFX_politics
 
-	trigger = {
-		tag = ISR
-		has_country_flag = ISR_OlimPituach
-		}
-
-	mean_time_to_happen = {
-		months = 4
-	}
+	is_triggered_only = yes
 
 	option = {
 		name = "They will have to help themselves"
@@ -2057,20 +2039,11 @@ country_event = {
 
 country_event = {
 	id = israelOlim.2
-	title = "Claims of Ethnic Discrimination towards the new Olim"
+	title = "Claims of Discrimination towards the new Olim"
 	desc = "israelOlim.2.d"
 	picture = GFX_politics
 
-	trigger = {
-		tag = ISR
-		has_country_flag = Olim
-		}
-
-	mean_time_to_happen = {
-		months = 2
-	}
-
-	fire_only_once = yes
+	is_triggered_only = yes
 
 	option = {
 		name = "Launch a probe into the matter"
@@ -2092,16 +2065,7 @@ country_event = {
 	desc = "israelOlim.3.d"
 	picture = GFX_politics
 
-	trigger = {
-		tag = ISR
-		has_country_flag = Olim
-		}
-
-	mean_time_to_happen = {
-		months = 6
-	}
-
-	fire_only_once = yes
+	is_triggered_only = yes
 
 	option = {
 		name = "Launch Integration programs to aid them"
@@ -2131,10 +2095,6 @@ country_event = {
 		has_country_flag = Olim
 		}
 
-	mean_time_to_happen = {
-		months = 2
-	}
-
 	fire_only_once = yes
 
 	option = {
@@ -2163,7 +2123,7 @@ country_event = {
 			}
 		}
 
-	mean_time_to_happen = {
+	mean_time_to_happen = { ##will be replaced later
 		months = 2
 	}
 
@@ -2185,10 +2145,6 @@ country_event = {
 		date > 1951.1.1
 		date < 1951.3.1
 		}
-
-	mean_time_to_happen = {
-		months = 1
-	}
 
 	fire_only_once = yes
 
@@ -2241,15 +2197,8 @@ country_event = {
 	desc = "Soon after his victory in the last elections, Prime Minister David Ben-Gurion has presented his new economic plan to the Knesset, it includes restraint on inflation, an increase in capital flow and the enhancement of productivity, many applaud this action by the government to tackle the state of the economy."
 	picture = GFX_politics
 
-	trigger = {
-		tag = ISR
-		has_country_flag = Mapai1951
-		}
-
-	mean_time_to_happen = {
-		months = 3
-	}
-
+	is_triggered_only = yes
+	
 	fire_only_once = yes
 
 	option = {
@@ -2263,14 +2212,7 @@ country_event = {
 	desc = israel.30.d
 	picture = GFX_politics
 
-	trigger = {
-		tag = ISR
-		has_country_flag = Mapai1951
-		}
-
-	mean_time_to_happen = {
-		months = 6
-	}
+	is_triggered_only = yes
 
 	fire_only_once = yes
 
@@ -2285,14 +2227,7 @@ country_event = {
 	desc = "Finance Minister Levi Eshkol has announced an increase in consumer price due to the state of the economy, while people won't like increased prices for commodities, it will help the economy in the long run."
 	picture = GFX_politics
 
-	trigger = {
-		tag = ISR
-		has_country_flag = Mapai1951
-		}
-
-	mean_time_to_happen = {
-		months = 6
-	}
+	is_triggered_only = yes
 
 	fire_only_once = yes
 
@@ -2307,19 +2242,15 @@ country_event = {
 	desc = "A bomb has set off in the Soviet Embassy in Tel Aviv, allegedly by former Lehi activists, considering our rather volatile relations with the USSR, this doesn't paint us in a good way in the Soviet Union."
 	picture = GFX_politics
 
-	trigger = {
-		tag = ISR
-		has_country_flag = Election1951
-		date > 1953.1.1
-		date < 1953.3.1
-			}
-
+	is_triggered_only = yes
+	
 	fire_only_once = yes
 
 	option = {
 		name = "Damn"
 		add_political_power = -50
 		set_country_flag = IsraelSovietEmbassy
+		country_event = { id = israel.34 days = 7 }
 	}
 	option = {
 	   name = "Act against the activists, we must save face"
@@ -2327,6 +2258,7 @@ country_event = {
 			has_country_flag = Mapam1951
 			}
 	   set_country_flag = MapamSovietEmbassy
+	   	country_event = { id = israel.40 days = 7 }
 	}
 }
 country_event = {
@@ -2335,13 +2267,8 @@ country_event = {
 	desc = "Due to the explosion at the Soviet Embassy recently, the Soviet Union has announced the severing of diplomatic ties between them and us, this puts us in the position that only one superpower, the USA is friendly to us"
 	picture = GFX_politics
 
-	trigger = {
-		tag = ISR
-		has_country_flag = IsraelSovietEmbassy
-		date > 1953.3.1
-		date < 1953.4.1
-			}
-
+	is_triggered_only = yes
+	
 	fire_only_once = yes
 
 	option = {
@@ -2360,15 +2287,8 @@ country_event = {
 	desc = israel.35.d
 	picture = GFX_politics
 
-	trigger = {
-		tag = ISR
-		has_country_flag = GenZionist1951
-	}
-		
-	mean_time_to_happen = {
-		months = 2
-	}
-
+	is_triggered_only = yes
+	
 	fire_only_once = yes
 
 	option = {
@@ -2398,13 +2318,8 @@ country_event = {
 	desc = "Our economic ventures, namely the Bernstein Plan have started to bear results, more and more companies have begun to sprung up and the economy is visibly benefiting from the Bernstein plan."
 	picture = GFX_politics
 
-	trigger = {
-		tag = ISR
-		has_country_flag = GenZionist1951
-		date > 1953.1.1
-		date < 1953.5.1
-	}
-
+	is_triggered_only = yes
+	
 	fire_only_once = yes
 
 	option = {
@@ -2419,13 +2334,8 @@ country_event = {
 	desc = "Mapai has issued a motion of no confidence in our government, stating our disregard to the legacy of Israel as a nation built up by workers. The motion didn't pass and it just shows how desperate Mapai is to regain power."
 	picture = GFX_politics
 
-	trigger = {
-		tag = ISR
-		has_country_flag = GenZionist1951
-		date > 1953.6.1
-		date < 1954.2.1
-	}
-
+	is_triggered_only = yes
+	
 	fire_only_once = yes
 
 	option = {
@@ -2439,12 +2349,7 @@ country_event = {
 	desc = "Our closest partners, the Progressive Party are growing ever closer to us, some even speculate a merger of our two parties, while we don't think the time is right, it sure is good news."
 	picture = GFX_politics
 
-	trigger = {
-		tag = ISR
-		has_country_flag = GenZionist1951
-		date > 1954.4.1
-		date < 1955.2.1
-	}
+	is_triggered_only = yes
 
 	fire_only_once = yes
 
@@ -2459,13 +2364,8 @@ country_event = {
 	desc = "Prime Minister Ya'ari has unveiled his plan for reforming the economy, a planned hands-on approach usual for socialist governments around the world, while the plan has drawn criticism, Ya'ari promises that the program will be a way to fix the economy."
 	picture = GFX_politics
 
-	trigger = {
-		tag = ISR
-		has_country_flag = Mapam1951
-		date > 1951.8.1
-		date < 1951.10.1
-	}
-
+	is_triggered_only = yes
+	
 	fire_only_once = yes
 
 	option = {
@@ -2503,8 +2403,8 @@ country_event = {
 		date > 1951.8.1
 		date < 1952.1.1
 	}
-	
-	fire_only_once = yes	
+
+	fire_only_once = yes
 
 	option = {
 		name = "Good"
@@ -2542,18 +2442,11 @@ country_event = {
 	title = "USSR keeps relations with Israel"
 	desc = "With our swift response to the Soviet Embassy bombing, the USSR has decided to keep relations with us."
 	picture = GFX_politics
-	
+
 	fire_only_once = yes
 
-	trigger = {
-		tag = ISR
-		has_country_flag = MapamSovietEmbassy
-		date > 1953.3.1
-		date < 1953.4.1
-		}
-	mean_time_to_happen = {
-		months = 1
-	}
+	is_triggered_only = yes
+
 	option = {
 		name = "Why sever them at all?"
 		set_country_flag = MapamTankie2
@@ -2566,12 +2459,7 @@ country_event = {
 	desc = "With our recent falling out with the USSR, many are beginning to see Ben-Gurion's point to be suspicious of the USSR. Prime Minister Ya'ari has begrudgingly met with Ben-Gurion at a hotel today to break the ice between the two."
 	picture = GFX_politics
 
-	trigger = {
-		tag = ISR
-		has_country_flag = MapamNotUSSR
-		date > 1953.1.1
-		date < 1953.5.1
-	}
+	is_triggered_only = yes
 
 	fire_only_once = yes
 
@@ -2587,13 +2475,7 @@ country_event = {
 	desc = "With the aftermath of the 'Revolution of 1951' Prime Minister Begin has announced his plan for the economy: a 'mixed' economy mixing socialism and capitalism while following Jabotinsky's '5 Mems'."
 	picture = GFX_politics
 
-	trigger = {
-		tag = ISR
-		has_country_flag = Herut1951
-		date > 1951.10.1
-		date < 1951.12.1
-	}
-
+	is_triggered_only = yes
 	fire_only_once = yes
 
 	option = {
@@ -2608,13 +2490,8 @@ country_event = {
 	desc = "With a revisionist government in power, Beitar has expanded its operations and began to do activist work and promoting the idea of 'a complete Israel' much to the delight of the government."
 	picture = GFX_politics
 
-	trigger = {
-		tag = ISR
-		has_country_flag = Herut1951
-		date > 1952.3.1
-		date < 1952.6.1
-	}
-
+	is_triggered_only = yes
+	
 	fire_only_once = yes
 
 	option = {
@@ -2630,13 +2507,8 @@ country_event = {
 	desc = "With our belief that Jordan is an illegitimate state and should not be recognized, tensions began to rise up. With the borders being more dangerous than ever and the occasional mortar attacks from Jordan."
 	picture = GFX_politics
 
-	trigger = {
-		tag = ISR
-		has_country_flag = Herut1951
-		date > 1952.9.1
-		date < 1953.3.1
-	}
-
+	is_triggered_only = yes
+	
 	fire_only_once = yes
 
 	option = {
@@ -2652,14 +2524,8 @@ country_event = {
 	desc = "With our recent border tensions with Jordan, many high ranking Herut members push for outright war, while a war would align with our goal to control both banks of the Jordan, Prime Minister Begin has stated that we are in no state to declare war on Jordan."
 	picture = GFX_politics
 
-	trigger = {
-		tag = ISR
-		has_country_flag = JordanTensionsHerut
-    }
-		mean_time_to_happen = {
-		days = 20
-	}
-
+	is_triggered_only = yes
+	
 	fire_only_once = yes
 
 	option = {
@@ -2675,12 +2541,7 @@ country_event = {
 	desc = "Our ideological leader, the late Ze'ev Jabotinsky is buried in New York City, a proposal has arrived at the Prime Minister's office to move his remains to Israel for a burial at Mount Herzl, to honour his legacy in shaping Israel in the pre-state years."
 	picture = GFX_politics
 
-	trigger = {
-		tag = ISR
-		has_country_flag = Herut1951
-		date > 1953.9.1
-		date < 1954.2.1
-	}
+	is_triggered_only = yes
 
 	fire_only_once = yes
 
@@ -2695,13 +2556,8 @@ country_event = {
 	desc = "This year's budget includes increased funding for the IDF, when debating this budget the minister of defense and also Prime Minister Menachem Begin has said that it is intended to 'fight terrorism and outside threats that haven't diminished since the war'."
 	picture = GFX_politics
 
-	trigger = {
-		tag = ISR
-		has_country_flag = Herut1951
-		date > 1954.3.1
-		date < 1955.1.1
-	}
-
+	is_triggered_only = yes
+	
 	fire_only_once = yes
 
 	option = {
@@ -2827,7 +2683,7 @@ country_event = {
 	option = {
 		name = "the Old Guard maintains control of the United Religious Front"
 		set_country_flag = URFOldGuard
-				}				
+				}
 			}
 country_event = {
 	id = israel.54
@@ -2849,7 +2705,7 @@ country_event = {
 		name = "Herut is on its own now"
 		set_country_flag = Herut1951
 		clr_country_flag = Religious1951
-				}				
+				}
 			}
 country_event = {
 	id = israel.55
@@ -2869,7 +2725,7 @@ country_event = {
 	option = {
 		name = "Bah, we need to maintain our alliance"
 		add_political_power = -50
-				}				
+				}
 			}
 country_event = {
 	id = israel.56
@@ -2889,7 +2745,7 @@ country_event = {
 	option = {
 		name = "Bah, we need to maintain our alliance"
 		add_political_power = -50
-				}				
+				}
 			}
 
 country_event = {
@@ -2906,9 +2762,9 @@ country_event = {
 		name = "Excellent!"
 		add_political_power = 100
 		add_stability = 0.05
-				}				
+				}
 			}
-			
+
 country_event = {
 	id = israel.58
 	title = "Operation Volcano"
@@ -2923,7 +2779,7 @@ country_event = {
 		name = "Excellent!"
 		add_political_power = 100
 		add_stability = 0.05
-				}				
+				}
 			}
 
 country_event = {
@@ -2949,7 +2805,7 @@ country_event = {
 					}
 				}
 			}
-			
+
 country_event = {
 	id = israel.60
 	title = "Trade Union Act of 1956"
@@ -2971,7 +2827,7 @@ country_event = {
 				add_stability = -0.01
 				}
 			}
-			
+
 country_event = {
 	id = israel.61
 	title = "Histadrut outraged!"
@@ -3128,7 +2984,7 @@ country_event = {
 				add_stability = 0.02
 				}
 			}
-			
+
 country_event = {
 	id = israel.68
 	title = "Yosef Sapir's idea"
@@ -3613,12 +3469,8 @@ country_event = {
 		name = "A solution?"
 		add_political_power = 50
 		add_stability = 0.03
-		country_event = {
-			id = israel.90
-			days = 40
-		}
-			}
-		}
+	}
+}
 country_event = {
 	id = israel.90
 	title = "The Belgrade Accords"
@@ -3636,7 +3488,7 @@ country_event = {
 		country_event = {
 			id = israel.91
 			days = 7
-		}
+				}
 			}
 		}
 country_event = {
@@ -3676,7 +3528,7 @@ country_event = {
 		country_event = {
 			id = israel.93
 			days = 7
-		}
+				}
 			}
 		}
 country_event = {
@@ -4007,7 +3859,7 @@ country_event = {
 		add_stability = 0.02
 			}
 		}
-		
+
 country_event = {
 	id = israel.109
 	title = "Vision for Israel"
@@ -4144,7 +3996,7 @@ option = {
 			long_name = ISR_RTF_party_long
 			name = ISR_RTF_party
 			}
-			set_country_flag = ReligiousPartiesRTF1955		
+			set_country_flag = ReligiousPartiesRTF1955
 		}
 	}
 
@@ -4232,7 +4084,7 @@ country_event = {
 		add_political_power = 50
 			}
 		}
-		
+
 country_event = {
 	id = israel.118
 	title = "New Menorah Sculpture"
@@ -4254,7 +4106,7 @@ country_event = {
 		add_stability = 0.01
 			}
 		}
-		
+
 country_event = {
 	id = israel.119
 	title = "Herut and Agudat Yisrael's motion of no Confidence"
@@ -4295,7 +4147,7 @@ country_event = {
 		add_political_power = 20
 			}
 		}
-		
+
 country_event = {
 	id = israel.121
 	title = "Statement by the Prime Minsiter regarding Egyptian Jewry"
@@ -4395,7 +4247,7 @@ country_event = {
 		name = "We can't let this happen again"
 		add_political_power = -5
 			}
-		}	
+		}
 country_event = {
 	id = israel.126
 	title = "Ten Years since Independence"
@@ -4415,7 +4267,7 @@ country_event = {
 		name = "Hooray!"
 		add_political_power = 80
 			}
-		}	
+		}
 country_event = {
 	id = israel.127
 	title = "Mafdal ministers resign from government"
@@ -4517,7 +4369,7 @@ country_event = {
 		name = "Elections in November, huh"
 			}
 		}
-		
+
 country_event = {
 	id = israel.132
 	title = "Kfar Qasim Massacre"
@@ -4547,7 +4399,7 @@ fire_only_once = yes
 		has_country_flag = URFMaintained
 		has_country_flag = HerutAndReligious
 	}
-	
+
     mean_time_to_happen = {
         days = 20
     }
@@ -4568,10 +4420,10 @@ option = {
 		set_country_flag = ReligiousPartiesMafdal1955
 		clr_country_flag = HerutAndReligious
 		}
-	}		
-			
-			
-			
+	}
+
+
+
 country_event = {
 	id = israelwar.1
 	title = "Wartime National Unity Government"
@@ -4629,7 +4481,7 @@ country_event = {
 	}
 
 	fire_only_once = yes
-	
+
 	mean_time_to_happen = {
 		days = 5
 	}
@@ -4640,7 +4492,7 @@ country_event = {
 	add_popularity = {
 			ideology = socialist
 			popularity = 0.03
-		}		
+		}
 	}
 }
 
@@ -4742,7 +4594,7 @@ country_event = {
 	option = {
 		name = "Pinhas Lavon, risky but worthy"
 	add_political_power = 50
-    hidden_effect = {	
+    hidden_effect = {
 	country_event = {
 			id = mapai.7
 			days = 80
@@ -4752,7 +4604,7 @@ country_event = {
 	option = {
 		name = "Levi Eshkol, unrewarding but safe"
 	add_stability = 0.03
-	}	
+	}
 }
 
 
@@ -4778,7 +4630,7 @@ country_event = {
 	option = {
 		name = "Getting on America's good side is worth the pain"
 	add_political_power = 50
-	}	
+	}
 }
 
 country_event = {
@@ -4797,7 +4649,7 @@ country_event = {
 		name = "Isn't this reckless enough?!"
 	add_stability = -0.03
 	add_political_power = -30
-	}	
+	}
 }
 
 country_event = {
@@ -4809,7 +4661,7 @@ country_event = {
 	mean_time_to_happen = {
 		days = 5
 	}
-	
+
 	trigger = {
 	tag = ISR
 	has_country_flag = GoldaLeadsMapai
@@ -4824,7 +4676,7 @@ country_event = {
 			ideology = socialist
 			popularity = 0.03
 		}
-	}	
+	}
 }
 
 country_event = {
@@ -4840,7 +4692,7 @@ country_event = {
 	trigger = {
 	tag = ISR
 	has_country_flag = GoldaLeadsMapai
-	has_government = socialist	
+	has_government = socialist
 	}
 
 	fire_only_once = yes
@@ -4852,7 +4704,7 @@ country_event = {
 		add_stability = -0.02
 		}
 	}
-	
+
 country_event = {
 	id = mapai.10
 	title = "General Zionists leave the coalition, Progressives in"
@@ -4866,7 +4718,7 @@ country_event = {
 	trigger = {
 	tag = ISR
 	has_country_flag = GoldaLeadsMapai
-	has_government = socialist	
+	has_government = socialist
 	}
 
 	fire_only_once = yes
@@ -4879,7 +4731,7 @@ country_event = {
 			popularity = 0.05
 		}
 	}
-}	
+}
 
 country_event = {
 	id = mapai.11
@@ -4894,7 +4746,7 @@ country_event = {
 	trigger = {
 	tag = ISR
 	has_country_flag = GoldaLeadsMapai
-	has_government = socialist	
+	has_government = socialist
 	}
 
 	fire_only_once = yes
@@ -4918,7 +4770,7 @@ country_event = {
 	trigger = {
 	tag = ISR
 	has_country_flag = GoldaLeadsMapai
-	has_government = socialist	
+	has_government = socialist
 	}
 
 	fire_only_once = yes
@@ -4930,7 +4782,7 @@ country_event = {
 		add_stability = -0.02
 		}
 	}
-	
+
 country_event = {
 	id = mapai.13
 	title = "Levi Eshkol's 'Middle Way'"
@@ -4943,7 +4795,7 @@ country_event = {
 
 	trigger = {
 	tag = ISR
-	has_country_flag = EshkolLeadsMapai	
+	has_country_flag = EshkolLeadsMapai
 	}
 
 	fire_only_once = yes
@@ -4956,7 +4808,7 @@ country_event = {
 			popularity = 0.03
 			}
 		}
-	}	
+	}
 country_event = {
 	id = mapai.14
 	title = "The Cautious Premier"
@@ -4970,7 +4822,7 @@ country_event = {
 	trigger = {
 	tag = ISR
 	has_country_flag = EshkolLeadsMapai
-	has_government = socialist	
+	has_government = socialist
 	}
 
 	fire_only_once = yes
@@ -4994,7 +4846,7 @@ country_event = {
 	trigger = {
 	tag = ISR
 	has_country_flag = EshkolLeadsMapai
-	has_government = socialist	
+	has_government = socialist
 	}
 
 	fire_only_once = yes
@@ -5019,7 +4871,7 @@ country_event = {
 	trigger = {
 	tag = ISR
 	has_country_flag = EshkolLeadsMapai
-	has_government = socialist	
+	has_government = socialist
 	}
 
 	fire_only_once = yes
@@ -5039,7 +4891,7 @@ country_event = {
 	trigger = {
 	tag = ISR
 	has_country_flag = EshkolLeadsMapai
-	has_government = socialist	
+	has_government = socialist
 	}
 
 	fire_only_once = yes
@@ -5047,22 +4899,22 @@ country_event = {
 
 	option = {
 		name = "Drats! do a retake so he won't stutter while speaking!"
-		hidden_effect = {	
+		hidden_effect = {
 			country_event = {
 			id = mapai.18
 			days = 2
 		}
-	}		
+	}
 }
 	option = {
 		name = "Air the speech as is"
-			hidden_effect = {	
+			hidden_effect = {
 			country_event = {
 			id = mapai.19
 			days = 2
 				}
-			}		
-		}		
+			}
+		}
 	}
 country_event = {
 	id = mapai.18
@@ -5098,4 +4950,102 @@ country_event = {
 		name = "Stuttering but honest, truly a man of the people"
 		add_political_power = 50
 		}
-	}	
+	}
+country_event = {
+	id = mapai.20
+	title = "The King of Intrigue"
+	desc = mapai.20.d
+	picture = GFX_politics
+
+	mean_time_to_happen = {
+		days = 30
+	}
+
+	trigger = {
+	tag = ISR
+	has_country_flag = LavonLeadsMapai
+	has_government = socialist
+	}
+
+	fire_only_once = yes
+
+
+	option = {
+		name = "Can he at least get policy implemented?"
+		add_stability = -0.02
+		}
+	}
+country_event = {
+	id = mapai.21
+	title = "Lavon confronts Ya'ari"
+	desc = mapai.21.d
+	picture = GFX_politics
+
+	mean_time_to_happen = {
+		days = 60
+	}
+
+	trigger = {
+	tag = ISR
+	has_country_flag = LavonLeadsMapai
+	has_government = socialist
+	}
+
+	fire_only_once = yes
+
+
+	option = {
+		name = "At least the bill has passed"
+		add_political_power = 80
+		add_stability = -0.03
+		}
+	}
+country_event = {
+	id = mapai.22
+	title = "Lavon gets on the ire of Rabbis"
+	desc = mapai.22.d
+	picture = GFX_politics
+
+	mean_time_to_happen = {
+		days = 90
+	}
+
+	trigger = {
+	tag = ISR
+	has_country_flag = LavonLeadsMapai
+	has_government = socialist
+	}
+
+	fire_only_once = yes
+
+
+	option = {
+		name = "At least Lavon can keep getting bills passed"
+		add_political_power = 100
+		add_stability = -0.04
+		}
+	}
+country_event = {
+	id = mapai.23
+	title = "Lavon barely survives a vote of no confidence"
+	desc = mapai.23.d
+	picture = GFX_politics
+
+	mean_time_to_happen = {
+		days = 200
+	}
+
+	trigger = {
+	tag = ISR
+	has_country_flag = LavonLeadsMapai
+	has_government = socialist
+	}
+
+	fire_only_once = yes
+
+
+	option = {
+		name = "Ugh"
+		add_stability = -0.07
+		}
+	}

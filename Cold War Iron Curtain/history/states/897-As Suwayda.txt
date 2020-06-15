@@ -2,7 +2,9 @@
 state = {
 	id = 897
 	name = "STATE_897"
-
+	resources = {
+		tungsten = 4.000
+	}
 	history = {
 		owner = FRA
 		set_state_flag = mountainshot
@@ -11,24 +13,23 @@ state = {
 		set_state_flag = semideveloped
 		1946.1.1 = {
 			owner = SYR
-
+		buildings = {
+			infrastructure = 2
+			state_infrastructure = 2
+		}
 		}
 		1958.1.1 = {
 			owner = EGY
+			add_core_of = EGY
 
 		}
 		1961.1.1 = {
 			owner = SYR
+			remove_core_of = EGY
 
 		}
 		victory_points = {
 			4486 1 
-		}
-		buildings = {
-			infrastructure = 2
-			state_infrastructure = 2
-
-
 		}
 		add_core_of = SYR
 

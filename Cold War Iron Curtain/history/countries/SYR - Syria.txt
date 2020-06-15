@@ -4,6 +4,9 @@ oob = "SYR_1949"
 
 set_research_slots = 2
 
+set_country_flag = weapon_purchasing_CUM_permit
+set_country_flag = weapon_purchasing_CAP_permit
+
 if = {
 	limit = {
 		not = { has_dlc = "Man the Guns"}
@@ -18,7 +21,7 @@ if = {
 	set_technology = {
 		subkiller_0 = 1
 		maritime_sonar_0 = 1
-		ww_detection = 1
+		detection_ww = 1
 		maritime_ew_ss_0 = 1
 		ww_armaments = 1
 		ship_armament_light_0 = 1
@@ -31,8 +34,8 @@ if = {
 		sub_hull_large_single_0 = 1
 		torpedo_small_0 = 1
 		ww_screens = 1
-		screen_hull_small_0 = 1
 		screen_hull_medium_0 = 1
+		screen_hull_heavy_0 = 1
 	}
 }
 
@@ -113,6 +116,7 @@ set_technology = {
 	
 	ww_production = 1
 	ww_construction = 1
+	ww_infra = 1
 
 ##Rocketry##
 
@@ -191,13 +195,6 @@ create_country_leader = {
 	name = "Husni al-Za'im"
 	desc = "POLITICS_HUSNI_AL_ZAIM_DESC"
 	picture = "Husni_al_Zaim.dds"
-	ideology = military_junta
-}
-
-create_country_leader = {
-	name = "Adib Shishakli"
-	desc = "POLITICS_ADIB_SHISHAKLI_DESC"
-	picture = "Adib_Shishakli.dds"
 	ideology = nationalist_ideology
 }
 
@@ -253,12 +250,254 @@ create_country_leader = {
 		}
 	
 		set_politics = {
-	ruling_party = neutrality
+	ruling_party = nationalism
 		last_election = "1949.1.1"
 		election_frequency = 84
 		elections_allowed = no
 	}
 }
+
+create_field_marshal = {
+	name = "Aram Karamanoukian"
+	portrait_path = "gfx/leaders/SYR/FIELD_MARSHALS/Aram_Karamanoukian.dds"
+	traits = { bearer_of_artillery defensive_doctrine   }
+	skill = 2
+	attack_skill = 2
+	defense_skill = 2
+	#planning_skill = 2
+	#logistics_skill = 2
+}
+
+create_corps_commander = {
+	name = "Abdel Hamid al-Sarraj"
+	portrait_path = "gfx/leaders/SYR/GENERALS/Abdel_Hamid_al_Sarraj.dds"
+	traits = {  }
+	skill = 1
+	attack_skill = 1
+	defense_skill = 1
+	#planning_skill = 1
+	#logistics_skill = 1
+}
+
+create_corps_commander = {
+	name = "Sami_al-Hinnawi"
+	portrait_path = "gfx/leaders/SYR/GENERALS/Sami_al_Hinnawi.dds"
+	traits = {  }
+	skill = 1
+	attack_skill = 1
+	defense_skill = 1
+	#planning_skill = 1
+	#logistics_skill = 1
+}
+
+create_corps_commander = {
+	name = "Afif al-Bizri"
+	portrait_path = "gfx/leaders/SYR/GENERALS/Afif_al_Bizri.dds"
+	traits = {  }
+	skill = 1
+	attack_skill = 1
+	defense_skill = 1
+	#planning_skill = 1
+	#logistics_skill = 1
+}
+
+create_corps_commander = {
+	name = "Fawzi Selu"
+	portrait_path = "gfx/leaders/SYR/GENERALS/Fawzi_Selu.dds"
+	traits = {  }
+	skill = 1
+	attack_skill = 1
+	defense_skill = 1
+	#planning_skill = 1
+	#logistics_skill = 1
+}
+
+create_corps_commander = {
+	name = "Husni Beck al-Bahra"
+	portrait_path = "gfx/leaders/SYR/GENERALS/Husni_Beck_al_Bahra.dds"
+	traits = {  }
+	skill = 1
+	attack_skill = 1
+	defense_skill = 1
+	#planning_skill = 1
+	#logistics_skill = 1
+}
+
+create_corps_commander = {
+	name = "Adib Shishakli"
+	portrait_path = "gfx/leaders/SYR/Adib_Shishakli.dds"
+	traits = {  }
+	skill = 1
+	attack_skill = 1
+	defense_skill = 1
+	#planning_skill = 1
+	#logistics_skill = 1 
+}
+
+create_corps_commander = {
+	name = "Luay al-Atassi"
+	portrait_path = "gfx/leaders/SYR/GENERALS/Luay_al-Atassi.dds"
+	traits = {  }
+	skill = 1
+	attack_skill = 1
+	defense_skill = 1
+	#planning_skill = 1
+	#logistics_skill = 1
+}
+
+create_corps_commander = {
+	name = "Adib Shishakli"
+	portrait_path = "gfx/leaders/SYR/Adib_Shishakli.dds"
+	traits = {  }
+	skill = 1
+	attack_skill = 1
+	defense_skill = 1
+	#planning_skill = 1
+	#logistics_skill = 1 
+}
+
+create_corps_commander = {
+	name = "Salah Jadid"
+	portrait_path = "gfx/leaders/SYR/GENERALS/Salah_Jadid.dds"
+	traits = {  }
+	skill = 1
+	attack_skill = 1
+	defense_skill = 1
+	#planning_skill = 1
+	#logistics_skill = 1 
+}
+
+create_corps_commander = {
+	name = "Mustafa Tlass"
+	portrait_path = "gfx/leaders/SYR/GENERALS/Mustafa_Tlass.dds"
+	traits = {  }
+	skill = 1
+	attack_skill = 1
+	defense_skill = 1
+	#planning_skill = 1
+	#logistics_skill = 1 
+}
+
+create_corps_commander = {
+	name = "Rifaat al-Assad"
+	portrait_path = "gfx/leaders/SYR/GENERALS/Rifaat_al_Assad_General.dds"
+	traits = { commando }
+	skill = 1
+	attack_skill = 1
+	defense_skill = 1
+	#planning_skill = 1
+	#logistics_skill = 1 
+}
+
+create_corps_commander = {
+	name = "Luay al-Atassi"
+	portrait_path = "gfx/leaders/SYR/GENERALS/Luay_al-Atassi.dds"
+	traits = { }
+	skill = 1
+	attack_skill = 1
+	defense_skill = 1
+	#planning_skill = 1
+	#logistics_skill = 1
+}
+
+create_corps_commander = {
+	name = "Ali Aslan"
+	portrait_path = "gfx/leaders/SYR/GENERALS/Ali_Aslan.dds"
+	traits = { brilliant_strategist }
+	skill = 1
+	attack_skill = 1
+	defense_skill = 1
+	#planning_skill = 1
+	#logistics_skill = 1 
+}
+
+create_corps_commander = {
+	name = "Hikmat Shihabi"
+	portrait_path = "gfx/leaders/SYR/GENERALS/Hikmat_Shihabi.tga"
+	traits = {  }
+	skill = 1
+	attack_skill = 1
+	defense_skill = 1
+	#planning_skill = 1
+	#logistics_skill = 1 
+}
+
+create_corps_commander = {
+	name = "Ali Haydar"
+	portrait_path = "gfx/leaders/SYR/GENERALS/Ali_Haydar.dds"
+	traits = { commando }
+	skill = 1
+	attack_skill = 1
+	defense_skill = 1
+	#planning_skill = 1
+	#logistics_skill = 1 
+}
+
+create_corps_commander = {
+	name = "Hasan Turkmani"
+	portrait_path = "gfx/leaders/SYR/GENERALS/Hasan_Turkmani.dds"
+	traits = { cavalry_leader }
+	skill = 1
+	attack_skill = 1
+	defense_skill = 1
+	#planning_skill = 1
+	#logistics_skill = 1 
+}
+
+create_corps_commander = {
+	name = "Ali Habib Mahmud"
+	portrait_path = "gfx/leaders/SYR/GENERALS/Ali_Habib_Mahmud.dds"
+	traits = { cavalry_leader infantry_leader }
+	skill = 2
+	attack_skill = 1
+	defense_skill = 1
+	#planning_skill = 1
+	#logistics_skill = 1 
+}
+
+if = {
+	limit = {
+		has_dlc = "La Resistance"
+	}
+	create_operative_leader = {
+		name = "Georg Fischer"
+		traits = { operative_master_interrogator }
+		bypass_recruitment = no
+		available_to_spy_master = yes
+		nationalities = { SYR }
+	}
+}
+
+1950.1.1 = {
+	
+		set_popularities = { 
+			democratic = 0
+			communism = 10
+			fascism = 30
+			nationalism = 50
+			monarchism = 0
+			neutrality = 0
+			islamism = 5
+			radical_shiaism = 0
+			Social_Democratic = 0
+			Social_Liberalism = 0
+			Salafism = 0
+			Liberal_Conservatism = 0
+			conservative = 10
+			Christian_Democratic = 0
+			socialist = 0
+			centrist = 0
+			liberal = 0
+			trotskyism = 0
+			maoism = 0
+		}
+		create_country_leader = {
+			name = "Adib Shishakli"
+			desc = "POLITICS_ADIB_SHISHAKLI_DESC"
+			picture = "Adib_Shishakli.dds"
+			ideology = nationalist_ideology
+		}
+	}
 
 1955.1.1 = {
 	
@@ -301,6 +540,8 @@ create_country_leader = {
 		idea_SYR_CIA_Influence
 	}
 
+	set_country_flag = weapon_purchasing_CAP_disallowed
+
 }
 
 1957.1.1 = {
@@ -308,9 +549,9 @@ create_country_leader = {
 	add_offsite_building = { type = industrial_complex level = 2 }
 
 	add_ideas = {
-			idea_SYR_Aleppo_University
 			idea_SYR_Accepted_Refugees
 	}
+	set_research_slots = 3
 
 if = {
 	limit = {
@@ -334,7 +575,7 @@ if = {
 		subkiller_0 = 1
 		subkiller_1 = 1
 		maritime_sonar_0 = 1
-		ww_detection = 1
+		detection_ww = 1
 		maritime_ta_fcs_0 = 1
 		maritime_ew_ss_0 = 1
 		ww_armaments = 1
@@ -344,9 +585,9 @@ if = {
 		ship_armament_heavy_0 = 1
 		
 		ww_capitals = 1
-		capital_hull_0 = 1
+		battle_hull_medium_0 = 1
 		ww_carriers = 1
-		capital_hull_0 = 1
+		battle_hull_medium_0 = 1
 		carrier_hull_0 = 1
 		
 		ww_submarines = 1
@@ -355,9 +596,9 @@ if = {
 		sub_hull_small_single_0 = 1
 		torpedo_small_0 = 1
 		ww_screens = 1
+		screen_hull_heavy_0 = 1
 		screen_hull_medium_0 = 1
-		screen_hull_small_0 = 1
-		screen_hull_large_0 = 1
+		battle_hull_light_0 = 1
 	}
 }
 	set_technology = {
@@ -560,7 +801,15 @@ if = {
 			
 
 		}
-	
+		
+		if = {
+			limit = {
+				has_dlc = "La Resistance"
+			}
+			create_intelligence_agency = { name = "Idarat al-Mukhabarat al-Jawiyya" icon = "GFX_intelligence_agency_logo_syr" } 
+			
+		}
+
 		set_politics = {
 			ruling_party = fascism
 			last_election = "1963.3.8"
@@ -588,6 +837,8 @@ if = {
 		 ideology = baathism
 	}
 
+	set_country_flag = weapon_purchasing_MAO_permit
+
 	add_offsite_building = { type = industrial_complex level = 2 }
 
 	oob = "SYR_1973"
@@ -614,8 +865,9 @@ if = {
 			SYR_npf
 			SYR_cut_food_prices
 			SYR_alawite_security
+			neutrality_idea
 	}
-	set_research_slots = 3
+	set_research_slots = 4
 	if = {
 	limit = {
 		not = { has_dlc = "Man the Guns"}
@@ -638,7 +890,7 @@ if = {
 		subkiller_0 = 1
 		subkiller_1 = 1
 		maritime_sonar_0 = 1
-		ww_detection = 1
+		detection_ww = 1
 		maritime_ta_fcs_0 = 1
 		maritime_ew_ss_0 = 1
 		ww_armaments = 1
@@ -648,9 +900,9 @@ if = {
 		ship_armament_heavy_0 = 1
 		
 		ww_capitals = 1
-		capital_hull_0 = 1
+		battle_hull_medium_0 = 1
 		ww_carriers = 1
-		capital_hull_0 = 1
+		battle_hull_medium_0 = 1
 		carrier_hull_0 = 1
 		
 		ww_submarines = 1
@@ -659,9 +911,9 @@ if = {
 		sub_hull_small_single_0 = 1
 		torpedo_small_0 = 1
 		ww_screens = 1
+		screen_hull_heavy_0 = 1
 		screen_hull_medium_0 = 1
-		screen_hull_small_0 = 1
-		screen_hull_large_0 = 1
+		battle_hull_light_0 = 1
 	}
 }
 	set_technology = {
@@ -833,7 +1085,7 @@ if = {
 # ROCKETS XD #
 
 	jet_engines = 1
-	}		
+	}
 }
 
 2000.7.1 = {
@@ -842,125 +1094,4 @@ if = {
 		 picture = "Bashar_al_Assad.dds"
 		 ideology = baathism
 	}
-}
-
-create_field_marshal = {
-	name = "Aram Karamanoukian"
-	portrait_path = "gfx/leaders/SYR/FIELD_MARSHALS/Aram_Karamanoukian.tga"
-	traits = { bearer_of_artillery defensive_doctrine   }
-	skill = 2
-	attack_skill = 2
-	defense_skill = 2
-	#planning_skill = 2
-	#logistics_skill = 2
-}
-
-create_corps_commander = {
-	name = "Adib Shishakli"
-	portrait_path = "gfx/leaders/SYR/Adib_Shishakli.dds"
-	traits = {  }
-	skill = 1
-	attack_skill = 1
-	defense_skill = 1
-	#planning_skill = 1
-	#logistics_skill = 1 
-}
-
-create_corps_commander = {
-	name = "Amin al-Hafiz"
-	portrait_path = "gfx/leaders/SYR/GENERALS/Amin_al-Hafiz.tga"
-	traits = {  }
-	skill = 1
-	attack_skill = 1
-	defense_skill = 1
-	#planning_skill = 1
-	#logistics_skill = 1 
-}
-
-create_corps_commander = {
-	name = "Salah Jadid"
-	portrait_path = "gfx/leaders/SYR/GENERALS/Salah_Jadid.tga"
-	traits = {  }
-	skill = 1
-	attack_skill = 1
-	defense_skill = 1
-	#planning_skill = 1
-	#logistics_skill = 1 
-}
-
-create_corps_commander = {
-	name = "Mustafa Tlass"
-	portrait_path = "gfx/leaders/SYR/GENERALS/Mustafa_Tlass.tga"
-	traits = {  }
-	skill = 1
-	attack_skill = 1
-	defense_skill = 1
-	#planning_skill = 1
-	#logistics_skill = 1 
-}
-
-create_corps_commander = {
-	name = "Rifaat al-Assad"
-	portrait_path = "gfx/leaders/SYR/GENERALS/Rifaat_al_Assad.tga"
-	traits = { commando }
-	skill = 1
-	attack_skill = 1
-	defense_skill = 1
-	#planning_skill = 1
-	#logistics_skill = 1 
-}
-
-create_corps_commander = {
-	name = "Ali Aslan"
-	portrait_path = "gfx/leaders/SYR/GENERALS/Ali_Aslan.tga"
-	traits = { brilliant_strategist }
-	skill = 1
-	attack_skill = 1
-	defense_skill = 1
-	#planning_skill = 1
-	#logistics_skill = 1 
-}
-
-create_corps_commander = {
-	name = "Hikmat Shihabi"
-	portrait_path = "gfx/leaders/SYR/GENERALS/Hikmat_Shihabi.tga"
-	traits = {  }
-	skill = 1
-	attack_skill = 1
-	defense_skill = 1
-	#planning_skill = 1
-	#logistics_skill = 1 
-}
-
-create_corps_commander = {
-	name = "Ali Haydar"
-	portrait_path = "gfx/leaders/SYR/GENERALS/Ali_Haydar.tga"
-	traits = { commando }
-	skill = 1
-	attack_skill = 1
-	defense_skill = 1
-	#planning_skill = 1
-	#logistics_skill = 1 
-}
-
-create_corps_commander = {
-	name = "Hasan Turkmani"
-	portrait_path = "gfx/leaders/SYR/GENERALS/Hasan_Turkmani.tga"
-	traits = { cavalry_leader }
-	skill = 1
-	attack_skill = 1
-	defense_skill = 1
-	#planning_skill = 1
-	#logistics_skill = 1 
-}
-
-create_corps_commander = {
-	name = "Ali Habib Mahmud"
-	portrait_path = "gfx/leaders/SYR/GENERALS/Ali_Habib_Mahmud.tga"
-	traits = { cavalry_leader infantry_leader }
-	skill = 2
-	attack_skill = 1
-	defense_skill = 1
-	#planning_skill = 1
-	#logistics_skill = 1 
 }

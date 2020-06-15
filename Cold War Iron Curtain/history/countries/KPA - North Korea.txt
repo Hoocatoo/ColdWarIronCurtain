@@ -1,7 +1,7 @@
 ﻿capital = 745 
 
 oob = "KPA_1949"
-
+set_research_slots = 3
 if = {
 	limit = {
 		not = { has_dlc = "Man the Guns"}
@@ -16,7 +16,7 @@ if = {
 	set_technology = {
 		subkiller_0 = 1
 		maritime_sonar_0 = 1
-		ww_detection = 1
+		detection_ww = 1
 		maritime_ew_ss_0 = 1
 		ww_armaments = 1
 		ship_armament_light_0 = 1
@@ -29,8 +29,8 @@ if = {
 		sub_hull_large_single_0 = 1
 		torpedo_small_0 = 1
 		ww_screens = 1
-		screen_hull_small_0 = 1
 		screen_hull_medium_0 = 1
+		screen_hull_heavy_0 = 1
 	}
 }
 
@@ -86,11 +86,15 @@ set_technology = {
 	spaag_1 = 1
 	
 	artillery_1 = 1
-	sp_artillery_1 = 1
 	light_artillery_1 = 1
+	sp_artillery_1 = 1
+	heavy_artillery_1 = 1
 	light_sp_artillery_1 = 1
+	heavy_sp_artillery_1 = 1
+	sp_rocket1 = 1
 	
 	direct_fire_gun_1 = 1
+	tank_destroyer_1 = 1
 	
 ##Land Doc##
 	

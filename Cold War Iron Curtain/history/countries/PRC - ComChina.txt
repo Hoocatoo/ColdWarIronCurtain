@@ -2,12 +2,12 @@
 
 oob = "PRC_1949"
 
-set_research_slots = 3
+set_research_slots = 4
 
 if = {
 	limit = { has_dlc = "Man the Guns"}
 	set_technology = {
-		ww_detection = 1
+		detection_ww = 1
 		ww_armaments = 1
 
 		ww_screens = 1
@@ -69,11 +69,15 @@ set_technology = {
 	spaag_1 = 1
 	
 	artillery_1 = 1
-	sp_artillery_1 = 1
 	light_artillery_1 = 1
+	sp_artillery_1 = 1
+	heavy_artillery_1 = 1
 	light_sp_artillery_1 = 1
+	heavy_sp_artillery_1 = 1
+	sp_rocket1 = 1
 	
 	direct_fire_gun_1 = 1
+	tank_destroyer_1 = 1
 	
 ##Land Doc##
 	
@@ -140,6 +144,12 @@ set_war_support = 0.7
 
 set_cosmetic_tag = CPC
 
+
+	add_timed_idea = {
+		idea = civil_war_fervor
+		days = 365
+	}
+
 init_influence = yes
 set_variable = { var = domestic_influence_amount value = 10000 }
 
@@ -152,34 +162,47 @@ set_variable = { var = domestic_influence_amount value = 10000 }
 		target = XSM
 		type = civil_war
 	}
+	add_ideas = {
+		international_credibility_3
+		agrarian_bourgeoisie_1
+		fiscal_collapse_3
+		PRC_peoples_army
+		closed_economy
+		extensive_conscription
+		tot_economic_mobilisation
+		administration_integration_3
+	}
 }
-
+set_country_flag = weapon_purchasing_CUM_permit
+set_country_flag = weapon_purchasing_MAO_permit
 add_ideas = {
-	closed_economy
-	extensive_conscription
-	tot_economic_mobilisation
-	PRC_peoples_army
+
+	
 	foreign_aggression_policy_6
 	defcon_system_5
 	SOV_government_corruption_endemic
 	banditry
-	fiscal_collapse_3
+	
 	Global_Intervention
 	
+	
+	
+	Major_Power_Spy_Bonus
+
 	policy_military_temp_3
 	policy_welfare_temp_1
 	policy_cpi_temp_1
 	policy_education_temp_1
 	policy_healthcare_temp_0
 	policy_services_temp_0
-	Progressive_Taxation
+	policy_taxrate_temp_3
 	
-	Elites_Only
-	State_Press
-	Equality
-	Equal_Rights
-	atheist_state
-	gen_notsaga_1
+	policy_voting_temp_1
+	policy_media_temp_0
+	policy_women_temp_4
+	policy_minorities_temp_3
+	policy_religion_temp_0a
+	policy_saga_temp_1
 }
 
 add_opinion_modifier = { target = CHI modifier = hostile_status }
@@ -242,8 +265,41 @@ create_field_marshal = {
 	skill = 4
 	attack_skill = 4
 	defense_skill = 4
-	#planning_skill = 4
-	#logistics_skill = 4
+	planning_skill = 4
+	logistics_skill = 4
+}
+
+create_corps_commander = {
+	name = "Xu Shiyou"
+	portrait_path = "gfx/leaders/PRC/Army/Xu_Shiyou.dds"
+	traits = {  }
+	skill = 2
+	attack_skill = 2
+	defense_skill = 2
+	planning_skill = 3
+	logistics_skill = 2
+}
+
+create_corps_commander = {
+	name = "Su Yu"
+	portrait_path = "gfx/leaders/PRC/Army/Su_Yu.dds"
+	traits = {  }
+	skill = 3
+	attack_skill = 3
+	defense_skill = 3
+	planning_skill = 3
+	logistics_skill = 2
+}
+
+create_corps_commander = {
+	name = "Luo Ruiqing"
+	portrait_path = "gfx/leaders/PRC/Army/Luo_Ruiqing.dds"
+	traits = {  }
+	skill = 3
+	attack_skill = 3
+	defense_skill = 2
+	planning_skill = 3
+	logistics_skill = 3
 }
 
 create_corps_commander = {
@@ -253,8 +309,8 @@ create_corps_commander = {
 	skill = 5
 	attack_skill = 5
 	defense_skill = 5
-	#planning_skill = 5
-	#logistics_skill = 5
+	planning_skill = 5
+	logistics_skill = 5
 	id = 9004
 }
 
@@ -265,8 +321,8 @@ create_corps_commander = {
 	skill = 4
 	attack_skill = 4
 	defense_skill = 4
-	#planning_skill = 4
-	#logistics_skill = 4
+	planning_skill = 4
+	logistics_skill = 4
 }
 
 create_corps_commander = {
@@ -277,8 +333,8 @@ create_corps_commander = {
 	skill = 3
 	attack_skill = 3
 	defense_skill = 3
-	#planning_skill = 3
-	#logistics_skill = 3
+	planning_skill = 3
+	logistics_skill = 3
 }
 
 create_corps_commander = {
@@ -288,8 +344,8 @@ create_corps_commander = {
 	skill = 3
 	attack_skill = 3
 	defense_skill = 3
-	#planning_skill = 3
-	#logistics_skill = 3
+	planning_skill = 3
+	logistics_skill = 3
 }
 
 create_corps_commander = {
@@ -300,8 +356,8 @@ create_corps_commander = {
 	skill = 3
 	attack_skill = 3
 	defense_skill = 3
-	#planning_skill = 3
-	#logistics_skill = 3
+	planning_skill = 3
+	logistics_skill = 3
 }
 
 create_corps_commander = {
@@ -311,8 +367,8 @@ create_corps_commander = {
 	skill = 2
 	attack_skill = 2
 	defense_skill = 2
-	#planning_skill = 2
-	#logistics_skill = 2
+	planning_skill = 2
+	logistics_skill = 2
 }
 
 create_corps_commander = {
@@ -323,8 +379,8 @@ create_corps_commander = {
 	id = 9002
 	attack_skill = 2
 	defense_skill = 2
-	#planning_skill = 2
-	#logistics_skill = 2
+	planning_skill = 2
+	logistics_skill = 2
 }
 
 create_corps_commander = {
@@ -334,8 +390,8 @@ create_corps_commander = {
 	skill = 2
 	attack_skill = 2
 	defense_skill = 2
-	#planning_skill = 2
-	#logistics_skill = 2
+	planning_skill = 2
+	logistics_skill = 2
 }
 
 create_corps_commander = {
@@ -345,8 +401,8 @@ create_corps_commander = {
 	skill = 1
 	attack_skill = 1
 	defense_skill = 1
-	#planning_skill = 1
-	#logistics_skill = 1
+	planning_skill = 1
+	logistics_skill = 1
 }
 
 create_corps_commander = {
@@ -356,15 +412,17 @@ create_corps_commander = {
 	skill = 1
 	attack_skill = 1
 	defense_skill = 1
-	#planning_skill = 1
-	#logistics_skill = 1
+	planning_skill = 1
+	logistics_skill = 1
 }
 
 1950.5.1 = {
 	drop_cosmetic_tag = yes	
+	white_peace = CHI
 }
 
 1960.1.1 = {
+	
 	remove_ideas = SOV_government_corruption_endemic
 	remove_ideas = banditry
 	remove_ideas = fiscal_collapse_3

@@ -963,7 +963,7 @@ focus_tree = {
 					add_equipment_to_stockpile = {
 							type = infantry_equipment_2
 							amount = 15000
-							producer = SOV
+							producer = CUM
 						}
 				}
 
@@ -2751,7 +2751,7 @@ focus_tree = {
 					add_tech_bonus = {
 							name = agri_tech_bonus
 							bonus = 1
-							category = agri_tech
+							category = agriculture
 						}
 				}
 	}
@@ -3197,7 +3197,7 @@ focus_tree = {
 							name = light_air_bonus
 							bonus = 0.15
 							uses = 1
-							category = light_air 
+							category = air_single_engine 
 						}
 				}
 	}
@@ -3366,7 +3366,7 @@ focus_tree = {
 					add_tech_bonus = {
 							name = agri_tech_bonus
 							bonus = 1
-							category = agri_tech
+							category = agriculture
 						}
 				}
 	}

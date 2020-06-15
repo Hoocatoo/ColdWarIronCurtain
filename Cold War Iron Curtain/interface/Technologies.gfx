@@ -1,13 +1,13 @@
 spriteTypes = {
 
 #############################################################################
-#######################       INDUSTRY               ########################
+#######################	   INDUSTRY			   ########################
 #############################################################################
 #La Resistance Stuff
 	SpriteType = {
 		name = "GFX_radio_detection_medium"
 		texturefile = "gfx/interface/technologies/radio_detection.dds"
-	}	
+	}
 	spriteType = {
 		name = "GFX_mapmode_button_depressed"
 		texturefile = "gfx//interface/mapmode/mapmode_button_depressed.dds"
@@ -86,6 +86,18 @@ spriteTypes = {
 		name = "GFX_civil_engineering_XII_medium"
 		texturefile = "gfx/interface/technologies/civil_engineering_XII.dds"
 	}
+	SpriteType = {
+		name = "GFX_civil_engineering_XIII_medium"
+		texturefile = "gfx/interface/technologies/civil_engineering_XIII.dds"
+	}
+	SpriteType = {
+		name = "GFX_civil_engineering_XIV_medium"
+		texturefile = "gfx/interface/technologies/civil_engineering_XIV.dds"
+	}
+	SpriteType = {
+		name = "GFX_civil_engineering_XV_medium"
+		texturefile = "gfx/interface/technologies/civil_engineering_XV.dds"
+	}
 
 ##### RGO #####
 	
@@ -117,6 +129,10 @@ spriteTypes = {
 	SpriteType = {
 		name = "GFX_excavation_VI_medium"
 		texturefile = "gfx/interface/technologies/excavation_vi.dds"
+	}
+	SpriteType = {
+		name = "GFX_excavation_VII_medium"
+		texturefile = "gfx/interface/technologies/excavation_vii.dds"
 	}
 
 ##### AGRARIAN TECHNOLOGY #####
@@ -150,6 +166,14 @@ spriteTypes = {
 		name = "GFX_agriculture_VI_medium"
 		texturefile = "gfx/interface/technologies/agriculture_VI.dds"
 	}
+	SpriteType = {
+		name = "GFX_agriculture_VII_medium"
+		texturefile = "gfx/interface/technologies/agriculture_VII.dds"
+	}
+	SpriteType = {
+		name = "GFX_agriculture_VIII_medium"
+		texturefile = "gfx/interface/technologies/agriculture_VIII.dds"
+	}
 	
 ##### ORGANIC FARMING #####
 
@@ -182,6 +206,10 @@ spriteTypes = {
 		name = "GFX_organic_VI_medium"
 		texturefile = "gfx/interface/technologies/organic_VI.dds"
 	}
+	SpriteType = {
+		name = "GFX_organic_VII_medium"
+		texturefile = "gfx/interface/technologies/organic_VII.dds"
+	}
 	
 ##### WATER #####
 
@@ -213,6 +241,10 @@ spriteTypes = {
 	SpriteType = {
 		name = "GFX_water_VI_medium"
 		texturefile = "gfx/interface/technologies/water_VI.dds"
+	}
+	SpriteType = {
+		name = "GFX_water_VII_medium"
+		texturefile = "gfx/interface/technologies/water_VII.dds"
 	}
 	
 ##### BIOFUELS #####
@@ -313,6 +345,14 @@ spriteTypes = {
 		name = "GFX_logistics_XII_medium"
 		texturefile = "gfx/interface/technologies/logistics_xii.dds"
 	}
+	SpriteType = {
+		name = "GFX_logistics_XIII_medium"
+		texturefile = "gfx/interface/technologies/logistics_xiii.dds"
+	}
+	SpriteType = {
+		name = "GFX_logistics_XIV_medium"
+		texturefile = "gfx/interface/technologies/logistics_xiv.dds"
+	}
 
 ##### PRODUCTION #####
 	
@@ -403,6 +443,14 @@ spriteTypes = {
 		name = "GFX_factory_automation_II_medium"
 		texturefile = "gfx/interface/technologies/factory_automation_II.dds"
 	}
+	SpriteType = {
+		name = "GFX_factory_automation_III_medium"
+		texturefile = "gfx/interface/technologies/factory_automation_III.dds"
+	}
+	SpriteType = {
+		name = "GFX_factory_automation_IV_medium"
+		texturefile = "gfx/interface/technologies/factory_automation_IV .dds"
+	}
 
 ##### FACTORY MANAGEMENT #####
 
@@ -475,6 +523,14 @@ spriteTypes = {
 		name = "GFX_management_X_medium"
 		texturefile = "gfx/interface/technologies/management_X.dds"
 	}
+	SpriteType = {
+		name = "GFX_management_XI_A_medium"
+		texturefile = "gfx/interface/technologies/management_XI_A.dds"
+	}
+	SpriteType = {
+		name = "GFX_management_XI_B_medium"
+		texturefile = "gfx/interface/technologies/management_XI_B.dds"
+	}
 
 ##### WW MATERIALS #####
 
@@ -510,9 +566,13 @@ spriteTypes = {
 		texturefile = "gfx/interface/technologies/chemistry_v.dds"
 	}
 
-		SpriteType = {
+	SpriteType = {
 		name = "GFX_chemistry_VI_medium"
 		texturefile = "gfx/interface/technologies/chemistry_vi.dds"
+	}
+	SpriteType = {
+		name = "GFX_chemistry_VII_medium"
+		texturefile = "gfx/interface/technologies/chemistry_vii.dds"
 	}
 
 ##### MATERIALS #####
@@ -546,6 +606,14 @@ spriteTypes = {
 		name = "GFX_materials_VI_medium"
 		texturefile = "gfx/interface/technologies/materials_vi.dds"
 	}
+	SpriteType = {
+		name = "GFX_materials_VII_medium"
+		texturefile = "gfx/interface/technologies/materials_vii.dds"
+	}
+	SpriteType = {
+		name = "GFX_materials_VIII_medium"
+		texturefile = "gfx/interface/technologies/materials_viii.dds"
+	}
 	
 ##### PLASTICS [PLAZTECS] #####
 	
@@ -572,6 +640,14 @@ spriteTypes = {
 	SpriteType = {
 		name = "GFX_plastics_V_medium"
 		texturefile = "gfx/interface/technologies/plastics_v.dds"
+	}
+	SpriteType = {
+		name = "GFX_plastics_VI_medium"
+		texturefile = "gfx/interface/technologies/plastics_vi.dds"
+	}
+	SpriteType = {
+		name = "GFX_plastics_VII_medium"
+		texturefile = "gfx/interface/technologies/plastics_vii.dds"
 	}
 	
 ##### GRID #####
@@ -605,6 +681,14 @@ spriteTypes = {
 		name = "GFX_grid_VI_medium"
 		texturefile = "gfx/interface/technologies/grid_VI.dds"
 	}
+	SpriteType = {
+		name = "GFX_grid_VII_medium"
+		texturefile = "gfx/interface/technologies/grid_VII.dds"
+	}
+	SpriteType = {
+		name = "GFX_grid_VIII_medium"
+		texturefile = "gfx/interface/technologies/grid_VIII.dds"
+	}
 	
 ##### FOSSIL ENERGY #####
 
@@ -621,6 +705,10 @@ spriteTypes = {
 	SpriteType = {
 		name = "GFX_gas_III_medium"
 		texturefile = "gfx/interface/technologies/gas_III.dds"
+	}
+	SpriteType = {
+		name = "GFX_gas_IV_medium"
+		texturefile = "gfx/interface/technologies/gas_IV.dds"
 	}
 	
 ##### RENEWABLES #####
@@ -653,6 +741,10 @@ spriteTypes = {
 	SpriteType = {
 		name = "GFX_renewables_VI_medium"
 		texturefile = "gfx/interface/technologies/renewables_VI.dds"
+	}
+	SpriteType = {
+		name = "GFX_renewables_VII_medium"
+		texturefile = "gfx/interface/technologies/renewables_VII.dds"
 	}
 
 ##### RENEWABLE ENERGY PROJECT #####
@@ -692,6 +784,10 @@ spriteTypes = {
 	SpriteType = {
 		name = "GFX_ecoenergy_VI_medium"
 		texturefile = "gfx/interface/technologies/ecoenergy_VI.dds"
+	}
+	SpriteType = {
+		name = "GFX_ecoenergy_VII_medium"
+		texturefile = "gfx/interface/technologies/ecoenergy_VII.dds"
 	}
 	
 ##### ELECTRIC CARS #####
@@ -739,6 +835,14 @@ spriteTypes = {
 		name = "GFX_inframanagement_VI_medium"
 		texturefile = "gfx/interface/technologies/inframanagement_VI.dds"
 	}
+	SpriteType = {
+		name = "GFX_inframanagement_VII_medium"
+		texturefile = "gfx/interface/technologies/inframanagement_VII.dds"
+	}
+	SpriteType = {
+		name = "GFX_inframanagement_VIII_medium"
+		texturefile = "gfx/interface/technologies/inframanagement_VIII.dds"
+	}
 	
 ##### INFRAMUNICIPAL #####
 
@@ -770,6 +874,14 @@ spriteTypes = {
 	SpriteType = {
 		name = "GFX_inframunicipal_VI_medium"
 		texturefile = "gfx/interface/technologies/inframunicipal_VI.dds"
+	}
+	SpriteType = {
+		name = "GFX_inframunicipal_VII_medium"
+		texturefile = "gfx/interface/technologies/inframunicipal_VII.dds"
+	}
+	SpriteType = {
+		name = "GFX_inframunicipal_VIII_medium"
+		texturefile = "gfx/interface/technologies/inframunicipal_VIII.dds"
 	}
 
 ##### INFRASTATE #####
@@ -803,9 +915,13 @@ spriteTypes = {
 		name = "GFX_infrastate_VI_medium"
 		texturefile = "gfx/interface/technologies/infrastate_VI.dds"
 	}
+	SpriteType = {
+		name = "GFX_infrastate_VII_medium"
+		texturefile = "gfx/interface/technologies/infrastate_VII.dds"
+	}
 	
 #############################################################################
-####################       GENERIC MILITARY            ######################
+####################	   GENERIC MILITARY			######################
 #############################################################################
 
 	SpriteType = {
@@ -835,11 +951,11 @@ spriteTypes = {
 	SpriteType = {
 		name = "GFX_convoy_equipment_medium"
 		texturefile = "gfx/interface/archetype_convoy.dds"
-	}	
+	}
 	SpriteType = {
 		name = "GFX_convoy_medium"
 		texturefile = "gfx/interface/archetype_convoy.dds"
-	}	
+	}
 	
 	SpriteType = {
 		name = "GFX_archetype_support_equipment_medium"
@@ -1074,6 +1190,23 @@ spriteTypes = {
 	SpriteType = {
 		name = "GFX_jet_strategic_bomber1_medium"
 		texturefile = "gfx/interface/technologies/jet_strategic_bomber1.dds"
+	}
+	
+	SpriteType = {
+		name = "GFX_recon0_medium"
+		texturefile = "gfx/interface/technologies/recon0.dds"
+	}
+	SpriteType = {
+		name = "GFX_jet_recon0_medium"
+		texturefile = "gfx/interface/technologies/jet_recon0.dds"
+	}
+	SpriteType = {
+		name = "GFX_jet_recon1_medium"
+		texturefile = "gfx/interface/technologies/jet_recon1.dds"
+	}
+	SpriteType = {
+		name = "GFX_jet_recon2_medium"
+		texturefile = "gfx/interface/technologies/jet_recon2.dds"
 	}
 
 	SpriteType = {
@@ -3200,7 +3333,7 @@ spriteTypes = {
 	SpriteType = {
 		name = "GFX_cruisemissile_6_medium"
 		textureFile = "gfx/interface/technologies/USA_crum7.dds"
-	}	
+	}
 
 	SpriteType = {
 		name = "GFX_atgm_carrier_0_medium"
@@ -4293,7 +4426,7 @@ spriteTypes = {
 		texturefile = "gfx/interface/technologies/autocannon_1.dds"
 	}
 
-    SpriteType = {
+	SpriteType = {
 		name = "GFX_autocannon_2_medium"
 		texturefile = "gfx/interface/technologies/autocannon_2.dds"
 	}
@@ -5520,7 +5653,7 @@ spriteTypes = {
 	}
 	
 #############################################################################
-####################       PROLETARIAT NAVY            ######################
+####################	   PROLETARIAT NAVY			######################
 #############################################################################	
 
 ##### WW SCREENS #####
@@ -5534,96 +5667,96 @@ spriteTypes = {
 
 	SpriteType = {
 		name = "GFX_frigate_0_medium"
-		texturefile = "gfx/interface/technologies/screen_hull_small_0.dds"
+		texturefile = "gfx/interface/technologies/screen_hull_medium_0.dds"
 	}
 	
 	SpriteType = {
 		name = "GFX_frigate_1_medium"
-		texturefile = "gfx/interface/technologies/screen_hull_small_1.dds"
+		texturefile = "gfx/interface/technologies/screen_hull_medium_1.dds"
 	}
 	
 	SpriteType = {
 		name = "GFX_frigate_2_medium"
-		texturefile = "gfx/interface/technologies/screen_hull_small_2.dds"
+		texturefile = "gfx/interface/technologies/screen_hull_medium_2.dds"
 	}
 	
 	SpriteType = {
 		name = "GFX_frigate_3_medium"
-		texturefile = "gfx/interface/technologies/screen_hull_small_3.dds"
+		texturefile = "gfx/interface/technologies/screen_hull_medium_3.dds"
 	}
 	
 	SpriteType = {
 		name = "GFX_frigate_4_medium"
-		texturefile = "gfx/interface/technologies/screen_hull_small_4a.dds"
+		texturefile = "gfx/interface/technologies/screen_hull_medium_4a.dds"
 	}
 	
 	SpriteType = {
 		name = "GFX_frigate_5_medium"
-		texturefile = "gfx/interface/technologies/screen_hull_small_4.dds"
+		texturefile = "gfx/interface/technologies/screen_hull_medium_4.dds"
 	}
 	
 ##### SCREEN HULL MEDIUM [Destroyers] #####
 
 	SpriteType = {
 		name = "GFX_destroyer_0_medium"
-		texturefile = "gfx/interface/technologies/screen_hull_medium_0.dds"
+		texturefile = "gfx/interface/technologies/screen_hull_heavy_0.dds"
 	}
 	
 	SpriteType = {
 		name = "GFX_destroyer_1_medium"
-		texturefile = "gfx/interface/technologies/screen_hull_medium_1.dds"
+		texturefile = "gfx/interface/technologies/screen_hull_heavy_1.dds"
 	}
 	
 	SpriteType = {
 		name = "GFX_destroyer_2_medium"
-		texturefile = "gfx/interface/technologies/screen_hull_medium_2.dds"
+		texturefile = "gfx/interface/technologies/screen_hull_heavy_2.dds"
 	}
 	
 	SpriteType = {
 		name = "GFX_destroyer_3_medium"
-		texturefile = "gfx/interface/technologies/screen_hull_medium_3.dds"
+		texturefile = "gfx/interface/technologies/screen_hull_heavy_3.dds"
 	}
 	
 	SpriteType = {
 		name = "GFX_destroyer_4_medium"
-		texturefile = "gfx/interface/technologies/screen_hull_medium_4a.dds"
+		texturefile = "gfx/interface/technologies/screen_hull_heavy_4a.dds"
 	}
 	
 	SpriteType = {
 		name = "GFX_destroyer_5_medium"
-		texturefile = "gfx/interface/technologies/screen_hull_medium_4.dds"
+		texturefile = "gfx/interface/technologies/screen_hull_heavy_4.dds"
 	}
 	
 ##### SCREEN HULL LARGE [Cruisers] #####
 	
 	SpriteType = {
 		name = "GFX_cruiser_0_medium"
-		texturefile = "gfx/interface/technologies/screen_hull_large_0.dds"
+		texturefile = "gfx/interface/technologies/battle_hull_light_0.dds"
 	}
 	
 	SpriteType = {
 		name = "GFX_cruiser_1_medium"
-		texturefile = "gfx/interface/technologies/screen_hull_large_1.dds"
+		texturefile = "gfx/interface/technologies/battle_hull_light_1.dds"
 	}
 	
 	SpriteType = {
 		name = "GFX_cruiser_2_medium"
-		texturefile = "gfx/interface/technologies/screen_hull_large_2.dds"
+		texturefile = "gfx/interface/technologies/battle_hull_light_2.dds"
 	}
 	
 	SpriteType = {
 		name = "GFX_cruiser_3_medium"
-		texturefile = "gfx/interface/technologies/screen_hull_large_3.dds"
+		texturefile = "gfx/interface/technologies/battle_hull_light_3.dds"
 	}
 	
 	SpriteType = {
 		name = "GFX_cruiser_4_medium"
-		texturefile = "gfx/interface/technologies/screen_hull_large_4a.dds"
+		texturefile = "gfx/interface/technologies/battle_hull_light_4a.dds"
 	}
 	
 	SpriteType = {
 		name = "GFX_cruiser_5_medium"
-		texturefile = "gfx/interface/technologies/screen_hull_large_4.dds"
+		texturefile = "gfx/interface/technologies/battle_hull_light_4.dds"
 	}
 	
 ##### WW CARRIERS #####
@@ -5644,32 +5777,32 @@ spriteTypes = {
 
 	SpriteType = {
 		name = "GFX_battlecruiser_0_medium"
-		texturefile = "gfx/interface/technologies/capital_hull_0.dds"
+		texturefile = "gfx/interface/technologies/battle_hull_medium_0.dds"
 	}
 	
 	SpriteType = {
 		name = "GFX_battlecruiser_1_medium"
-		texturefile = "gfx/interface/technologies/capital_hull_1.dds"
+		texturefile = "gfx/interface/technologies/battle_hull_medium_1.dds"
 	}
 	
 	SpriteType = {
 		name = "GFX_battlecruiser_2_medium"
-		texturefile = "gfx/interface/technologies/capital_hull_2.dds"
+		texturefile = "gfx/interface/technologies/battle_hull_medium_2.dds"
 	}
 	
 	SpriteType = {
 		name = "GFX_battlecruiser_3_medium"
-		texturefile = "gfx/interface/technologies/capital_hull_3.dds"
+		texturefile = "gfx/interface/technologies/battle_hull_medium_3.dds"
 	}
 	
 	SpriteType = {
 		name = "GFX_battlecruiser_4_medium"
-		texturefile = "gfx/interface/technologies/capital_hull_4a.dds"
+		texturefile = "gfx/interface/technologies/battle_hull_medium_4a.dds"
 	}
 	
 	SpriteType = {
 		name = "GFX_battlecruiser_5_medium"
-		texturefile = "gfx/interface/technologies/capital_hull_4.dds"
+		texturefile = "gfx/interface/technologies/battle_hull_medium_4.dds"
 	}
 	
 ##### CAPITAL HULL LARGE #####
@@ -5797,10 +5930,10 @@ spriteTypes = {
 	}
 
 #############################################################################
-####################       GENERIC MTG NAVY            ######################
+####################	   GENERIC MTG NAVY			######################
 #############################################################################
 
-#########################       MTG LARGE        ############################
+#########################	   MTG LARGE		############################
 
 ##### WW CARRIERS #####
 
@@ -5819,28 +5952,28 @@ spriteTypes = {
 ##### CAPITAL HULL #####
 
 	SpriteType = {
-		name = "GFX_capital_hull_0_medium"
-		texturefile = "gfx/interface/technologies/capital_hull_0.dds"
+		name = "GFX_battle_hull_medium_0_medium"
+		texturefile = "gfx/interface/technologies/battle_hull_medium_0.dds"
 	}
 	
 	SpriteType = {
-		name = "GFX_capital_hull_1_medium"
-		texturefile = "gfx/interface/technologies/capital_hull_1.dds"
+		name = "GFX_battle_hull_medium_1_medium"
+		texturefile = "gfx/interface/technologies/battle_hull_medium_1.dds"
 	}
 	
 	SpriteType = {
-		name = "GFX_capital_hull_2_medium"
-		texturefile = "gfx/interface/technologies/capital_hull_2.dds"
+		name = "GFX_battle_hull_medium_2_medium"
+		texturefile = "gfx/interface/technologies/battle_hull_medium_2.dds"
 	}
 	
 	SpriteType = {
-		name = "GFX_capital_hull_3_medium"
-		texturefile = "gfx/interface/technologies/capital_hull_3.dds"
+		name = "GFX_battle_hull_medium_3_medium"
+		texturefile = "gfx/interface/technologies/battle_hull_medium_3.dds"
 	}
 	
 	SpriteType = {
-		name = "GFX_capital_hull_4_medium"
-		texturefile = "gfx/interface/technologies/capital_hull_4.dds"
+		name = "GFX_battle_hull_medium_4_medium"
+		texturefile = "gfx/interface/technologies/battle_hull_medium_4.dds"
 	}
 	
 ##### CAPITAL HULL LARGE #####
@@ -5933,33 +6066,6 @@ spriteTypes = {
 ##### SCREEN HULL SMALL [Frigates] #####
 
 	SpriteType = {
-		name = "GFX_screen_hull_small_0_medium"
-		texturefile = "gfx/interface/technologies/screen_hull_small_0.dds"
-	}
-	
-	SpriteType = {
-		name = "GFX_screen_hull_small_1_medium"
-		texturefile = "gfx/interface/technologies/screen_hull_small_1.dds"
-	}
-	
-	SpriteType = {
-		name = "GFX_screen_hull_small_2_medium"
-		texturefile = "gfx/interface/technologies/screen_hull_small_2.dds"
-	}
-	
-	SpriteType = {
-		name = "GFX_screen_hull_small_3_medium"
-		texturefile = "gfx/interface/technologies/screen_hull_small_3.dds"
-	}
-	
-	SpriteType = {
-		name = "GFX_screen_hull_small_4_medium"
-		texturefile = "gfx/interface/technologies/screen_hull_small_4.dds"
-	}
-	
-##### SCREEN HULL MEDIUM [Destroyers] #####
-
-	SpriteType = {
 		name = "GFX_screen_hull_medium_0_medium"
 		texturefile = "gfx/interface/technologies/screen_hull_medium_0.dds"
 	}
@@ -5984,31 +6090,58 @@ spriteTypes = {
 		texturefile = "gfx/interface/technologies/screen_hull_medium_4.dds"
 	}
 	
+##### SCREEN HULL MEDIUM [Destroyers] #####
+
+	SpriteType = {
+		name = "GFX_screen_hull_heavy_0_medium"
+		texturefile = "gfx/interface/technologies/screen_hull_heavy_0.dds"
+	}
+	
+	SpriteType = {
+		name = "GFX_screen_hull_heavy_1_medium"
+		texturefile = "gfx/interface/technologies/screen_hull_heavy_1.dds"
+	}
+	
+	SpriteType = {
+		name = "GFX_screen_hull_heavy_2_medium"
+		texturefile = "gfx/interface/technologies/screen_hull_heavy_2.dds"
+	}
+	
+	SpriteType = {
+		name = "GFX_screen_hull_heavy_3_medium"
+		texturefile = "gfx/interface/technologies/screen_hull_heavy_3.dds"
+	}
+	
+	SpriteType = {
+		name = "GFX_screen_hull_heavy_4_medium"
+		texturefile = "gfx/interface/technologies/screen_hull_heavy_4.dds"
+	}
+	
 ##### SCREEN HULL LARGE [Cruisers] #####
 	
 	SpriteType = {
-		name = "GFX_screen_hull_large_0_medium"
-		texturefile = "gfx/interface/technologies/screen_hull_large_0.dds"
+		name = "GFX_battle_hull_light_0_medium"
+		texturefile = "gfx/interface/technologies/battle_hull_light_0.dds"
 	}
 	
 	SpriteType = {
-		name = "GFX_screen_hull_large_1_medium"
-		texturefile = "gfx/interface/technologies/screen_hull_large_1.dds"
+		name = "GFX_battle_hull_light_1_medium"
+		texturefile = "gfx/interface/technologies/battle_hull_light_1.dds"
 	}
 	
 	SpriteType = {
-		name = "GFX_screen_hull_large_2_medium"
-		texturefile = "gfx/interface/technologies/screen_hull_large_2.dds"
+		name = "GFX_battle_hull_light_2_medium"
+		texturefile = "gfx/interface/technologies/battle_hull_light_2.dds"
 	}
 	
 	SpriteType = {
-		name = "GFX_screen_hull_large_3_medium"
-		texturefile = "gfx/interface/technologies/screen_hull_large_3.dds"
+		name = "GFX_battle_hull_light_3_medium"
+		texturefile = "gfx/interface/technologies/battle_hull_light_3.dds"
 	}
 	
 	SpriteType = {
-		name = "GFX_screen_hull_large_4_medium"
-		texturefile = "gfx/interface/technologies/screen_hull_large_4.dds"
+		name = "GFX_battle_hull_light_4_medium"
+		texturefile = "gfx/interface/technologies/battle_hull_light_4.dds"
 	}
 	
 ##### SUB HULL WW #####
@@ -6459,8 +6592,8 @@ spriteTypes = {
 	}
 ##### WW DETECTION #####
 	SpriteType = {
-		name = "GFX_ww_detection_medium"
-		texturefile = "gfx/interface/technologies/ww_detection.dds"
+		name = "GFX_detection_ww_medium"
+		texturefile = "gfx/interface/technologies/detection_ww.dds"
 	}
 ##### COUNTERMEASURES #####
 	SpriteType = {
@@ -6604,7 +6737,7 @@ spriteTypes = {
 	}
 	
 #############################################################################
-#######################       AIR DOCTRINES               ###################
+#######################	   AIR DOCTRINES			   ###################
 #############################################################################
 
 ##### VERSATILE DOCTRINES #####
@@ -6904,7 +7037,7 @@ spriteTypes = {
 	}
 	
 #############################################################################
-#######################       ELECTRONICS               #####################
+#######################	   ELECTRONICS			   #####################
 #############################################################################
 
 	#### COMPUTERS ####
@@ -6973,6 +7106,18 @@ spriteTypes = {
 		name = "GFX_hardware_XIII_medium"
 		texturefile = "gfx/interface/technologies/hardware_XIII.dds"
 	}
+	SpriteType = {
+		name = "GFX_hardware_XIV_medium"
+		texturefile = "gfx/interface/technologies/hardware_XIV.dds"
+	}
+	SpriteType = {
+		name = "GFX_hardware_XV_medium"
+		texturefile = "gfx/interface/technologies/hardware_XV.dds"
+	}
+	SpriteType = {
+		name = "GFX_hardware_XVI_medium"
+		texturefile = "gfx/interface/technologies/hardware_XVI.dds"
+	}
 	
 	#### SOFTWARE ####
 	
@@ -7028,6 +7173,18 @@ spriteTypes = {
 		name = "GFX_software_XIII_medium"
 		texturefile = "gfx/interface/technologies/software_XIII.dds"
 	}
+	SpriteType = {
+		name = "GFX_software_XIV_medium"
+		texturefile = "gfx/interface/technologies/software_XIV.dds"
+	}
+	SpriteType = {
+		name = "GFX_software_XV_medium"
+		texturefile = "gfx/interface/technologies/software_XV.dds"
+	}
+	SpriteType = {
+		name = "GFX_software_XVI_medium"
+		texturefile = "gfx/interface/technologies/software_XVI.dds"
+	}
 	
 	#### INTERWEBS ####
 	
@@ -7062,6 +7219,18 @@ spriteTypes = {
 	SpriteType = {
 		name = "GFX_interwebs_VIII_medium"
 		texturefile = "gfx/interface/technologies/interwebs_VIII.dds"
+	}
+	SpriteType = {
+		name = "GFX_interwebs_IX_medium"
+		texturefile = "gfx/interface/technologies/interwebs_IX.dds"
+	}
+	SpriteType = {
+		name = "GFX_interwebs_X_medium"
+		texturefile = "gfx/interface/technologies/interwebs_X.dds"
+	}
+	SpriteType = {
+		name = "GFX_interwebs_XI_medium"
+		texturefile = "gfx/interface/technologies/interwebs_XI.dds"
 	}
 	
 	#### TRANSISTOR ####
@@ -7118,6 +7287,18 @@ spriteTypes = {
 		name = "GFX_transistor_XIII_medium"
 		texturefile = "gfx/interface/technologies/transistor_XIII.dds"
 	}
+	SpriteType = {
+		name = "GFX_transistor_XIV_medium"
+		texturefile = "gfx/interface/technologies/transistor_XIV.dds"
+	}
+	SpriteType = {
+		name = "GFX_transistor_XV_medium"
+		texturefile = "gfx/interface/technologies/transistor_XV.dds"
+	}
+	SpriteType = {
+		name = "GFX_transistor_XVI_medium"
+		texturefile = "gfx/interface/technologies/transistor_XVI.dds"
+	}
 	
 	#### SUPERCOMPUTING ####
 	
@@ -7144,6 +7325,10 @@ spriteTypes = {
 	SpriteType = {
 		name = "GFX_supercomputer_VI_medium"
 		texturefile = "gfx/interface/technologies/supercomputer_VI.dds"
+	}
+	SpriteType = {
+		name = "GFX_supercomputer_VII_medium"
+		texturefile = "gfx/interface/technologies/supercomputer_VII.dds"
 	}
 	
 	#### APPLICATIONS ####
@@ -7173,6 +7358,14 @@ spriteTypes = {
 		name = "GFX_radar_V_medium"
 		texturefile = "gfx/interface/technologies/radar_V.dds"
 	}
+	SpriteType = {
+		name = "GFX_radar_VI_medium"
+		texturefile = "gfx/interface/technologies/radar_VI.dds"
+	}
+	SpriteType = {
+		name = "GFX_radar_VII_medium"
+		texturefile = "gfx/interface/technologies/radar_VII.dds"
+	}
 	
 	#### COMS ####
 	
@@ -7199,6 +7392,14 @@ spriteTypes = {
 	SpriteType = {
 		name = "GFX_coms_VI_medium"
 		texturefile = "gfx/interface/technologies/coms_VI.dds"
+	}
+	SpriteType = {
+		name = "GFX_coms_VII_medium"
+		texturefile = "gfx/interface/technologies/coms_VII.dds"
+	}
+	SpriteType = {
+		name = "GFX_coms_VIII_medium"
+		texturefile = "gfx/interface/technologies/coms_VIII.dds"
 	}
 	
 	#### CONSUMER_ELECTRONICS ####
@@ -7227,6 +7428,14 @@ spriteTypes = {
 		name = "GFX_consumer_electronics_VI_medium"
 		texturefile = "gfx/interface/technologies/consumer_electronics_VI.dds"
 	}
+	SpriteType = {
+		name = "GFX_consumer_electronics_VII_medium"
+		texturefile = "gfx/interface/technologies/consumer_electronics_VII.dds"
+	}
+	SpriteType = {
+		name = "GFX_consumer_electronics_VIII_medium"
+		texturefile = "gfx/interface/technologies/consumer_electronics_VIII.dds"
+	}
 	
 	#### CYBER ATTACKS ####
 	
@@ -7254,6 +7463,14 @@ spriteTypes = {
 		name = "GFX_decryption_VI_medium"
 		texturefile = "gfx/interface/technologies/decryption_VI.dds"
 	}
+	SpriteType = {
+		name = "GFX_decryption_VII_medium"
+		texturefile = "gfx/interface/technologies/decryption_VII.dds"
+	}
+	SpriteType = {
+		name = "GFX_decryption_VIII_medium"
+		texturefile = "gfx/interface/technologies/decryption_VIII.dds"
+	}
 	
 	#### CYBER SECURITY ####
 	
@@ -7280,6 +7497,14 @@ spriteTypes = {
 	SpriteType = {
 		name = "GFX_enc_VI_medium"
 		texturefile = "gfx/interface/technologies/enc_VI.dds"
+	}
+	SpriteType = {
+		name = "GFX_enc_VII_medium"
+		texturefile = "gfx/interface/technologies/enc_VII.dds"
+	}
+	SpriteType = {
+		name = "GFX_enc_VIII_medium"
+		texturefile = "gfx/interface/technologies/enc_VIII.dds"
 	}
 	
 ##### SUBTECHS #####
@@ -7372,66 +7597,66 @@ spriteTypes = {
 	
 	SpriteType = {
 		name = "GFX_atomic_reactor_0_medium"
-		texturefile = "gfx/interface/technologies/atomic_weapons_reactor_0.dds"
+		texturefile = "gfx/interface/technologies/atomic_reactor_0.dds"
 	}
 	SpriteType = {
 		name = "GFX_atomic_reactor_I_medium"
-		texturefile = "gfx/interface/technologies/atomic_weapons_reactor_I.dds"
+		texturefile = "gfx/interface/technologies/atomic_reactor_I.dds"
 	}
 	SpriteType = {
 		name = "GFX_atomic_reactor_II_medium"
-		texturefile = "gfx/interface/technologies/atomic_weapons_reactor_II.dds"
+		texturefile = "gfx/interface/technologies/atomic_reactor_II.dds"
 	}
 	SpriteType = {
 		name = "GFX_atomic_reactor_III_medium"
-		texturefile = "gfx/interface/technologies/atomic_weapons_reactor_III.dds"
+		texturefile = "gfx/interface/technologies/atomic_reactor_III.dds"
 	}
 	
 	SpriteType = {
 		name = "GFX_atomic_reactor_fission_0_medium"
-		texturefile = "gfx/interface/technologies/atomic_weapons_reactor_fission_0.dds"
+		texturefile = "gfx/interface/technologies/atomic_reactor_fission_0.dds"
 	}
 	SpriteType = {
 		name = "GFX_atomic_reactor_fission_I_medium"
-		texturefile = "gfx/interface/technologies/atomic_weapons_reactor_fission_I.dds"
+		texturefile = "gfx/interface/technologies/atomic_reactor_fission_I.dds"
 	}
 	SpriteType = {
 		name = "GFX_atomic_reactor_fission_II_medium"
-		texturefile = "gfx/interface/technologies/atomic_weapons_reactor_fission_II.dds"
+		texturefile = "gfx/interface/technologies/atomic_reactor_fission_II.dds"
 	}
 	
 	SpriteType = {
 		name = "GFX_atomic_reactor_fusion_0_medium"
-		texturefile = "gfx/interface/technologies/atomic_weapons_reactor_fusion_0.dds"
+		texturefile = "gfx/interface/technologies/atomic_reactor_fusion_0.dds"
 	}
 	SpriteType = {
 		name = "GFX_atomic_reactor_fusion_I_medium"
-		texturefile = "gfx/interface/technologies/atomic_weapons_reactor_fusion_I.dds"
+		texturefile = "gfx/interface/technologies/atomic_reactor_fusion_I.dds"
 	}
 	SpriteType = {
 		name = "GFX_atomic_reactor_fusion_II_medium"
-		texturefile = "gfx/interface/technologies/atomic_weapons_reactor_fusion_II.dds"
+		texturefile = "gfx/interface/technologies/atomic_reactor_fusion_II.dds"
 	}
 	SpriteType = {
 		name = "GFX_atomic_reactor_fusion_III_medium"
-		texturefile = "gfx/interface/technologies/atomic_weapons_reactor_fusion_III.dds"
+		texturefile = "gfx/interface/technologies/atomic_reactor_fusion_III.dds"
 	}
 	
 	SpriteType = {
 		name = "GFX_atomic_reactor_naval_0_medium"
-		texturefile = "gfx/interface/technologies/atomic_weapons_reactor_naval_0.dds"
+		texturefile = "gfx/interface/technologies/atomic_reactor_naval_0.dds"
 	}
 	SpriteType = {
 		name = "GFX_atomic_reactor_naval_I_medium"
-		texturefile = "gfx/interface/technologies/atomic_weapons_reactor_naval_I.dds"
+		texturefile = "gfx/interface/technologies/atomic_reactor_naval_I.dds"
 	}
 	SpriteType = {
 		name = "GFX_atomic_reactor_naval_II_medium"
-		texturefile = "gfx/interface/technologies/atomic_weapons_reactor_naval_II.dds"
+		texturefile = "gfx/interface/technologies/atomic_reactor_naval_II.dds"
 	}
 	SpriteType = {
 		name = "GFX_atomic_reactor_naval_III_medium"
-		texturefile = "gfx/interface/technologies/atomic_weapons_reactor_naval_III.dds"
+		texturefile = "gfx/interface/technologies/atomic_reactor_naval_III.dds"
 	}
 ###CHEMICAL WEAPONS###
 	SpriteType = {
